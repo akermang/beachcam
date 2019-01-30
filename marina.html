@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<title>מרינה צפון</title>
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="shortcut icon" type="image/png" href="https://akermang.github.io/WeatherApp/sun-favicon.png" />
+
+<head>
+  <style>
+    body {
+      background-color: black;
+    }
+
+    header {
+      width: 100%;
+      display: flex;
+      /* background-image: radial-gradient(red 5%, yellow 15%, green 60%); */
+      background-color: #1fc8db;
+      background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+    }
+
+    header a {
+      text-decoration: none;
+    }
+
+    .wrapper {
+      width: 100%;
+    }
+
+    p,
+    h2 {
+      text-align: center;
+      margin: 1px auto;
+    }
+
+    div.img {
+      text-align: center;
+    }
+
+    .img img {
+      width: 200px;
+    }
+
+    .cams-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 6px;
+      overflow: auto;
+    }
+
+    .cams-container P {
+      margin: 0;
+      min-width: 33%;
+    }
+
+    iframe {
+      width: 100%;
+      min-height: 33vh;
+    }
+
+    @media(max-width: 914px) {
+      .cams-container P {
+        min-width: 49%;
+      }
+    }
+
+    @media(max-width: 740px) {
+      .img img {
+        width: 100px;
+      }
+    }
+
+    @media(max-width:613px) {
+      .cams-container P {
+        min-width: 100%;
+      }
+
+      h2 {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="wrapper">
+      <a id="c7" style="color: white;" href="./index.html">
+
+        <div class="w3-container w3-blue">
+          <h2>מרינה צפון </h2>
+          <p>הרצליה מצלמת גלים</p>
+          <div class="img">
+
+            <img id="sidny" src="http://www.seadny.com/wp-content/themes/seadny/images/logo.png">
+          </div>
+          <p>לפירסום כאן 054-6817830</p>
+        </div>
+
+      </a>
+
+    </div>
+
+  </header>
+  <nav>
+    <p style="text-align: center;font-size:20px;">
+      <a target="blank" id="c7" style="color: white;" href="./index.html">למצלמות</a>
+      <a id="c7" style="color: white;" href="http://www.seadny.com/" target="_blank">לגלשני סידני</a>
+    </p>
+  </nav>
+
+  <section class="cams-container">
+     <img src="http://62.219.45.26:130//mjpg/video.mjpg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></img>
+  </section>
+  <p style="text-align: center;">
+    <a style="color: gold;" href="">gloona Soft</a>
+  </p>
+
+</body>
+
+</html>
