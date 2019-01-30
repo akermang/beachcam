@@ -16,6 +16,10 @@
       display: flex;
     }
 
+    header a {
+      text-decoration: none;
+    }
+
     .wrapper {
       width: 100%;
     }
@@ -42,34 +46,36 @@
     .cams-container {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
+      justify-content: space-around;
+      padding: 6px;
+    }
+
+    .cams-container P {
+      margin: 0;
+      min-width: 33%;
     }
 
     iframe {
-      display: block;
-      margin: auto;
-      float: right;
-      width: 440px;
-      min-height: 240px;
+      width: 100%;
+      min-height: 33vh;
     }
 
-    @media(max-width: 881px) {
-      iframe {
-        width: 360px;
-        min-height: 200px;
+    @media(max-width: 914px) {
+      .cams-container P {
+        min-width: 49%;
       }
     }
 
     @media(max-width: 740px) {
-      iframe {
-        width: 320px;
-      }
       .img img {
-        width: 160px;
+        width: 100px;
       }
     }
 
-    @media(max-width:540px) {
+    @media(max-width:613px) {
+      .cams-container P {
+        min-width: 100%;
+      }
 
       h2 {
         font-size: 22px;
@@ -81,28 +87,27 @@
 <body>
   <header>
     <div class="wrapper">
-      <div class="w3-container w3-blue">
-        <h2>מצלמות חופים </h2>
-        <p>שידור חי - גלישת גלים</p>
-        <div class="img">
-          <img id="sidny" src="http://www.seadny.com/wp-content/themes/seadny/images/logo.png">
+      <a id="c7" style="color: white;" href="http://www.seadny.com/" target="blank">
+
+        <div class="w3-container w3-blue">
+          <h2>מצלמות חופים </h2>
+          <p>שידור חי - גלישת גלים</p>
+          <div class="img">
+
+            <img id="sidny" src="http://www.seadny.com/wp-content/themes/seadny/images/logo.png">
+          </div>
+          <p>לפירסום כאן 054-6817830</p>
         </div>
-        <p>לפירסום כאן 054-6817830</p>
-      </div>
+
+      </a>
+
     </div>
 
   </header>
   <nav>
     <p style="text-align: center;font-size:20px;">
       <a target="blank" id="c7" style="color: white;" href="http://www.seadny.com/">לגלשני סידני</a>
-      <!-- <a id="c1" style="color: green;" href="http://gloona.esy.es/new%201.html#C6">לחוף גוטה</a> -->
-      <!-- <a id="c2" style="color: blue;" href="http://gloona.esy.es/new%201.html#C5">לחוף מוטה ריי</a> -->
-      <!-- <a id="c3" style="color: purple;" href="http://gloona.esy.es/new%201.html#C4">תל-אביב יפו המערבי</a> -->
-      <!-- <a id="c4" style="color: blue;" href="http://gloona.esy.es/new%201.html#C3">הרצליה מרינה</a> -->
-      <!-- <a id="c5" style="color: purple;" href="http://gloona.esy.es/new%201.html#C2">הרצליה-גזיבו</a> -->
-      <!-- <a id="c6" style="color: green;" href="http://gloona.esy.es/new%201.html">הרצליה הדרומי</a> -->
       <a id="c7" style="color: white;" href="http://www.seadny.com/" target="blank">לגלשני סידני</a>
-      <!-- <a id="c7" style="color: red;" href="http://gloona.esy.es/new%201.html#C7">חוף הילטון ת"א</a> -->
     </p>
   </nav>
 
