@@ -42,11 +42,12 @@
       width: 200px;
     }
 
-    .cams-container {
+     .cams-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
       padding: 6px;
+      overflow: auto;
     }
 
     .cams-container P {
@@ -59,22 +60,6 @@
       min-height: 33vh;
     }
 
-    iframe img {
-      margin: 0 auto;
-    }
-
-
-    .resiseable-img img {
-      max-width: 100%;
-    }
-
-    img.full-size {
-      position: absolute;
-      width: 100%;
-      position: absolute;
-      top: 0;
-    }
-
     @media(max-width: 914px) {
       .cams-container P {
         min-width: 49%;
@@ -82,9 +67,10 @@
     }
 
     @media(max-width: 740px) {
-      .img img {
+      header img {
         width: 100px;
       }
+
     }
 
     @media(max-width:613px) {
@@ -96,6 +82,7 @@
         font-size: 22px;
       }
     }
+
   </style>
 </head>
 
