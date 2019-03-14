@@ -24,6 +24,13 @@
       width: 100%;
     }
 
+    .row-flex {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5px 0;
+    }
+
     p,
     h1 {
       text-align: center;
@@ -38,6 +45,10 @@
       text-align: center;
     }
 
+    .img img {
+      width: 180px;
+    }
+
     img.full-size {
       position: absolute;
       width: 100%;
@@ -45,7 +56,7 @@
       top: 0;
     }
 
-     .cams-container {
+    .cams-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
@@ -69,11 +80,22 @@
       }
     }
 
-    @media(max-width: 740px) {
+    @media(max-width: 748px) {
       header img {
         width: 100px;
       }
 
+      .row-flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+      }
+
+      .img img {
+        width: 100px;
+      }
     }
 
     @media(max-width:613px) {
@@ -85,31 +107,32 @@
         font-size: 22px;
       }
     }
-
   </style>
 </head>
 
 <body>
   <header>
     <div class="wrapper">
-      <a style="color: white;" href="http://www.seadny.com/" target="_blank">
-        <div class="w3-container w3-blue">
-          <h1> מצלמות חופים </h1>
-          <p>שידור חי - הדרומי - גלישת גלים</p>
+
+      <div class="w3-container w3-blue row-flex">
+        <p>שידור חי - הדרומי - גלישת גלים</p>
+        <h1> מרינה דרום </h1>
+        <a style="color: white;" href="http://www.seadny.com/" target="_blank">
           <div class="img">
             <img id="sidny" src="http://www.seadny.com/wp-content/themes/seadny/images/logo.png" alt="seadny">
           </div>
-          <p>לפירסום כאן 054-6817830</p>
-        </div>
-      </a>
+        </a>
+
+        <p>לפירסום כאן 054-6817830</p>
+      </div>
     </div>
   </header>
 
   <nav>
     <p style="text-align: center;font-size:20px;">
-      <a target="_blank" style="color: white;" href="http://www.seadny.com/">לגלשני סידני</a>
-      <a style="color: white;" href="./forcast.html">לתחזית גלים</a>
       <a style="color: white;" href="./marina.html">מרינה צפון</a>
+      <a style="color: white;" href="./forcast.html">לתחזית גלים</a>
+      <a target="_blank" style="color: white;" href="http://www.seadny.com/">לגלשני סידני</a>
     </p>
   </nav>
 
