@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<title>מצלמות חוף</title>
+<title>מצלמות חופים</title>
 <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="shortcut icon" type="image/png" href="https://akermang.github.io/WeatherApp/sun-favicon.png" />
@@ -68,6 +68,14 @@
       max-width: 100%;
     }
 
+    img.full-size {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+    }
+
     @media(max-width: 914px) {
       .cams-container P {
         min-width: 49%;
@@ -97,8 +105,8 @@
     <div class="wrapper">
       <a style="color: white;" href="http://www.seadny.com/" target="_blank">
         <div class="w3-container w3-blue">
-          <h1>מצלמות חופים </h1>
-          <p>שידור חי - גלישת גלים</p>
+          <h1> מצלמות חופים </h1>
+          <p>שידור חי - הדרומי - גלישת גלים</p>
           <div class="img">
             <img id="sidny" src="http://www.seadny.com/wp-content/themes/seadny/images/logo.png" alt="seadny">
           </div>
@@ -111,44 +119,15 @@
   <nav>
     <p style="text-align: center;font-size:20px;">
       <a target="_blank" style="color: white;" href="http://www.seadny.com/">לגלשני סידני</a>
-      <a style="color: white;" href="./forcast.html" target="_blank">לתחזית גלים</a>
-      <a style="color: white;" href="./marina.html" target="_blank">מרינה צפון
+      <a style="color: white;" href="./forcast.html">לתחזית גלים</a>
+      <a style="color: white;" href="./marina.html">מרינה צפון
       </a>
     </p>
   </nav>
 
   <section class="cams-container">
-    <!-- <p>
-      <iframe src="https://www.youtube.com/embed/L2SOYvS2i7g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-    </p>
-    <p>
-      <iframe src="https://www.youtube.com/embed/zGQ4po7_qRA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-      </iframe>
-    </p>
-    <p>
-      <iframe src="https://www.youtube.com/embed/Lb_qF8C9xfo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-    </p>
-    <p>
-      <iframe src="https://www.youtube.com/embed/6pLidX5QM5o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-    </p>
-    <p>
-      <iframe src="https://www.youtube.com/embed/nSlubKoE5Zs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-      </iframe>
-    </p>
-
-    <p>
-      <iframe src="https://www.youtube.com/embed/bjTmgSFpSlk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-    </p>
-    <p>
-      <iframe src="https://www.youtube.com/embed/4pGewiEPdxk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-    </p> -->
+    <img id="image" onclick="togglesize()" src="http://62.219.45.26:120//mjpg/video.mjpg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></img>
 
   </section>
   <p class="resiseable-img">
@@ -161,5 +140,11 @@
   </p>
 
 </body>
+<script>
+  const togglesize = () => {
+    document.querySelector("#image").classList.toggle("full-size");
+  }
+</script>
+
 
 </html>
