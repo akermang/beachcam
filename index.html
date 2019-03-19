@@ -4,7 +4,6 @@
 <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="shortcut icon" type="image/png" href="https://akermang.github.io/WeatherApp/sun-favicon.png" />
-
 <head>
   <style>
     body {
@@ -114,7 +113,6 @@
 <body>
   <header>
     <div class="wrapper">
-
       <div class="w3-container w3-blue row-flex">
         <p class="info" >שידור חי - הדרומי - גלישת גלים</p>
         <h1> מרינה דרום </h1>
@@ -123,7 +121,6 @@
             <img id="sidny" src="http://www.seadny.com/wp-content/themes/seadny/images/logo.png" alt="seadny">
           </div>
         </a>
-
         <p>לפירסום כאן 054-6817830</p>
       </div>
     </div>
@@ -140,10 +137,8 @@
   <section class="cams-container">
     <img id="image" onclick="togglesize()" src="http://62.219.45.26:120//mjpg/video.mjpg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen alt="מקסימום צופים מחוברים למצלמה...נסו מאוחר יותר"></img>
-
   </section>
  
-
   <p style="text-align: center;">
     <a style="color: gold;" href="">gloona Soft</a>
   </p>
@@ -153,16 +148,12 @@
   const togglesize = () => {
     document.querySelector("#image").classList.toggle("full-size");
   }
-
   const timeOut = () => setTimeout(() => {
     let cam = document.querySelector("#image");
-    cam.style.width = "67%";
-    cam.style.height = "450px";
+    cam.style.width = "66%";
+    cam.style.height = "67vh";
     cam.src = "./images/DSC02569.JPG"
   }, 30000);
   timeOut();
-
 </script>
-
-
 </html>
