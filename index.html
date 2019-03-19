@@ -150,9 +150,11 @@
   }
   const timeOut = () => setTimeout(() => {
     let cam = document.querySelector("#image");
-    cam.style.width = "66%";
-    cam.style.height = "67vh";
-    cam.src = "./images/DSC02569.JPG"
+    cam.style.background =  "white";
+    cam.style.borderRadius = "52%";
+    cam.style.margin = "15%";
+    cam.onclick = null;
+    cam.src="http://www.seadny.com/wp-content/themes/seadny/images/logo.png";
   }, 30000);
   timeOut();
 </script>

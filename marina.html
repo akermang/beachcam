@@ -71,6 +71,10 @@
       min-width: 33%;
     }
 
+    #imag{
+      background: white;
+    }
+
     iframe {
       width: 100%;
       min-height: 33vh;
@@ -139,7 +143,7 @@
   </nav>
 
   <section class="cams-container">
-    <img id="imag" onclick="togglesize()" src="http://62.219.45.26:130//mjpg/video.mjpg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    <img id="imag" onclick="togglesize()"  src="http://62.219.45.26:130//mjpg/video.mjpg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen alt="מקסימום צופים מחוברים למצלמה...נסו מאוחר יותר"></img>
   </section>
 
@@ -155,9 +159,13 @@
 
   const timeOut = () => setTimeout(() => {
     let cam = document.querySelector("#imag");
-    cam.style.width = "66%";
-    cam.style.height = "67vh";
-    cam.src = "./images/DSC02569.JPG";
+   cam.style.width ="90%";
+   cam.style.maxWidth = "780px"
+   cam.style.height = "67vh"
+    cam.style.margin = "4% 10%";
+    cam.style.borderRadius = "52%";
+    cam.onclick = null;
+    cam.src="./images/DSC02569.JPG";
   }, 30000);
   timeOut();
 </script>
