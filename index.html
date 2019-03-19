@@ -151,6 +151,8 @@
   const timeOut = () => setTimeout(() => {
     let cam = document.querySelector("#image");
     cam.style.background =  "white";
+    cam.style.maxWidth = "300px";
+    cam.style.position = "static";
     cam.style.borderRadius = "52%";
     cam.style.margin = "15%";
     cam.onclick = null;
