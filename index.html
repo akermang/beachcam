@@ -4,6 +4,7 @@
 <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="shortcut icon" type="image/png" href="https://akermang.github.io/WeatherApp/sun-favicon.png" />
+
 <head>
   <style>
     body {
@@ -25,7 +26,7 @@
 
     .row-flex {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
       padding: 5px 0;
     }
@@ -33,7 +34,7 @@
     p,
     h1 {
       text-align: center;
-      margin: 1px auto;
+      margin: 0;
     }
 
     h1 {
@@ -90,7 +91,7 @@
       .row-flex {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-evenly;
         align-items: center;
         padding: 0;
       }
@@ -98,15 +99,19 @@
       .img img {
         width: 100px;
       }
+
+      p.info {
+        display: none;
+      }
+
+      h1 {
+        font-size: 22px;
+      }
     }
 
     @media(max-width:613px) {
       .cams-container P {
         min-width: 100%;
-      }
-
-      h1 {
-        font-size: 22px;
       }
     }
   </style>
@@ -116,8 +121,10 @@
   <header>
     <div class="wrapper">
       <div class="w3-container w3-blue row-flex">
-        <p class="info" >שידור חי - הדרומי - גלישת גלים</p>
-        <h1> מרינה דרום </h1>
+        <div>
+          <p class="info">שידור חי - הדרומי - גלישת גלים</p>
+          <h1> מרינה דרום </h1>
+        </div>
         <a style="color: white;" href="http://www.seadny.com/">
           <div class="img">
             <img id="sidny" src="http://www.seadny.com/wp-content/themes/seadny/images/logo.png" alt="seadny">
@@ -140,7 +147,7 @@
     <img id="image" onclick="togglesize()" src="http://62.219.45.26:120//mjpg/video.mjpg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen alt="מקסימום צופים מחוברים למצלמה...נסו מאוחר יותר"></img>
   </section>
- 
+
   <p style="text-align: center;">
     <a style="color: gold;" href="">gloona Soft</a>
   </p>
@@ -152,14 +159,15 @@
   }
   const timeOut = () => setTimeout(() => {
     let cam = document.querySelector("#image");
-    cam.style.background =  "white";
+    cam.style.background = "white";
     cam.style.maxWidth = "300px";
     cam.style.position = "static";
     cam.style.borderRadius = "52%";
     cam.style.margin = "15%";
     cam.onclick = null;
-    cam.src="http://www.seadny.com/wp-content/themes/seadny/images/logo.png";
+    cam.src = "http://www.seadny.com/wp-content/themes/seadny/images/logo.png";
   }, 30000);
   timeOut();
 </script>
+
 </html>
