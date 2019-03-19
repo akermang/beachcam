@@ -62,6 +62,7 @@
       justify-content: space-around;
       padding: 6px;
       overflow: auto;
+      color: wheat;
     }
 
     .cams-container P {
@@ -117,7 +118,7 @@
       <div class="w3-container w3-blue row-flex">
         <p class="info" >שידור חי - הדרומי - גלישת גלים</p>
         <h1> מרינה דרום </h1>
-        <a style="color: white;" href="http://www.seadny.com/" target="_blank">
+        <a style="color: white;" href="http://www.seadny.com/">
           <div class="img">
             <img id="sidny" src="http://www.seadny.com/wp-content/themes/seadny/images/logo.png" alt="seadny">
           </div>
@@ -132,19 +133,16 @@
     <p style="text-align: center;font-size:20px;">
       <a style="color: white;" href="./marina.html">מרינה צפון</a>
       <a style="color: white;" href="./forcast.html">לתחזית גלים</a>
-      <a target="_blank" style="color: white;" href="http://www.seadny.com/">לגלשני סידני</a>
+      <a style="color: white;" href="http://www.seadny.com/">לגלשני סידני</a>
     </p>
   </nav>
 
   <section class="cams-container">
     <img id="image" onclick="togglesize()" src="http://62.219.45.26:120//mjpg/video.mjpg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen></img>
+      allowfullscreen alt="יותר מדי צופים במצלמה...נסו מאוחר יותר"></img>
 
   </section>
-  <p class="resiseable-img">
-    <a href="http://62.219.45.26:130//mjpg/video.mjpg" target="_blank">מרינה צפון
-    </a>
-  </p>
+ 
 
   <p style="text-align: center;">
     <a style="color: gold;" href="">gloona Soft</a>
@@ -155,6 +153,15 @@
   const togglesize = () => {
     document.querySelector("#image").classList.toggle("full-size");
   }
+
+  const timeOut = () => setTimeout(() => {
+    let cam = document.querySelector("#image");
+    cam.style.width = "67%";
+    cam.style.height = "450px";
+    cam.src = "./images/DSC02569.JPG"
+  }, 40000);
+  timeOut();
+
 </script>
 
 

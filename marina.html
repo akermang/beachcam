@@ -63,6 +63,7 @@
       justify-content: space-around;
       padding: 6px;
       overflow: auto;
+      color: wheat;
     }
 
     .cams-container P {
@@ -116,35 +117,31 @@
 <body>
   <header>
     <div class="wrapper">
-      <a style="color: white;" href="./index.html">
 
-        <div class="w3-container w3-blue row-flex">
-          <p class="info" >הרצליה מצלמת גלים</p>
-          <h1>מרינה צפון </h1>
-          
+      <div class="w3-container w3-blue row-flex">
+        <p class="info" >שידור חי - הדרומי - גלישת גלים</p>
+        <h1> מרינה צפון </h1>
+        <a style="color: white;" href="http://www.seadny.com/">
           <div class="img">
-
             <img id="sidny" src="http://www.seadny.com/wp-content/themes/seadny/images/logo.png" alt="seadny">
           </div>
-          <p>לפירסום כאן 054-6817830</p>
-        </div>
+        </a>
 
-      </a>
-
+        <p>לפירסום כאן 054-6817830</p>
+      </div>
     </div>
-
   </header>
   <nav>
     <p style="text-align: center;font-size:20px;">
-      <a style="color: white;" href="./index.html">מרינה דרומי</a>
+      <a style="color: white;" href="./index.html">מרינה דרום</a>
       <a style="color: white;" href="./forcast.html">לתחזית גלים</a>
-      <a style="color: white;" href="http://www.seadny.com/" target="_blank">לגלשני סידני</a>
+      <a style="color: white;" href="http://www.seadny.com/" >לגלשני סידני</a>
     </p>
   </nav>
 
   <section class="cams-container">
     <img id="imag" onclick="togglesize()" src="http://62.219.45.26:130//mjpg/video.mjpg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen></img>
+      allowfullscreen alt="יותר מדי צופים במצלמה...נסו מאוחר  יותר"></img>
   </section>
   <p style="text-align: center;">
     <a style="color: gold;" href="">gloona Soft</a>
@@ -155,6 +152,13 @@
   const togglesize = () => {
     document.querySelector("#imag").classList.toggle("full-size");
   }
+
+  const timeOut = () => setTimeout(() => {
+    let cam = document.querySelector("#imag");
+    cam.style.width = "70%";
+    cam.src = "http://www.seadny.com/wp-content/uploads/2015/03/slider1.jpg"
+  }, 40000);
+  timeOut();
 </script>
 
 </html>
