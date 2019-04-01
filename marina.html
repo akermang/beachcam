@@ -179,12 +179,13 @@
 
   const changeView = () => {
     cam.style.background = "#f1f1f157";
-    cam.style.maxWidth = "300px";
+    cam.style.maxWidth = "99%";
+    cam.style.maxHeight = "300px";
     cam.style.position = "static";
     cam.style.borderRadius = "52%";
-    cam.style.margin = "15%";
+    cam.style.margin = "40px 10%";
     cam.onclick = null;
-    cam.src = "http://www.seadny.com/wp-content/themes/seadny/images/logo.png";
+    cam.src = "./images/DSC02569.JPG";
   }
 
   cam.onerror = () => {
