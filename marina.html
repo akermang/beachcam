@@ -64,16 +64,22 @@
     }
 
     img.full-size {
-      position: absolute;
       width: 100%;
       position: absolute;
       top: 0;
+      left: 0;
+    }
+
+    .message {
+      color: wheat;
+      text-align: center;
+      font-size: medium;
     }
 
     .cams-container {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-around;
+      justify-content: center;
       padding: 6px;
       overflow: auto;
       color: wheat;
@@ -84,7 +90,7 @@
       min-width: 33%;
     }
 
-    #imag {
+    #image {
       background: white;
     }
 
@@ -151,7 +157,6 @@
       </div>
     </div>
   </header>
-
   <nav>
     <p style="text-align: center;font-size:20px;">
       <a style="color: white;" href="./index.html">מרינה דרום</a>
@@ -159,34 +164,43 @@
       <a style="color: white;" href="http://www.seadny.com/">לגלשני סידני</a>
     </p>
   </nav>
-
+  <div class="message"></div>
   <section class="cams-container">
-    <img id="imag" onclick="togglesize()" src="http://62.219.45.26:130//mjpg/video.mjpg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen alt="מקסימום צופים מחוברים למצלמה...נסו מאוחר יותר"></img>
+    <img id="image" onclick="togglesize()" src="http://62.219.45.26:130//mjpg/video.mjpg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen alt="מקסימום צופים מחוברים למצלמה..נסו מאוחר יותר"></img>
   </section>
-
   <p style="text-align: center;">
     <a style="color: gold;" href="">gloona Soft</a>
   </p>
-
 </body>
 <script>
+  let cam = document.querySelector("#image");
+  const message = document.querySelector(".message");
+
+  const changeView = () => {
+    cam.style.background = "#f1f1f157";
+    cam.style.maxWidth = "300px";
+    cam.style.position = "static";
+    cam.style.borderRadius = "52%";
+    cam.style.margin = "15%";
+    cam.onclick = null;
+    cam.src = "http://www.seadny.com/wp-content/themes/seadny/images/logo.png";
+  }
+
+  cam.onerror = () => {
+    changeView();
+    message.innerHTML = "מקסימום צופים מחוברים למצלמה<br>נסו מאוחר יותר";
+  };
+
   const togglesize = () => {
-    document.querySelector("#imag").classList.toggle("full-size");
+    document.querySelector("#image").classList.toggle("full-size");
   }
 
   const timeOut = () => setTimeout(() => {
-    let cam = document.querySelector("#imag");
-    cam.style.width = "90%";
-    cam.style.maxWidth = "780px"
-    cam.style.height = "67vh"
-    cam.style.margin = "4% 10%";
-    cam.style.position = "static";
-    cam.style.borderRadius = "52%";
-    cam.onclick = null;
-    cam.src = "./images/DSC02569.JPG";
+    changeView()
   }, 30000);
   timeOut();
+
 </script>
 
 </html>
