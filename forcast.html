@@ -7,16 +7,16 @@
 
 <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-22782431-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-22782431-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'UA-22782431-1');
-</script>
+    gtag('config', 'UA-22782431-1');
+  </script>
 
-</script>
+  </script>
 
   <style>
     body {
@@ -40,15 +40,15 @@
 
     .row-flex {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 5px 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
     }
 
     p,
     h1 {
       text-align: center;
-      margin: 1px auto;
+      margin: 0;
     }
 
     h1 {
@@ -56,8 +56,8 @@
     }
 
     nav p {
-        font-size: 20px;
-      }
+      font-size: 20px;
+    }
 
     div.img {
       text-align: center;
@@ -99,7 +99,7 @@
       }
     }
 
-    @media(max-width: 748px) {
+     @media(max-width: 748px) {
       header img {
         width: 100px;
       }
@@ -107,7 +107,7 @@
       .row-flex {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-evenly;
         align-items: center;
         padding: 0;
       }
@@ -115,15 +115,19 @@
       .img img {
         width: 100px;
       }
+
+      p.info {
+        display: none;
+      }
+
+      h1 {
+        font-size: 22px;
+      }
     }
 
     @media(max-width:613px) {
       .cams-container P {
         min-width: 100%;
-      }
-
-      h1 {
-        font-size: 22px;
       }
     }
 
@@ -138,21 +142,19 @@
 <body>
   <header>
     <div class="wrapper">
-      <a style="color: white;" href="./index.html">
-        <div class="w3-container w3-blue row-flex">
-          <p class="info" >הרצליה תחזית גלים</p>
+      <div class="w3-container w3-blue row-flex">
+        <div>
+          <p class="info">הרצליה תחזית גלים</p>
           <h1>תחזית בזבולון </h1>
+        </div>
+        <a style="color: white;" href="./index.html">
           <div class="img">
-
             <img id="sidny" src="http://www.seadny.com/wp-content/themes/seadny/images/logo.png" alt="seadny">
           </div>
-          <p>לפירסום כאן 054-6817830</p>
-        </div>
-
-      </a>
-
+        </a>
+        <p>לפירסום כאן 054-6817830</p>
+      </div>
     </div>
-
   </header>
   <nav>
     <p>
