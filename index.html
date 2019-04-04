@@ -17,6 +17,15 @@
   </script>
 
   <style>
+    @keyframes loader-spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
     body {
       background-color: black;
     }
@@ -97,6 +106,33 @@
       min-height: 33vh;
     }
 
+    .loader-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      /*   opacity: 1; */
+    }
+
+    .loader {
+      /*   display: inline-block; */
+      border: 4px solid #17a2b8;
+      border-left-color: rgba(0, 0, 0, 0.1);
+      border-top-color: #2196F3;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: loader-spin 0.8s linear infinite;
+      opacity: 1;
+      opacity: 1;
+      /*   margin-top: calc(50vh - 15px); */
+      /*   margin-left: calc(50% - 15px); */
+    }
+
     @media(max-width: 914px) {
       .cams-container P {
         min-width: 49%;
@@ -170,7 +206,7 @@
   </nav>
   <div class="message"></div>
   <section class="cams-container">
-    <img id="image" onclick="togglesize()" src="http://62.219.45.26:120//mjpg/video.mjpg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    <img cam.onclick='togglesize()' id="image" src="http://62.219.45.26:120//mjpg/video.mjpg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen alt="מקסימום צופים מחוברים למצלמ..נסו מאוחר יותר"></img>
   </section>
 
@@ -178,9 +214,14 @@
     <a style="color: gold;" href="">gloona Soft</a>
   </p>
 
+  <div class="loader-container">
+    <div class="loader"></div>
+  </div>
+
 </body>
 <script>
   let cam = document.querySelector("#image");
+  const loader = document.querySelector(".loader-container");
   const message = document.querySelector(".message");
 
   const changeView = () => {
@@ -193,6 +234,9 @@
     cam.src = "http://www.seadny.com/wp-content/themes/seadny/images/logo.png";
   }
 
+  cam.onload = () => {
+    loader.style.display = "none"
+  }
   cam.onerror = () => {
     changeView();
     message.innerHTML = "..מקסימום צופים מחוברים למצלמה<br>נסו מאוחר יותר";
