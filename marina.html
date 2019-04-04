@@ -135,6 +135,10 @@
       opacity: 1;
     }
 
+    .main-container {
+      min-height: calc(100vh - 160px)
+    }
+
     @media(max-width: 914px) {
       .cams-container P {
         min-width: 49%;
@@ -205,13 +209,17 @@
     </p>
   </nav>
   <div class="message"></div>
-  <section class="cams-container">
-    <img id="image" onclick="togglesize()" src="http://62.219.45.26:130//mjpg/video.mjpg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen alt="מקסימום צופים מחוברים למצלמה..נסו מאוחר יותר"></img>
-  </section>
-  <p style="text-align: center;">
-    <a style="color: gold;" href="">gloona Soft</a>
-  </p>
+  <div class="main-container">
+    <section class="cams-container">
+      <img id="image" onclick="togglesize()" src="http://62.219.45.26:130//mjpg/video.mjpg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen alt="מקסימום צופים מחוברים למצלמה..נסו מאוחר יותר"></img>
+    </section>
+  </div>
+  <footer>
+    <p style="text-align: center;">
+      <a style="color: gold;" href="">gloona Soft</a>
+    </p>
+  </footer>
 
   <div class="loader-container">
     <div class="loader"></div>
