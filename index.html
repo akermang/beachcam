@@ -100,7 +100,7 @@
       color: white;
       top: 5%;
       left: 2%;
-      font-size: 17px; 
+      font-size: 17px;
     }
 
     .cams-container.full-size {
@@ -187,6 +187,11 @@
     @media(max-width:530px) {}
 
     @media (max-width: 530px) {
+      .cam-title {
+        bottom: 5%;
+        top: initial;
+      }
+
       .row-flex {
         display: flex;
         flex-direction: column;
@@ -253,11 +258,16 @@
 
 </body>
 <script>
-  let cam = document.querySelector("#image");
+
+  const cam = document.querySelector("#image");
   const camContainer = document.querySelector(".cams-container");
   const camTitle = document.querySelector(".cam-title");
   const loader = document.querySelector(".loader-container");
   const message = document.querySelector(".message");
+
+  const togglesize = () => {
+    camContainer.classList.toggle("full-size");
+  }
 
   const changeView = () => {
     cam.style.background = "#f1f1f157";
@@ -267,6 +277,7 @@
     cam.style.margin = "15%";
     cam.onclick = null;
     camTitle.style.display = "none";
+    camContainer.classList.remove("full-size");
     cam.src = "http://www.seadny.com/wp-content/themes/seadny/images/logo.png";
   }
 
@@ -279,13 +290,11 @@
     message.innerHTML = "..מקסימום צופים מחוברים למצלמה<br>נסו מאוחר יותר";
   };
 
-  const togglesize = () => {
-    document.querySelector(".cams-container").classList.toggle("full-size");
-  }
+
 
   const timeOut = () => setTimeout(() => {
     changeView()
-  }, 30000);
+  }, 10000);
   timeOut();
 </script>
 
