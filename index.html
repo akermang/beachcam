@@ -100,6 +100,7 @@
       color: white;
       top: 5%;
       left: 2%;
+      font-size: 17px; 
     }
 
     .cams-container.full-size {
@@ -254,6 +255,7 @@
 <script>
   let cam = document.querySelector("#image");
   const camContainer = document.querySelector(".cams-container");
+  const camTitle = document.querySelector(".cam-title");
   const loader = document.querySelector(".loader-container");
   const message = document.querySelector(".message");
 
@@ -264,6 +266,7 @@
     cam.style.borderRadius = "52%";
     cam.style.margin = "15%";
     cam.onclick = null;
+    camTitle.style.display = "none";
     cam.src = "http://www.seadny.com/wp-content/themes/seadny/images/logo.png";
   }
 
