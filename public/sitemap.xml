@@ -8,25 +8,29 @@
 
 
 <url>
-  <loc>https://beachcam.co.il/</loc>
-  <lastmod>2019-04-05T11:22:32+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://beachcam.co.il/marina.html</loc>
-  <lastmod>2019-04-05T11:22:32+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://beachcam.co.il/forcast.html</loc>
-  <lastmod>2019-04-05T11:22:32+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://beachcam.co.il/index.html</loc>
-  <lastmod>2019-04-05T11:22:32+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
+  <loc>https://beachcam.co.il/</loc> 
+  <lastmod>2019-04-07T10:56:17+00:00</lastmod> 
+  <priority>1.00</priority> 
+  </url>
+- <url>
+  <loc>https://beachcam.co.il/index.html</loc> 
+  <lastmod>2019-04-07T10:56:17+00:00</lastmod> 
+  <priority>0.80</priority> 
+  </url>
+- <url>
+  <loc>https://beachcam.co.il/marina.html</loc> 
+  <lastmod>2019-04-07T10:56:16+00:00</lastmod> 
+  <priority>0.80</priority> 
+  </url>
+- <url>
+  <loc>https://beachcam.co.il/forcast.html</loc> 
+  <lastmod>2019-04-07T10:56:17+00:00</lastmod> 
+  <priority>0.80</priority> 
+  </url>
+- <url>
+  <loc>https://beachcam.co.il/marina.out.html</loc> 
+  <lastmod>2019-04-07T10:56:17+00:00</lastmod> 
+  <priority>0.64</priority> 
+  </url>
 
 
-</urlset>
