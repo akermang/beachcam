@@ -9,8 +9,6 @@
   />
   <meta name="keywords" content="הרצליה,דרומי,מרינה דרום,מצלמת גלישה, גלים,מצלמת חוף הרצליה,גלישה,מצב,גלים,שידור,חי,מרינה,surf,live,Camera"
   />
-  <meta property="og:description" content="הרצליה,דרומי,מרינה דרום,מצלמת גלישה, גלים,מצלמת חוף הרצליה,גלישה,גלים,שידור,חי,מרינה,surf,live,Camera,מצלמות חוף שידור ישיר ישראל"
-  />
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
   <link rel="shortcut icon" type="image/png" href="https://akermang.github.io/WeatherApp/sun-favicon.png" />
   <title>מצלמות חופים | BeachCam</title>
@@ -292,7 +290,7 @@
       cam.style.position = "static";
       cam.style.borderRadius = "52%";
       cam.style.margin = "15%";
-      cam.onclick = null;
+      cam.onclick = () => location.reload();
       camTitle.style.display = "none";
       camContainer.classList.remove("full-size");
       cam.src = "http://www.seadny.com/wp-content/themes/seadny/images/logo.png";
