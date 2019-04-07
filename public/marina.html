@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<title>מצלמות חופים | BeachCam</title>
-<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
-<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="מצלמות חוף שידור ישיר ישראל" />
-<meta name="keywords" content="הרצליה,דרומי,מרינה דרום,מצלמת גלישה, גלים,מצלמת חוף הרצליה,גלישה,מצב,גלים,שידור,חי,מרינה,surf,live,Camera"
-/>
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="shortcut icon" type="image/png" href="https://akermang.github.io/WeatherApp/sun-favicon.png" />
 
 <head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="מצלמות חוף שידור ישיר ישראל" />
+  <meta name="keywords" content="הרצליה,דרומי,מרינה דרום,מצלמת גלישה, גלים,מצלמת חוף הרצליה,גלישה,מצב,גלים,שידור,חי,מרינה,surf,live,Camera"
+  />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="shortcut icon" type="image/png" href="https://akermang.github.io/WeatherApp/sun-favicon.png" />
+  <title>מצלמות חופים | BeachCam</title>
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-22782431-1"></script>
   <script>
@@ -254,8 +255,7 @@
   <div class="main-container">
     <section class="cams-container">
       <div class="cam-title">BeachCam.co.il</div>
-      <img id="image" onclick="togglesize()" src="http://62.219.45.26:130//mjpg/video.mjpg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen alt="מצלמת חוף"></img>
+      <img id="image" onclick="togglesize()" src="http://62.219.45.26:130//mjpg/video.mjpg" alt="מצלמת חוף">
     </section>
   </div>
   <footer>
@@ -267,44 +267,44 @@
   <div class="loader-container">
     <div class="loader"></div>
   </div>
+  <script>
+
+    const cam = document.querySelector("#image");
+    const camContainer = document.querySelector(".cams-container");
+    const camTitle = document.querySelector(".cam-title");
+    const loader = document.querySelector(".loader-container");
+    const message = document.querySelector(".message");
+
+    const togglesize = () => {
+      camContainer.classList.toggle("full-size");
+    }
+
+    const changeView = () => {
+      cam.style.background = "#f1f1f157";
+      cam.style.maxWidth = "300px";
+      cam.style.position = "static";
+      cam.style.borderRadius = "52%";
+      cam.style.margin = "15%";
+      cam.onclick = null;
+      camTitle.style.display = "none";
+      camContainer.classList.remove("full-size");
+      cam.src = "http://www.seadny.com/wp-content/themes/seadny/images/logo.png";
+    }
+
+    cam.onload = () => {
+      loader.style.display = "none";
+      camContainer.style.display = "flex";
+    }
+    cam.onerror = () => {
+      changeView();
+      message.innerHTML = "..מקסימום צופים מחוברים למצלמה<br>נסו מאוחר יותר";
+    };
+
+    const timeOut = () => setTimeout(() => {
+      changeView()
+    }, 30000);
+    timeOut();
+  </script>
 </body>
-<script>
-
-  const cam = document.querySelector("#image");
-  const camContainer = document.querySelector(".cams-container");
-  const camTitle = document.querySelector(".cam-title");
-  const loader = document.querySelector(".loader-container");
-  const message = document.querySelector(".message");
-
-  const togglesize = () => {
-    camContainer.classList.toggle("full-size");
-  }
-
-  const changeView = () => {
-    cam.style.background = "#f1f1f157";
-    cam.style.maxWidth = "300px";
-    cam.style.position = "static";
-    cam.style.borderRadius = "52%";
-    cam.style.margin = "15%";
-    cam.onclick = null;
-    camTitle.style.display = "none";
-    camContainer.classList.remove("full-size");
-    cam.src = "http://www.seadny.com/wp-content/themes/seadny/images/logo.png";
-  }
-
-  cam.onload = () => {
-    loader.style.display = "none";
-    camContainer.style.display = "flex";
-  }
-  cam.onerror = () => {
-    changeView();
-    message.innerHTML = "..מקסימום צופים מחוברים למצלמה<br>נסו מאוחר יותר";
-  };
-
-  const timeOut = () => setTimeout(() => {
-    changeView()
-  }, 30000);
-  timeOut();
-</script>
 
 </html>
