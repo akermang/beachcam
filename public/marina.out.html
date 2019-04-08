@@ -75,6 +75,7 @@
             text-align: center;
             border-radius: 2px;
             background-color: rgb(241, 232, 232);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
         }
 
         div.img:hover {
@@ -82,7 +83,8 @@
         }
 
         .img img {
-            width: 200px;
+            width: 206px;
+            padding: 0 3px;
         }
 
         .message {
@@ -179,13 +181,13 @@
 
         @media(max-width: 700px) {
             .img img {
-                width: 140px;
+                width: 146px;
             }
         }
 
         @media(max-width: 599px) {
             header img {
-                width: 115px;
+                width: 121px;
             }
 
             .cams-container P {
@@ -193,7 +195,7 @@
             }
 
             .img img {
-                width: 115px;
+                width: 121px;
             }
 
             h1,
@@ -202,7 +204,7 @@
             }
         }
 
-        @media (max-width: 530px) {
+        @media (max-width: 536px) {
             .cam-title {
                 bottom: 5%;
                 top: initial;
@@ -238,7 +240,7 @@
 
                 <a style="color: white;" href="https://tosess.co.il/">
                     <div class="img">
-                        <img id="sidny" src = "./images/tosess.png" alt="מצלמות חוף">
+                        <img id="sidny" src="./images/tosess.png" alt="מצלמות חוף">
                     </div>
                 </a>
                 <div>
@@ -288,7 +290,7 @@
             // cam.style.background = "#f1f1f157";
             cam.style.maxWidth = "300px";
             cam.style.position = "static";
-            cam.style.height =  "75px";
+            cam.style.height = "75px";
             // cam.style.borderRadius = "52%";
             cam.style.margin = "15%";
             cam.onclick = () => location.reload();
