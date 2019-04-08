@@ -57,7 +57,8 @@
     }
 
     p,
-    h1,h2 {
+    h1,
+    h2 {
       text-align: center;
       margin: 0;
     }
@@ -66,7 +67,8 @@
       font-size: 20px;
     }
 
-    h1,h2 {
+    h1,
+    h2 {
       font-size: 30px;
     }
 
@@ -195,7 +197,8 @@
         width: 115px;
       }
 
-      h1,h2 {
+      h1,
+      h2 {
         font-size: 22px;
       }
     }
@@ -235,7 +238,7 @@
         </div>
         <a style="color: white;" href="https://tosess.co.il/">
           <div class="img">
-            <img id="sidny" src="https://tosess.co.il/wp-content/uploads/2018/03/logo.png" alt="מצלמת חוף">
+            <img id="sidny" src="../images/toses.png" alt="מצלמת חוף">
           </div>
         </a>
         <div>
@@ -289,13 +292,13 @@
       // cam.style.background = "#f1f1f157";
       cam.style.maxWidth = "300px";
       cam.style.position = "static";
-      cam.style.height =  "75px";
+      cam.style.height = "75px";
       // cam.style.borderRadius = "52%";
       cam.style.margin = "15%";
       cam.onclick = () => location.reload();
       camTitle.style.display = "none";
       camContainer.classList.remove("full-size");
-      cam.src = "https://tosess.co.il/wp-content/uploads/2018/03/logo.png";
+      cam.src = "../images/toses.png";
     }
 
     cam.onload = () => {
@@ -309,7 +312,7 @@
 
     const timeOut = () => setTimeout(() => {
       changeView()
-    }, 30000);
+    }, 300);
     timeOut();
   </script>
 </body>
