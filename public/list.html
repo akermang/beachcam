@@ -23,6 +23,15 @@
     </script>
 
     <style>
+        @keyframes createBox {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+
         body {
             background-color: black;
         }
@@ -35,6 +44,10 @@
 
         a {
             text-decoration: none;
+        }
+
+        div.animat-box-in {
+            animation: createBox .25s;
         }
 
         .wrapper {
@@ -171,10 +184,10 @@
 
                 <a style="color: white;" href="https://tosess.co.il/">
                     <div class="img">
-                        <img id="sidny" src = "./images/tosess.png" alt="מצלצת חוף">
+                        <img id="sidny" src="./images/tosess.png" alt="מצלצת חוף">
                     </div>
                 </a>
-                <div>
+                <div class="animat-box-in">
                     <p class="info">הרצליה תחזית גלים</p>
                     <h1>תחזית בזבולון </h1>
                 </div>
@@ -182,10 +195,12 @@
         </div>
     </header>
     <nav>
-        <p>
-            <a style="color: white;" href="./index.html">למצלמות |</a>
-            <a style="color: white;" href="http://www.seadny.com/">לגלשני סידני</a>
-        </p>
+        <div class="animat-box-in">
+            <p>
+                <a style="color: white;" href="./index.html">למצלמות |</a>
+                <a style="color: white;" href="http://www.seadny.com/">לגלשני סידני</a>
+            </p>
+        </div>
     </nav>
 
     <section class="cams-container">

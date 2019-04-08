@@ -32,6 +32,15 @@
       }
     }
 
+    @keyframes createBox {
+      from {
+        transform: scale(0);
+      }
+      to {
+        transform: scale(1);
+      }
+    }
+
     body {
       background-color: black;
     }
@@ -43,6 +52,10 @@
 
     a {
       text-decoration: none;
+    }
+
+    div.animat-box-in {
+      animation: createBox .25s;
     }
 
     .wrapper {
@@ -241,7 +254,7 @@
             <img id="sidny" src="./images/tosess.png" alt="מצלמת חוף">
           </div>
         </a>
-        <div>
+        <div class="animat-box-in">
           <p class="info">שידור חי - הדרומי - גלישת גלים</p>
           <h2> מרינה דרום </h2>
         </div>
@@ -251,12 +264,14 @@
   </header>
 
   <nav>
-    <p>
-      <a style="color: white;" href="./marina.html">למרינה צפון |</a>
-      <a style="color: white;" href="./forcast.html">לתחזית גלים |</a>
-      <a style="color: white;" href="./marina.out.html">מרינה כניסה</a>
-      <!-- <a style="color: white;" href="http://www.seadny.com/">לגלשני סידני</a> -->
-    </p>
+    <div class="animat-box-in">
+      <p>
+        <a style="color: white;" href="./marina.html">למרינה צפון |</a>
+        <a style="color: white;" href="./forcast.html">לתחזית גלים |</a>
+        <a style="color: white;" href="./marina.out.html">מרינה כניסה</a>
+        <!-- <a style="color: white;" href="http://www.seadny.com/">לגלשני סידני</a> -->
+      </p>
+    </div>
   </nav>
   <div class="message"></div>
   <div class="main-container">

@@ -31,6 +31,15 @@
             }
         }
 
+        @keyframes createBox {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+
         body {
             background-color: black;
         }
@@ -42,6 +51,10 @@
 
         a {
             text-decoration: none;
+        }
+
+        div.animat-box-in {
+            animation: createBox .25s;
         }
 
         .wrapper {
@@ -238,10 +251,10 @@
 
                 <a style="color: white;" href="https://tosess.co.il/">
                     <div class="img">
-                        <img id="sidny" src = "./images/tosess.png" alt="מצלמות חוף">
+                        <img id="sidny" src="./images/tosess.png" alt="מצלמות חוף">
                     </div>
                 </a>
-                <div>
+                <div class="animat-box-in">
                     <p class="info">שידור חי - הרצליה - כניסה למרינה</p>
                     <h2> מרינה כניסה </h2>
                 </div>
@@ -249,12 +262,14 @@
         </div>
     </header>
     <nav>
-        <p>
-            <a style="color: white;" href="./index.html">למרינה דרום |</a>
-            <a style="color: white;" href="./forcast.html">תחזית גלים |</a>
-            <a style="color: white;" href="./marina.html">למרינה צפון</a>
+        <div class="animat-box-in">
+            <p>
+                <a style="color: white;" href="./index.html">למרינה דרום |</a>
+                <a style="color: white;" href="./forcast.html">תחזית גלים |</a>
+                <a style="color: white;" href="./marina.html">למרינה צפון</a>
 
-        </p>
+            </p>
+        </div>
     </nav>
     <div class="message"></div>
     <div class="main-container">
@@ -288,7 +303,7 @@
             // cam.style.background = "#f1f1f157";
             cam.style.maxWidth = "300px";
             cam.style.position = "static";
-            cam.style.height =  "75px";
+            cam.style.height = "75px";
             // cam.style.borderRadius = "52%";
             cam.style.margin = "15%";
             cam.onclick = () => location.reload();
