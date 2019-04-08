@@ -56,7 +56,8 @@
         }
 
         p,
-        h1,h2 {
+        h1,
+        h2 {
             text-align: center;
             margin: 0;
         }
@@ -65,14 +66,15 @@
             font-size: 20px;
         }
 
-        h1,h2 {
+        h1,
+        h2 {
             font-size: 30px;
         }
 
         div.img {
             text-align: center;
-            border-radius: 52%;
-            background-color: white;
+            border-radius: 2px;
+            background-color: rgb(241, 232, 232);
         }
 
         div.img:hover {
@@ -194,7 +196,8 @@
                 width: 100px;
             }
 
-            h1,h2 {
+            h1,
+            h2 {
                 font-size: 22px;
             }
         }
@@ -233,9 +236,9 @@
                     </a>
                 </div>
 
-                <a style="color: white;" href="http://www.seadny.com/">
+                <a style="color: white;" href="https://tosess.co.il/">
                     <div class="img">
-                        <img id="sidny" src="http://www.seadny.com/wp-content/themes/seadny/images/logo.png" alt="seadny">
+                        <img id="sidny" src="https://tosess.co.il/wp-content/uploads/2018/03/logo.png" alt="מצלמות חוף">
                     </div>
                 </a>
                 <div>
@@ -282,15 +285,15 @@
         }
 
         const changeView = () => {
-            cam.style.background = "#f1f1f157";
+            // cam.style.background = "#f1f1f157";
             cam.style.maxWidth = "300px";
             cam.style.position = "static";
-            cam.style.borderRadius = "52%";
+            // cam.style.borderRadius = "52%";
             cam.style.margin = "15%";
             cam.onclick = () => location.reload();
             camTitle.style.display = "none";
             camContainer.classList.remove("full-size");
-            cam.src = "http://www.seadny.com/wp-content/themes/seadny/images/logo.png";
+            cam.src = "https://tosess.co.il/wp-content/uploads/2018/03/logo.png";
         }
 
         cam.onload = () => {
