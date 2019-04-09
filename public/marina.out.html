@@ -184,6 +184,23 @@
             box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
         }
 
+        .jump-btn.show {
+            width: 40px;
+            position: relative;
+            height: 40px;
+            background: transparent url("./images/jump.png") no-repeat;
+            background-position: center center;
+            background-size: contain;
+            outline: 0!important;
+            border: 0;
+            color: white;
+            line-height: 2.5;
+            margin-left: 73vw;
+            text-align: center;
+            opacity: 0.7;
+            cursor: pointer;
+        }
+
         @media(max-width: 914px) {
             .cams-container P {
                 min-width: 49%;
@@ -277,6 +294,9 @@
             <div class="cam-title">BeachCam.co.il</div>
             <img id="image" onclick="togglesize()" src="http://62.219.45.26:140//mjpg/video.mjpg" frameborder="0" alt="מצלמת חוף">
         </section>
+        <div class="jump-btn" onclick="location.reload()">
+            דלג
+        </div>
     </div>
     <footer>
         <p style="text-align: center;">
@@ -294,6 +314,11 @@
         const camTitle = document.querySelector(".cam-title");
         const loader = document.querySelector(".loader-container");
         const message = document.querySelector(".message");
+        const jumpBtn = document.querySelector(".jump-btn");
+
+        const showJumpBtn = () => {
+            jumpBtn.classList.add("show");
+        }
 
         const togglesize = () => {
             camContainer.classList.toggle("full-size");
@@ -310,6 +335,7 @@
             camTitle.style.display = "none";
             camContainer.classList.remove("full-size");
             cam.src = "./images/tosess.png";
+            showJumpBtn();
         }
 
         cam.onload = () => {
@@ -318,7 +344,7 @@
         }
         cam.onerror = () => {
             changeView();
-            message.innerHTML = "..מקסימום צופים מחוברים למצלמה<br>נסו מאוחר יותר <br> BeachCam.co.il אנו בצוות   <br> משפרים את המערכת כדי<br>לספק לכם חוויית צפייה מדהימה <br> כבר בימים הקרובים.. מצלמות חדשות! וחווית גלישה משופרת";
+            message.innerHTML = "..מקסימום צופים מחוברים למצלמה<br>נסו מאוחר יותר <br> BeachCam.co.il אנו בצוות   <br> משפרים את המערכת כדי<br>לספק לכם חוויית צפייה מדהימה <br> כבר בימים הקרובים.. מצלמות חדשות! וחוויית גלישה משופרת";
         };
 
         const timeOut = () => setTimeout(() => {
