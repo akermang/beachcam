@@ -65,11 +65,11 @@
             text-decoration: none;
         }
 
-        div.animat-box-in {
+        div.animate-box-in {
             animation: createBox .25s;
         }
 
-        div.animat-box-in-y {
+        div.animate-box-in-y {
             animation: createBoxY .25s;
         }
 
@@ -125,6 +125,15 @@
             flex-wrap: wrap;
             justify-content: space-around;
             padding: 6px;
+        }
+
+        .main-container {
+            min-height: calc(100vh - 155px);
+        }
+
+        .link-list {
+            max-width: 40%;
+            margin: 5px auto;
         }
 
         .cams-container P {
@@ -192,6 +201,10 @@
         }
 
         @media (max-width: 530px) {
+            .link-list {
+                max-width: 60%;
+            }
+
             .row-flex {
                 display: flex;
                 flex-direction: column;
@@ -225,17 +238,18 @@
                         <img id="sidny" src="./images/tosess.png" alt="מצלצת חוף">
                     </div>
                 </a>
-                <div class="animat-box-in">
+                <div class="animate-box-in">
                     <p class="info">שידור חי - מצלמות גלים</p>
-                    <h1>מצלמות חוף</h1> </h1>
+                    <h1>מצלמות חוף</h1>
+                    </h1>
                 </div>
             </div>
         </div>
     </header>
 
 
-    <section class="cams-container">
-        <div class="animat-box-in-y">
+    <div class="main-container">
+        <div class="link-list animate-box-in-y">
             <li>
                 <a style="color: white;" href="./index.html">
                     <p class="cam-link">חוף הצוק תל-אביב</p>
@@ -272,10 +286,12 @@
                 </a>
             </li>
         </div>
-    </section>
-    <p style="text-align: center;">
-        <a style="color: gold;" href="">gloona Soft</a>
-    </p>
+    </div>
+    <footer>
+        <p style="text-align: center;">
+            <a style="color: gold;" href="">gloona Soft</a>
+        </p>
+    </footer>
 
 </body>
 
