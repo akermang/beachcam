@@ -3,12 +3,15 @@
 
 <head>
   <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WPTQ3HT');</script>
-    <!-- End Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+    w[l] = w[l] || []; w[l].push({
+      'gtm.start':
+        new Date().getTime(), event: 'gtm.js'
+    }); var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-WPTQ3HT');</script>
+  <!-- End Google Tag Manager -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="מצלמות חוף שידור ישיר ישראל" />
@@ -190,7 +193,12 @@
       box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
     }
 
+    .jump-btn {
+      display: none;
+    }
+
     .jump-btn.show {
+      display: block;
       width: 40px;
       position: relative;
       height: 40px;
@@ -203,8 +211,12 @@
       line-height: 2.5;
       margin-left: 73vw;
       text-align: center;
-      opacity: 0.7;
+      opacity: 0.6;
       cursor: pointer;
+    }
+
+    .jump-btn.show:hover {
+      opacity: 1;
     }
 
     @media(max-width: 914px) {
@@ -333,7 +345,7 @@
       // cam.style.background = "#f1f1f157";
       cam.style.maxWidth = "300px";
       cam.style.position = "static";
-      cam.style.height = "75px";
+      cam.style.height = "70px";
       // cam.style.borderRadius = "52%";
       cam.style.margin = "15%";
       cam.onclick = () => location.reload();
