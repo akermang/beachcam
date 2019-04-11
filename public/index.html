@@ -3,12 +3,15 @@
 
 <head>
   <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WPTQ3HT');</script>
-    <!-- End Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-WPTQ3HT');</script>
+  <!-- End Google Tag Manager -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="מצלמות חוף שידור ישיר ישראל" />
@@ -192,14 +195,16 @@
       box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
     }
 
-    .jump-btn{
+    .jump-btn {
       display: none;
     }
 
     .jump-btn.show {
       display: block;
       width: 40px;
-      position: relative;
+      position: absolute;
+      bottom: 10%;
+      right: 16%;
       height: 40px;
       background: transparent url("./images/jump.png") no-repeat;
       background-position: center center;
@@ -208,7 +213,6 @@
       border: 0;
       color: white;
       line-height: 2.5;
-      margin-left: 73vw;
       text-align: center;
       opacity: 0.6;
       cursor: pointer;
@@ -311,10 +315,10 @@
     <section class="cams-container">
       <div class="cam-title">BeachCam.co.il</div>
       <img onclick='togglesize()' id="image" src="http://62.219.45.26:120//mjpg/video.mjpg" alt="מצלמת חוף">
+      <div class="jump-btn" onclick="location.reload()">
+        דלג
+      </div>
     </section>
-    <div class="jump-btn" onclick="location.reload()">
-      דלג
-    </div>
   </div>
 
   <footer>

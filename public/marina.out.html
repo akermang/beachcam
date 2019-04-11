@@ -201,7 +201,9 @@
         .jump-btn.show {
             display: block;
             width: 40px;
-            position: relative;
+            position: absolute;
+            bottom: 10%;
+            right: 16%;
             height: 40px;
             background: transparent url("./images/jump.png") no-repeat;
             background-position: center center;
@@ -210,7 +212,6 @@
             border: 0;
             color: white;
             line-height: 2.5;
-            margin-left: 73vw;
             text-align: center;
             opacity: 0.6;
             cursor: pointer;
@@ -312,10 +313,10 @@
         <section class="cams-container">
             <div class="cam-title">BeachCam.co.il</div>
             <img id="image" onclick="togglesize()" src="http://62.219.45.26:140//mjpg/video.mjpg" frameborder="0" alt="מצלמת חוף">
+            <div class="jump-btn" onclick="location.reload()">
+                דלג
+            </div>
         </section>
-        <div class="jump-btn" onclick="location.reload()">
-            דלג
-        </div>
     </div>
     <footer>
         <p style="text-align: center;">
@@ -361,7 +362,7 @@
             loader.style.display = "none";
             camContainer.style.display = "flex";
         }
-        
+
         const timeOut = () => setTimeout(() => {
             changeView()
         }, 30000);
