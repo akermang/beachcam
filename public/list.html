@@ -78,8 +78,8 @@
         }
 
         li {
-      list-style: none;
-    }
+            list-style: none;
+        }
 
         div.animate-box-in {
             animation: createBox .25s;
@@ -191,6 +191,29 @@
             background: #add2f1;
         }
 
+        .loader-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 50vh;
+            width: 100%;
+            position: absolute;
+            top: 33%;
+        }
+
+        .loader {
+            border: 4px solid #17a2b8;
+            border-left-color: rgba(0, 0, 0, 0.1);
+            border-top-color: #2196F3;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: loader-spin 0.8s linear infinite;
+            opacity: 1;
+            opacity: 1;
+        }
+
         @media(max-width: 914px) {
             .cams-container P {
                 min-width: 49%;
@@ -278,30 +301,30 @@
             </li>
             <li>
                 <a style="color: white;" href="./index.html">
-                    <p class="cam-link">הרצליה מרינה דרום</p>
+                    <p class="cam-link">מרינה דרום הרצליה</p>
                 </a>
             </li>
             <li>
                 <a style="color: white;" href="./marina.html">
-                    <p class="cam-link">הרצליה מרינה צפוןן</p>
+                    <p class="cam-link">מרינה צפון הרצליה</p>
                 </a>
             </li>
             <li>
                 <a style="color: white;" href="./marina.out.html">
-                    <p class="cam-link">הרצליה פתח המרינה</p>
+                    <p class="cam-link">פתח המרינה הרצליה</p>
+                </a>
+            </li>
+            <li>
+                <a style="color: white;" href="./forcast.html">
+                    <p class="cam-link">תחזית גלים</p>
                 </a>
             </li>
             <!-- <li>
                 <a style="color: white;" href="./index.html">
-                    <p class="cam-link">הרצליה דבוש השובר</p>
-                </a>
-            </li>
-            <li>
-                <a style="color: white;" href="./index.html">
                     <p class="cam-link">הרצליה זבולון צפון</p>
                 </a>
-            </li>
-            <li>
+            </li> -->
+            <!-- <li>
                 <a style="color: white;" href="./index.html">
                     <p class="cam-link">הרצליה גזיבו</p>
                 </a>
