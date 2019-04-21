@@ -380,9 +380,10 @@
     timeOut();
 
     cam.onerror = () => {
-      changeView();
+      // changeView();
       clearTimeout(timeOut);
-      message.innerHTML = "..מקסימום צופים מחוברים למצלמה<br>נסו מאוחר יותר <br> BeachCam.co.il אנו בצוות   <br> משפרים את המערכת כדי<br>לספק לכם חוויית צפייה מדהימה <br> כבר בימים הקרובים.. מצלמות חדשות! וחוויית גלישה משופרת";
+      window.location = "./testcam2.html";
+      // message.innerHTML = "..מקסימום צופים מחוברים למצלמה<br>נסו מאוחר יותר <br> BeachCam.co.il אנו בצוות   <br> משפרים את המערכת כדי<br>לספק לכם חוויית צפייה מדהימה <br> כבר בימים הקרובים.. מצלמות חדשות! וחוויית גלישה משופרת";
     };
 
   </script>
