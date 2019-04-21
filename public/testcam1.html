@@ -15,11 +15,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="מצלמות חוף שידור ישיר ישראל" />
-    <meta name="keywords" content="הרצליה,דרומי,מרינה דרום,מצלמת גלישה, גלים,מצלמת חוף הרצליה,גלישה,מצב,גלים,שידור,חי,מרינה,surf,live,Camera"
-    />
+    <meta name="keywords"
+        content="כניסה למרינה,הרצליה,דרומי,מרינה צפון,מצלמת גלישה, גלים,מצלמת חוף הרצליה,גלישה,מצב,גלים,שידור,חי,מרינה,surf,live,Camera" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="shortcut icon" type="image/png" href="https://akermang.github.io/WeatherApp/sun-favicon.png" />
-    <title>מצלמות חופים | BeachCam</title>
+    <title>Test Cam 1</title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-22782431-1"></script>
@@ -28,38 +28,27 @@
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'UA-22782431-1');
-    </script>
 
     </script>
 
     <style>
+        @keyframes loader-spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
         @keyframes createBox {
             from {
                 transform: scale(0);
             }
+
             to {
                 transform: scale(1);
-            }
-        }
-
-        @keyframes createBoxY {
-            from {
-                transform: scaleY(0);
-            }
-            to {
-                transform: scaleY(1);
-            }
-        }
-
-        @keyframes createBoxYX {
-            0% {
-                transform: scale(0.5, 0);
-            }
-            50% {
-                transform: scale(0.5, 1);
-            }
-            100% {
-                transform: scale(1, 1);
             }
         }
 
@@ -70,27 +59,14 @@
         header {
             width: 100%;
             display: flex;
-            background-color: #1fc8db;
         }
 
         a {
             text-decoration: none;
         }
 
-        li {
-            list-style: none;
-        }
-
-        div.animate-box-in {
+        div.animat-box-in {
             animation: createBox .25s;
-        }
-
-        div.animate-box-in-y {
-            animation: createBoxY .25s;
-        }
-
-        div.animate-box-in-xy {
-            animation: createBoxXY .35s;
         }
 
         .wrapper {
@@ -105,17 +81,19 @@
         }
 
         p,
-        h1 {
+        h1,
+        h2 {
             text-align: center;
             margin: 0;
         }
 
-        h1 {
-            font-size: 30px;
-        }
-
         nav p {
             font-size: 20px;
+        }
+
+        h1,
+        h2 {
+            font-size: 30px;
         }
 
         div.img {
@@ -132,27 +110,45 @@
             width: 200px;
         }
 
-        img.full-size {
-            position: absolute;
-            width: 100%;
-            position: absolute;
-            top: 0;
+        .message {
+            color: wheat;
+            text-align: center;
+            font-size: medium;
         }
 
         .cams-container {
-            display: flex;
+            display: none;
             flex-wrap: wrap;
-            justify-content: space-around;
+            justify-content: center;
             padding: 6px;
+            overflow: auto;
+            color: wheat;
+            max-width: 800px;
+            margin: 0px auto;
+            position: relative;
         }
 
-        .main-container {
-            min-height: calc(100vh - 155px);
+        .cam-title {
+            position: absolute;
+            color: white;
+            top: 5%;
+            left: 2%;
+            font-size: 22px;
+            z-index: 1;
         }
 
-        .link-list {
-            max-width: 40%;
-            margin: 5px auto;
+        .cams-container.full-size {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            max-width: 100%;
+            padding: 0;
+        }
+
+        .full-size img {
+            width: 100%;
+            height: 100%;
         }
 
         .cams-container P {
@@ -165,32 +161,6 @@
             min-height: 33vh;
         }
 
-        .home-btn {
-            padding: 4px;
-            border-radius: 7px;
-        }
-
-        .home-btn:hover {
-            box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
-        }
-
-        p.cam-link {
-            background: #2196f3;
-            padding: 6px;
-            margin: 25px 0;
-            border-radius: 4px;
-            transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-            box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
-            font-weight: 500;
-            font-size: 17px;
-            font-weight: bold;
-        }
-
-        p.cam-link:hover {
-            color: #a52a2a;
-            background: #add2f1;
-        }
-
         .loader-container {
             display: flex;
             justify-content: center;
@@ -199,7 +169,7 @@
             height: 50vh;
             width: 100%;
             position: absolute;
-            top: 33%;
+            top: 200px;
         }
 
         .loader {
@@ -214,6 +184,53 @@
             opacity: 1;
         }
 
+        .main-container {
+            min-height: calc(100vh - 160px);
+            position: relative;
+            z-index: 1;
+        }
+
+        .home-btn {
+            padding: 4px;
+            border-radius: 7px;
+        }
+
+        .home-btn:hover {
+            box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
+        }
+
+        .jump-btn {
+            display: none;
+        }
+
+        .jump-btn.show {
+            display: block;
+            width: 40px;
+            position: absolute;
+            bottom: 10%;
+            right: 16%;
+            height: 40px;
+            background: transparent url("./images/jump.png") no-repeat;
+            background-position: center center;
+            background-size: contain;
+            outline: 0 !important;
+            border: 0;
+            color: white;
+            line-height: 2.5;
+            text-align: center;
+            opacity: 0.6;
+            cursor: pointer;
+        }
+
+        .jump-btn.show:hover {
+            opacity: 1;
+        }
+
+        #iframe-1 {
+            position: relative;
+            z-index: 2;
+        }
+
         @media(max-width: 914px) {
             .cams-container P {
                 min-width: 49%;
@@ -223,6 +240,10 @@
         @media(max-width: 700px) {
             .img img {
                 width: 140px;
+            }
+
+            .cam-title {
+                font-size: 19px;
             }
         }
 
@@ -239,14 +260,16 @@
                 width: 115px;
             }
 
-            h1 {
+            h1,
+            h2 {
                 font-size: 22px;
             }
         }
 
         @media (max-width: 530px) {
-            .link-list {
-                max-width: 60%;
+            .cam-title {
+                bottom: 5%;
+                top: initial;
             }
 
             .row-flex {
@@ -256,9 +279,11 @@
                 align-items: center;
                 padding: 0;
             }
+
             nav p {
                 font-size: 18px;
             }
+
             p.info {
                 display: none;
             }
@@ -271,72 +296,46 @@
         <div class="wrapper">
             <div class="w3-container w3-blue row-flex">
                 <div class="home-btn">
-                    <a href="./index.html">
+                    <a href="./list.html">
                         <h1>BeachCam.co.il</h1>
                         <p>לפירסום כאן 054-6817830</p>
                     </a>
                 </div>
 
-                <a id="tosess1" style="color: white;" href="https://tosess.co.il/">
+                <!-- <a id="tosess1" style="color: white;" href="https://tosess.co.il/">
                     <div class="img">
-                        <img id="sidny" src="./images/tosess.png" alt="מצלצת חוף">
+                        <img id="sidny" src="./images/tosess.png" alt="מצלמות חוף">
                     </div>
-                </a>
-                <div class="animate-box-in">
-                    <p class="info">שידור חי - מצלמות גלים</p>
-                    <h1>מצלמות חוף</h1>
-                    </h1>
+                </a> -->
+                <div class="animat-box-in">
+                    <p class="info">שידור חי - תל-אביב - חוף הצוק</p>
+                    <h2> test חוף הצוק ת"א </h2>
                 </div>
             </div>
         </div>
     </header>
+    <nav>
+        <div class="animat-box-in">
+            <p>
+                <a style="color: white;" href="./index.html">למרינה דרום |</a>
+                <a style="color: white;" href="./forcast.html">תחזית גלים |</a>
+                <a style="color: white;" href="./list.html">מצלמות</a>
 
-
+            </p>
+        </div>
+    </nav>
+    <div class="message"></div>
     <div class="main-container">
-        <div class="link-list animate-box-in-y">
-            <!-- <li>
-                <a style="color: white;" href="./gordom.html">
-                    <p class="cam-link">גורדון תל אביב</p>
-                </a>
-            </li> -->
-            <li>
-                <a style="color: white;" href="./zuk.html">
-                    <p class="cam-link"> הצוק תל-אביב</p>
-                </a>
-            </li>
-            <li>
-                <a style="color: white;" href="./index.html">
-                    <p class="cam-link">מרינה דרום הרצליה</p>
-                </a>
-            </li>
-            <li>
-                <a style="color: white;" href="./marina.html">
-                    <p class="cam-link">מרינה צפון הרצליה</p>
-                </a>
-            </li>
-            <li>
-                <a style="color: white;" href="./marina.out.html">
-                    <p class="cam-link">פתח המרינה הרצליה</p>
-                </a>
-            </li>
-            <li>
-                <a style="color: white;" href="./forcast.html">
-                    <p class="cam-link">תחזית גלים</p>
-                </a>
-            </li>
-            <li>
-                <a style="color: white;" href="./testcam1.html">
-                    <p class="cam-link">שידור ניסיון- הדרומי</p>
-                </a>
-            </li>
-            <li>
-                <a style="color: white;" href="./testcam2.html">
-                    <p class="cam-link">שידור ניסיון - 2</p>
-                </a>
-            </li>
+        <iframe id="iframe-1" width="640" height="480" src="https://rtsp.me/embed/RbTt6Ttz/" frameborder="0"
+            allowfullscreen></iframe>
+
+        <div class="jump-btn" onclick="location.reload()">
+            דלג
         </div>
     </div>
-
+    <div class="loader-container">
+        <div class="loader"></div>
+    </div>
     <footer>
         <p style="text-align: center;">
             <a style="color: gold;" href="">gloona Soft</a>
@@ -344,5 +343,6 @@
     </footer>
 
 </body>
+
 
 </html>
