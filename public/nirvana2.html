@@ -130,7 +130,7 @@
       color: wheat;
       max-width: 800px;
       margin: 0px auto;
-      margin-top: -30vmin;
+      margin-top: -132px;
       position: relative;
     }
 
@@ -145,10 +145,12 @@
     .cams-container.full-size {
       width: 100%;
       position: absolute;
-      top: 30vh;
+      top: 0;
       left: 0;
       max-width: 100%;
       padding: 0;
+      z-index: 4;
+      margin-top: -25vh;
     }
 
     .full-size img {
@@ -233,6 +235,7 @@
       .cams-container P {
         min-width: 49%;
       }
+     
     }
 
     @media(max-width: 700px) {
@@ -247,6 +250,10 @@
     @media(max-width: 599px) {
       header img {
         width: 115px;
+      }
+
+       .cams-container{
+        margin-top: -137px;
       }
 
       .cams-container P {
@@ -281,6 +288,12 @@
       }
       p.info {
         display: none;
+      }
+    }
+
+    @media(max-width: 440px)  {
+      .cams-container.full-size {
+        top: 56px;
       }
     }
   </style>
