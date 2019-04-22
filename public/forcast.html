@@ -3,12 +3,15 @@
 
 <head>
   <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WPTQ3HT');</script>
-    <!-- End Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-WPTQ3HT');</script>
+  <!-- End Google Tag Manager -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="מצלמות חוף שידור ישיר ישראל" />
@@ -30,6 +33,15 @@
   </script>
 
   <style>
+    @keyframes loader-spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
     @keyframes createBox {
       from {
         transform: scale(0);
@@ -38,6 +50,7 @@
         transform: scale(1);
       }
     }
+
 
     body {
       background-color: black;
@@ -132,6 +145,29 @@
       box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
     }
 
+    .loader-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 50vh;
+      width: 100%;
+      position: absolute;
+      top: 33%;
+    }
+
+    .loader {
+      border: 4px solid #17a2b8;
+      border-left-color: rgba(0, 0, 0, 0.1);
+      border-top-color: #2196F3;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: loader-spin 0.8s linear infinite;
+      opacity: 1;
+      opacity: 1;
+    }
+
     @media(max-width: 914px) {
       .cams-container P {
         min-width: 49%;
@@ -215,11 +251,19 @@
   </nav>
 
   <section class="cams-container">
-    <iframe src="https://magicseaweed.com/Zvulun-Herzelia-Surf-Report/3981/Embed/" width="100%" height="1080" frameborder="0"></iframe>
+    <iframe onload="hideLoader()"  src="https://magicseaweed.com/Zvulun-Herzelia-Surf-Report/3981/Embed/" width="100%" height="1080" frameborder="0"></iframe>
   </section>
+  <div id="loader-container" class="loader-container">
+    <div class="loader"></div>
+  </div>
   <p style="text-align: center;">
     <a style="color: gold;" href="">gloona Soft</a>
   </p>
+
+  <script>
+    const loader = document.querySelector("#loader-container");
+    const hideLoader = () => loader.style.display = "none";
+    </script>
 
 </body>
 
