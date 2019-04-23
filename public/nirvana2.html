@@ -15,8 +15,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="מצלמות חוף שידור ישיר ישראל" />
-  <meta name="keywords" content="הרצליה,דרומי,מרינה דרום,מצלמת גלישה, גלים,מצלמת חוף הרצליה,גלישה,מצב,גלים,שידור,חי,מרינה,surf,live,Camera"
-  />
+  <meta name="keywords"
+    content="הרצליה,דרומי,מרינה דרום,מצלמת גלישה, גלים,מצלמת חוף הרצליה,גלישה,מצב,גלים,שידור,חי,מרינה,surf,live,Camera" />
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="shortcut icon" type="image/png" href="https://akermang.github.io/WeatherApp/sun-favicon.png" />
   <title>מצלמות חופים | BeachCam | מרינה הרצליה</title>
@@ -35,6 +35,7 @@
       0% {
         transform: rotate(0deg);
       }
+
       100% {
         transform: rotate(360deg);
       }
@@ -44,6 +45,7 @@
       from {
         transform: scale(0);
       }
+
       to {
         transform: scale(1);
       }
@@ -192,7 +194,9 @@
     }
 
     .main-container {
-      min-height: calc(100vh - 160px)
+      min-height: calc(100vh - 160px);
+      max-width: 800px;
+      margin: auto;
     }
 
     .home-btn {
@@ -218,7 +222,7 @@
       background: transparent url("./images/jump.png") no-repeat;
       background-position: center center;
       background-size: contain;
-      outline: 0!important;
+      outline: 0 !important;
       border: 0;
       color: white;
       line-height: 2.5;
@@ -235,13 +239,14 @@
       .cams-container P {
         min-width: 49%;
       }
-     
+
     }
 
     @media(max-width: 700px) {
       .img img {
         width: 140px;
       }
+
       .cam-title {
         font-size: 19px;
       }
@@ -252,7 +257,7 @@
         width: 115px;
       }
 
-       .cams-container{
+      .cams-container {
         margin-top: -137px;
       }
 
@@ -283,15 +288,17 @@
         align-items: center;
         padding: 0;
       }
+
       nav p {
         font-size: 18px;
       }
+
       p.info {
         display: none;
       }
     }
 
-    @media(max-width: 440px)  {
+    @media(max-width: 440px) {
       .cams-container.full-size {
         top: 56px;
         margin-top: -15vh;

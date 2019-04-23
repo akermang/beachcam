@@ -131,7 +131,7 @@
         .cam-title {
             position: absolute;
             color: white;
-            top: 5%;
+            top: 7%;
             left: 2%;
             font-size: 22px;
             z-index: 1;
@@ -188,6 +188,8 @@
             min-height: calc(100vh - 160px);
             position: relative;
             z-index: 1;
+            max-width: 800px;
+            margin: auto;
         }
 
         .home-btn {
@@ -324,8 +326,9 @@
     </nav>
     <div class="message"></div>
     <div class="main-container">
-        <iframe src="https://ipcamlive.com/player/player.php?alias=freegullsouth&autoplay=true" width="800px" height="450px"
-            frameborder="0" allowfullscreen></iframe>
+        <div class="cam-title">BeachCam.co.il</div>
+        <iframe src="https://ipcamlive.com/player/player.php?alias=freegullsouth&autoplay=true" width="800px"
+            height="450px" frameborder="0" allowfullscreen></iframe>
 
         <!-- Parameters:
         - alias: alias of your camera
