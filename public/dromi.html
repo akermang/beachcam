@@ -19,7 +19,7 @@
     />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="shortcut icon" type="image/png" href="https://akermang.github.io/WeatherApp/sun-favicon.png" />
-    <title> הדרומי הרצליה  | מצלמות חופים | BeachCam</title>
+    <title>מצלמות חופים | BeachCam | הרצליה דרומי</title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-22782431-1"></script>
@@ -36,6 +36,7 @@
             0% {
                 transform: rotate(0deg);
             }
+
             100% {
                 transform: rotate(360deg);
             }
@@ -45,6 +46,7 @@
             from {
                 transform: scale(0);
             }
+
             to {
                 transform: scale(1);
             }
@@ -185,6 +187,7 @@
         .main-container {
             min-height: calc(100vh - 160px);
             position: relative;
+            z-index: 1;
             max-width: 800px;
             margin: auto;
         }
@@ -212,7 +215,7 @@
             background: transparent url("./images/jump.png") no-repeat;
             background-position: center center;
             background-size: contain;
-            outline: 0!important;
+            outline: 0 !important;
             border: 0;
             color: white;
             line-height: 2.5;
@@ -240,6 +243,7 @@
             .img img {
                 width: 140px;
             }
+
             .cam-title {
                 font-size: 19px;
             }
@@ -277,9 +281,11 @@
                 align-items: center;
                 padding: 0;
             }
+
             nav p {
                 font-size: 18px;
             }
+
             p.info {
                 display: none;
             }
@@ -297,15 +303,13 @@
                         <p>לפירסום כאן 054-6817830</p>
                     </a>
                 </div>
+                <a class="home-btn title" style="color: white;" href="./list.html">
+                    <h1> מצלמות חוף נוספות </h1>
+                </a>
 
-                <!-- <a id="tosess1" style="color: white;" href="https://tosess.co.il/">
-                    <div class="img">
-                        <img id="sidny" src="./images/tosess.png" alt="מצלמות חוף">
-                    </div>
-                </a> -->
                 <div class="animat-box-in">
-                    <p class="info">שידור חי - תל-אביב - חוף הצוק</p>
-                    <h2> חוף הצוק ת"א </h2>
+                    <p class="info">שידור חי - הרצליה - חוף הדרומי</p>
+                    <h2>דרומי הרצליה </h2>
                 </div>
             </div>
         </div>
@@ -313,7 +317,7 @@
     <nav>
         <div class="animat-box-in">
             <p>
-                <a style="color: white;" href="./index.html">למרינה דרום |</a>
+                <a style="color: white;" href="./marina.html">למרינה צפון |</a>
                 <a style="color: white;" href="./forcast.html">תחזית גלים |</a>
                 <a style="color: white;" href="./list.html">מצלמות</a>
 
@@ -322,13 +326,26 @@
     </nav>
     <div class="message"></div>
     <div class="main-container">
-        <iframe id="iframe-1" width="640" height="480" src="https://rtsp.me/embed/RbTt6Ttz/" frameborder="0" allowfullscreen></iframe>
+        <div class="cam-title">BeachCam.co.il</div>
+        <iframe src="https://g2.ipcamlive.com/player/player.php?alias=5cba53080497f&autoplay=true" width="800px" height="450px" frameborder="0"
+            allowfullscreen></iframe>
+        <!-- Parameters:
+        - alias: alias of your camera
+        - skin: orange/white (orange is the default)
+        - autoplay=1: start video automatically (this parameter works on desktop computers only)
+        - mute=1: mute the audio
+        - disablefullscreen=1: disable full screen button
+        - disablevideofit=1: disable video fit button
+        - timelapseplayerenabled=1: enable the Time-lapse Hub on the player
+        - disabledownloadbutton=1: disable time-lapse download button in time-lapse mode
+
+        Don't forget to adjust the height of the IFRAME according to the ASPECT RATIO of your camera! -->
 
         <div class="jump-btn" onclick="location.reload()">
             דלג
         </div>
     </div>
-    <div class="loader-container">
+    <div id="loader-container" class="loader-container">
         <div class="loader"></div>
     </div>
     <footer>
@@ -336,6 +353,7 @@
             <a style="color: gold;" href="">gloona Soft</a>
         </p>
     </footer>
+
 
 </body>
 
