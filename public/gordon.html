@@ -195,6 +195,7 @@
             position: relative;
             max-width: 800px;
             margin: auto;
+            z-index: 2;
         }
 
         .home-btn {
@@ -277,11 +278,6 @@
         }
 
         @media (max-width: 530px) {
-            .cam-title {
-                bottom: 5%;
-                top: initial;
-            }
-
             .row-flex {
                 display: flex;
                 flex-direction: column;
@@ -332,19 +328,21 @@
     <div class="message"></div>
     <div class="main-container">
         <div class="cam-title">BeachCam.co.il</div>
-        <iframe id="iframe-1" name="iframe1" width="700" height="480" src="https://balticlivecam.com/cameras/israel/tel-aviv/tel-aviv/?embed"
-            frameborder="0" border="0" allowtransparency="true" class="frame122" allowfullscreen></iframe>
-
-        <div class="jump-btn" onclick="location.reload()">
+        <div id="broadcastobject">
+            <iframe width="800" height="450" style="border:0" webkitallowfullscreen="true" scrolling="no" allowfullscreen src="https://balticlivecam.com/cameras/israel/tel-aviv/tel-aviv/?embed"></iframe>
+           
+        </div>
+               
+        <div class="jump-btn " onclick="location.reload() ">
             דלג
         </div>
     </div>
-    <div class="loader-container">
-        <div class="loader"></div>
+    <div class="loader-container ">
+        <div class="loader "></div>
     </div>
     <footer>
-        <p style="text-align: center;">
-            <a style="color: gold;" href="">gloona Soft</a>
+        <p style="text-align: center; ">
+            <a style="color: gold; " href=" ">gloona Soft</a>
         </p>
     </footer>
 
