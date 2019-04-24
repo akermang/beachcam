@@ -175,6 +175,19 @@
       }
     }
 
+    @media(max-width: 768px) {
+      .img img {
+        width: 140px;
+      }
+      .cam-title {
+        font-size: 19px;
+      }
+      h1,
+      h2 {
+        font-size: 22px;
+      }
+    }
+
     @media(max-width: 700px) {
       .img img {
         width: 140px;
@@ -251,7 +264,8 @@
   </nav>
 
   <section class="cams-container">
-    <iframe onload="hideLoader()"  src="https://magicseaweed.com/Zvulun-Herzelia-Surf-Report/3981/Embed/" width="100%" height="1080" frameborder="0"></iframe>
+    <iframe onload="hideLoader()" src="https://magicseaweed.com/Zvulun-Herzelia-Surf-Report/3981/Embed/" width="100%" height="1080"
+      frameborder="0"></iframe>
   </section>
   <div id="loader-container" class="loader-container">
     <div class="loader"></div>
@@ -263,7 +277,7 @@
   <script>
     const loader = document.querySelector("#loader-container");
     const hideLoader = () => loader.style.display = "none";
-    </script>
+  </script>
 
 </body>
 
