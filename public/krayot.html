@@ -19,7 +19,7 @@
     />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="shortcut icon" type="image/png" href="https://akermang.github.io/WeatherApp/sun-favicon.png" />
-    <title> חוף גורדון תל-אביב | מצלמות חופים | BeachCam</title>
+    <title>מצלמות חופים | BeachCam | קריות חיפה</title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-22782431-1"></script>
@@ -36,6 +36,7 @@
             0% {
                 transform: rotate(0deg);
             }
+
             100% {
                 transform: rotate(360deg);
             }
@@ -45,6 +46,7 @@
             from {
                 transform: scale(0);
             }
+
             to {
                 transform: scale(1);
             }
@@ -57,14 +59,6 @@
         header {
             width: 100%;
             display: flex;
-            position: relative;
-            z-index: 2;
-        }
-
-        nav {
-            z-index: 2;
-            position: relative;
-            background: black;
         }
 
         a {
@@ -138,9 +132,9 @@
             position: absolute;
             color: white;
             top: 5%;
-            left: 4%;
+            left: 2%;
             font-size: 22px;
-            z-index: 4;
+            z-index: 1;
         }
 
         .cams-container.full-size {
@@ -175,7 +169,7 @@
             height: 50vh;
             width: 100%;
             position: absolute;
-            top: 130px;
+            top: 200px;
         }
 
         .loader {
@@ -193,9 +187,9 @@
         .main-container {
             min-height: calc(100vh - 160px);
             position: relative;
+            z-index: 1;
             max-width: 800px;
             margin: auto;
-            z-index: 2;
         }
 
         .home-btn {
@@ -221,7 +215,7 @@
             background: transparent url("./images/jump.png") no-repeat;
             background-position: center center;
             background-size: contain;
-            outline: 0!important;
+            outline: 0 !important;
             border: 0;
             color: white;
             line-height: 2.5;
@@ -237,11 +231,7 @@
         #iframe-1 {
             position: relative;
             z-index: 2;
-            max-width: 750px;
-            margin: 0 auto;
-            height: 600px;
         }
-
 
         @media(max-width: 914px) {
             .cams-container P {
@@ -253,6 +243,7 @@
             .img img {
                 width: 140px;
             }
+
             .cam-title {
                 font-size: 19px;
             }
@@ -278,6 +269,11 @@
         }
 
         @media (max-width: 530px) {
+            .cam-title {
+                bottom: 5%;
+                top: initial;
+            }
+
             .row-flex {
                 display: flex;
                 flex-direction: column;
@@ -285,9 +281,11 @@
                 align-items: center;
                 padding: 0;
             }
+
             nav p {
                 font-size: 18px;
             }
+
             p.info {
                 display: none;
             }
@@ -309,8 +307,8 @@
                     <h1> מצלמות חוף נוספות </h1>
                 </a>
                 <div class="animat-box-in">
-                    <p class="info">שידור חי - תל-אביב - חוף גורדון</p>
-                    <h2> חוף גורדון ת"א </h2>
+                    <p class="info">שידור חי - חיפה -Surf Cycle</p>
+                    <h2>חיפה חוף קרית ים</h2>
                 </div>
             </div>
         </div>
@@ -327,20 +325,20 @@
     </nav>
     <div class="message"></div>
     <div class="main-container">
-        <div class="cam-title">BeachCam.co.il</div>
-        <iframe width="800" height="450" style="border:0" webkitallowfullscreen="true" scrolling="no" mozallowfullscreen="true" allowfullscreen="true"
-            src="https://balticlivecam.com/cameras/israel/tel-aviv/tel-aviv/?embed"></iframe>
-
-        <div class="jump-btn " onclick="location.reload() ">
+        <!-- <iframe src="https://camstreamer.com/yt-embed/91e3a5f7dee3764/S-14818?autoplay=1&amp;controls=1&amp;showinfo=0&amp;rel=0"
+            width="800" height="450" frameborder="0" allowfullscreen="allowfullscreen"></iframe> -->
+        <iframe width="800" height="450" src="https://www.youtube.com/embed/HP0pTuakZcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        <div class="jump-btn" onclick="location.reload()">
             דלג
         </div>
     </div>
-    <div class="loader-container ">
-        <div class="loader "></div>
+    <div class="loader-container">
+        <div class="loader"></div>
     </div>
     <footer>
-        <p style="text-align: center; ">
-            <a style="color: gold; " href=" ">gloona Soft</a>
+        <p style="text-align: center;">
+            <a style="color: gold;" href="">gloona Soft</a>
         </p>
     </footer>
 
