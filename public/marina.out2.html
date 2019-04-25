@@ -19,7 +19,7 @@
     />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="shortcut icon" type="image/png" href="https://akermang.github.io/WeatherApp/sun-favicon.png" />
-    <title>מצלמות חופים | BeachCam | כניסה למרינה הרצליה</title>
+    <title>מצלמות חופים | BeachCam | הרצליה מרינה</title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-22782431-1"></script>
@@ -36,6 +36,7 @@
             0% {
                 transform: rotate(0deg);
             }
+
             100% {
                 transform: rotate(360deg);
             }
@@ -45,6 +46,7 @@
             from {
                 transform: scale(0);
             }
+
             to {
                 transform: scale(1);
             }
@@ -132,6 +134,7 @@
             top: 5%;
             left: 2%;
             font-size: 22px;
+            z-index: 1;
         }
 
         .cams-container.full-size {
@@ -166,7 +169,7 @@
             height: 50vh;
             width: 100%;
             position: absolute;
-            top: 33%;
+            top: 200px;
         }
 
         .loader {
@@ -182,7 +185,11 @@
         }
 
         .main-container {
-            min-height: calc(100vh - 160px)
+            min-height: calc(100vh - 160px);
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: auto;
         }
 
         .home-btn {
@@ -208,7 +215,7 @@
             background: transparent url("./images/jump.png") no-repeat;
             background-position: center center;
             background-size: contain;
-            outline: 0!important;
+            outline: 0 !important;
             border: 0;
             color: white;
             line-height: 2.5;
@@ -219,6 +226,11 @@
 
         .jump-btn.show:hover {
             opacity: 1;
+        }
+
+        #iframe-1 {
+            position: relative;
+            z-index: 2;
         }
 
         @media(max-width: 914px) {
@@ -240,23 +252,11 @@
             }
         }
 
-        @media(max-width: 768px) {
-            .img img {
-                width: 140px;
-            }
-            .cam-title {
-                font-size: 19px;
-            }
-            h1,
-            h2 {
-                font-size: 22px;
-            }
-        }
-
         @media(max-width: 700px) {
             .img img {
                 width: 140px;
             }
+
             .cam-title {
                 font-size: 19px;
             }
@@ -279,21 +279,14 @@
             h2 {
                 font-size: 22px;
             }
-            img {
-                max-height: 263px;
-                width: 100%;
-            }
-
-            .cam-title {
-                left: 4%;
-                font-size: 16px;
-            }
         }
 
         @media (max-width: 530px) {
-            .cam-title {
-                bottom: 5%;
-                top: initial;
+            iframe {
+                max-height: 263px;
+            }
+            .loader-container {
+                top: 160px;
             }
 
             .row-flex {
@@ -303,9 +296,11 @@
                 align-items: center;
                 padding: 0;
             }
+
             nav p {
                 font-size: 18px;
             }
+
             p.info {
                 display: none;
             }
@@ -324,10 +319,10 @@
                     </a>
                 </div>
                 <div class="animat-box-in">
-                    <h2> מרינה כניסה </h2>
+                    <h2>פתח המרינה</h2>
                 </div>
                 <a class="home-btn title" style="color: white;" href="./list.html">
-                    <p class="info">שידור חי - הרצליה - כניסה למרינה</p>
+                    <p class="info">שידור חי - הרצליה - פתח המרינה</p>
                     <h1> מצלמות חוף נוספות </h1>
                 </a>
             </div>
@@ -338,20 +333,22 @@
             <p>
                 <a style="color: white;" href="./index.html">למרינה דרום |</a>
                 <a style="color: white;" href="./forcast.html">תחזית גלים |</a>
-                <a style="color: white;" href="./marina.html">למרינה צפון</a>
+                <a style="color: white;" href="./list.html">מצלמות</a>
 
             </p>
         </div>
     </nav>
     <div class="message"></div>
     <div class="main-container">
-        <section class="cams-container">
-            <div class="cam-title">BeachCam.co.il</div>
-            <img id="image" onclick="togglesize()" src="http://62.219.45.26:140//mjpg/video.mjpg" frameborder="0" alt="מצלמת חוף">
-            <div class="jump-btn" onclick="location.reload()">
-                דלג
-            </div>
-        </section>
+        <div class="cam-title">BeachCam.co.il</div>
+        <iframe src="https://g2.ipcamlive.com/player/player.php?alias=5cc1ec1b52a4d&skin=white&autoplay=true" width="800px" height="450px"
+            frameborder="0" allowfullscreen></iframe>
+        <div class="jump-btn" onclick="location.reload()">
+            דלג
+        </div>
+    </div>
+    <div id="loader-container" class="loader-container">
+        <div class="loader"></div>
     </div>
     <footer>
         <p style="text-align: center;">
@@ -359,56 +356,7 @@
         </p>
     </footer>
 
-    <div class="loader-container">
-        <div class="loader"></div>
-    </div>
-    <script>
 
-        const cam = document.querySelector("#image");
-        const camContainer = document.querySelector(".cams-container");
-        const camTitle = document.querySelector(".cam-title");
-        const loader = document.querySelector(".loader-container");
-        const message = document.querySelector(".message");
-        const jumpBtn = document.querySelector(".jump-btn");
-
-        const showJumpBtn = () => {
-            jumpBtn.classList.add("show");
-        }
-
-        const togglesize = () => {
-            camContainer.classList.toggle("full-size");
-        }
-
-        const changeView = () => {
-            // cam.style.background = "#f1f1f157";
-            cam.style.maxWidth = "300px";
-            cam.style.position = "static";
-            cam.style.height = "70px";
-            // cam.style.borderRadius = "52%";
-            cam.style.margin = "15%";
-            cam.onclick = () => location.reload();
-            camTitle.style.display = "none";
-            camContainer.classList.remove("full-size");
-            cam.src = "./images/tosess.png";
-            showJumpBtn();
-        }
-
-        cam.onload = () => {
-            loader.style.display = "none";
-            camContainer.style.display = "flex";
-        }
-
-        const timeOut = () => setTimeout(() => {
-            changeView()
-        }, 30000);
-        timeOut();
-
-        cam.onerror = () => {
-            clearTimeout(timeOut);
-            window.location = "./dromi.html";
-        };
-
-    </script>
 </body>
 
 
