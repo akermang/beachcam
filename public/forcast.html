@@ -56,6 +56,12 @@
       background-color: black;
     }
 
+    .sticky-top {
+      position: sticky;
+      top: 0;
+      width: 100%;
+    }
+
     header {
       width: 100%;
       display: flex;
@@ -232,36 +238,38 @@
 </head>
 
 <body>
-  <header>
-    <div class="wrapper">
-      <div class="w3-container w3-blue row-flex">
-        <div class="home-btn">
-          <a href="./list.html">
-            <h1>BeachCam.co.il</h1>
-            <p>לפירסום כאן 054-6817830</p>
-          </a>
-        </div>
-
-        <a id="tosess1" style="color: white;" href="https://tosess.co.il/">
-          <div class="img">
-            <img id="sidny" src="./images/tosess.png" alt="מצלמת חוף">
+  <div class="sticky-top">
+    <header>
+      <div class="wrapper">
+        <div class="w3-container w3-blue row-flex">
+          <div class="home-btn">
+            <a href="./list.html">
+              <h1>BeachCam.co.il</h1>
+              <p>לפירסום כאן 054-6817830</p>
+            </a>
           </div>
-        </a>
-        <div class="animat-box-in">
-          <p class="info">הרצליה תחזית גלים</p>
-          <h2>תחזית בזבולון </h2>
+  
+          <a id="tosess1" style="color: white;" href="https://tosess.co.il/">
+            <div class="img">
+              <img id="sidny" src="./images/tosess.png" alt="מצלמת חוף">
+            </div>
+          </a>
+          <div class="animat-box-in">
+            <p class="info">הרצליה תחזית גלים</p>
+            <h2>תחזית בזבולון </h2>
+          </div>
         </div>
       </div>
-    </div>
-  </header>
-  <nav>
-    <div class="animat-box-in">
-      <p>
-        <a style="color: white;" href="./list.html"> | למצלמות | </a>
-      </p>
-    </div>
-
-  </nav>
+    </header>
+    <nav>
+      <div class="animat-box-in">
+        <p>
+          <a style="color: white;" href="./list.html"> | למצלמות | </a>
+        </p>
+      </div>
+  
+    </nav>
+  </div>
 
   <section class="cams-container">
     <iframe onload="hideLoader()" src="https://magicseaweed.com/Zvulun-Herzelia-Surf-Report/3981/Embed/" width="100%" height="1080"
