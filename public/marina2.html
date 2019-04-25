@@ -19,7 +19,7 @@
     />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="shortcut icon" type="image/png" href="https://akermang.github.io/WeatherApp/sun-favicon.png" />
-    <title>מצלמות חופים | BeachCam | תל אביב חוף הצוק</title>
+    <title>מצלמות חופים | BeachCam | הרצליה מרינה</title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-22782431-1"></script>
@@ -288,11 +288,6 @@
             .loader-container {
                 top: 160px;
             }
-            
-            .cam-title {
-                bottom: 5%;
-                top: initial;
-            }
 
             .row-flex {
                 display: flex;
@@ -324,10 +319,10 @@
                     </a>
                 </div>
                 <div class="animat-box-in">
-                    <h2>חוף הצוק</h2>
+                    <h2>מרינה צפון</h2>
                 </div>
                 <a class="home-btn title" style="color: white;" href="./list.html">
-                    <p class="info">שידור חי - תל אביב - חוף הצוק</p>
+                    <p class="info">שידור חי - הרצליה - מרינה צפון</p>
                     <h1> מצלמות חוף נוספות </h1>
                 </a>
             </div>
@@ -336,7 +331,7 @@
     <nav>
         <div class="animat-box-in">
             <p>
-                <a style="color: white;" href="./marina.html">למרינה צפון |</a>
+                <a style="color: white;" href="./index.html">למרינה דרום |</a>
                 <a style="color: white;" href="./forcast.html">תחזית גלים |</a>
                 <a style="color: white;" href="./list.html">מצלמות</a>
 
@@ -345,20 +340,9 @@
     </nav>
     <div class="message"></div>
     <div class="main-container">
-        <iframe src="https://g2.ipcamlive.com/player/player.php?alias=5cba51a21bb45&skin=white&autoplay=true" width="800px" height="450px" frameborder="0"
-            allowfullscreen></iframe>
-        <!-- Parameters:
-        - alias: alias of your camera
-        - skin: orange/white (orange is the default)
-        - autoplay=1: start video automatically (this parameter works on desktop computers only)
-        - mute=1: mute the audio
-        - disablefullscreen=1: disable full screen button
-        - disablevideofit=1: disable video fit button
-        - timelapseplayerenabled=1: enable the Time-lapse Hub on the player
-        - disabledownloadbutton=1: disable time-lapse download button in time-lapse mode
-
-        Don't forget to adjust the height of the IFRAME according to the ASPECT RATIO of your camera! -->
-
+        <div class="cam-title">BeachCam.co.il</div>
+        <iframe src="https://g2.ipcamlive.com/player/player.php?alias=5cc1e5f01af1d&skin=white&autoplay=true" width="800px" height="450px"
+            frameborder="0" allowfullscreen></iframe>
         <div class="jump-btn" onclick="location.reload()">
             דלג
         </div>
