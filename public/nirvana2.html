@@ -194,7 +194,6 @@
     }
 
     .main-container {
-      min-height: calc(100vh - 160px);
       max-width: 800px;
       margin: auto;
     }
@@ -233,6 +232,13 @@
 
     .jump-btn.show:hover {
       opacity: 1;
+    }
+
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
     }
 
     @media(max-width: 914px) {
@@ -354,7 +360,6 @@
     <section class="cams-container">
       <div class="cam-title">BeachCam.co.il</div>
       <img id="image" onclick="togglesize()" src="http://37.142.41.42:38777//mjpg/video.mjpg" alt="מצלמת חוף">
-      <!-- <img id="image" onclick="togglesize()" src="http://37.142.41.42:38777/axis-cgi/mjpg/video.cgi" alt="מצלמת חוף"> -->
       <div class="jump-btn" onclick="location.reload()">
         דלג
       </div>
