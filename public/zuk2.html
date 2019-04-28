@@ -12,6 +12,9 @@
                     'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-WPTQ3HT');</script>
     <!-- End Google Tag Manager -->
+    <meta http-Equiv="Cache-Control" Content="no-cache" />
+    <meta http-Equiv="Pragma" Content="no-cache" />
+    <meta http-Equiv="Expires" Content="0" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="מצלמות חוף שידור ישיר ישראל" />
@@ -19,7 +22,7 @@
     />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="shortcut icon" type="image/png" href="https://akermang.github.io/WeatherApp/sun-favicon.png" />
-    <title>מצלמות חופים | BeachCam | תל אביב חוף הצוק</title>
+    <title> חוף הצוק | מצלמות חופים | BeachCam</title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-22782431-1"></script>
@@ -36,7 +39,6 @@
             0% {
                 transform: rotate(0deg);
             }
-
             100% {
                 transform: rotate(360deg);
             }
@@ -46,7 +48,6 @@
             from {
                 transform: scale(0);
             }
-
             to {
                 transform: scale(1);
             }
@@ -157,7 +158,7 @@
         }
 
         iframe {
-            width: 98%;
+            width: 100%;
             min-height: 33vh;
         }
 
@@ -185,12 +186,10 @@
         }
 
         .main-container {
+            min-height: calc(100vh - 160px);
             position: relative;
-            z-index: 1;
             max-width: 800px;
             margin: auto;
-            display: flex;
-            justify-content: center;
         }
 
         .home-btn {
@@ -216,7 +215,7 @@
             background: transparent url("./images/jump.png") no-repeat;
             background-position: center center;
             background-size: contain;
-            outline: 0 !important;
+            outline: 0!important;
             border: 0;
             color: white;
             line-height: 2.5;
@@ -233,22 +232,6 @@
             position: relative;
             z-index: 2;
         }
-        
-        footer {
-            width: 100%;
-            margin-top: 10vh;
-            text-align: center;
-        }
-        
-        footer img {
-            width: 150px;
-            opacity: 0.8;
-        }
-
-        footer p {
-            color: #cc5100;
-        }
-
 
         @media(max-width: 914px) {
             .cams-container P {
@@ -273,7 +256,6 @@
             .img img {
                 width: 140px;
             }
-
             .cam-title {
                 font-size: 19px;
             }
@@ -302,10 +284,7 @@
             iframe {
                 max-height: 53vw;
             }
-            .loader-container {
-                top: 160px;
-            }
-            
+
             .cam-title {
                 bottom: 5%;
                 top: initial;
@@ -318,11 +297,9 @@
                 align-items: center;
                 padding: 0;
             }
-
             nav p {
                 font-size: 18px;
             }
-
             p.info {
                 display: none;
             }
@@ -341,10 +318,10 @@
                     </a>
                 </div>
                 <div class="animat-box-in">
-                    <h2>חוף הצוק</h2>
+                    <h2> חוף הצוק ת"א </h2>
                 </div>
                 <a class="home-btn title" style="color: white;" href="./list.html">
-                    <p class="info">שידור חי - תל אביב - חוף הצוק</p>
+                    <p class="info">שידור חי - תל-אביב - חוף הצוק</p>
                     <h1> מצלמות חוף נוספות </h1>
                 </a>
             </div>
@@ -353,7 +330,7 @@
     <nav>
         <div class="animat-box-in">
             <p>
-                <a style="color: white;" href="./marina.html">למרינה צפון |</a>
+                <a style="color: white;" href="./index.html">למרינה דרום |</a>
                 <a style="color: white;" href="./forcast.html">תחזית גלים |</a>
                 <a style="color: white;" href="./list.html">מצלמות</a>
 
@@ -362,34 +339,20 @@
     </nav>
     <div class="message"></div>
     <div class="main-container">
-        <iframe src="https://g2.ipcamlive.com/player/player.php?alias=5cba51a21bb45&skin=white&autoplay=true" width="800px" height="450px" frameborder="0"
-            allowfullscreen></iframe>
-        <!-- Parameters:
-        - alias: alias of your camera
-        - skin: orange/white (orange is the default)
-        - autoplay=1: start video automatically (this parameter works on desktop computers only)
-        - mute=1: mute the audio
-        - disablefullscreen=1: disable full screen button
-        - disablevideofit=1: disable video fit button
-        - timelapseplayerenabled=1: enable the Time-lapse Hub on the player
-        - disabledownloadbutton=1: disable time-lapse download button in time-lapse mode
-
-        Don't forget to adjust the height of the IFRAME according to the ASPECT RATIO of your camera! -->
+        <iframe id="iframe-1" width="800" height="450" src="https://rtsp.me/embed/RbTt6Ttz/" frameborder="0" allowfullscreen></iframe>
 
         <div class="jump-btn" onclick="location.reload()">
             דלג
         </div>
     </div>
-    <div id="loader-container" class="loader-container">
+    <div class="loader-container">
         <div class="loader"></div>
     </div>
     <footer>
-        <div class="animat-box-in">
-            <img src="./images/omega.png" alt="מצלמת חוף הצוק BeachCam">
-            <p>omega security</p>
-        </div>
+        <p style="text-align: center;">
+            <a style="color: gold;" href="">gloona Soft</a>
+        </p>
     </footer>
-
 
 </body>
 
