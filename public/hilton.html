@@ -355,12 +355,6 @@
     </section>
   </div>
 
-  <!-- <footer>
-    <p style="text-align: center;">
-      <a style="color: gold;" href="">gloona Soft</a>
-    </p>
-  </footer> -->
-
   <div class="loader-container">
     <div class="loader"></div>
   </div>
@@ -383,11 +377,9 @@
     }
 
     const changeView = () => {
-      // cam.style.background = "#f1f1f157";
       cam.style.maxWidth = "300px";
       cam.style.position = "static";
       cam.style.height = "70px";
-      // cam.style.borderRadius = "52%";
       cam.style.margin = "15%";
       cam.onclick = () => location.reload();
       camTitle.style.display = "none";
@@ -409,8 +401,7 @@
     cam.onerror = () => {
       changeView();
       clearTimeout(timeOut);
-      //   window.location = "./testcam2.html";
-      message.innerHTML = "..מקסימום צופים מחוברים למצלמה<br>נסו מאוחר יותר <br> BeachCam.co.il אנו בצוות   <br> משפרים את המערכת כדי<br>לספק לכם חוויית צפייה מדהימה <br> כבר בימים הקרובים.. מצלמות חדשות! וחוויית גלישה משופרת";
+      message.innerHTML = "..מצלמת גלים חוף הילטון תל אביב <br> BeachCam.co.il <br>  מצלמות חדשות! וחוויית גלישה משופרת";
     };
 
   </script>
