@@ -32,90 +32,96 @@
     gtag('config', 'UA-22782431-1');
   </script>
 
-  <style>
-    @keyframes loader-spin {
+<style>
+  @keyframes loader-spin {
       0% {
-        transform: rotate(0deg);
+          transform: rotate(0deg);
       }
+
       100% {
-        transform: rotate(360deg);
+          transform: rotate(360deg);
       }
-    }
+  }
 
-    @keyframes createBox {
+  @keyframes createBox {
       from {
-        transform: scale(0);
+          transform: scale(0);
       }
+
       to {
-        transform: scale(1);
+          transform: scale(1);
       }
-    }
+  }
 
-    body {
+  body {
       background-color: black;
-    }
+  }
 
-    header {
+  header {
       width: 100%;
       display: flex;
-    }
+  }
 
-    a {
+  a {
       text-decoration: none;
-    }
+  }
 
-    div.animat-box-in {
+  div.animat-box-in {
       animation: createBox .25s;
-    }
+  }
 
-    .wrapper {
+  .wrapper {
       width: 100%;
-    }
+  }
 
-    .row-flex {
+  .row-flex {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 5px 0;
-    }
+  }
 
-    p,
-    h1,
-    h2 {
+  p,
+  h1,
+  h2 {
       text-align: center;
       margin: 0;
-    }
+  }
 
-    nav p {
+  nav p {
       font-size: 20px;
-    }
+  }
 
-    h1,
-    h2 {
+  h1,
+  h2 {
       font-size: 30px;
-    }
+  }
 
-    div.img {
+  div.img {
       text-align: center;
       border-radius: 2px;
       background-color: rgb(241, 232, 232);
-    }
+  }
 
-    div.img:hover {
+  div.img:hover {
       box-shadow: 0 2px 10px rgba(0, 0, 0, 1.2);
-    }
+  }
 
-    .img img {
+  .img img {
       width: 200px;
-    }
+  }
 
-    .message {
+  .message {
       color: wheat;
       text-align: center;
       font-size: medium;
-    }
+  }
 
-    .cams-container {
+  .name_video {
+    display: none;
+  }
+
+  .cams-container {
       display: none;
       flex-wrap: wrap;
       justify-content: center;
@@ -125,41 +131,42 @@
       max-width: 800px;
       margin: 0px auto;
       position: relative;
-    }
+  }
 
-    .cam-title {
+  .cam-title {
       position: absolute;
       color: white;
       top: 5%;
       left: 2%;
       font-size: 22px;
-    }
+      z-index: 1;
+  }
 
-    .cams-container.full-size {
+  .cams-container.full-size {
       width: 100%;
       position: absolute;
       top: 0;
       left: 0;
       max-width: 100%;
       padding: 0;
-    }
+  }
 
-    .full-size img {
+  .full-size img {
       width: 100%;
       height: 100%;
-    }
+  }
 
-    .cams-container P {
+  .cams-container P {
       margin: 0;
       min-width: 33%;
-    }
+  }
 
-    iframe {
-      width: 100%;
+  iframe {
+      width: 98%;
       min-height: 33vh;
-    }
+  }
 
-    .loader-container {
+  .loader-container {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -167,10 +174,10 @@
       height: 50vh;
       width: 100%;
       position: absolute;
-      top: 33%;
-    }
+      top: 200px;
+  }
 
-    .loader {
+  .loader {
       border: 4px solid #17a2b8;
       border-left-color: rgba(0, 0, 0, 0.1);
       border-top-color: #2196F3;
@@ -180,22 +187,31 @@
       animation: loader-spin 0.8s linear infinite;
       opacity: 1;
       opacity: 1;
-    }
+  }
 
-    .home-btn {
+  .main-container {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 5px auto;
+      display: flex;
+      justify-content: center;
+  }
+
+  .home-btn {
       padding: 4px;
       border-radius: 7px;
-    }
+  }
 
-    .home-btn:hover {
+  .home-btn:hover {
       box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
-    }
+  }
 
-    .jump-btn {
+  .jump-btn {
       display: none;
-    }
+  }
 
-    .jump-btn.show {
+  .jump-btn.show {
       display: block;
       width: 40px;
       position: absolute;
@@ -205,113 +221,118 @@
       background: transparent url("./images/jump.png") no-repeat;
       background-position: center center;
       background-size: contain;
-      outline: 0!important;
+      outline: 0 !important;
       border: 0;
       color: white;
       line-height: 2.5;
       text-align: center;
       opacity: 0.6;
       cursor: pointer;
-    }
+  }
 
-    .jump-btn.show:hover {
+  .jump-btn.show:hover {
       opacity: 1;
-    }
+  }
 
-    .title:hover {
-      box-shadow: 0 2px 10px rgba(0, 0, 0, .4);
-    }
-
-    footer {
-      position: fixed;
-      bottom: 0;
+  #iframe-1 {
+      position: relative;
+      z-index: 2;
+  }
+  
+  footer {
       width: 100%;
-    }
+      margin-top: 10vh;
+      text-align: center;
+  }
+  
+  footer img {
+      width: 150px;
+      opacity: 0.8;
+  }
+
+  footer p {
+      color: #cc5100;
+  }
 
 
-    @media(max-width: 914px) {
+  @media(max-width: 914px) {
       .cams-container P {
-        min-width: 49%;
+          min-width: 49%;
       }
-    }
+  }
 
-    @media(max-width: 768px) {
+  @media(max-width: 768px) {
       .img img {
-        width: 140px;
+          width: 140px;
       }
       .cam-title {
-        font-size: 19px;
+          font-size: 19px;
       }
-    }
+      h1,
+      h2 {
+          font-size: 22px;
+      }
+  }
 
-    @media(max-width: 768px) {
+  @media(max-width: 700px) {
+      .img img {
+          width: 140px;
+      }
+
+      .cam-title {
+          font-size: 19px;
+      }
+  }
+
+  @media(max-width: 599px) {
       header img {
-        width: 115px;
+          width: 115px;
       }
 
       .cams-container P {
-        min-width: 100%;
+          min-width: 100%;
       }
 
       .img img {
-        width: 115px;
+          width: 115px;
       }
 
       h1,
       h2 {
-        font-size: 22px;
+          font-size: 22px;
       }
-    }
+  }
 
-    @media(max-width: 599px) {
-      header img {
-        width: 115px;
+  @media (max-width: 530px) {
+      iframe {
+          max-height: 53vw;
       }
-
-      .cams-container P {
-        min-width: 100%;
+      .loader-container {
+          top: 160px;
       }
-
-      .img img {
-        width: 115px;
-      }
-
-      h1,
-      h2 {
-        font-size: 22px;
-      }
-      img {
-        max-height: 53vw;
-        width: 100%;
-      }
-
+      
       .cam-title {
-        left: 4%;
-        font-size: 16px;
-      }
-    }
-
-    @media (max-width: 530px) {
-      .cam-title {
-        bottom: 5%;
-        top: initial;
+          bottom: 5%;
+          top: initial;
       }
 
       .row-flex {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        padding: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          align-items: center;
+          padding: 0;
       }
+
       nav p {
-        font-size: 18px;
+          font-size: 18px;
       }
+
       p.info {
-        display: none;
+          display: none;
       }
-    }
-  </style>
+  }
+</style>
 </head>
 
 <body>
@@ -346,14 +367,11 @@
   </nav>
   <div class="message"></div>
   <div class="main-container">
-    <section class="cams-container">
       <div class="cam-title">BeachCam.co.il</div>
-      <img ondblclick='togglesize()' id="image" src="http://84.95.212.7/axis-cgi/mjpg/video.cgi" alt="מצלמת חוף" width="800px"
-        height="450px">
+      <iframe width="600" height="440" src="https://rtsp.me/embed/4FEN7bBF/" frameborder="0" allowfullscreen autoplay></iframe>
       <div class="jump-btn" onclick="location.reload()">
         דלג
       </div>
-    </section>
   </div>
 
   <div class="loader-container">
@@ -364,53 +382,6 @@
       <a style="color: gold;" href="./list.html"> מצלמת חוף Beach Cam </a>
     </p>
   </footer>
-
-  <script>
-
-    const cam = document.querySelector("#image");
-    const camContainer = document.querySelector(".cams-container");
-    const camTitle = document.querySelector(".cam-title");
-    const loader = document.querySelector(".loader-container");
-    const message = document.querySelector(".message");
-    const jumpBtn = document.querySelector(".jump-btn");
-
-    const showJumpBtn = () => {
-      jumpBtn.classList.add("show");
-    }
-
-    const togglesize = () => {
-      camContainer.classList.toggle("full-size");
-    }
-
-    const changeView = () => {
-      cam.style.maxWidth = "300px";
-      cam.style.position = "static";
-      cam.style.height = "70px";
-      cam.style.margin = "15%";
-      cam.onclick = () => location.reload();
-      camTitle.style.display = "none";
-      camContainer.classList.remove("full-size");
-      cam.src = "./images/tosess.png";
-      showJumpBtn();
-    }
-
-    cam.onload = () => {
-      loader.style.display = "none";
-      camContainer.style.display = "flex";
-    }
-
-    const timeOut = () => setTimeout(() => {
-      changeView()
-    }, 30000);
-    timeOut();
-
-    cam.onerror = () => {
-      changeView();
-      clearTimeout(timeOut);
-      message.innerHTML = "..מצלמת גלים חוף הילטון תל אביב <br> BeachCam.co.il <br>  מצלמות חדשות! וחוויית גלישה משופרת";
-    };
-
-  </script>
 </body>
 
 </html>
