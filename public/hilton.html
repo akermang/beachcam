@@ -128,9 +128,9 @@
             padding: 6px;
             overflow: auto;
             color: wheat;
-            max-width: 800px;
             margin: 0px auto;
             position: relative;
+            width: 100%;
         }
 
         .cam-title {
@@ -190,7 +190,7 @@
         }
 
         .main-container {
-            position: relative;
+            /* position: relative; */
             z-index: 1;
             max-width: 800px;
             margin: 5px auto;
@@ -370,11 +370,20 @@
     </nav>
     <div class="message"></div>
     <div class="main-container">
-        <div class="cam-title">BeachCam.co.il</div>
-        <iframe width="800" height="440" src="https://rtsp.me/embed/4FEN7bBF/" frameborder="0" allowfullscreen autoplay></iframe>
-        <div class="jump-btn" onclick="location.reload()">
+        <section class="cams-container">
+            <div class="cam-title">BeachCam.co.il</div>
+            <img ondblclick='togglesize()' id="image" width="100%" src="http://84.95.212.7/axis-cgi/mjpg/video.cgi?resolution=320x240&dummy=1588254075013" alt="מצלמת חוף">
+            <div class="jump-btn" onclick="location.reload()">
+              דלג
+            </div>
+          </section>
+
+        <!-- <div class="cam-title">BeachCam.co.il</div> -->
+        <!-- <img ondblclick='togglesize()' id="image" width="100%" src="http://84.95.212.7/axis-cgi/mjpg/video.cgi?resolution=320x240&dummy=1588254075013" alt="מצלמת חוף"> -->
+        <!-- <iframe width="800" height="440" src="https://rtsp.me/embed/4FEN7bBF/" frameborder="0" allowfullscreen autoplay></iframe> -->
+        <!-- <div class="jump-btn" onclick="location.reload()">
             דלג
-        </div>
+        </div> -->
     </div>
 
     <div class="loader-container">
@@ -385,6 +394,53 @@
             <a style="color: gold;" href="./list.html"> מצלמת חוף Beach Cam </a>
         </p>
     </footer>
+    <script>
+
+        const cam = document.querySelector("#image");
+        const camContainer = document.querySelector(".cams-container");
+        const camTitle = document.querySelector(".cam-title");
+        const loader = document.querySelector(".loader-container");
+        const message = document.querySelector(".message");
+        const jumpBtn = document.querySelector(".jump-btn");
+    
+        const showJumpBtn = () => {
+          jumpBtn.classList.add("show");
+        }
+    
+        const togglesize = () => {
+          camContainer.classList.toggle("full-size");
+        }
+    
+        const changeView = () => {
+          // cam.style.background = "#f1f1f157";
+          cam.style.maxWidth = "300px";
+          cam.style.position = "static";
+          cam.style.height = "70px";
+          // cam.style.borderRadius = "52%";
+          cam.style.margin = "15%";
+          cam.onclick = () => location.reload();
+          camTitle.style.display = "none";
+          camContainer.classList.remove("full-size");
+          cam.src = "./images/tosess.png";
+          showJumpBtn();
+        }
+    
+        cam.onload = () => {
+          loader.style.display = "none";
+          camContainer.style.display = "flex";
+        }
+    
+        const timeOut = () => setTimeout(() => {
+          changeView()
+        }, 30000);
+        timeOut();
+    
+        cam.onerror = () => {
+          clearTimeout(timeOut);
+          window.location = "./dromi.html";
+        };
+    
+      </script>
 </body>
 
 </html>
