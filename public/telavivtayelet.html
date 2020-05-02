@@ -19,10 +19,7 @@
     />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="shortcut icon" type="image/png" href="https://akermang.github.io/WeatherApp/sun-favicon.png" />
-    <title>מצלמות חופים | BeachCam | בת-ים</title>
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
+    <title> טיילת תל-אביב | מצלמות חופים | BeachCam</title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-22782431-1"></script>
@@ -39,7 +36,6 @@
             0% {
                 transform: rotate(0deg);
             }
-
             100% {
                 transform: rotate(360deg);
             }
@@ -49,7 +45,6 @@
             from {
                 transform: scale(0);
             }
-
             to {
                 transform: scale(1);
             }
@@ -62,6 +57,14 @@
         header {
             width: 100%;
             display: flex;
+            position: relative;
+            z-index: 2;
+        }
+
+        nav {
+            z-index: 2;
+            position: relative;
+            background: black;
         }
 
         a {
@@ -134,10 +137,10 @@
         .cam-title {
             position: absolute;
             color: white;
-            top: 10%;
-            left: 7%;
+            top: 5%;
+            left: 9%;
             font-size: 22px;
-            z-index: 1;
+            z-index: 4;
         }
 
         .cams-container.full-size {
@@ -172,7 +175,7 @@
             height: 50vh;
             width: 100%;
             position: absolute;
-            top: 160px;
+            top: 130px;
         }
 
         .loader {
@@ -189,9 +192,9 @@
 
         .main-container {
             position: relative;
-            z-index: 1;
-            max-width: 800px;
+            max-width: 1000px;
             margin: auto;
+            z-index: 2;
         }
 
         .home-btn {
@@ -217,7 +220,7 @@
             background: transparent url("./images/jump.png") no-repeat;
             background-position: center center;
             background-size: contain;
-            outline: 0 !important;
+            outline: 0!important;
             border: 0;
             color: white;
             line-height: 2.5;
@@ -233,6 +236,9 @@
         #iframe-1 {
             position: relative;
             z-index: 2;
+            max-width: 750px;
+            margin: 0 auto;
+            height: 600px;
         }
 
         footer {
@@ -265,9 +271,8 @@
             .img img {
                 width: 140px;
             }
-
             .cam-title {
-                font-size: 19px;
+                font-size: 14px;
             }
         }
 
@@ -292,13 +297,8 @@
 
         @media (max-width: 530px) {
             iframe {
-                max-height: 53vw;
+                max-height: 198px;
             }
-
-            .cam-title {
-                font-size: 13px;
-            }
-
             .row-flex {
                 display: flex;
                 flex-direction: column;
@@ -306,11 +306,9 @@
                 align-items: center;
                 padding: 0;
             }
-
             nav p {
                 font-size: 18px;
             }
-
             p.info {
                 display: none;
             }
@@ -329,10 +327,10 @@
                     </a>
                 </div>
                 <div class="animat-box-in">
-                    <h2 dir="rtl">בת ים סטלה ביץ'</h2>
+                    <h2>תל-אביב טיילת</h2>
                 </div>
                 <a class="home-btn title" style="color: white;" href="./list.html">
-                    <p class="info" dir="rtl">שידור חי - בת ים -סטלה ביץ'</p>
+                    <p class="info">שידור חי - תל-אביב -  טיילת</p>
                     <h1> מצלמות חוף נוספות </h1>
                 </a>
             </div>
@@ -341,7 +339,7 @@
     <nav>
         <div class="animat-box-in">
             <p>
-                <a style="color: white;" href="./index.html">למרינה דרום |</a>
+                <a style="color: white;" href="./gordon.html"> גורדון תל-אביב |</a>
                 <a style="color: white;" href="./forcast.html">תחזית גלים |</a>
                 <a style="color: white;" href="./list.html">מצלמות</a>
 
@@ -351,17 +349,18 @@
     <div class="message"></div>
     <div class="main-container">
         <div class="cam-title">BeachCam.co.il</div>
-        <iframe width="800" height="450" src="https://www.youtube.com/embed/LTBzwcSi-kc" frameborder="0" autoplay encrypted-media
-            gyroscope picture-in-picture allowfullscreen></iframe>
-        <div class="jump-btn" onclick="location.reload()">
+        <iframe width="1000" height="600" style="border:0" webkitallowfullscreen="true" scrolling="no" mozallowfullscreen="true" allowfullscreen="true"
+            src="https://webcasting.co.il/player/tlv/cam5_mute.html"></iframe>
+
+        <div class="jump-btn " onclick="location.reload() ">
             דלג
         </div>
     </div>
-    <div class="loader-container">
-        <div class="loader"></div>
+    <div class="loader-container ">
+        <div class="loader "></div>
     </div>
     <footer>
-        <p style="text-align: center;">
+        <p style="text-align: center; ">
             <a style="color: gold;" href="./list.html"> מצלמת חוף Beach Cam </a>
         </p>
     </footer>
