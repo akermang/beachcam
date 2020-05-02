@@ -14,7 +14,7 @@
   </url>
 - <url>
   <loc>https://beachcam.co.il/list.html</loc> 
-  <lastmod>2019-04-25T19:28:47+00:00</lastmod> 
+  <lastmod>2020-04-25T19:28:47+00:00</lastmod> 
   <priority>0.80</priority> 
   </url>
 - <url>
@@ -39,10 +39,25 @@
   </url>
 - <url>
   <loc>https://beachcam.co.il/gordon.html</loc> 
-  <lastmod>2019-04-25T18:03:37+00:00</lastmod> 
+  <lastmod>2020-04-25T18:03:37+00:00</lastmod> 
+  <priority>0.64</priority> 
+  </url>
+   <url>
+  <loc>https://beachcam.co.il/yafo.html</loc> 
+  <lastmod>2020-04-25T18:03:37+00:00</lastmod> 
   <priority>0.64</priority> 
   </url>
 - <url>
+ <url>
+  <loc>https://beachcam.co.il/gazibo.html</loc> 
+  <lastmod>2020-04-25T18:03:37+00:00</lastmod> 
+  <priority>0.64</priority> 
+  </url>
+ <url>
+  <loc>https://beachcam.co.il/hamaaravi.html</loc> 
+  <lastmod>2020-04-25T18:03:37+00:00</lastmod> 
+  <priority>0.64</priority> 
+  </url>
   <loc>https://beachcam.co.il/hilton.html</loc> 
   <lastmod>2019-04-25T21:26:09+00:00</lastmod> 
   <priority>0.64</priority> 
@@ -64,7 +79,7 @@
   </url>
 - <url>
   <loc>https://beachcam.co.il/testcam1.html</loc> 
-  <lastmod>2019-04-25T20:59:29+00:00</lastmod> 
+  <lastmod>2020-04-25T20:59:29+00:00</lastmod> 
   <priority>0.64</priority> 
   </url>
 - <url>
@@ -74,7 +89,7 @@
   </url>
 - <url>
   <loc>https://beachcam.co.il/krayot.html</loc> 
-  <lastmod>2019-04-25T21:44:55+00:00</lastmod> 
+  <lastmod>2020-04-25T21:44:55+00:00</lastmod> 
   <priority>0.64</priority> 
   </url>
   </urlset>
