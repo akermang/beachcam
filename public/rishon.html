@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en-US">
 
@@ -14,12 +15,12 @@
     <!-- End Google Tag Manager -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="מצלמות חוף שידור ישיר ישראל" />
-    <meta name="keywords" content="כניסה למרינה,הרצליה,דרומי,מצלמת חוף פרישמן ,ישראל,מצלמת גלישה, גלים,מצלמת חוף הרצליה,גלישה,מצב,גלים,שידור,חי,מרינה,surf,live,Camera"
+    <meta name="description" content="  זבולון צופי ים מצלמות חוף שידור ישיר ישראל" />
+    <meta name="keywords" content="כניסה למרינה, חוף זבולון, צופי ים,הרצליה,דרומי,מרינה צפון,מצלמת גלישה, גלים,מצלמת חוף הרצליה,גלישה,מצב,גלים,שידור,חי,מרינה,surf,live,Camera"
     />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="shortcut icon" type="image/png" href="https://akermang.github.io/WeatherApp/sun-favicon.png" />
-    <title>מצלמות חופים | BeachCam |פרישמן</title>
+    <title>מצלמות חופים | BeachCam | צופי ים הרצליה</title>
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
@@ -134,7 +135,7 @@
         .cam-title {
             position: absolute;
             color: white;
-            top: 80%;
+            top: 10%;
             left: 7%;
             font-size: 22px;
             z-index: 1;
@@ -329,10 +330,10 @@
                     </a>
                 </div>
                 <div class="animat-box-in">
-                    <h2 dir="rtl"> תל אביב חוף פרישמן</h2>
+                    <h2 dir="rtl">צופי ים   הרצליה</h2>
                 </div>
                 <a class="home-btn title" style="color: white;" href="./list.html">
-                    <p class="info" dir="rtl">שידור חי - פרישמן תל אביב</p>
+                    <p class="info" dir="rtl">שידור חי - צופי ים הרצליה</p>
                     <h1> מצלמות חוף נוספות </h1>
                 </a>
             </div>
@@ -341,7 +342,7 @@
     <nav>
         <div class="animat-box-in">
             <p>
-                <a style="color: white;" href="./index.html">הרצליה דרום |</a>
+                <a style="color: white;" href="./index.html">למרינה דרום |</a>
                 <a style="color: white;" href="./forcast.html">תחזית גלים |</a>
                 <a style="color: white;" href="./list.html">מצלמות</a>
 
@@ -351,7 +352,60 @@
     <div class="message"></div>
     <div class="main-container">
         <div class="cam-title">BeachCam.co.il</div>
-        <iframe width="800" height="450" src="https://www.youtube.com/embed/GBcHl6C3IRY" frameborder="0" autoplay encrypted-media
+        <div id="videoContainer">
+            <video id="video" width="100%" height="auto" controls autoplay preload="auto"  ></video>
+       </div>
+       <script>
+          var video = document.getElementById('video');
+            if(Hls.isSupported()) {
+                var hls = new Hls();
+                hls.loadSource('https://stream.cawamo.com/hof/hof5.m3u8');
+                hls.attachMedia(video);
+                hls.on(Hls.Events.MANIFEST_PARSED,function() {
+                  video.play();
+              });
+                  //setTimeout(function(){ alert("הצפייה מוגבלת לשלוש דקות - לצפייה מחודשת, יש לבחור מצלמה"); }, 260000);
+                setTimeout(function(){hls.destroy(); }, 160000);
+                
+                hls.on(Hls.Events.ERROR, function (event, data) {
+                if (data.fatal) {
+                  switch(data.type) {
+                  case Hls.ErrorTypes.NETWORK_ERROR:
+                  // try to recover network error
+                    console.log("fatal network error encountered, try to recover");
+                    //hls.startLoad();
+                    video.src = 'img/slate1.2.mp4';
+                      video.addEventListener('loadedmetadata',function() {
+                         video.play();
+                        });	
+                    break;
+                  case Hls.ErrorTypes.MEDIA_ERROR:
+                    console.log("fatal media error encountered, try to recover");
+                    hls.recoverMediaError();
+                    break;
+                  default:
+                  // cannot recover
+                    hls.destroy();
+                    break;
+                  }
+                }
+              });	
+             }
+             // hls.js is not supported on platforms that do not have Media Source Extensions (MSE) enabled.
+             // When the browser has built-in HLS support (check using `canPlayType`), we can provide an HLS manifest (i.e. .m3u8 URL) directly to the video element throught the `src` property.
+             // This is using the built-in support of the plain video element, without using hls.js.
+             // Note: it would be more normal to wait on the 'canplay' event below however on Safari (where you are most likely to find built-in HLS support) the video.src URL must be on the user-driven
+             // white-list before a 'canplay' event will be emitted; the last video event that can be reliably listened-for when the URL is not on the white-list is 'loadedmetadata'.
+            else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+              video.src = 'https://stream.cawamo.com/hof/hof5.m3u8';
+              video.addEventListener('loadedmetadata',function() {
+               video.play();
+            });
+            }
+        </script>
+
+
+        <iframe width="800" height="450" src="https://www.youtube.com/embed/YZVej51RJZ8" frameborder="0" autoplay encrypted-media
             gyroscope picture-in-picture allowfullscreen></iframe>
         <div class="jump-btn" onclick="location.reload()">
             דלג
@@ -365,6 +419,55 @@
             <a style="color: gold;" href="./list.html"> מצלמת חוף Beach Cam </a>
         </p>
     </footer>
+    <script>
+        var video = document.getElementById('video');
+          if(Hls.isSupported()) {
+              var hls = new Hls();
+              hls.loadSource('https://stream.cawamo.com/hof/hof5.m3u8');
+              hls.attachMedia(video);
+              hls.on(Hls.Events.MANIFEST_PARSED,function() {
+                video.play();
+            });
+                //setTimeout(function(){ alert("הצפייה מוגבלת לשלוש דקות - לצפייה מחודשת, יש לבחור מצלמה"); }, 260000);
+              setTimeout(function(){hls.destroy(); }, 160000);
+              
+              hls.on(Hls.Events.ERROR, function (event, data) {
+              if (data.fatal) {
+                switch(data.type) {
+                case Hls.ErrorTypes.NETWORK_ERROR:
+                // try to recover network error
+                  console.log("fatal network error encountered, try to recover");
+                  //hls.startLoad();
+                  video.src = 'img/slate1.2.mp4';
+                    video.addEventListener('loadedmetadata',function() {
+                       video.play();
+                      });	
+                  break;
+                case Hls.ErrorTypes.MEDIA_ERROR:
+                  console.log("fatal media error encountered, try to recover");
+                  hls.recoverMediaError();
+                  break;
+                default:
+                // cannot recover
+                  hls.destroy();
+                  break;
+                }
+              }
+            });	
+           }
+           // hls.js is not supported on platforms that do not have Media Source Extensions (MSE) enabled.
+           // When the browser has built-in HLS support (check using `canPlayType`), we can provide an HLS manifest (i.e. .m3u8 URL) directly to the video element throught the `src` property.
+           // This is using the built-in support of the plain video element, without using hls.js.
+           // Note: it would be more normal to wait on the 'canplay' event below however on Safari (where you are most likely to find built-in HLS support) the video.src URL must be on the user-driven
+           // white-list before a 'canplay' event will be emitted; the last video event that can be reliably listened-for when the URL is not on the white-list is 'loadedmetadata'.
+          else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+            video.src = 'https://stream.cawamo.com/hof/hof5.m3u8';
+            video.addEventListener('loadedmetadata',function() {
+             video.play();
+          });
+          }
+      </script>
+      <!-- / Main Video-->
 
 </body>
 
