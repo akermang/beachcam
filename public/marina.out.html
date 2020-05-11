@@ -1,417 +1,448 @@
 <!DOCTYPE html>
 <html lang="en-US">
-
-<head>
+  <head>
     <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-WPTQ3HT');</script>
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          "gtm.start": new Date().getTime(),
+          event: "gtm.js",
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-WPTQ3HT");
+    </script>
     <!-- End Google Tag Manager -->
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="מצלמות חוף שידור ישיר ישראל" />
-    <meta name="keywords" content="כניסה למרינה,הרצליה,דרומי,מרינה צפון,מצלמת גלישה, גלים,מצלמת חוף הרצליה,גלישה,מצב,גלים,שידור,חי,מרינה,surf,live,Camera"
+    <meta
+      name="keywords"
+      content="כניסה למרינה,הרצליה,דרומי,מרינה צפון,מצלמת גלישה, גלים,מצלמת חוף הרצליה,גלישה,מצב,גלים,שידור,חי,מרינה,surf,live,Camera"
     />
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="shortcut icon" type="image/png" href="https://akermang.github.io/WeatherApp/sun-favicon.png" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="https://akermang.github.io/WeatherApp/sun-favicon.png"
+    />
     <title>מצלמות חופים | BeachCam | כניסה למרינה הרצליה</title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-22782431-1"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-22782431-1"
+    ></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'UA-22782431-1');
-
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-22782431-1");
     </script>
 
     <style>
-        @keyframes loader-spin {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
+      @keyframes loader-spin {
+        0% {
+          transform: rotate(0deg);
         }
-
-        @keyframes createBox {
-            from {
-                transform: scale(0);
-            }
-            to {
-                transform: scale(1);
-            }
+        100% {
+          transform: rotate(360deg);
         }
+      }
 
-        body {
-            background-color: black;
+      @keyframes createBox {
+        from {
+          transform: scale(0);
         }
-
-        header {
-            width: 100%;
-            display: flex;
+        to {
+          transform: scale(1);
         }
+      }
 
-        a {
-            text-decoration: none;
+      body {
+        background-color: black;
+      }
+
+      header {
+        width: 100%;
+        display: flex;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      div.animat-box-in {
+        animation: createBox 0.25s;
+      }
+
+      .wrapper {
+        width: 100%;
+      }
+
+      .row-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 0;
+      }
+
+      p,
+      h1,
+      h2 {
+        text-align: center;
+        margin: 0;
+      }
+
+      nav p {
+        font-size: 20px;
+      }
+
+      h1,
+      h2 {
+        font-size: 30px;
+      }
+
+      div.img {
+        text-align: center;
+        border-radius: 2px;
+        background-color: rgb(241, 232, 232);
+      }
+
+      div.img:hover {
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 1.2);
+      }
+
+      .img img {
+        width: 200px;
+      }
+
+      .message {
+        color: wheat;
+        text-align: center;
+        font-size: medium;
+      }
+
+      .cams-container {
+        display: none;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 6px;
+        overflow: auto;
+        color: wheat;
+        max-width: 800px;
+        margin: 0px auto;
+        position: relative;
+      }
+
+      .cam-title {
+        position: absolute;
+        color: white;
+        top: 5%;
+        left: 2%;
+        font-size: 22px;
+      }
+
+      .cams-container.full-size {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        max-width: 100%;
+        padding: 0;
+      }
+
+      .full-size img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .cams-container P {
+        margin: 0;
+        min-width: 33%;
+      }
+
+      iframe {
+        width: 100%;
+        min-height: 33vh;
+      }
+
+      .loader-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 50vh;
+        width: 100%;
+        position: absolute;
+        top: 33%;
+      }
+
+      .loader {
+        border: 4px solid #17a2b8;
+        border-left-color: rgba(0, 0, 0, 0.1);
+        border-top-color: #2196f3;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: loader-spin 0.8s linear infinite;
+        opacity: 1;
+        opacity: 1;
+      }
+
+      .home-btn {
+        padding: 4px;
+        border-radius: 7px;
+      }
+
+      .home-btn:hover {
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .jump-btn {
+        display: none;
+      }
+
+      .jump-btn.show {
+        display: block;
+        width: 40px;
+        position: absolute;
+        bottom: 10%;
+        right: 16%;
+        height: 40px;
+        background: transparent url("./images/jump.png") no-repeat;
+        background-position: center center;
+        background-size: contain;
+        outline: 0 !important;
+        border: 0;
+        color: white;
+        line-height: 2.5;
+        text-align: center;
+        opacity: 0.6;
+        cursor: pointer;
+      }
+
+      .jump-btn.show:hover {
+        opacity: 1;
+      }
+
+      footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+
+      @media (max-width: 914px) {
+        .cams-container P {
+          min-width: 49%;
         }
+      }
 
-        div.animat-box-in {
-            animation: createBox .25s;
-        }
-
-        .wrapper {
-            width: 100%;
-        }
-
-        .row-flex {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 5px 0;
-        }
-
-        p,
-        h1,
-        h2 {
-            text-align: center;
-            margin: 0;
-        }
-
-        nav p {
-            font-size: 20px;
-        }
-
-        h1,
-        h2 {
-            font-size: 30px;
-        }
-
-        div.img {
-            text-align: center;
-            border-radius: 2px;
-            background-color: rgb(241, 232, 232);
-        }
-
-        div.img:hover {
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 1.2);
-        }
-
+      @media (max-width: 768px) {
         .img img {
-            width: 200px;
+          width: 140px;
         }
-
-        .message {
-            color: wheat;
-            text-align: center;
-            font-size: medium;
-        }
-
-        .cams-container {
-            display: none;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 6px;
-            overflow: auto;
-            color: wheat;
-            max-width: 800px;
-            margin: 0px auto;
-            position: relative;
-        }
-
         .cam-title {
-            position: absolute;
-            color: white;
-            top: 5%;
-            left: 2%;
-            font-size: 22px;
+          font-size: 19px;
         }
-
-        .cams-container.full-size {
-            width: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            max-width: 100%;
-            padding: 0;
+        h1,
+        h2 {
+          font-size: 22px;
         }
+      }
 
-        .full-size img {
-            width: 100%;
-            height: 100%;
+      @media (max-width: 768px) {
+        .img img {
+          width: 140px;
+        }
+        .cam-title {
+          font-size: 19px;
+        }
+        h1,
+        h2 {
+          font-size: 22px;
+        }
+      }
+
+      @media (max-width: 700px) {
+        .img img {
+          width: 140px;
+        }
+        .cam-title {
+          font-size: 19px;
+        }
+      }
+
+      @media (max-width: 599px) {
+        header img {
+          width: 115px;
         }
 
         .cams-container P {
-            margin: 0;
-            min-width: 33%;
+          min-width: 100%;
         }
 
-        iframe {
-            width: 100%;
-            min-height: 33vh;
+        .img img {
+          width: 115px;
         }
 
-        .loader-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            height: 50vh;
-            width: 100%;
-            position: absolute;
-            top: 33%;
+        h1,
+        h2 {
+          font-size: 22px;
+        }
+        img {
+          max-height: 53vw;
+          width: 100%;
         }
 
-        .loader {
-            border: 4px solid #17a2b8;
-            border-left-color: rgba(0, 0, 0, 0.1);
-            border-top-color: #2196F3;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            animation: loader-spin 0.8s linear infinite;
-            opacity: 1;
-            opacity: 1;
+        .cam-title {
+          left: 4%;
+          font-size: 16px;
+        }
+      }
+
+      .mobile-btn {
+        display: none;
+      }
+
+      @media (max-width: 530px) {
+        .mobile-btn {
+          display: block;
+          background-color: #2196f3;
+          margin: 60px 1em;
+          cursor: pointer;
+        }
+        .cam-title {
+          bottom: 5%;
+          top: initial;
         }
 
-        .home-btn {
-            padding: 4px;
-            border-radius: 7px;
+        .row-flex {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          align-items: center;
+          padding: 0;
         }
-
-        .home-btn:hover {
-            box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
+        nav p {
+          font-size: 18px;
         }
-
-        .jump-btn {
-            display: none;
+        p.info {
+          display: none;
         }
-
-        .jump-btn.show {
-            display: block;
-            width: 40px;
-            position: absolute;
-            bottom: 10%;
-            right: 16%;
-            height: 40px;
-            background: transparent url("./images/jump.png") no-repeat;
-            background-position: center center;
-            background-size: contain;
-            outline: 0!important;
-            border: 0;
-            color: white;
-            line-height: 2.5;
-            text-align: center;
-            opacity: 0.6;
-            cursor: pointer;
-        }
-
-        .jump-btn.show:hover {
-            opacity: 1;
-        }
-
-        footer {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        @media(max-width: 914px) {
-            .cams-container P {
-                min-width: 49%;
-            }
-        }
-
-        @media(max-width: 768px) {
-            .img img {
-                width: 140px;
-            }
-            .cam-title {
-                font-size: 19px;
-            }
-            h1,
-            h2 {
-                font-size: 22px;
-            }
-        }
-
-        @media(max-width: 768px) {
-            .img img {
-                width: 140px;
-            }
-            .cam-title {
-                font-size: 19px;
-            }
-            h1,
-            h2 {
-                font-size: 22px;
-            }
-        }
-
-        @media(max-width: 700px) {
-            .img img {
-                width: 140px;
-            }
-            .cam-title {
-                font-size: 19px;
-            }
-        }
-
-        @media(max-width: 599px) {
-            header img {
-                width: 115px;
-            }
-
-            .cams-container P {
-                min-width: 100%;
-            }
-
-            .img img {
-                width: 115px;
-            }
-
-            h1,
-            h2 {
-                font-size: 22px;
-            }
-            img {
-                max-height: 53vw;
-                width: 100%;
-            }
-
-            .cam-title {
-                left: 4%;
-                font-size: 16px;
-            }
-        }
-
-        @media (max-width: 530px) {
-            .cam-title {
-                bottom: 5%;
-                top: initial;
-            }
-
-            .row-flex {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-evenly;
-                align-items: center;
-                padding: 0;
-            }
-            nav p {
-                font-size: 18px;
-            }
-            p.info {
-                display: none;
-            }
-        }
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="wrapper">
-            <div class="w3-container w3-blue row-flex">
-                <div class="home-btn">
-                    <a href="./list.html">
-                        <h1>BeachCam.co.il</h1>
-                        <p>לפירסום כאן 054-6817830</p>
-                    </a>
-                </div>
-                <div class="animat-box-in">
-                    <h2> מרינה כניסה </h2>
-                </div>
-                <a class="home-btn title" style="color: white;" href="./list.html">
-                    <p class="info">שידור חי - הרצליה - כניסה למרינה</p>
-                    <h1> מצלמות חוף נוספות </h1>
-                </a>
-            </div>
+      <div class="wrapper">
+        <div class="w3-container w3-blue row-flex">
+          <div class="home-btn">
+            <a href="./list.html">
+              <h1>BeachCam.co.il</h1>
+              <p>לפירסום כאן 054-6817830</p>
+            </a>
+          </div>
+          <div class="animat-box-in">
+            <h2>מרינה כניסה</h2>
+          </div>
+          <a class="home-btn title" style="color: white;" href="./list.html">
+            <p class="info">שידור חי - הרצליה - כניסה למרינה</p>
+            <h1>מצלמות חוף נוספות</h1>
+          </a>
         </div>
+      </div>
     </header>
     <nav>
-        <div class="animat-box-in">
-            <p>
-                <a style="color: white;" href="./gazibo.html">לגזיבו הרצליה |</a>
-                <a style="color: white;" href="./forcast.html">תחזית גלים |</a>
-                <a style="color: white;" href="./marina.html">למרינה צפון</a>
-
-            </p>
-        </div>
+      <div class="animat-box-in">
+        <p>
+          <a style="color: white;" href="./gazibo.html">לגזיבו הרצליה |</a>
+          <a style="color: white;" href="./forcast.html">תחזית גלים |</a>
+          <a style="color: white;" href="./marina.html">למרינה צפון</a>
+        </p>
+      </div>
     </nav>
     <div class="message"></div>
     <div class="main-container">
-        <section class="cams-container">
-            <div class="cam-title">BeachCam.co.il</div>
-            <img id="image" ondblclick="togglesize()" src="http://62.219.45.26:140//mjpg/video.mjpg" frameborder="0" alt="מצלמת חוף">
-            <div class="jump-btn" onclick="location.reload()">
-                דלג
-            </div>
-        </section>
+      <section class="cams-container">
+        <div class="cam-title">BeachCam.co.il</div>
+        <img
+          id="image"
+          ondblclick="togglesize()"
+          src="http://62.219.45.26:140//mjpg/video.mjpg"
+          frameborder="0"
+          alt="מצלמת חוף"
+        />
+        <div class="jump-btn" onclick="location.reload()">
+          דלג
+        </div>
+      </section>
     </div>
+    <a class="home-btn mobile-btn" style="color: white;" href="./list.html">
+      <h1>מצלמות חוף נוספות</h1>
+    </a>
     <footer>
-        <p style="text-align: center;">
-            <a style="color: gold;" href="./list.html"> מצלמת חוף Beach Cam </a>
-        </p>
+      <p style="text-align: center;">
+        <a style="color: gold;" href="./list.html"> מצלמת חוף Beach Cam </a>
+      </p>
     </footer>
 
     <div class="loader-container">
-        <div class="loader"></div>
+      <div class="loader"></div>
     </div>
     <script>
+      const cam = document.querySelector("#image");
+      const camContainer = document.querySelector(".cams-container");
+      const camTitle = document.querySelector(".cam-title");
+      const loader = document.querySelector(".loader-container");
+      const message = document.querySelector(".message");
+      const jumpBtn = document.querySelector(".jump-btn");
 
-        const cam = document.querySelector("#image");
-        const camContainer = document.querySelector(".cams-container");
-        const camTitle = document.querySelector(".cam-title");
-        const loader = document.querySelector(".loader-container");
-        const message = document.querySelector(".message");
-        const jumpBtn = document.querySelector(".jump-btn");
+      const showJumpBtn = () => {
+        jumpBtn.classList.add("show");
+      };
 
-        const showJumpBtn = () => {
-            jumpBtn.classList.add("show");
-        }
+      const togglesize = () => {
+        camContainer.classList.toggle("full-size");
+      };
 
-        const togglesize = () => {
-            camContainer.classList.toggle("full-size");
-        }
+      const changeView = () => {
+        // cam.style.background = "#f1f1f157";
+        cam.style.maxWidth = "300px";
+        cam.style.position = "static";
+        cam.style.height = "70px";
+        // cam.style.borderRadius = "52%";
+        cam.style.margin = "15%";
+        cam.onclick = () => location.reload();
+        camTitle.style.display = "none";
+        camContainer.classList.remove("full-size");
+        cam.src = "./images/tosess.png";
+        showJumpBtn();
+      };
 
-        const changeView = () => {
-            // cam.style.background = "#f1f1f157";
-            cam.style.maxWidth = "300px";
-            cam.style.position = "static";
-            cam.style.height = "70px";
-            // cam.style.borderRadius = "52%";
-            cam.style.margin = "15%";
-            cam.onclick = () => location.reload();
-            camTitle.style.display = "none";
-            camContainer.classList.remove("full-size");
-            cam.src = "./images/tosess.png";
-            showJumpBtn();
-        }
+      cam.onload = () => {
+        loader.style.display = "none";
+        camContainer.style.display = "flex";
+      };
 
-        cam.onload = () => {
-            loader.style.display = "none";
-            camContainer.style.display = "flex";
-        }
-
-        const timeOut = () => setTimeout(() => {
-            changeView()
+      const timeOut = () =>
+        setTimeout(() => {
+          changeView();
         }, 30000);
-        timeOut();
+      timeOut();
 
-        cam.onerror = () => {
-            clearTimeout(timeOut);
-            window.location = "./marina.out2.html";
-        };
-
+      cam.onerror = () => {
+        clearTimeout(timeOut);
+        window.location = "./marina.out2.html";
+      };
     </script>
-</body>
-
-
+  </body>
 </html>

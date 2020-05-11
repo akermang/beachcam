@@ -290,7 +290,17 @@
             }
         }
 
+        .mobile-btn {
+            display: none;
+        }
+
         @media (max-width: 530px) {
+            .mobile-btn {
+                display: block;
+                background-color: #2196f3;
+                margin: 60px 1em;
+                cursor: pointer;
+            }
             iframe {
                 max-height: 263px;
             }
@@ -360,6 +370,9 @@
     <div class="loader-container">
         <div class="loader"></div>
     </div>
+    <a class="home-btn mobile-btn" style="color: white;" href="./list.html">
+        <h1>מצלמות חוף נוספות</h1>
+    </a>
     <footer>
         <p style="text-align: center; ">
             <a style="color: gold;" href="./list.html"> מצלמת חוף Beach Cam </a>
