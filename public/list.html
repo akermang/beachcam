@@ -225,8 +225,21 @@
         .scroller {
             position: absolute;
             left: 6%;
-            top: 80%;
         }
+
+        .scroller:hover {
+            transform: scale(0.9);
+        }
+
+        .scroller.down {
+            top: 50%;
+        }
+
+        .scroller.up {
+            top: 100%;
+        }
+
+
 
         @media(max-width: 914px) {
             .cams-container P {
@@ -329,13 +342,18 @@
     </header>
 
 
-    <div class="main-container">
-        <div class="scroller">
+    <div id="top" class="main-container">
+        <div class="scroller down">
             <a href="#gazibo" style="color: white;">
                 <img src="./images/icons8-double-down-30.png" alt='scrol'/>
             </a>
         </div>
-        <div class="link-list animate-box-in-y">
+        <div class="scroller up">
+            <a href="#top" style="color: white;">
+                <img src="./images/icons8-double-up-30.png" alt='scrol'/>
+            </a>
+        </div>
+        <div id="link-list" class="link-list animate-box-in-y">
             <li>
                 <a style="color: white;" href="./yafo.html">
                     <p class="cam-link">יפו</p>
@@ -477,7 +495,7 @@
                     target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
                     if (target.length) {
                         $('html,body').animate({
-                            scrollTop: target.offset().top
+                            scrollTop: target.offset().top - 200
                         }, 1000);
                         return false;
                     }
