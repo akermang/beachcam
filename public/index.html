@@ -323,8 +323,14 @@
         .mobile-btn {
           display: block;
           background-color: #2196f3;
-          margin: 32% 1em 0;
+          /* margin: 32% 1em 0; */
           cursor: pointer;
+          width: 80vw;
+          margin: auto;
+          left: 0;
+          right: 0;
+          bottom: 63px;
+          position: absolute;
         }
 
         .cam-title {
@@ -395,9 +401,7 @@
         </div>
       </section>
     </div>
-    <a class="home-btn mobile-btn" style="color: white;" href="./list.html">
-      <h1>מצלמות חוף נוספות</h1>
-    </a>
+   
 
     <footer>
       <p style="text-align: center;">
@@ -408,6 +412,9 @@
     <div class="loader-container">
       <div class="loader"></div>
     </div>
+    <a class="home-btn mobile-btn" style="color: white;" href="./list.html">
+      <h1>מצלמות חוף נוספות</h1>
+    </a>
 
     <script>
       const cam = document.querySelector("#image");
