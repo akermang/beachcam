@@ -218,6 +218,10 @@
         border-radius: 7px;
       }
 
+      .home-btn.special {
+        background-color: #008000a1;
+      }
+
       .home-btn:hover {
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
       }
@@ -349,13 +353,13 @@
           <div class="home-btn">
             <a href="./list.html">
               <h1>BeachCam.co.il</h1>
-              <p>לפירסום כאן 054-6817830</p>
+              <!-- <p>לפירסום כאן 054-6817830</p> -->
             </a>
           </div>
           <div class="animat-box-in">
             <h2>חוף יפו</h2>
           </div>
-          <a class="home-btn title" style="color: white;" href="./list.html">
+          <a class="home-btn title special" style="color: white;" href="./list.html">
             <p class="info">שידור חי - תל-אביב - חוף יפו</p>
             <h1>מצלמות חוף נוספות</h1>
           </a>
@@ -372,9 +376,10 @@
       </div>
     </nav>
     <div class="message"></div>
-    <div class="main-container">
+    <div class="main-container cams-container">
       <div class="cam-title">BeachCam.co.il</div>
       <iframe
+        id="cam"
         width="1000"
         height="600"
         style="border: 0;"
@@ -385,7 +390,7 @@
         src="https://webcasting.co.il/player/tlv/cam4_mute.html"
       ></iframe>
 
-      <div class="jump-btn" onclick="location.reload() ">
+      <div class="jump-btn" onclick="location.reload()">
         דלג
       </div>
     </div>
@@ -400,5 +405,72 @@
         <a style="color: gold;" href="./list.html"> מצלמת חוף Beach Cam </a>
       </p>
     </footer>
+    <script>
+      const cam = document.querySelector("#cam");
+      const camContainer = document.querySelector(".cams-container");
+      const camTitle = document.querySelector(".cam-title");
+      const loader = document.querySelector(".loader-container");
+      const message = document.querySelector(".message");
+      const jumpBtn = document.querySelector(".jump-btn");
+      const mobileBtn = document.querySelector(".mobile-btn");
+
+      const showJumpBtn = () => {
+        jumpBtn.classList.add("show");
+      };
+
+      const hideJumpBtn = () => {
+        jumpBtn.classList.remove("show");
+      };
+
+      const togglesize = () => {
+        camContainer.classList.toggle("full-size");
+      };
+
+      const reloadCam = () => {
+        cam.src = "https://webcasting.co.il/player/tlv/cam4_mute.html";
+        cam.style.maxWidth = "100%";
+        cam.style.position = "relative";
+        cam.style.height = "430px";
+        // cam.style.borderRadius = "52%";
+        cam.style.margin = "unset";
+        camTitle.style.display = "block";
+        camContainer.classList.remove("full-size");
+        mobileBtn.style.marginTop = "32%"
+        timeOut(30000,  changeView)
+        hideJumpBtn();
+      }
+
+      const changeView = () => {
+        // cam.style.background = "#f1f1f157";
+        cam.style.maxWidth = "300px";
+        cam.style.position = "static";
+        cam.style.height = "70px";
+        // cam.style.borderRadius = "52%";
+        cam.style.margin = "13%";
+        // cam.onclick = () => location.reload();\
+        mobileBtn.style.marginTop = "20%"
+        camTitle.style.display = "none";
+        camContainer.classList.remove("full-size");
+        cam.src = "./ad.html";
+        showJumpBtn();
+      };
+
+      cam.onload = () => {
+        loader.style.display = "none";
+        camContainer.style.display = "flex";
+      };
+
+      const timeOut = (time, callBack) =>
+        setTimeout(() => {
+          callBack();
+        }, time);
+
+      timeOut(35000, changeView);
+
+      cam.onerror = () => {
+        clearTimeout(timeOut);
+        window.location = "./list.html";
+      };
+    </script>
   </body>
 </html>
