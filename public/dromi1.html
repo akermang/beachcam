@@ -31,7 +31,7 @@
       type="image/png"
       href="https://akermang.github.io/WeatherApp/sun-favicon.png"
     />
-    <title>מצלמות חופים | BeachCam | הרצליה דרומי</title>
+    <title>מצלמות חופים | BeachCam | מצלמת חוף הרצליה דרומי</title>
     <meta
       http-equiv="Cache-Control"
       content="no-cache, no-store, must-revalidate"
@@ -375,14 +375,14 @@
             </a>
           </div>
           <div class="animat-box-in">
-            <h2>הדרומי פרמיום הרצליה</h2>
+            <h2>הדרומי פרימיום הרצליה</h2>
           </div>
           <a
             class="home-btn title special"
             style="color: white;"
             href="./list.html"
           >
-            <p class="info">שידור חי - הרצליה - חוף הדרומי</p>
+            <p class="info">שידור חי - הרצליה - חוף הדרומי פרימיום</p>
             <h1>מצלמות חוף נוספות</h1>
           </a>
         </div>
@@ -406,7 +406,7 @@
           width="800"
           height="434px"
           frameborder="0"
-          autoplay=1
+          autoplay
           allowfullscreen
         ></iframe>
       </div>
@@ -415,7 +415,7 @@
       </div>
     </div>
     <div id="loader-container" class="loader-container">
-        <div class="loader"></div>
+      <div class="loader"></div>
     </div>
     <a class="home-btn mobile-btn" style="color: white;" href="./list.html">
       <h1>מצלמות חוף נוספות</h1>
@@ -426,50 +426,75 @@
       </p>
     </footer>
     <script>
-        const cam = document.querySelector("#cam1");
-        const camContainer = document.querySelector(".cams-container");
-        const camTitle = document.querySelector(".cam-title");
-        const loader = document.querySelector(".loader-container");
-        const message = document.querySelector(".message");
-        const jumpBtn = document.querySelector(".jump-btn");
-  
-        const showJumpBtn = () => {
-          jumpBtn.classList.add("show");
-        };
-  
-        const togglesize = () => {
-          camContainer.classList.toggle("full-size");
-        };
-  
-        const changeView = () => {
-          // cam.style.background = "#f1f1f157";
-          cam.style.maxWidth = "300px";
-          cam.style.position = "static";
-          cam.style.height = "70px";
-          // cam.style.borderRadius = "52%";
-          cam.style.margin = "15%";
-        //   cam.onclick = () => location.reload();
-          camTitle.style.display = "none";
-          camContainer.classList.remove("full-size");
-          cam.src = "./ad.html";
-          showJumpBtn();
-        };
-  
-        cam.onload = () => {
-          loader.style.display = "none";
-          camContainer.style.display = "flex";
-        };
-  
-        const timeOut = () =>
-          setTimeout(() => {
-            changeView();
-          }, 40000);
-        timeOut();
-  
-        cam.onerror = () => {
-          clearTimeout(timeOut);
-          window.location = "./list.html";
-        };
-      </script>
+      const cam = document.querySelector("#cam1");
+      const camContainer = document.querySelector(".cams-container");
+      const camTitle = document.querySelector(".cam-title");
+      const loader = document.querySelector(".loader-container");
+      const message = document.querySelector(".message");
+      const jumpBtn = document.querySelector(".jump-btn");
+
+      const elem = document.documentElement;
+      const openFullscreen = () => {
+        if (elem.requestFullscreen) {
+          elem.requestFullscreen();
+        } else if (elem.mozRequestFullScreen) {
+          /* Firefox */
+          elem.mozRequestFullScreen();
+        } else if (elem.webkitRequestFullscreen) {
+          /* Chrome, Safari & Opera */
+          elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen) {
+          /* IE/Edge */
+          elem.msRequestFullscreen();
+        }
+      };
+
+      const closeFullscreen = () => {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        } else if (document.mozCancelFullScreen) {
+          document.mozCancelFullScreen();
+        } else if (document.webkitExitFullscreen) {
+          document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) {
+          document.msExitFullscreen();
+        }
+      };
+
+      const showJumpBtn = () => {
+        jumpBtn.classList.add("show");
+      };
+
+      const togglesize = () => {
+        camContainer.classList.toggle("full-size");
+      };
+
+      const changeView = () => {
+        cam.style.maxWidth = "800px";
+        cam.style.position = "static";
+        cam.style.maxHeight = "350px";
+        cam.style.margin = "30px 15%";
+        camTitle.style.display = "none";
+        closeFullscreen();
+        cam.src = "./ad.html";
+        showJumpBtn();
+      };
+
+      cam.onload = () => {
+        loader.style.display = "none";
+        camContainer.style.display = "flex";
+      };
+
+      const timeOut = () =>
+        setTimeout(() => {
+          changeView();
+        }, 65000);
+      timeOut();
+
+      cam.onerror = () => {
+        clearTimeout(timeOut);
+        window.location = "./list.html";
+      };
+    </script>
   </body>
 </html>

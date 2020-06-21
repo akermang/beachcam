@@ -31,7 +31,7 @@
       type="image/png"
       href="https://akermang.github.io/WeatherApp/sun-favicon.png"
     />
-    <title>מצלמות חופים | BeachCam | בת-ים</title>
+    <title>מצלמות חופים | BeachCam | הרצליה הדרומי</title>
     <meta
       http-equiv="Cache-Control"
       content="no-cache, no-store, must-revalidate"
@@ -111,6 +111,7 @@
 
       nav p {
         font-size: 20px;
+        color: white;
       }
 
       h1,
@@ -139,12 +140,13 @@
       }
 
       .cams-container {
-        display: none;
+        display: flex;
         flex-wrap: wrap;
         justify-content: center;
         padding: 6px;
         overflow: auto;
         color: wheat;
+        width: 100%;
         max-width: 800px;
         margin: 0px auto;
         position: relative;
@@ -153,8 +155,8 @@
       .cam-title {
         position: absolute;
         color: white;
-        top: 10%;
-        left: 7%;
+        top: 5%;
+        left: 4%;
         font-size: 22px;
         z-index: 1;
       }
@@ -179,8 +181,8 @@
       }
 
       iframe {
-        width: 100%;
-        min-height: 33vh;
+        width: 98%;
+        min-height: 30vh;
       }
 
       .loader-container {
@@ -188,10 +190,10 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        height: 50vh;
+        height: 40vh;
         width: 100%;
         position: absolute;
-        top: 160px;
+        top: 200px;
       }
 
       .loader {
@@ -211,6 +213,8 @@
         z-index: 1;
         max-width: 800px;
         margin: auto;
+        display: flex;
+        justify-content: center;
       }
 
       .home-btn {
@@ -262,6 +266,7 @@
         position: fixed;
         bottom: 20px;
         width: 100%;
+        color: gold;
         z-index: 3;
       }
 
@@ -291,6 +296,7 @@
 
         .cam-title {
           font-size: 19px;
+          left: 5%;
         }
       }
 
@@ -331,13 +337,12 @@
           bottom: 63px;
           position: absolute;
         }
-        
         iframe {
           max-height: 53vw;
         }
 
-        .cam-title {
-          font-size: 13px;
+        .loader-container {
+          top: 160px;
         }
 
         .row-flex {
@@ -370,10 +375,14 @@
             </a>
           </div>
           <div class="animat-box-in">
-            <h2 dir="rtl">בת ים סטלה ביץ'</h2>
+            <h2>הדרומי פרימיום הרצליה</h2>
           </div>
-          <a class="home-btn title special" style="color: white;" href="./list.html">
-            <p class="info" dir="rtl">שידור חי - בת ים -סטלה ביץ'</p>
+          <a
+            class="home-btn title special"
+            style="color: white;"
+            href="./list.html"
+          >
+            <p class="info">שידור חי - הרצליה - חוף הדרומי</p>
             <h1>מצלמות חוף נוספות</h1>
           </a>
         </div>
@@ -382,31 +391,31 @@
     <nav>
       <div class="animat-box-in">
         <p>
-          <a style="color: white;" href="./index.html">למרינה דרום |</a>
-          <a style="color: white;" href="./forcast.html">תחזית גלים |</a>
-          <a style="color: white;" href="./list.html">מצלמות</a>
+          <a href="./marina.html">למרינה צפון |</a>
+          <a href="./forcast.html">תחזית גלים |</a>
+          <a href="./list.html">מצלמות</a>
         </p>
       </div>
     </nav>
-    <div class="message"></div>
     <div class="main-container">
       <div class="cam-title">BeachCam.co.il</div>
-      <iframe
-        width="800"
-        height="450"
-        src="https://www.youtube.com/embed/KlMhEmIxvL8"
-        frameborder="0"
-        autoplay
-        encrypted-media
-        gyroscope
-        picture-in-picture
-        allowfullscreen
-      ></iframe>
+
+      <div class="cams-container">
+        <iframe
+          id="cam1"
+          src="https://rtsp.me/embed/4HE3Q85E/"
+          width="800"
+          height="434px"
+          frameborder="0"
+          autoplay
+          allowfullscreen
+        ></iframe>
+      </div>
       <div class="jump-btn" onclick="location.reload()">
         דלג
       </div>
     </div>
-    <div class="loader-container">
+    <div id="loader-container" class="loader-container">
       <div class="loader"></div>
     </div>
     <a class="home-btn mobile-btn" style="color: white;" href="./list.html">
@@ -417,5 +426,76 @@
         <a style="color: gold;" href="./list.html"> מצלמת חוף Beach Cam </a>
       </p>
     </footer>
+    <script>
+      const cam = document.querySelector("#cam1");
+      const camContainer = document.querySelector(".cams-container");
+      // const camTitle = document.querySelector(".cam-title");
+      const loader = document.querySelector(".loader-container");
+      const message = document.querySelector(".message");
+      const jumpBtn = document.querySelector(".jump-btn");
+
+      const elem = document.documentElement;
+      const openFullscreen = () => {
+        if (elem.requestFullscreen) {
+          elem.requestFullscreen();
+        } else if (elem.mozRequestFullScreen) {
+          /* Firefox */
+          elem.mozRequestFullScreen();
+        } else if (elem.webkitRequestFullscreen) {
+          /* Chrome, Safari & Opera */
+          elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen) {
+          /* IE/Edge */
+          elem.msRequestFullscreen();
+        }
+      };
+
+      const closeFullscreen = () => {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        } else if (document.mozCancelFullScreen) {
+          document.mozCancelFullScreen();
+        } else if (document.webkitExitFullscreen) {
+          document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) {
+          document.msExitFullscreen();
+        }
+      };
+
+      const showJumpBtn = () => {
+        jumpBtn.classList.add("show");
+      };
+
+      const togglesize = () => {
+        camContainer.classList.toggle("full-size");
+      };
+
+      const changeView = () => {
+        cam.style.maxWidth = "800px";
+        cam.style.position = "static";
+        cam.style.maxHeight = "350px";
+        cam.style.margin = "30px 15%";
+        // camTitle.style.display = "none";
+        closeFullscreen();
+        cam.src = "./ad.html";
+        showJumpBtn();
+      };
+
+      cam.onload = () => {
+        loader.style.display = "none";
+        camContainer.style.display = "flex";
+      };
+
+      const timeOut = () =>
+        setTimeout(() => {
+          changeView();
+        }, 65000);
+      timeOut();
+
+      cam.onerror = () => {
+        clearTimeout(timeOut);
+        window.location = "./list.html";
+      };
+    </script>
   </body>
 </html>

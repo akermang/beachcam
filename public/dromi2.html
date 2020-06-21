@@ -156,7 +156,7 @@
         position: absolute;
         color: white;
         top: 5%;
-        left: 2%;
+        left: 4%;
         font-size: 22px;
         z-index: 1;
       }
@@ -190,7 +190,7 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        height: 50vh;
+        height: 40vh;
         width: 100%;
         position: absolute;
         top: 200px;
@@ -375,7 +375,7 @@
             </a>
           </div>
           <div class="animat-box-in">
-            <h2>הדרומי הרצליה</h2>
+            <h2>הדרומי פרימיום הרצליה</h2>
           </div>
           <a
             class="home-btn title special"
@@ -401,13 +401,21 @@
       <div class="cam-title">BeachCam.co.il</div>
 
       <div class="cams-container">
+        <!-- <iframe
+          id="cam1"
+          src="https://g2.ipcamlive.com/player/player.php?alias=5ee8adb181c4c&autoplay=1&skin=white"
+          width="800px"
+          height="450px"
+          frameborder="0"
+          allowfullscreen
+        ></iframe> -->
         <iframe
           id="cam1"
           src="https://rtsp.me/embed/4HE3Q85E/"
           width="800"
           height="434px"
           frameborder="0"
-          autoplay="1"
+          autoplay
           allowfullscreen
         ></iframe>
       </div>
@@ -429,10 +437,38 @@
     <script>
       const cam = document.querySelector("#cam1");
       const camContainer = document.querySelector(".cams-container");
-      const camTitle = document.querySelector(".cam-title");
+      // const camTitle = document.querySelector(".cam-title");
       const loader = document.querySelector(".loader-container");
       const message = document.querySelector(".message");
       const jumpBtn = document.querySelector(".jump-btn");
+
+      const elem = document.documentElement;
+      const openFullscreen = () => {
+        if (elem.requestFullscreen) {
+          elem.requestFullscreen();
+        } else if (elem.mozRequestFullScreen) {
+          /* Firefox */
+          elem.mozRequestFullScreen();
+        } else if (elem.webkitRequestFullscreen) {
+          /* Chrome, Safari & Opera */
+          elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen) {
+          /* IE/Edge */
+          elem.msRequestFullscreen();
+        }
+      };
+
+      const closeFullscreen = () => {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        } else if (document.mozCancelFullScreen) {
+          document.mozCancelFullScreen();
+        } else if (document.webkitExitFullscreen) {
+          document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) {
+          document.msExitFullscreen();
+        }
+      };
 
       const showJumpBtn = () => {
         jumpBtn.classList.add("show");
@@ -443,15 +479,12 @@
       };
 
       const changeView = () => {
-        // cam.style.background = "#f1f1f157";
-        cam.style.maxWidth = "300px";
+        cam.style.maxWidth = "800px";
         cam.style.position = "static";
-        cam.style.height = "70px";
-        // cam.style.borderRadius = "52%";
-        cam.style.margin = "15%";
-        //   cam.onclick = () => location.reload();
-        camTitle.style.display = "none";
-        camContainer.classList.remove("full-size");
+        cam.style.maxHeight = "350px";
+        cam.style.margin = "30px 15%";
+        // camTitle.style.display = "none";
+        closeFullscreen();
         cam.src = "./ad.html";
         showJumpBtn();
       };
@@ -464,7 +497,7 @@
       const timeOut = () =>
         setTimeout(() => {
           changeView();
-        }, 40000);
+        }, 65000);
       timeOut();
 
       cam.onerror = () => {
