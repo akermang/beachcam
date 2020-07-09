@@ -232,11 +232,12 @@
       }
 
       .jump-btn.show {
+        z-index: 10;
         font-weight: bold;
         display: block;
         width: 40px;
         position: absolute;
-        bottom: 35%;
+        bottom: 0;
         right: 16%;
         height: 40px;
         background: transparent url("./images/jump.png") no-repeat;
@@ -423,6 +424,18 @@
         camContainer.classList.toggle("full-size");
       };
 
+      const closeFullscreen = () => {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        } else if (document.mozCancelFullScreen) { /* Firefox */
+          document.mozCancelFullScreen();
+        } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
+          document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) { /* IE/Edge */
+          document.msExitFullscreen();
+        }
+      };
+
       const reloadCam = () => {
         cam.src = "https://g2.ipcamlive.com/player/player.php?alias=galyamsurf&autoplay=1";
         cam.style.maxWidth = "800px";
@@ -437,15 +450,12 @@
       }
 
       const changeView = () => {
-        // cam.style.background = "#f1f1f157";
-        cam.style.maxWidth = "300px";
+        cam.style.maxWidth = "800px";
         cam.style.position = "static";
-        cam.style.height = "70px";
-        // cam.style.borderRadius = "52%";
-        cam.style.margin = "13%";
-        // cam.onclick = () => location.reload();
+        cam.style.maxHeight = "53vh";
+        cam.style.margin = "30px 15%";
         camTitle.style.display = "none";
-        camContainer.classList.remove("full-size");
+        closeFullscreen();
         cam.src = "./ad.html";
         showJumpBtn();
       };
