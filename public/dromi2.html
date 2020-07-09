@@ -18,6 +18,13 @@
       })(window, document, "script", "dataLayer", "GTM-WPTQ3HT");
     </script>
     <!-- End Google Tag Manager -->
+    <!-- adsense  -->
+    <script
+      data-ad-client="ca-pub-2190134608327180"
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
+    <!-- End adsense  -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="מצלמות חוף שידור ישיר ישראל" />
@@ -182,7 +189,7 @@
 
       iframe {
         width: 98%;
-        min-height: 30vh;
+        /* min-height: 30vh; */
       }
 
       .loader-container {
@@ -235,10 +242,11 @@
       }
 
       .jump-btn.show {
+        font-weight: bold;
         display: block;
         width: 40px;
         position: absolute;
-        bottom: 10%;
+        bottom: 0;
         right: 16%;
         height: 40px;
         background: transparent url("./images/jump.png") no-repeat;
@@ -249,7 +257,7 @@
         color: white;
         line-height: 2.5;
         text-align: center;
-        opacity: 0.6;
+        opacity: 0.9;
         cursor: pointer;
       }
 
@@ -317,6 +325,10 @@
         h2 {
           font-size: 22px;
         }
+
+        .cam-title {
+          display: none;
+        }
       }
 
       .mobile-btn {
@@ -338,7 +350,7 @@
           position: absolute;
         }
         iframe {
-          max-height: 53vw;
+          max-height: 53vw!important;
         }
 
         .loader-container {
@@ -369,21 +381,21 @@
       <div class="wrapper">
         <div class="w3-container w3-blue row-flex">
           <div class="home-btn">
-            <a href="./list.html">
-              <h1>BeachCam.co.il</h1>
+            <a href="./index.html">
+              <h1>BeachCam.co.il מצלמות חוף</h1>
               <!-- <p>לפירסום כאן 054-6817830</p> -->
             </a>
           </div>
           <div class="animat-box-in">
-            <h2>הדרומי פרימיום הרצליה</h2>
+            <h2> חוף הדרומי פרימיום הרצליה</h2>
           </div>
           <a
             class="home-btn title special"
             style="color: white;"
             href="./list.html"
           >
-            <p class="info">שידור חי - הרצליה - חוף הדרומי</p>
-            <h1>מצלמות חוף נוספות</h1>
+            <p class="info">שידור חי - מצלמת חוף</p>
+            <h2>מצלמות חוף נוספות</h2>
           </a>
         </div>
       </div>
@@ -402,16 +414,21 @@
 
       <div class="cams-container">
         <!-- <iframe
-          id="cam1"
-          src="https://g2.ipcamlive.com/player/player.php?alias=5ee8adb181c4c&autoplay=1&skin=white"
-          width="800px"
-          height="450px"
-          frameborder="0"
-          allowfullscreen
-        ></iframe> -->
+        id="cam1"
+        width="800"
+        height="430"
+        src="https://vxg.io/iframe.html?channel=eyJ0b2tlbiI6InNoYXJlLmV5SnphU0k2SURFMk5EQXlPSDAuNWVmM2M0NjJ0MTJjZmY3ODAuZXg3LXNyODJwRGdsbjJsQnI0b25QTjVDUFZNIiwiY2FtaWQiOjIxNzg2MCwiYWNjZXNzIjoid2F0Y2gifQ%3D%3D&autoplay=on"
+        frameborder="0"
+        scrolling="no"
+        allowfullscreen
+        controls 
+        autoplay
+        utohide= -1  
+        >Your browser are not supported iframe.</iframe
+      > -->
         <iframe
           id="cam1"
-          src="https://rtsp.me/embed/4HE3Q85E/"
+          src="https://rtsp.me/embed/68h59RBY/"
           width="800"
           height="434px"
           frameborder="0"
@@ -427,17 +444,17 @@
       <div class="loader"></div>
     </div>
     <a class="home-btn mobile-btn" style="color: white;" href="./list.html">
-      <h1>מצלמות חוף נוספות</h1>
+      <h2>מצלמות חוף נוספות</h2>
     </a>
     <footer>
       <p style="text-align: center;">
-        <a style="color: gold;" href="./list.html"> מצלמת חוף Beach Cam </a>
+        <a style="color: gold;" href="./index.html"> מצלמת חוף Beach Cam </a>
       </p>
     </footer>
     <script>
       const cam = document.querySelector("#cam1");
       const camContainer = document.querySelector(".cams-container");
-      // const camTitle = document.querySelector(".cam-title");
+      const camTitle = document.querySelector(".cam-title");
       const loader = document.querySelector(".loader-container");
       const message = document.querySelector(".message");
       const jumpBtn = document.querySelector(".jump-btn");
@@ -481,9 +498,9 @@
       const changeView = () => {
         cam.style.maxWidth = "800px";
         cam.style.position = "static";
-        cam.style.maxHeight = "350px";
+        cam.style.maxHeight = "53vh";
         cam.style.margin = "30px 15%";
-        // camTitle.style.display = "none";
+        camTitle.style.display = "none";
         closeFullscreen();
         cam.src = "./ad.html";
         showJumpBtn();
@@ -497,7 +514,7 @@
       const timeOut = () =>
         setTimeout(() => {
           changeView();
-        }, 65000);
+        }, 55000);
       timeOut();
 
       cam.onerror = () => {

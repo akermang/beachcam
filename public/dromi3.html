@@ -18,6 +18,13 @@
       })(window, document, "script", "dataLayer", "GTM-WPTQ3HT");
     </script>
     <!-- End Google Tag Manager -->
+    <!-- adsense  -->
+    <script
+      data-ad-client="ca-pub-2190134608327180"
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
+    <!-- End adsense  -->
 
     <!-- <script>
       document.addEventListener("DOMContentLoaded", function () {
@@ -200,7 +207,8 @@
 
       iframe {
         width: 98%;
-        min-height: 30vh;
+        /* min-height: 30vh; */
+        max-height: 393px;
       }
 
       .loader-container {
@@ -253,10 +261,11 @@
       }
 
       .jump-btn.show {
+        font-weight: bold;
         display: block;
         width: 40px;
         position: absolute;
-        bottom: 10%;
+        bottom: 0;
         right: 16%;
         height: 40px;
         background: transparent url("./images/jump.png") no-repeat;
@@ -267,7 +276,7 @@
         color: white;
         line-height: 2.5;
         text-align: center;
-        opacity: 0.6;
+        opacity: 0.9;
         cursor: pointer;
       }
 
@@ -336,6 +345,10 @@
         h2 {
           font-size: 22px;
         }
+
+        .cam-title {
+          display: none;
+        }
       }
 
       .mobile-btn {
@@ -357,7 +370,7 @@
           position: absolute;
         }
         iframe {
-          max-height: 53vh;
+          max-height: 53vw!important;
         }
 
         .loader-container {
@@ -388,21 +401,21 @@
       <div class="wrapper">
         <div class="w3-container w3-blue row-flex">
           <div class="home-btn">
-            <a href="./list.html">
+            <a href="./index.html">
               <h1>BeachCam.co.il</h1>
               <!-- <p>לפירסום כאן 054-6817830</p> -->
             </a>
           </div>
           <div class="animat-box-in">
-            <h2>הדרומי פרימיום הרצליה</h2>
+            <h2> חוף הדרומי פרימיום הרצליה</h2>
           </div>
           <a
             class="home-btn title special"
             style="color: white;"
             href="./list.html"
           >
-            <p class="info">שידור חי - הרצליה - חוף הדרומי</p>
-            <h1>מצלמות חוף נוספות</h1>
+            <p class="info">שידור חי - מצלמת חוף</p>
+            <h2>מצלמות חוף נוספות</h2>
           </a>
         </div>
       </div>
@@ -417,7 +430,7 @@
       </div>
     </nav>
     <div class="main-container">
-      <!-- <div class="cam-title">BeachCam.co.il</div> -->
+      <div class="cam-title">BeachCam.co.il</div>
       <div class="cams-container">
         <!-- <iframe
           id="cam1"
@@ -432,7 +445,7 @@
           id="cam1"
           width="800"
           height="400"
-          src="https://vxg.io/iframe.html?channel=eyJ0b2tlbiI6InNoYXJlLmV5SnphU0k2SURFMk16RTBPWDAuNWVlYmY5ZWJ0MTJjZmY3ODAuZ1dpQmRNbS00bElSMmRJT1F4bmtMNHZpR01JIiwiY2FtaWQiOjIxNzQ0MSwiYWNjZXNzIjoid2F0Y2gifQ%3D%3D&autoplay=on"
+          src="https://vxg.io/iframe.html?channel=eyJ0b2tlbiI6InNoYXJlLmV5SnphU0k2SURFMk5EQXlPSDAuNWVmM2M0NjJ0MTJjZmY3ODAuZXg3LXNyODJwRGdsbjJsQnI0b25QTjVDUFZNIiwiY2FtaWQiOjIxNzg2MCwiYWNjZXNzIjoid2F0Y2gifQ%3D%3D&autoplay=on"
           frameborder="0"
           scrolling="no"
           allowfullscreen
@@ -443,7 +456,7 @@
         > -->
         <iframe
           id="cam1"
-          src="https://rtsp.me/embed/4HE3Q85E/"
+          src="https://rtsp.me/embed/68h59RBY/"
           width="800"
           height="434px"
           frameborder="0"
@@ -459,11 +472,11 @@
       <div class="loader"></div>
     </div>
     <a class="home-btn mobile-btn" style="color: white;" href="./list.html">
-      <h1>מצלמות חוף נוספות</h1>
+      <h2>מצלמות חוף נוספות</h2>
     </a>
     <footer>
       <p style="text-align: center;">
-        <a style="color: gold;" href="./list.html"> מצלמת חוף Beach Cam </a>
+        <a style="color: gold;" href="./index.html"> מצלמת חוף Beach Cam </a>
       </p>
     </footer>
     <script>
@@ -513,8 +526,8 @@
       const changeView = () => {
         cam.style.maxWidth = "800px";
         cam.style.position = "static";
-        cam.style.maxHeight = "350px";
-        cam.style.margin = "30px 15%";
+        cam.style.maxHeight = "53vh";
+        cam.style.margin = "30px 5%";
         // camTitle.style.display = "none";
         closeFullscreen();
         cam.src = "./ad.html";
@@ -529,8 +542,8 @@
       const timeOut = () =>
         setTimeout(() => {
           changeView();
-        }, 65000);
-        timeOut();
+        }, 55000);
+      timeOut();
 
       cam.onerror = () => {
         clearTimeout(timeOut);

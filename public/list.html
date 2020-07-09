@@ -12,6 +12,9 @@
                     'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-WPTQ3HT');</script>
     <!-- End Google Tag Manager -->
+            <!-- adsense  -->
+            <script data-ad-client="ca-pub-2190134608327180" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- End adsense  -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content=" תחזית,מצלמות חוף שידור ישיר ישראל, מצלמת חוף גלים surf report Isreal updated daily with live HD Beach cam stream. Live Isreal - Marina HD surf cam show live moments going now, see beach, marine and sea."
@@ -77,6 +80,7 @@
             background-color: #1fc8db;
             position: sticky;
             top: 0;
+            z-index: 100;
         }
 
         a {
@@ -111,12 +115,12 @@
         }
 
         p,
-        h1 {
+        h1,h2 {
             text-align: center;
             margin: 0;
         }
 
-        h1 {
+        h1,h2 {
             font-size: 30px;
         }
 
@@ -195,7 +199,7 @@
         }
 
         .cam-link.new {
-            background-color: red;
+            background-color: #ff00f3;
         }
 
         p.cam-link:hover {
@@ -240,7 +244,7 @@
         }
 
         .scroller.up {
-            top: 100%;
+            top: 145%;
         }
 
 
@@ -275,6 +279,10 @@
                 width: 115px;
             }
 
+            .ads-container {
+                margin-bottom: 5px;
+            }
+
             .cams-container P {
                 min-width: 100%;
             }
@@ -283,7 +291,7 @@
                 width: 115px;
             }
 
-            h1 {
+            h1,h2 {
                 font-size: 22px;
             }
         }
@@ -300,7 +308,7 @@
                 cursor: pointer;
             }
             .link-list {
-                max-width: 60%;
+                max-width: 70%;
             }
 
             .row-flex {
@@ -313,6 +321,7 @@
             nav p {
                 font-size: 18px;
             }
+            h2.info,
             p.info {
                 display: none;
             }
@@ -325,30 +334,32 @@
         <div class="wrapper">
             <div class="w3-container w3-blue row-flex">
                 <div class="home-btn">
-                    <a href="./index.html">
+                    <a href="./index.html" for="home-link">
                         <h1>BeachCam.co.il מצלמת חוף</h1>
-                        <!-- <p>לפירסום כאן 054-6817830</p> -->
                     </a>
                 </div>
+                <div class="animat-box-in text-center">
+                    <h2>אינדקס מצלמות</h2>
+                </div>
 
-                <a id="tosess1" style="color: white;" href="https://tosess.co.il/">
+                <!-- <a id="tosess1" for="tosess-ads-link" style="color: white;" href="https://tosess.co.il/">
                     <div class="img">
-                        <img id="sidny" src="./images/tosess.png" alt="מצלצת חוף">
+                        <img id="tosess" src="./images/tosess.png" alt="tosess">
                     </div>
-                </a>
+                </a> -->
                 <div class="animate-box-in">
                     <p class="info">שידור חי מצלמת חוף - מצלמות גלים</p>
-                    <h1>מצלמות חוף</h1>
-                    </h1>
+                    <h2 class="info">מצלמות חוף</h2>
                 </div>
             </div>
         </div>
     </header>
+   
 
 
     <div id="top" class="main-container">
         <div class="scroller down">
-            <a href="#gazibo" style="color: white;">
+            <a href="#krayot" style="color: white;">
                 <img src="./images/icons8-double-down-30.png" alt='scrol'/>
             </a>
         </div>
@@ -373,11 +384,6 @@
                     <p class="cam-link new"> חדש! הדרומי הכוכבים הרצליה </p>
                 </a>
             </li>
-            <!-- <li>
-                <a style="color: white;" href="./dromi3.html">
-                    <p class="cam-link new"> !! הדרומי הכוכבים הרצליה !!</p>
-                </a>
-            </li> -->
             <li>
                 <a style="color: white;" href="./telavivtayelet.html">
                     <p class="cam-link">טיילת תל אביב</p>
@@ -388,43 +394,18 @@
                     <p class="cam-link">גורדון תל אביב</p>
                 </a>
             </li>
-            <!-- <li>
-                <a style="color: white;" href="./hilton.html">
-                    <p class="cam-link">הילטון תל-אביב</p>
-                </a>
-            </li> -->
             <li>
-                <a style="color: white;" href="./hiltonsurfline.html">
-                    <p class="cam-link">הילטון surfline</p>
-                </a>
-            </li>
-            <li>
-                <a style="color: white;" target="_blank" href="http://intersurf.co.il/content/31-HiltonBeach-Camera">
+                <a style="color: white;" target="_blank" for="link-intersurf" href="http://intersurf.co.il/content/31-HiltonBeach-Camera">
                     <p class="cam-link">הילטון אינטרסרף</p>
                 </a>
             </li>
             <li>
-                <a style="color: white;" target="_blank"  href="http://intersurf.co.il/content/32-HiltonBBeach-Camera">
+                <a style="color: white;" target="_blank" for="link-intersurf"  href="http://intersurf.co.il/content/32-HiltonBBeach-Camera">
                     <p class="cam-link">הילטון ב אינטרסרף</p>
                 </a>
             </li>
-            <!-- <li>
-                <a style="color: white;" href="./hilton2.html">
-                    <p class="cam-link"> פרישמן תל-אביב</p>
-                </a>
-            </li> -->
-            <!-- <li>
-                <a style="color: white;" href="./zuk.html">
-                    <p class="cam-link"> הצוק תל-אביב</p>
-                </a>
-            </li> -->
             <li>
-                <a style="color: white;" href="./mandarin.html">
-                    <p class="cam-link" dir="rtl">חוף מנדרין תל אביב</p>
-                </a>
-            </li>
-            <li>
-                <a style="color: white;" href="./index.html">
+                <a style="color: white;" href="./dromi.html">
                     <p class="cam-link">מרינה דרום הרצליה</p>
                 </a>
             </li>
@@ -438,28 +419,28 @@
                     <p class="cam-link">מרינה צפון הרצליה</p>
                 </a>
             </li>
-            <li>
-                <a style="color: white;" href="./marina3.html">
-                    <p class="cam-link">מרינה צפון 2</p>
-                </a>
+            <li class="ads-container">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-format="fluid"
+                     data-ad-layout-key="-fb+5w+4e-db+86"
+                     data-ad-client="ca-pub-2190134608327180"
+                     data-ad-slot="3365880506"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
             </li>
-            <li>
-                <a id="gazibo" style="color: white;" href="./gazibo.html">
-                    <p class="cam-link">  הרצליה גזיבו</p>
-                </a>
-            </li>
-            <!-- <li>
-                <a style="color: white;" href="./zvulun.html">
-                    <p class="cam-link">צופי ים הרצליה</p>
-                </a>
-            </li> -->
             <li>
                 <a style="color: white;" href="./forcast.html">
-                    <p class="cam-link">תחזית גלים</p>
+                    <p class="cam-link">
+                        <span>msw forcast -</span>
+                        <span>תחזית גלים </span>
+                    </p>
                 </a>
             </li>
             <li>
-                <a style="color: white;" target="_blank" href="https://wind.co.il/%D7%9E%D7%96%D7%92-%D7%90%D7%95%D7%99%D7%A8/%D7%A9%D7%99%D7%93%D7%95%D7%A8-%D7%97%D7%99/">
+                <a style="color: white;" target="_blank" for="link-wind.co.il" href="https://wind.co.il/%D7%9E%D7%96%D7%92-%D7%90%D7%95%D7%99%D7%A8/%D7%A9%D7%99%D7%93%D7%95%D7%A8-%D7%97%D7%99/">
                     <p class="cam-link">שדות-ים קיסריה</p>
                 </a>
             </li>
@@ -470,7 +451,7 @@
             </li>
             <li>
                 <a style="color: white;" href="./poleg.html">
-                    <p class="cam-link"> פולג נתניה</p>
+                    <p class="cam-link">גל ים פולג נתניה</p>
                 </a>
             </li>
             <li>
@@ -478,27 +459,37 @@
                     <p class="cam-link">חיפה מרידיאן</p>
                 </a>
             </li>
-            <li>
+            <li id="krayot">
                 <a style="color: white;" href="./krayot.html">
                     <p class="cam-link">חיפה Surf Cycle</p>
                 </a>
             </li>
-            <li>
+            <!-- <li>
                 <a style="color: white;" href="./batyam.html">
                     <p class="cam-link" dir="rtl">בת ים סטלה ביץ'</p>
                 </a>
-            </li>
-            <li>
+            </li> -->
+            <li id="video">
                 <a style="color: white;" href="./johnflorence.html">
                     <p class="cam-link" dir="rtl">וידאו</p>
                 </a>
             </li>
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-format="fluid"
+                data-ad-layout-key="-6t+ed+2i-1n-4w"
+                data-ad-client="ca-pub-2190134608327180"
+                data-ad-slot="5117111724"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
         </div>
     </div>
 
-    <footer>
+    <footer id="bottom-page">
         <p style="text-align: center;">
-            <a style="color: gold;" href="">מצלמת חוף Beach Cam</a>
+            <a style="color: gold;" href="./index.html">מצלמת חוף Beach Cam</a>
         </p>
     </footer>
     <script src="assets/js/jquery-2.1.3.min.js"></script>
