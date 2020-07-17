@@ -178,7 +178,7 @@
 
       iframe {
         width: 100%;
-        min-height: 33vh;
+        /* min-height: 33vh; */
       }
 
       .loader-container {
@@ -391,7 +391,7 @@
     <nav>
       <div class="animat-box-in">
         <p>
-          <a style="color: white;" href="./dromi3.html">לדרומי הרצליה |</a>
+          <a style="color: white;" href="./dromi2.html">לדרומי הרצליה |</a>
           <a style="color: white;" href="./forcast.html">תחזית גלים |</a>
           <a style="color: white;" href="./marina.html">למרינה צפון</a>
         </p>
@@ -401,6 +401,11 @@
     <div class="main-container">
       <section class="cams-container">
         <div class="cam-title">BeachCam.co.il</div>
+        <iframe
+          id="adsFrame"
+          frameborder="0"
+          height="0"
+        ></iframe>
         <img
           id="image"
           ondblclick="togglesize()"
@@ -428,6 +433,7 @@
       <div class="loader"></div>
     </div>
     <script>
+      const adsFrame = document.querySelector("#adsFrame");
       const cam = document.querySelector("#image");
       const camContainer = document.querySelector(".cams-container");
       const camTitle = document.querySelector(".cam-title");
@@ -456,17 +462,19 @@
       };
 
       const changeView = () => {
-        closeFullscreen();
-        // cam.style.background = "#f1f1f157";
-        cam.style.maxWidth = "300px";
+        adsFrame.style.minHeight = "50vh";
+        adsFrame.src = "./ad1.html"
+        cam.style.display = "none";
+        // closeFullscreen();
+        // cam.style.maxWidth = "300px";
         cam.style.position = "static";
-        cam.style.height = "70px";
+        // cam.style.height = "70px";
         // cam.style.borderRadius = "52%";
-        cam.style.margin = "15%";
-        cam.onclick = () => location.reload();
+        // cam.style.margin = "15%";
+        // cam.onclick = () => location.reload();
         camTitle.style.display = "none";
         camContainer.classList.remove("full-size");
-        cam.src = "./images/tosess.png";
+        // cam.src = "./images/tosess.png";
         showJumpBtn();
       };
 

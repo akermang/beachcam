@@ -437,16 +437,17 @@
       };
 
       const reloadCam = () => {
-        cam.src = "https://g2.ipcamlive.com/player/player.php?alias=galyamsurf&autoplay=1";
-        cam.style.maxWidth = "800px";
-        cam.style.position = "relative";
-        cam.style.height = "450px";
-        // cam.style.borderRadius = "52%";
-        cam.style.margin = "unset";
-        camTitle.style.display = "block";
-        camContainer.classList.remove("full-size");
-        timeOut(30000,  changeView)
-        hideJumpBtn();
+        // cam.src = "https://g2.ipcamlive.com/player/player.php?alias=galyamsurf&autoplay=1";
+        // cam.style.maxWidth = "800px";
+        // cam.style.position = "relative";
+        // cam.style.height = "450px";
+        // // cam.style.borderRadius = "52%";
+        // cam.style.margin = "unset";
+        // camTitle.style.display = "block";
+        // camContainer.classList.remove("full-size");
+        // timeOut(30000,  changeView)
+        // hideJumpBtn();
+        window.location.reload(true);
       }
 
       const changeView = () => {

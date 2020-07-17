@@ -207,7 +207,7 @@
 
       iframe {
         width: 98%;
-        /* min-height: 30vh; */
+        min-height: 53vh;
         max-height: 393px;
       }
 
@@ -442,7 +442,7 @@
           autoplay="1"
           allowfullscreen
         ></iframe> -->
-        <!-- <iframe
+        <iframe
           id="cam1"
           width="800"
           height="400"
@@ -454,8 +454,8 @@
           autoplay
           utohide= -1  
           >Your browser are not supported iframe.</iframe
-        > -->
-        <iframe
+        >
+        <!-- <iframe
           id="cam1"
           src="https://rtsp.me/embed/68h59RBY/"
           width="800"
@@ -463,7 +463,7 @@
           frameborder="0"
           autoplay
           allowfullscreen
-        ></iframe>
+        ></iframe> -->
       </div>
       <div class="jump-btn" onclick="location.reload()">
         דלג
@@ -531,7 +531,7 @@
         cam.style.margin = "30px 5%";
         // camTitle.style.display = "none";
         closeFullscreen();
-        cam.src = "./ad.html";
+        cam.src = "./ad13a7a2020.html";
         showJumpBtn();
       };
 
@@ -543,7 +543,7 @@
       const timeOut = () =>
         setTimeout(() => {
           changeView();
-        }, 55000);
+        }, 50000);
       timeOut();
 
       cam.onerror = () => {

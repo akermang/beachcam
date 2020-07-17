@@ -423,7 +423,7 @@
           src="http://62.219.45.26:120//mjpg/video.mjpg "
           alt="מצלמת חוף"
         />
-        <div class="jump-btn" onclick="location.reload()">
+        <div class="jump-btn" onclick="location.reload(true)">
           דלג
         </div>
       </section>
@@ -472,17 +472,17 @@
 
       const changeView = () => {
         adsFrame.style.minHeight = "50vh";
-        adsFrame.src = "./ad.html"
+        adsFrame.src = "./ad1.html"
         cam.style.display = "none";
-        closeFullscreen();
+        // closeFullscreen();
         // cam.style.maxWidth = "300px";
-        // cam.style.position = "static";
+        cam.style.position = "static";
         // cam.style.height = "70px";
         // cam.style.borderRadius = "52%";
         // cam.style.margin = "15%";
         // cam.onclick = () => location.reload();
         camTitle.style.display = "none";
-        // camContainer.classList.remove("full-size");
+        camContainer.classList.remove("full-size");
         // cam.src = "./images/tosess.png";
         showJumpBtn();
       };
