@@ -184,9 +184,9 @@
         min-width: 33%;
       }
 
-      iframe {
+      iframe#cam1 {
         width: 100%;
-        min-height: 33vh;
+        min-height: 29vh;
       }
 
       .loader-container {
@@ -214,7 +214,7 @@
 
       .main-container {
         position: relative;
-        max-width: 1000px;
+        max-width: 640px;
         margin: auto;
         z-index: 2;
       }
@@ -222,6 +222,7 @@
       .home-btn {
         padding: 4px;
         border-radius: 7px;
+        margin: 2px;
       }
 
       .home-btn.special {
@@ -237,14 +238,15 @@
       }
 
       .jump-btn.show {
+        font-size: 22px;
         z-index: 10;
         font-weight: bold;
         display: block;
-        width: 40px;
+        width: 60px;
         position: absolute;
         bottom: 0;
         right: 16%;
-        height: 40px;
+        height: 60px;
         background: transparent url("./images/jump.png") no-repeat;
         background-position: center center;
         background-size: contain;
@@ -261,19 +263,20 @@
         opacity: 1;
       }
 
-      #iframe-1 {
-        position: relative;
-        z-index: 2;
-        max-width: 750px;
-        margin: 0 auto;
-        height: 600px;
-      }
-
       footer {
-        position: fixed;
+        /* position: fixed; */
         bottom: 30px;
         width: 100%;
         z-index: 3;
+        text-align: center;
+        margin-bottom: 1em;
+      }
+      .ad {
+        width: 100%;
+        min-height: 100px;
+        max-width: 640px;
+        text-align: center;
+        margin: 5px auto;
       }
 
       @media (max-width: 914px) {
@@ -331,11 +334,11 @@
         .mobile-btn {
           display: block;
           background-color: #2196f3;
-          margin: 32% 1em 0;
+          margin: 15px 1em;
           cursor: pointer;
         }
-        iframe {
-          max-height: 198px;
+        iframe#cam1 {
+          max-height: 154px;
         }
         .row-flex {
           display: flex;
@@ -387,8 +390,9 @@
     <div class="main-container">
       <div class="cam-title">BeachCam.co.il</div>
       <iframe
-        width="1100"
-        height="620"
+        id="cam1"
+        width="640"
+        height="360"
         style="border: 0;"
         webkitallowfullscreen="true"
         scrolling="no"
@@ -400,10 +404,24 @@
       <div class="jump-btn" onclick="location.reload() ">
         דלג
       </div>
+
     </div>
     <div class="loader-container">
       <div class="loader"></div>
     </div>
+    <div class="ad">
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- adSmall -->
+      <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-2190134608327180"
+          data-ad-slot="9146492665"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+  </div>
     <a class="home-btn mobile-btn" style="color: white;" href="./list.html">
       <h1>מצלמות חוף נוספות</h1>
     </a>

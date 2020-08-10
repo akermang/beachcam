@@ -157,6 +157,7 @@
         max-width: 800px;
         margin: 0px auto;
         position: relative;
+        margin-bottom: 10px;
       }
 
       .cam-title {
@@ -242,14 +243,15 @@
       }
 
       .jump-btn.show {
+        font-size: 22px;
         z-index: 10;
         font-weight: bold;
         display: block;
-        width: 40px;
+        width: 60px;
         position: absolute;
         bottom: 0;
         right: 16%;
-        height: 40px;
+        height: 60px;
         background: transparent url("./images/jump.png") no-repeat;
         background-position: center center;
         background-size: contain;
@@ -272,11 +274,18 @@
       }
 
       footer {
-        position: fixed;
+        /* position: fixed; */
         bottom: 20px;
         width: 100%;
         color: gold;
         z-index: 3;
+      }
+
+      .ad {
+        width: 100%;
+        text-align: center;
+        margin: 5px 2px;
+        overflow: hidden;
       }
 
       @media (max-width: 914px) {
@@ -337,6 +346,10 @@
       }
 
       @media (max-width: 530px) {
+        .ad {
+          max-width: clac(100% - 2px) !important;
+          margin: 5px auto;
+        }
         .mobile-btn {
           display: block;
           background-color: #2196f3;
@@ -348,10 +361,10 @@
           left: 0;
           right: 0;
           bottom: 63px;
-          position: absolute;
+          /* position: absolute; */
         }
-        iframe {
-          max-height: 53vw!important;
+        iframe#cam1 {
+          max-height: 53vw !important;
         }
 
         .loader-container {
@@ -442,6 +455,24 @@
     </div>
     <div id="loader-container" class="loader-container">
       <div class="loader"></div>
+    </div>
+    <div class="ad">
+      <script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+      ></script>
+      <!-- marinaAds -->
+      <ins
+        class="adsbygoogle"
+        style="display: block;"
+        data-ad-client="ca-pub-2190134608327180"
+        data-ad-slot="2338140804"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      ></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
     </div>
     <a class="home-btn mobile-btn" style="color: white;" href="./list.html">
       <h2>מצלמות חוף נוספות</h2>

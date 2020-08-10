@@ -164,6 +164,7 @@
         left: 0;
         max-width: 100%;
         padding: 0;
+        z-index: 1;
       }
 
       .full-size img {
@@ -207,6 +208,7 @@
       .home-btn {
         padding: 4px;
         border-radius: 7px;
+        margin: 2px;
       }
 
       .home-btn.special {
@@ -226,14 +228,15 @@
       }
 
       .jump-btn.show {
+        font-size: 22px;
         z-index: 10;
         font-weight: bold;
         display: block;
-        width: 40px;
+        width: 60px;
         position: absolute;
         bottom: 0;
         right: 16%;
-        height: 40px;
+        height: 60px;
         background: transparent url("./images/jump.png") no-repeat;
         background-position: center center;
         background-size: contain;
@@ -251,9 +254,17 @@
       }
 
       footer {
-        position: fixed;
-        bottom: 30px;
+        /* position: fixed; */
         width: 100%;
+        margin-bottom: 1em;
+      }
+
+      .ad {
+        width: 100%;
+        text-align: center;
+        margin: 5px auto;
+        overflow: hidden;
+        max-width: 800px;
       }
 
       @media (max-width: 914px) {
@@ -337,11 +348,9 @@
           cursor: pointer;
           width: 80vw;
           margin: auto;
-          left: 0;
-          right: 0;
-          bottom: 63px;
-          position: absolute;
+          margin: 15px auto;
         }
+        
         .cam-title {
           bottom: 5%;
           top: initial;
@@ -419,6 +428,24 @@
           דלג
         </div>
       </section>
+      <div class="ad">
+        <script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+        ></script>
+        <!-- marinaAds -->
+        <ins
+          class="adsbygoogle"
+          style="display: block;"
+          data-ad-client="ca-pub-2190134608327180"
+          data-ad-slot="2338140804"
+          data-ad-format="auto"
+          data-full-width-responsive="true"
+        ></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
     </div>
     <a class="home-btn mobile-btn" style="color: white;" href="./list.html">
       <h1>מצלמות חוף נוספות</h1>
