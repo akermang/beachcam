@@ -126,6 +126,10 @@
         font-size: 30px;
       }
 
+      .light-background {
+        background-color: #0c885a;
+      }
+
       div.img {
         text-align: center;
         border-radius: 2px;
@@ -158,6 +162,7 @@
         margin: 0px auto;
         position: relative;
         margin-bottom: 10px;
+        min-height: 33vh;
       }
 
       .cam-title {
@@ -346,6 +351,15 @@
       }
 
       @media (max-width: 530px) {
+        .ad {
+          max-width: 100vw!important;
+          overflow: hidden;
+        }
+        
+        .adsbygoogle {
+         max-width: 100vw!important;
+        }
+        
         .mobile-btn {
           display: block;
           background-color: #2196f3;
@@ -357,7 +371,7 @@
         }
 
         iframe#cam1 {
-          max-height: 53vw!important;
+          max-height: 53vw !important;
         }
 
         .loader-container {
@@ -389,12 +403,12 @@
         <div class="w3-container w3-blue row-flex">
           <div class="home-btn">
             <a href="./index.html">
-              <h1>BeachCam.co.il מצלמות חוף</h1>
+              <h1>BEACH CAM ISRAEL מצלמות חוף</h1>
               <!-- <p>לפירסום כאן 054-6817830</p> -->
             </a>
           </div>
           <div class="animat-box-in">
-            <h2> חוף הדרומי פרימיום הרצליה</h2>
+            <h2>חוף הדרומי פרימיום הרצליה</h2>
           </div>
           <a
             class="home-btn title special"
@@ -412,12 +426,12 @@
         <p>
           <a href="./marina.html">למרינה צפון |</a>
           <a href="./forcast.html">תחזית גלים |</a>
-          <a href="./list.html">מצלמות</a>
+          <a class="light-background" href="./zvulun.html">חדש! חוף זבולון</a>
         </p>
       </div>
     </nav>
     <div class="main-container">
-      <div class="cam-title">BeachCam.co.il</div>
+      <!-- <div id="cam-title" class="cam-title">BeachCam.co.il</div> -->
 
       <div class="cams-container">
         <!-- <iframe
@@ -433,15 +447,33 @@
         utohide= -1  
         >Your browser are not supported iframe.</iframe
       > -->
+        <!-- <iframe
+          id="cam1"
+          src="https://g1.ipcamlive.com/player/player.php?alias=5f3ad0fd4e3c3&autoplay=1&skin=white"
+          width="800px"
+          height="450px"
+          frameborder="0"
+          autoplay
+          allowfullscreen
+        ></iframe> -->
         <iframe
           id="cam1"
-          src="https://rtsp.me/embed/68h59RBY/"
+          src="https://rtsp.me/embed/iKSibhk6/"
           width="800"
           height="434px"
           frameborder="0"
           autoplay
           allowfullscreen
         ></iframe>
+        <!-- <iframe
+          id="cam1"
+          src="https://g2.ipcamlive.com/player/player.php?alias=5f5507da3636d&autoplay=1&skin=white"
+          width="800"
+          height="434px"
+          frameborder="0"
+          autoplay
+          allowfullscreen
+        ></iframe> -->
       </div>
       <div class="jump-btn" onclick="location.reload()">
         דלג
@@ -451,30 +483,36 @@
       <div class="loader"></div>
     </div>
     <div class="ad">
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+      ></script>
       <!-- adSmall -->
-      <ins class="adsbygoogle"
-          style="display:block"
-          data-ad-client="ca-pub-2190134608327180"
-          data-ad-slot="9146492665"
-          data-ad-format="auto"
-          data-full-width-responsive="true"></ins>
+      <ins
+        class="adsbygoogle"
+        style="display: block;"
+        data-ad-client="ca-pub-2190134608327180"
+        data-ad-slot="9146492665"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      ></ins>
       <script>
-          (adsbygoogle = window.adsbygoogle || []).push({});
+        (adsbygoogle = window.adsbygoogle || []).push({});
       </script>
-  </div>
+    </div>
     <a class="home-btn mobile-btn" style="color: white;" href="./list.html">
       <h2>מצלמות חוף נוספות</h2>
     </a>
     <footer>
       <p style="text-align: center;">
-        <a style="color: gold;" href="./index.html"> מצלמת חוף Beach Cam </a>
+        <a style="color: gold;" href="./index.html"> מצלמת חוף Beach Cam Israel</a>
       </p>
+      <p style="color: gold;">gal@beachcam.co.il</p>
     </footer>
     <script>
       const cam = document.querySelector("#cam1");
       const camContainer = document.querySelector(".cams-container");
-      const camTitle = document.querySelector(".cam-title");
+      // const camTitle = document.querySelector("#cam-title");
       const loader = document.querySelector(".loader-container");
       const message = document.querySelector(".message");
       const jumpBtn = document.querySelector(".jump-btn");
@@ -520,7 +558,7 @@
         cam.style.position = "static";
         cam.style.maxHeight = "53vh";
         cam.style.margin = "30px 15%";
-        camTitle.style.display = "none";
+        // camTitle.style.display = "none";
         closeFullscreen();
         cam.src = "./ad13a7a2020.html";
         showJumpBtn();
@@ -534,7 +572,7 @@
       const timeOut = () =>
         setTimeout(() => {
           changeView();
-        }, 50000);
+        }, 55000);
       timeOut();
 
       cam.onerror = () => {

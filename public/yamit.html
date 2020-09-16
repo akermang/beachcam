@@ -23,7 +23,7 @@
     <meta name="description" content="מצלמות חוף שידור ישיר ישראל" />
     <meta
       name="keywords"
-      content="כניסה למרינה,הרצליה,דרומי,מצלמת חוף פרישמן ,ישראל,מצלמת גלישה, גלים,מצלמת חוף הרצליה,גלישה,מצב,גלים,שידור,חי,מרינה,surf,live,Camera"
+      content="כניסה למרינה,הרצליה,דרומי,מצלמת חוף הילטון ,ישראל,מצלמת גלישה, גלים,מצלמת חוף תל אביב, ים תל אביב,ימית,מצלמת ימית,Hilton beach cam ,גלישה,מצב,גלים,שידור,חי,מרינה,beach cam Israel,surf,live,Camera"
     />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
     <link
@@ -31,7 +31,7 @@
       type="image/png"
       href="https://akermang.github.io/WeatherApp/sun-favicon.png"
     />
-    <title>מצלמות חופים | BeachCam |פרישמן</title>
+    <title>מצלמות חופים | BeachCam Israel| מצלמת חוף הילטון</title>
     <meta
       http-equiv="Cache-Control"
       content="no-cache, no-store, must-revalidate"
@@ -148,6 +148,7 @@
         max-width: 800px;
         margin: 0px auto;
         position: relative;
+        min-height: 33vh;
       }
 
       .cam-title {
@@ -178,7 +179,7 @@
         min-width: 33%;
       }
 
-      iframe {
+      iframe#cam1 {
         width: 100%;
         min-height: 33vh;
       }
@@ -211,6 +212,7 @@
         z-index: 1;
         max-width: 800px;
         margin: auto;
+        margin-bottom: 8px;
       }
 
       .home-btn {
@@ -220,6 +222,7 @@
 
       .home-btn.special {
         background-color: #008000a1;
+        margin: 0.5em;
       }
 
       .home-btn:hover {
@@ -261,9 +264,20 @@
       }
 
       footer {
-        position: fixed;
-        bottom: 30px;
+        margin-top: 2em;
         width: 100%;
+        z-index: 3;
+      }
+
+      .cam-banner {
+        background: #ffffff;
+        max-width: 800px;
+        margin: 0 auto;
+        /* height: 52px; */
+        width: 100%;
+      }
+
+      a.cam-banner-link {
         z-index: 3;
       }
 
@@ -279,6 +293,7 @@
         }
         .cam-title {
           font-size: 19px;
+          top: 66%;
         }
         h1,
         h2 {
@@ -325,13 +340,14 @@
           background-color: #2196f3;
           margin: 32% 1em 0;
           cursor: pointer;
+          z-index: 3;
         }
-        iframe {
+        iframe#cam1 {
           max-height: 53vw;
         }
 
         .cam-title {
-          font-size: 13px;
+          font-size: 14px;
         }
 
         .row-flex {
@@ -359,14 +375,18 @@
         <div class="w3-container w3-blue row-flex">
           <div class="home-btn">
             <a href="./index.html">
-              <h1>BeachCam.co.il</h1>
+              <h1>BEACH CAM ISRAEL</h1>
               <!-- <p>לפירסום כאן 054-6817830</p> -->
             </a>
           </div>
           <div class="animat-box-in">
-            <h2 dir="rtl">תל אביב חוף פרישמן</h2>
+            <h2 dir="rtl">חוף הילטון ימית תל אביב</h2>
           </div>
-          <a class="home-btn title special" style="color: white;" href="./list.html">
+          <a
+            class="home-btn title special"
+            style="color: white"
+            href="./list.html"
+          >
             <p class="info" dir="rtl">שידור חי - מצלמת חוף</p>
             <h1>מצלמות חוף נוספות</h1>
           </a>
@@ -376,40 +396,59 @@
     <nav>
       <div class="animat-box-in">
         <p>
-          <a style="color: white;" href="./dromi.html">הרצליה דרום |</a>
-          <a style="color: white;" href="./forcast.html">תחזית גלים |</a>
-          <a style="color: white;" href="./list.html">מצלמות</a>
+          <a style="color: white" href="./dromi2.html">הרצליה דרומי |</a>
+          <a style="color: white" href="./forcast.html">תחזית גלים |</a>
+          <a style="color: white" href="./list.html">מצלמות</a>
         </p>
       </div>
     </nav>
     <div class="message"></div>
+
     <div class="main-container">
       <div class="cam-title">BeachCam.co.il</div>
-      <iframe
+      <!-- <iframe
+        id="cam1"
         width="800"
         height="450"
-        src="https://www.youtube.com/embed/bF3dG5-8dT4"
+        src=" https://rtsp.me/embed/tHdiSen6/"
+        width="800"
+        height="434px"
         frameborder="0"
         autoplay
-        encrypted-media
-        gyroscope
-        picture-in-picture
+        allowfullscreen
+      ></iframe> -->
+      <iframe
+        id="cam1"
+        src="https://g2.ipcamlive.com/player/player.php?alias=5f6226e0414da&autoplay=1&skin=white"
+        width="800px"
+        height="443px"
+        frameborder="0"
         allowfullscreen
       ></iframe>
-      <div class="jump-btn" onclick="location.reload()">
-        דלג
-      </div>
+      <a
+        class="cam-banner-link"
+        href="https://www.yamitysb.co.il"
+        target="blank"
+      >
+        <div class="cam-banner">
+          <img src="https://www.yamitysb.co.il/pics/logo.png" alt="YAMIT" />
+        </div>
+      </a>
+      <div class="jump-btn" onclick="location.reload()">דלג</div>
     </div>
     <div class="loader-container">
       <div class="loader"></div>
     </div>
-    <a class="home-btn mobile-btn" style="color: white;" href="./list.html">
+    <a class="home-btn mobile-btn" style="color: white" href="./list.html">
       <h1>מצלמות חוף נוספות</h1>
     </a>
     <footer>
-      <p style="text-align: center;">
-        <a style="color: gold;" href="./index.html"> מצלמת חוף Beach Cam </a>
+      <p style="text-align: center">
+        <a style="color: gold" href="./index.html">
+          מצלמת חוף Beach Cam Israel</a
+        >
       </p>
+      <p style="color: gold">contact: gal@beachcam.co.il</p>
     </footer>
   </body>
 </html>

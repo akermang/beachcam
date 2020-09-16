@@ -18,12 +18,22 @@
       })(window, document, "script", "dataLayer", "GTM-WPTQ3HT");
     </script>
     <!-- End Google Tag Manager -->
+    <!-- adsense  -->
+    <script
+      data-ad-client="ca-pub-2190134608327180"
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
+    <!-- End adsense  -->
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="מצלמות חוף שידור ישיר ישראל" />
     <meta
       name="keywords"
-      content="הרצליה,דרומי,מרינה דרום,מצלמת גלישה,גזיבו, הילטון, גלים,מצלמת חוף הרצליה,הילטון מצלמה,גלישה,מצב,גלים,שידור,חי,מרינה,surf,live,Camera"
+      content="הרצליה,דרומי,מרינה צפון,מצלמת גלישה, גלים,מצלמת חוף זבולון, הרצליה , דבוש , אכדיה ,גלישה , מצב,גלים ,שידור ,חי,מרינה,surf,live,Camera' Beach Cam Israel, מצלמות חוף, מצלמת חוף, מצלמת גלים"
     />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
     <link
@@ -31,7 +41,7 @@
       type="image/png"
       href="https://akermang.github.io/WeatherApp/sun-favicon.png"
     />
-    <title>מצלמות חופים | BeachCam | הילטון אינטרסרף</title>
+    <title>חוף זבולון הרצליה | מצלמות חופים | BeachCam Israel</title>
     <meta
       http-equiv="Cache-Control"
       content="no-cache, no-store, must-revalidate"
@@ -134,10 +144,11 @@
         color: wheat;
         text-align: center;
         font-size: medium;
+        font-weight: bold;
       }
 
       .cams-container {
-        display: block;
+        display: none;
         flex-wrap: wrap;
         justify-content: center;
         padding: 6px;
@@ -151,9 +162,10 @@
       .cam-title {
         position: absolute;
         color: white;
-        top: 5%;
+        bottom: 5%;
         left: 2%;
         font-size: 22px;
+        z-index: 3;
       }
 
       .cams-container.full-size {
@@ -177,7 +189,7 @@
 
       iframe {
         width: 100%;
-        min-height: 33vh;
+        min-height: 23vh;
       }
 
       .loader-container {
@@ -188,7 +200,7 @@
         height: 50vh;
         width: 100%;
         position: absolute;
-        top: 33%;
+        top: 170px;
       }
 
       .loader {
@@ -203,9 +215,17 @@
         opacity: 1;
       }
 
+      .main-container {
+        /* min-height: calc(90vh - 230px); */
+        position: relative;
+        max-width: 800px;
+        margin: auto;
+      }
+
       .home-btn {
         padding: 4px;
         border-radius: 7px;
+        margin: 2px;
       }
 
       .home-btn.special {
@@ -221,14 +241,15 @@
       }
 
       .jump-btn.show {
+        font-size: 22px;
         z-index: 10;
         font-weight: bold;
         display: block;
-        width: 40px;
+        width: 60px;
         position: absolute;
         bottom: 0;
         right: 16%;
-        height: 40px;
+        height: 60px;
         background: transparent url("./images/jump.png") no-repeat;
         background-position: center center;
         background-size: contain;
@@ -245,11 +266,19 @@
         opacity: 1;
       }
 
+      iframe#iframe-1 {
+        position: relative;
+        z-index: 2;
+      }
       footer {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
         z-index: 3;
+      }
+      .ad {
+        width: 100%;
+        min-height: 100px;
+        max-width: 640px;
+        text-align: center;
+        margin: 5px auto;
       }
 
       @media (max-width: 914px) {
@@ -271,6 +300,15 @@
         }
       }
 
+      @media (max-width: 700px) {
+        .img img {
+          width: 140px;
+        }
+        .cam-title {
+          font-size: 19px;
+        }
+      }
+
       @media (max-width: 599px) {
         header img {
           width: 115px;
@@ -288,16 +326,6 @@
         h2 {
           font-size: 22px;
         }
-
-        img {
-          max-height: 53vw;
-          width: 100%;
-        }
-
-        .cam-title {
-          left: 4%;
-          font-size: 16px;
-        }
       }
 
       .mobile-btn {
@@ -305,14 +333,26 @@
       }
 
       @media (max-width: 530px) {
+        .ad {
+          max-width: 100vw!important;
+          overflow: hidden;
+        }
+        
+        .adsbygoogle {
+         max-width: 100vw!important;
+        }
+        
         .mobile-btn {
           display: block;
           background-color: #2196f3;
-          margin: 32% 1em 0;
+          margin: 0 1em 1em;
           cursor: pointer;
         }
+        iframe#iframe-1 {
+          max-height: 53vw !important;
+        }
+
         .cam-title {
-          bottom: 5%;
           top: initial;
         }
 
@@ -339,15 +379,19 @@
         <div class="w3-container w3-blue row-flex">
           <div class="home-btn">
             <a href="./index.html">
-              <h1>BeachCam.co.il</h1>
+              <h1>BEACH CAM ISRAEL</h1>
               <!-- <p>לפירסום כאן 054-6817830</p> -->
             </a>
           </div>
           <div class="animat-box-in">
-            <h2>הילטון אינטרסרף</h2>
+            <h2>סאן ביץ' זבולון הרצליה</h2>
           </div>
-          <a class="home-btn title special" style="color: white;" href="./list.html">
-            <p class="info">שידור חי - גלישת גלים</p>
+          <a
+            class="home-btn title special"
+            style="color: white;"
+            href="./list.html"
+          >
+            <p class="info">שידור חי - מצלמת חוף</p>
             <h1>מצלמות חוף נוספות</h1>
           </a>
         </div>
@@ -356,84 +400,123 @@
     <nav>
       <div class="animat-box-in">
         <p>
-          <a style="color: white;" href="./hamaaravi.html">לחוף המערבי |</a>
+          <a style="color: white;" href="./dromi2.html">לדרומי |</a>
           <a style="color: white;" href="./forcast.html">תחזית גלים |</a>
-          <a style="color: white;" href="./marina.out.html">מרינה כניסה</a>
+          <a style="color: white;" href="./list.html">מצלמות</a>
         </p>
       </div>
     </nav>
-    <div class="message"></div>
-    <div class="main-container">
-      <section class="cams-container">
-        <div class="cam-title">BeachCam.co.il</div>
-        <iframe
-          id="cam-iframe"
-          width="100%"
-          src="http://intersurf.co.il/content/31-HiltonBeach-Camera"
-          width="1100px"
-          height="620px"
-          frameborder="0"
-          allowfullscreen
-        ></iframe>
-        <img
-          width="80%"
-          id="image"
-          ondblclick="togglesize()"
-          src="./images/tosess.png"
-          alt="מצלמת חוף"
-        />
-        <div class="jump-btn" onclick="location.reload()">
-          דלג
-        </div>
-      </section>
+    <div class="message">סאן ביץ' חוף זבולון הרצליה</div>
+    <div class="main-container cams-container">
+      <!-- <div id="cam-title" class="cam-title">BeachCam.co.il</div> -->
+      <!-- <iframe
+        id="iframe-1"
+        src="https://g2.ipcamlive.com/player/player.php?alias=5f3a9395bb9b8&autoplay=1&skin=white"
+        width="800px"
+        height="450px"
+        frameborder="0"
+        allowfullscreen
+        autoplay
+      ></iframe> -->
+      <iframe
+        id="iframe-1"
+        src="https://g1.ipcamlive.com/player/player.php?alias=5f5c9a4bcc0a3&autoplay=1&skin=white"
+        width="800px"
+        height="443px"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
+      <div class="jump-btn" onclick="reloadCam()">
+        דלג
+      </div>
+    </div>
+    <div class="loader-container">
+      <div class="loader"></div>
+    </div>
+    <div class="ad">
+      <script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+      ></script>
+      <!-- adSmall -->
+      <ins
+        class="adsbygoogle"
+        style="display: block;"
+        data-ad-client="ca-pub-2190134608327180"
+        data-ad-slot="9146492665"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      ></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
     </div>
     <a class="home-btn mobile-btn" style="color: white;" href="./list.html">
       <h1>מצלמות חוף נוספות</h1>
     </a>
     <footer>
       <p style="text-align: center;">
-        <a style="color: gold;" href="./index.html"> מצלמת חוף Beach Cam </a>
+        <a style="color: gold;" href="./index.html"> מצלמת חוף Beach Cam Israel</a>
       </p>
+      <p style="color: gold;">contact: gal@beachcam.co.il</p>
     </footer>
-
-    <div class="loader-container">
-      <div class="loader"></div>
-    </div>
     <script>
-      const cam = document.querySelector("#image");
+      const cam = document.querySelector("#iframe-1");
       const camContainer = document.querySelector(".cams-container");
-      const camTitle = document.querySelector(".cam-title");
+      const camTitle = document.querySelector("#cam-title");
       const loader = document.querySelector(".loader-container");
       const message = document.querySelector(".message");
       const jumpBtn = document.querySelector(".jump-btn");
-      const iframe = document.querySelector("#cam-iframe");
-
-      const hideLoader = () => {
-        loader.style.display = "none";
-        camContainer.style.display = "flex";
-      };
-
-      setTimeout(hideLoader, 3400);
 
       const showJumpBtn = () => {
         jumpBtn.classList.add("show");
+      };
+
+      const hideJumpBtn = () => {
+        jumpBtn.classList.remove("show");
       };
 
       const togglesize = () => {
         camContainer.classList.toggle("full-size");
       };
 
+      const closeFullscreen = () => {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        } else if (document.mozCancelFullScreen) {
+          /* Firefox */
+          document.mozCancelFullScreen();
+        } else if (document.webkitExitFullscreen) {
+          /* Chrome, Safari and Opera */
+          document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) {
+          /* IE/Edge */
+          document.msExitFullscreen();
+        }
+      };
+
+      const reloadCam = () => {
+        // cam.src = "https://g2.ipcamlive.com/player/player.php?alias=galyamsurf&autoplay=1";
+        // cam.style.maxWidth = "800px";
+        // cam.style.position = "relative";
+        // cam.style.height = "450px";
+        // // cam.style.borderRadius = "52%";
+        // cam.style.margin = "unset";
+        // camTitle.style.display = "block";
+        // camContainer.classList.remove("full-size");
+        // timeOut(30000,  changeView)
+        // hideJumpBtn();
+        window.location.reload(true);
+      };
+
       const changeView = () => {
-        // cam.style.background = "#f1f1f157";
-        cam.style.maxWidth = "300px";
+        cam.style.maxWidth = "800px";
         cam.style.position = "static";
-        cam.style.height = "70px";
-        // cam.style.borderRadius = "52%";
-        cam.style.margin = "15%";
-        cam.onclick = () => location.reload();
-        camTitle.style.display = "none";
-        camContainer.classList.remove("full-size");
-        cam.src = "./images/tosess.png";
+        cam.style.maxHeight = "53vh";
+        cam.style.margin = "30px 15%";
+        // camTitle.style.display = "none";
+        closeFullscreen();
+        cam.src = "./ad.html";
         showJumpBtn();
       };
 
@@ -442,15 +525,16 @@
         camContainer.style.display = "flex";
       };
 
-      const timeOut = () =>
+      const timeOut = (time, callBack) =>
         setTimeout(() => {
-          changeView();
-        }, 30000);
-      timeOut();
+          callBack();
+        }, time);
+
+      timeOut(85000, changeView);
 
       cam.onerror = () => {
         clearTimeout(timeOut);
-        window.location = "./marina2.html";
+        window.location = "./list.html";
       };
     </script>
   </body>
