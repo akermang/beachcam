@@ -132,9 +132,19 @@
       }
 
       .message {
+        background-color: #9C27B0;
+        display: none;
         color: wheat;
         text-align: center;
         font-size: medium;
+        font-weight: bold;
+        border: 1px solid;
+        padding: 7px;
+        margin: 5px 16px;
+        border-radius: 3px;
+        width: 97%;
+        max-width: 786px;
+        margin: 10px auto;
       }
 
       .cams-container {
@@ -266,6 +276,10 @@
         margin: 5px auto;
         overflow: hidden;
         max-width: 800px;
+      }
+
+      .error-link {
+        margin: 15px auto;
       }
 
       @media (max-width: 914px) {
@@ -416,8 +430,13 @@
         </p>
       </div>
     </nav>
-    <div class="message"></div>
+    <a href="http://62.219.45.26:140//mjpg/video.mjpg ">
+      <div class="message">
+        לכניסה למרינה ניתן לנסות בקישור כאן
+      </div>
+    </a>
     <div class="main-container">
+
       <section class="cams-container">
         <div class="cam-title">BeachCam.co.il</div>
         <iframe
@@ -531,6 +550,7 @@
         clearTimeout(timeOut);
         cam.style.width = "100%";
         cam.src = "./images/errorCam1_Moment.jpg";
+        message.style.display = "block";
       };
     </script>
   </body>

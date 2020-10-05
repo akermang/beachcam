@@ -27,10 +27,13 @@
     <!-- End adsense  -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="מצלמות חוף שידור ישיר ישראל" />
+    <meta
+      name="description"
+      content="מצלמות חוף שידור ישיר ישראל, מצלמת חוף גלים surf report Israel updated daily with live HD Beach cam stream. Live Israel - Herzelia Istael HD surf cam"
+    />
     <meta
       name="keywords"
-      content="כניסה למרינה,הרצליה,דרומי,מרינה צפון,מצלמת גלישה, גלים,מצלמת חוף הרצליה,מצלמת חוף הילטון מרינה תל אביב,גלישה,מצב,גלים,שידור,חי,מרינה,surf,live,Camera"
+      content="הרצליה,דרומי,מרינה צפון,מצלמת גלישה, גלים,מצלמת חוף זבולון, הרצליה , דבוש , אכדיה ,גלישה , מצב,גלים ,שידור ,חי,מרינה,surf,live,Camera' Beach Cam Israel, מצלמות חוף, מצלמת חוף, מצלמת גלים"
     />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
     <link
@@ -38,7 +41,7 @@
       type="image/png"
       href="https://akermang.github.io/WeatherApp/sun-favicon.png"
     />
-    <title>מצלמות חופים | BeachCam | מצלמות חוף ישראל</title>
+    <title>חוף זבולון הרצליה | מצלמות חופים | BeachCam Israel</title>
     <meta
       http-equiv="Cache-Control"
       content="no-cache, no-store, must-revalidate"
@@ -126,13 +129,8 @@
         font-size: 30px;
       }
 
-      .top-color {
-        background-color: #9c27b0;
-        color: white;
-      }
-
-      .text-center {
-        text-align: center;
+      .light-background {
+        background-color: #0c885a;
       }
 
       div.img {
@@ -166,6 +164,7 @@
         max-width: 800px;
         margin: 0px auto;
         position: relative;
+        margin-bottom: 10px;
         min-height: 33vh;
       }
 
@@ -176,13 +175,6 @@
         left: 4%;
         font-size: 22px;
         z-index: 1;
-      }
-
-      .cam-title.subTitle {
-        position: static;
-        width: 100%;
-        text-align: center;
-        color: #f5deb3;
       }
 
       .cams-container.full-size {
@@ -205,11 +197,6 @@
       }
 
       iframe {
-        width: 100%;
-        min-height: 23vh;
-      }
-
-      iframe#cam1 {
         width: 98%;
         /* min-height: 53vh; */
       }
@@ -249,7 +236,6 @@
       .home-btn {
         padding: 4px;
         border-radius: 7px;
-        margin: 2px;
       }
 
       .home-btn.special {
@@ -257,7 +243,7 @@
       }
 
       .home-btn:hover {
-        /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
       }
 
       .jump-btn {
@@ -296,6 +282,7 @@
       }
 
       footer {
+        /* position: fixed; */
         bottom: 20px;
         width: 100%;
         color: gold;
@@ -307,6 +294,21 @@
         max-width: 800px;
         margin: 5px auto;
         min-height: 110px;
+      }
+
+      .cam-banner {
+        background: #ffffff;
+        max-width: 800px;
+        margin: 0 auto;
+        /* height: 52px; */
+        width: 100%;
+      }
+
+      a.cam-banner-link {
+        z-index: 3;
+        width: 98%;
+        max-width: 796px;
+        margin-top: 5px;
       }
 
       @media (max-width: 914px) {
@@ -357,8 +359,8 @@
           font-size: 22px;
         }
 
-        .cam-title.subTitle {
-          top: 15%;
+        .cam-title {
+          display: none;
         }
       }
 
@@ -416,15 +418,15 @@
   <body>
     <header>
       <div class="wrapper">
-        <div class="w3-container top-color row-flex">
+        <div class="w3-container w3-blue row-flex">
           <div class="home-btn">
-            <div href="./index.html">
-              <h1>BEACH CAM ISRAEL</h1>
-            </div>
+            <a href="./index.html">
+              <h1>BEACH CAM ISRAEL מצלמות חוף</h1>
+              <!-- <p>לפירסום כאן 054-6817830</p> -->
+            </a>
           </div>
-          <div class="animat-box-in text-center">
-            <h2>מצלמות חוף ישראל</h2>
-            <label>אתר הבית לאוהבי הים והגלים</label>
+          <div class="animat-box-in">
+            <h2>סאן ביץ' צופי הים הרצליה</h2>
           </div>
           <a
             class="home-btn title special"
@@ -440,14 +442,12 @@
     <nav>
       <div class="animat-box-in">
         <p>
-          <a href="./marina.html">למרינה צפון |</a>
-          <a href="./forcast.html">תחזית גלים |</a>
-          <a href="./list.html">מצלמות</a>
+          <a style="color: white" href="./dromi2.html">לדרומי |</a>
+          <a style="color: white" href="./forcast.html">תחזית גלים |</a>
+          <a style="color: white" href="./list.html">מצלמות</a>
         </p>
       </div>
     </nav>
-    <div class="message">מצלמת היום: זבולון הרצליה</div>
-    <div id="cam-title" class="cam-title subTitle"></div>
     <div class="main-container">
       <!-- <div id="cam-title" class="cam-title">BeachCam.co.il</div> -->
 
@@ -466,41 +466,37 @@
         >Your browser are not supported iframe.</iframe
       > -->
         <!-- <iframe
-      id="cam1"
-      src="https://g2.ipcamlive.com/player/player.php?alias=5f5507da3636d&autoplay=1&skin=white"
-      width="800px"
-      height="450px"
-      frameborder="0"
-      allowfullscreen
-      autoplay
-    ></iframe> -->
-        <iframe
           id="cam1"
-          src="https://g2.ipcamlive.com/player/player.php?alias=5f6f2b822c9d7&autoplay=1&skin=white"
+          src="https://g1.ipcamlive.com/player/player.php?alias=5f3ad0fd4e3c3&autoplay=1&skin=white"
           width="800px"
-          height="443px"
+          height="450px"
           frameborder="0"
-          allowfullscreen
-        ></iframe>
-        <!-- <iframe
-          id="cam1"
-          width="800"
-          height="434"
-          src="https://rtsp.me/embed/iKSibhk6/"
-          frameborder="0"
-          allowfullscreen
           autoplay
+          allowfullscreen
         ></iframe> -->
-        <!-- iKSibhk6 4FEN7bBF -->
         <!-- <iframe
           id="cam1"
-          src="https://g2.ipcamlive.com/player/player.php?alias=5f53657ef1ad4&autoplay=1&skin=white"
+          src="https://rtsp.me/embed/iKSibhk6/"
           width="800"
           height="434px"
           frameborder="0"
           autoplay
           allowfullscreen
         ></iframe> -->
+        <a class="cam-banner-link" href="https://www.facebook.com/yamdakkar1">
+          <div class="cam-banner">
+            <img src="./images/3.png" alt="Herzelia Sea Scouts" />
+          </div>
+        </a>
+        <iframe
+          id="cam1"
+          src="https://g2.ipcamlive.com/player/player.php?alias=5f6f2b822c9d7&autoplay=1&skin=white"
+          width="800"
+          height="434px"
+          frameborder="0"
+          autoplay
+          allowfullscreen
+        ></iframe>
       </div>
       <div class="jump-btn" onclick="location.reload()">דלג</div>
     </div>
@@ -531,10 +527,10 @@
     <footer>
       <p style="text-align: center">
         <a style="color: gold" href="./index.html">
-          מצלמת חוף Beach Cam Israel
-        </a>
+          מצלמת חוף Beach Cam Israel</a
+        >
       </p>
-      <p style="color: gold">contact: gal@beachcam.co.il</p>
+      <p style="color: gold">gal@beachcam.co.il</p>
     </footer>
     <script>
       const cam = document.querySelector("#cam1");
@@ -587,7 +583,7 @@
         cam.style.margin = "30px 15%";
         // camTitle.style.display = "none";
         closeFullscreen();
-        cam.src = "./ad13a7a2020.html";
+        cam.src = "../ad13a7a2020.html";
         showJumpBtn();
       };
 
@@ -599,7 +595,7 @@
       const timeOut = () =>
         setTimeout(() => {
           changeView();
-        }, 80000);
+        }, 70000);
       timeOut();
 
       cam.onerror = () => {
