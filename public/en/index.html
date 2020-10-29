@@ -36,6 +36,7 @@
       content="Israel,beach,cam,Tel Aviv,Herzlia,South beach,Mrina south,camera, surfing,live, waves, wave cam,Live beach cam Herzlia,surfing,,sea condition,surf Israel,Live,brodcast,Marina,surf,live,Camera,Live beach surf cam from Israel"
     />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="../css/css1.css">
     <link
       rel="shortcut icon"
       type="image/png"
@@ -270,14 +271,13 @@
       .jump-btn.show {
         font-size: 22px;
         z-index: 10;
-        font-weight: bold;
         display: block;
         width: 60px;
         position: absolute;
         bottom: 0;
         right: 16%;
         height: 60px;
-        background: transparent url("./images/jump.png") no-repeat;
+        background: transparent url("../images/jump.png") no-repeat;
         background-position: center center;
         background-size: contain;
         outline: 0 !important;
@@ -437,75 +437,42 @@
             <p class="info"> Israel Live Beach Cam</p>
             <h2>CAMERAS</h2>
           </a>
+          <div class="dropdown">
+            <button onclick="openDropdown()" class="dropbtn"><img class="dropdown-icon" src="../images/white-down-arrow.png" width="16px"/>EN</button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="../index.html">עברית</a>
+              <a href="#">EN</a>
+              <a href="../arab/index.html">عربى</a>
+            </div>
+          </div>
         </div>
       </div>
     </header>
     <nav>
       <div class="animat-box-in">
         <p>
-          <a href="./marina.html">Mrina North |</a>
+          <a href="./dromi.html">Mrina South |</a>
           <a href="./forcast.html">Forcast |</a>
           <a href="./list.html">cameras</a>
         </p>
       </div>
     </nav>
-    <div class="message">Camera of the day: Zevulun Herzliya</div>
+    <div class="message">Camera of the day: Herzelia south</div>
     <div id="cam-title" class="cam-title subTitle"></div>
     <div class="main-container">
       <!-- <div id="cam-title" class="cam-title">BeachCam.co.il</div> -->
 
       <div class="cams-container">
-        <!-- <iframe
-        id="cam1"
-        width="800"
-        height="430"
-        src="https://vxg.io/iframe.html?channel=eyJ0b2tlbiI6InNoYXJlLmV5SnphU0k2SURFMk5EQXlPSDAuNWVmM2M0NjJ0MTJjZmY3ODAuZXg3LXNyODJwRGdsbjJsQnI0b25QTjVDUFZNIiwiY2FtaWQiOjIxNzg2MCwiYWNjZXNzIjoid2F0Y2gifQ%3D%3D&autoplay=on"
-        frameborder="0"
-        scrolling="no"
-        allowfullscreen
-        controls 
-        autoplay
-        utohide= -1  
-        >Your browser are not supported iframe.</iframe
-      > -->
-        <!-- <iframe
-      id="cam1"
-      src="https://g2.ipcamlive.com/player/player.php?alias=5f5507da3636d&autoplay=1&skin=white"
-      width="800px"
-      height="450px"
-      frameborder="0"
-      allowfullscreen
-      autoplay
-    ></iframe> -->
         <iframe
           id="cam1"
-          src="https://g2.ipcamlive.com/player/player.php?alias=5f6f2b822c9d7&autoplay=1&skin=white"
+          src="https://g2.ipcamlive.com/player/player.php?alias=5f632f67dlb6a&autoplay=1&skin=white"
           width="800px"
           height="443px"
           frameborder="0"
           allowfullscreen
         ></iframe>
-        <!-- <iframe
-          id="cam1"
-          width="800"
-          height="434"
-          src="https://rtsp.me/embed/iKSibhk6/"
-          frameborder="0"
-          allowfullscreen
-          autoplay
-        ></iframe> -->
-        <!-- iKSibhk6 4FEN7bBF -->
-        <!-- <iframe
-          id="cam1"
-          src="https://g2.ipcamlive.com/player/player.php?alias=5f53657ef1ad4&autoplay=1&skin=white"
-          width="800"
-          height="434px"
-          frameborder="0"
-          autoplay
-          allowfullscreen
-        ></iframe> -->
       </div>
-      <div class="jump-btn" onclick="location.reload()">דלג</div>
+      <div class="jump-btn" onclick="location.reload()">skip</div>
     </div>
     <div id="loader-container" class="loader-container">
       <div class="loader"></div>
@@ -608,5 +575,6 @@
         window.location = "./list.html";
       };
     </script>
+    <script src="../js/local.js"></script>
   </body>
 </html>

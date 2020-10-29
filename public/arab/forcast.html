@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-WPTQ3HT');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta
+  name="description"
+  content="يعيش كاميرا ركوب الأمواج الشاطئ from Israel, شاطئ بحر Surf Cam, surf report Israel updated daily with live HD شاطئ بحر cam stream. Live Israel - Marina HD surf cam"
+  />
+  <meta
+    property="og:description"
+    content="هرتسليا,جنوب شاطئ بحر,Mrina جنوب,camera, surfing,live, waves, wave cam,Live شاطئ بحر cam هرتسليا,surfing,,sea condition,surf Israel,Live,חי,Marina,surf,live,Camera,يعيش كاميرا ركوب الأمواج الشاطئ from Israel"
+    />
+  <meta
+    name="keywords"
+    content="Israel متنبأ,شاطئ بحر,cam,تل أبيب,هرتسليا,جنوب شاطئ بحر,Mrina جنوب,camera, surfing,live, waves, wave cam,Live شاطئ بحر cam هرتسليا,surfing,,sea condition,surf Israel,Live,brodcast,Marina,surf,live,Camera,يعيش كاميرا ركوب الأمواج الشاطئ from Israel"
+  />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="../css/css1.css">
+  <link rel="shortcut icon" type="image/png" href="https://akermang.github.io/WeatherApp/sun-favicon.png" />
+  <title>كاميرات ساحل اسرائيل كاميرا الشاطئ</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-22782431-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-22782431-1');
+  </script>
+
+  </script>
+
+  <style>
+    @keyframes loader-spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes createBox {
+      from {
+        transform: scale(0);
+      }
+      to {
+        transform: scale(1);
+      }
+    }
+
+
+    body {
+      background-color: black;
+    }
+
+    .sticky-top {
+      position: sticky;
+      top: 0;
+      width: 100%;
+    }
+
+    header {
+      width: 100%;
+      display: flex;
+      background-color: #1fc8db;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    div.animat-box-in {
+      animation: createBox .25s;
+    }
+
+    .wrapper {
+      width: 100%;
+    }
+
+
+    .row-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px 0;
+    }
+
+    p,
+    h1,
+    h2 {
+      text-align: center;
+      margin: 0;
+    }
+
+    h1,
+    h2 {
+      font-size: 30px;
+    }
+
+    nav p {
+      font-size: 20px;
+    }
+
+    div.img {
+      text-align: center;
+      border-radius: 2px;
+      background-color: rgb(241, 232, 232);
+    }
+
+    div.img:hover {
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 1.2);
+    }
+
+    .img img {
+      width: 200px;
+    }
+
+    img.full-size {
+      position: absolute;
+      width: 100%;
+      position: absolute;
+      top: 0;
+    }
+
+    .cams-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 6px;
+    }
+
+    .cams-container P {
+      margin: 0;
+      min-width: 33%;
+    }
+
+    iframe {
+      width: 100%;
+      min-height: 33vh;
+      /* z-index: 1; */
+    }
+
+    .home-btn {
+      padding: 4px;
+      border-radius: 7px;
+      margin: 2px;
+    }
+
+    .home-btn:hover {
+      box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
+    }
+
+    .loader-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 50vh;
+      width: 100%;
+      position: absolute;
+      top: 33%;
+    }
+
+    .loader {
+      border: 4px solid #17a2b8;
+      border-left-color: rgba(0, 0, 0, 0.1);
+      border-top-color: #2196F3;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: loader-spin 0.8s linear infinite;
+      opacity: 1;
+      opacity: 1;
+    }
+
+    .home-btn.special {
+      background-color: #008000a1;
+    }
+
+    @media(max-width: 914px) {
+      .cams-container P {
+        min-width: 49%;
+      }
+    }
+
+    @media(max-width: 768px) {
+      .img img {
+        width: 140px;
+      }
+      .cam-title {
+        font-size: 19px;
+      }
+      h1,
+      h2 {
+        font-size: 22px;
+      }
+    }
+
+    @media(max-width: 700px) {
+      .img img {
+        width: 140px;
+      }
+    }
+
+    @media(max-width: 599px) {
+      header img {
+        width: 115px;
+      }
+
+      .cams-container P {
+        min-width: 100%;
+      }
+
+      .img img {
+        width: 115px;
+      }
+
+      h1,
+      h2 {
+        font-size: 22px;
+      }
+    }
+
+    .mobile-btn {
+            display: none;
+        }
+
+    @media (max-width: 530px) {
+        .mobile-btn {
+            display: block;
+            background-color: #2196f3;
+            margin: 32% 1em 0;
+            cursor: pointer;
+        }
+      .row-flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 0;
+      }
+      nav p {
+        font-size: 18px;
+      }
+      p.info {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="sticky-top">
+    <header>
+      <div class="wrapper">
+        <div class="w3-container w3-blue row-flex">
+          <div class="home-btn">
+            <a href="./index.html">
+              <h1>كاميرا ساحل اسرائيل</h1>
+              <!-- <p>לפירסום כאן 054-6817830</p> -->
+            </a>
+          </div>
+          <div class="animat-box-in">
+            <h2>زفولون هرتسليا متنبأ</h2>
+          </div>
+          <a class="home-btn title special" style="color: white;" href="./list.html">
+            <p class="info">Live شاطئ بحر Cam</p>
+            <h1>الكاميرات</h1>
+          </a>
+          <div class="dropdown">
+            <button onclick="openDropdown()" class="dropbtn"><img class="dropdown-icon" src="../images/white-down-arrow.png" width="16px"/>عربى</button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="./forcast.html">עברית</a>
+              <a href="../en/forcast.html">EN</a>
+              <a href="#">عربى</a>
+            </div>
+        </div>
+        </div>
+      </div>
+    </header>
+    <nav>
+      <div class="animat-box-in">
+        <p>
+          <a style="color: white;" href="./list.html"> | الكاميرات | </a>
+        </p>
+      </div>
+  
+    </nav>
+  </div>
+
+  <section class="cams-container">
+    <iframe onload="hideLoader()" src="https://magicseaweed.com/زفولون-Herzelia-Surf-Report/3981/Embed/" width="100%" height="1080"
+      frameborder="0"></iframe>
+  </section>
+  <div id="loader-container" class="loader-container">
+    <div class="loader"></div>
+  </div>
+  <a class="home-btn mobile-btn" style="color: white;" href="./list.html">
+    <h1>الكاميرات</h1>
+  </a>
+  <p style="text-align: center;">
+    <a style="color: gold;" href="./index.html"> شاطئ الكام إسرائيل</a>
+  </p>
+
+  <script>
+    const loader = document.querySelector("#loader-container");
+    const hideLoader = () => loader.style.display = "none";
+  </script>
+  <script src="../js/local.js"></script>
+</body>
+
+</html>

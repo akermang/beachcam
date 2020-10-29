@@ -36,6 +36,7 @@
       content="Israel,beach,cam,Herzlia Marina,South beach,Mrina south,camera, surfing,live, waves, wave cam,Live beach cam Herzlia,surfing,,sea condition,surf Israel,Live,brodcast,Marina,surf,live,Camera,Live beach surf cam from Israel"
     />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="../css/css1.css">
     <link
       rel="shortcut icon"
       type="image/png"
@@ -246,7 +247,7 @@
         bottom: 0;
         right: 16%;
         height: 40px;
-        background: transparent url("./images/jump.png") no-repeat;
+        background: transparent url("../images/jump.png") no-repeat;
         background-position: center center;
         background-size: contain;
         outline: 0 !important;
@@ -394,6 +395,14 @@
             <p class="info"> Israel Live Beach Cam</p>
             <h1>CAMERAS</h1>
           </a>
+          <div class="dropdown">
+            <button onclick="openDropdown()" class="dropbtn"><img class="dropdown-icon" src="../images/white-down-arrow.png" width="16px"/>EN</button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="../marina2.html">עברית</a>
+              <a href="#">EN</a>
+              <a href="../arab/marina2.html">عربى</a>
+            </div>
+        </div>
         </div>
       </div>
     </header>
@@ -417,7 +426,7 @@
         allowfullscreen
       ></iframe>
       <div class="jump-btn" onclick="location.reload()">
-        דלג
+        skip
       </div>
     </div>
     <div id="loader-container" class="loader-container">
@@ -432,5 +441,6 @@
       </p>
       <p style="color: gold;">contact: gal@beachcam.co.il</p>
     </footer>
+    <script src="../js/local.js"></script>
   </body>
 </html>

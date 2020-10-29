@@ -80,14 +80,31 @@
         width: 100%;
         padding: 0;
       }
+
+      .main-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: #003eff66;
+        height: 250px;
+        width: 100%;
+      }
+
       footer {
         margin-top: 16px;
       }
       .message {
         color:silver;
-        text-align: right;
+        text-align: center;
+        font-size: 28px;
       }
+      
       @media (max-width: 599px) {
+        .main-container {
+          height: 200px;
+        }
+
         footer {
           margin-top: 0;
         }
@@ -95,10 +112,14 @@
     </style>
   </head>
 
-  <body>
-    <div class="message"></div>
-    <div class="main-container"></div>
 
+  <body>
+    <!-- <div class="main-container">
+      <div class="message">לפרסום כאן</div>
+      <div class="message">gal@beachcam.co.il</div>
+      <div class="message">Advertise here</div>
+    </div> -->
+      
     <footer>
       <script
         async
@@ -116,11 +137,11 @@
       <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
       </script>
-      <!-- <a href="" target="blank"> -->
-      <!-- <div class="animat-box-in">
-        <img src="./images/BeachCAm2.png" alt="מצלמת חוף  Beach Cam" />
-      </div> -->
-      <!-- </a> -->
+      <!-- <a href="" target="blank">
+        <div class="animat-box-in">
+          <img src="./images/BeachCAm2.png" alt="מצלמת חוף  Beach Cam" />
+        </div>
+      </a> -->
     </footer>
   </body>
 </html>

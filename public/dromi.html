@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="he-IL">
   <head>
     <!-- Google Tag Manager -->
     <script>
@@ -45,7 +45,7 @@
       rel="shortcut icon"
       type="image/png"
       href="https://akermang.github.io/WeatherApp/sun-favicon.png"
-    />
+    /><link rel="stylesheet" href="./css/css1.css">
     <title>מצלמות חופים | BeachCam | הרצליה מרינה דרום</title>
     <meta
       http-equiv="Cache-Control"
@@ -153,9 +153,19 @@
       }
 
       .message {
+        background-color: #9C27B0;
+        display: block;
         color: wheat;
         text-align: center;
         font-size: medium;
+        font-weight: bold;
+        border: 1px solid;
+        padding: 7px;
+        margin: 5px 16px;
+        border-radius: 3px;
+        width: 97%;
+        max-width: 786px;
+        margin: 10px auto;
       }
 
       .cams-container {
@@ -411,7 +421,7 @@
         <div class="w3-container w3-blue row-flex">
           <div class="home-btn">
             <a href="./index.html">
-              <h1>BEACH CAM ISRAEL מצלמות חוף</h1>
+              <h1>BEACH CAM ISRAEL</h1>
               <!-- <p>לפירסום כאן 054-6817830</p> -->
             </a>
           </div>
@@ -426,53 +436,34 @@
             <p class="info">שידור חי - מצלמת חוף</p>
             <h2>מצלמות חוף נוספות</h2>
           </a>
+          <div class="dropdown">
+            <button onclick="openDropdown()" class="dropbtn"><img class="dropdown-icon" src="./images/white-down-arrow.png" width="16px"/>HEB</button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="#">עברית</a>
+              <a href="./en/dromi.html">EN</a>
+              <a href="./arab/dromi.html">عربى</a>
+            </div>
+          </div>
         </div>
       </div>
     </header>
     <nav>
       <div class="animat-box-in">
         <p>
-          <a href="./marina.html">למרינה צפון |</a>
+          <a href="./yamit.html">להילטון |</a>
           <a href="./forcast.html">תחזית גלים |</a>
           <a class="light-background" href="./zvulun.html">חדש! חוף זבולון</a>
         </p>
       </div>
     </nav>
+    <a href="http://62.219.45.26:120//mjpg/video.mjpg ">
+      <!-- <div class="message">
+         למרינה דרום ניתן לנסות בקישור כאן
+      </div> -->
+    </a>
     <div class="main-container">
       <div id="cam-title" class="cam-title">BeachCam.co.il</div>
-
       <div class="cams-container">
-        <!-- <iframe
-        id="cam1"
-        width="800"
-        height="430"
-        src="https://vxg.io/iframe.html?channel=eyJ0b2tlbiI6InNoYXJlLmV5SnphU0k2SURFMk5EQXlPSDAuNWVmM2M0NjJ0MTJjZmY3ODAuZXg3LXNyODJwRGdsbjJsQnI0b25QTjVDUFZNIiwiY2FtaWQiOjIxNzg2MCwiYWNjZXNzIjoid2F0Y2gifQ%3D%3D&autoplay=on"
-        frameborder="0"
-        scrolling="no"
-        allowfullscreen
-        controls 
-        autoplay
-        utohide= -1  
-        >Your browser are not supported iframe.</iframe
-      > -->
-        <!-- <iframe
-          id="cam1"
-          src="https://g1.ipcamlive.com/player/player.php?alias=5f3ad0fd4e3c3&autoplay=1&skin=white"
-          width="800px"
-          height="450px"
-          frameborder="0"
-          autoplay
-          allowfullscreen
-        ></iframe> -->
-        <!-- <iframe
-          id="cam1"
-          src="https://rtsp.me/embed/iKSibhk6/"
-          width="800"
-          height="434px"
-          frameborder="0"
-          autoplay
-          allowfullscreen
-        ></iframe> -->
         <iframe
           id="cam1"
           src="https://g2.ipcamlive.com/player/player.php?alias=5f790dcadad77&autoplay=1&skin=white"
@@ -580,7 +571,7 @@
       const timeOut = () =>
         setTimeout(() => {
           changeView();
-        }, 55000);
+        }, 50000);
       timeOut();
 
       cam.onerror = () => {
@@ -588,5 +579,6 @@
         window.location = "./list.html";
       };
     </script>
+    <script src="./js/local.js"></script>
   </body>
 </html>

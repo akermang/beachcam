@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="ar">
   <head>
     <!-- Google Tag Manager -->
     <script>
@@ -28,20 +28,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
-      name="description"
-      content="Hillton Marina beach Israel surf cam, Live beach surf cam from Israel,home page, Beach Surf Cam, surf report Israel updated daily with live HD Beach cam stream. Live Israel - Marina HD surf cam"
-    />
-    <meta
-      name="keywords"
-      content="Tel Aviv, Narina, Hillton, Israel, surf cam,Israel,beach,cam,camera, surfing,live, waves, wave cam,Live beach cam Herzlia,surfing,,sea condition,surf Israel,Live,brodcast,Marina,surf,live,Camera,Live beach surf cam from Israel"
-    />
+    name="description"
+    content="يعيش كاميرا ركوب الأمواج الشاطئ from Israel, شاطئ بحر Surf Cam, surf report Israel updated daily with live HD شاطئ بحر cam stream. Live Israel - Marina HD surf cam"
+  />
+  <meta
+    property="og:description"
+    content="جوردون تل أبيب Israel,جنوب شاطئ بحر,Mrina جنوب,camera, surfing,live, waves, wave cam,Live شاطئ بحر cam هرتسليا,surfing,,sea condition,surf Israel,Live,חי,Marina,surf,live,Camera,يعيش كاميرا ركوب الأمواج الشاطئ from Israel"
+  />
+  <meta
+    name="keywords"
+    content="Israel,شاطئ بحر,cam,تل أبيب,هرتسليا,جنوب شاطئ بحر,Mrina جنوب,camera, surfing,live, waves, wave cam,Live شاطئ بحر cam هرتسليا,surfing,,sea condition,surf Israel,Live,brodcast,Marina,surf,live,Camera,يعيش كاميرا ركوب الأمواج الشاطئ from Israel"
+  />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="../css/css1.css">
     <link
       rel="shortcut icon"
       type="image/png"
       href="https://akermang.github.io/WeatherApp/sun-favicon.png"
     />
-    <title>BeachCam Israel | BeachCam Israel| Israel Live Beach Cam הילטון</title>
+    <title>Gordon شاطئ بحر تل أبيب | كاميرات ساحل اسرائيل كاميرا الشاطئ</title>
     <meta
       http-equiv="Cache-Control"
       content="no-cache, no-store, must-revalidate"
@@ -68,7 +73,6 @@
         0% {
           transform: rotate(0deg);
         }
-
         100% {
           transform: rotate(360deg);
         }
@@ -78,7 +82,6 @@
         from {
           transform: scale(0);
         }
-
         to {
           transform: scale(1);
         }
@@ -91,6 +94,14 @@
       header {
         width: 100%;
         display: flex;
+        position: relative;
+        z-index: 2;
+      }
+
+      nav {
+        z-index: 1;
+        position: relative;
+        background: black;
       }
 
       a {
@@ -158,16 +169,15 @@
         max-width: 800px;
         margin: 0px auto;
         position: relative;
-        min-height: 33vh;
       }
 
       .cam-title {
         position: absolute;
         color: white;
-        top: 80%;
-        left: 7%;
+        top: 5%;
+        left: 14%;
         font-size: 22px;
-        z-index: 1;
+        z-index: 4;
       }
 
       .cams-container.full-size {
@@ -191,7 +201,7 @@
 
       iframe#cam1 {
         width: 100%;
-        min-height: 33vh;
+        min-height: 29vh;
       }
 
       .loader-container {
@@ -202,7 +212,7 @@
         height: 50vh;
         width: 100%;
         position: absolute;
-        top: 160px;
+        top: 130px;
       }
 
       .loader {
@@ -219,20 +229,19 @@
 
       .main-container {
         position: relative;
-        z-index: 1;
-        max-width: 800px;
+        max-width: 640px;
         margin: auto;
-        margin-bottom: 8px;
+        z-index: 2;
       }
 
       .home-btn {
         padding: 4px;
         border-radius: 7px;
+        margin: 2px;
       }
 
       .home-btn.special {
         background-color: #008000a1;
-        margin: 0.5em;
       }
 
       .home-btn:hover {
@@ -246,14 +255,13 @@
       .jump-btn.show {
         font-size: 22px;
         z-index: 10;
-        font-weight: bold;
         display: block;
         width: 60px;
         position: absolute;
-        bottom: 64px;
+        bottom: 0;
         right: 16%;
         height: 60px;
-        background: transparent url("./images/jump.png") no-repeat;
+        background: transparent url("../images/jump.png") no-repeat;
         background-position: center center;
         background-size: contain;
         outline: 0 !important;
@@ -269,32 +277,14 @@
         opacity: 1;
       }
 
-      #iframe-1 {
-        position: relative;
-        z-index: 2;
-      }
-
       footer {
-        margin-top: 2em;
+        /* position: fixed; */
+        bottom: 30px;
         width: 100%;
         z-index: 3;
+        text-align: center;
+        margin-bottom: 1em;
       }
-
-      .cam-banner {
-        background: #ffffff;
-        max-width: 800px;
-        margin: 0 auto;
-        /* height: 52px; */
-        width: 100%;
-      }
-
-      a.cam-banner-link {
-        z-index: 3;
-        width: 100%;
-        max-width: 800px;
-        margin-top: 5px;
-      }
-
       .ad {
         width: 100%;
         min-height: 100px;
@@ -315,9 +305,7 @@
         }
         .cam-title {
           font-size: 19px;
-          top: 66%;
         }
-
         h1,
         h2 {
           font-size: 22px;
@@ -328,9 +316,8 @@
         .img img {
           width: 140px;
         }
-
         .cam-title {
-          font-size: 19px;
+          font-size: 14px;
         }
       }
 
@@ -359,30 +346,23 @@
 
       @media (max-width: 530px) {
         .ad {
-          max-width: 100vw !important;
+          max-width: 100vw!important;
           overflow: hidden;
         }
-
+        
         .adsbygoogle {
-          max-width: 100vw !important;
+         max-width: 100vw!important;
         }
-
+        
         .mobile-btn {
           display: block;
           background-color: #2196f3;
-          margin: 32% 1em 0;
+          margin: 15px 1em;
           cursor: pointer;
-          z-index: 3;
         }
-
         iframe#cam1 {
-          max-height: 53vw;
+          max-height: 154px;
         }
-
-        .cam-title {
-          font-size: 14px;
-        }
-
         .row-flex {
           display: flex;
           flex-direction: column;
@@ -390,11 +370,9 @@
           align-items: center;
           padding: 0;
         }
-
         nav p {
           font-size: 18px;
         }
-
         p.info {
           display: none;
         }
@@ -408,173 +386,82 @@
         <div class="w3-container w3-blue row-flex">
           <div class="home-btn">
             <a href="./index.html">
-              <h1>BEACH CAM ISRAEL</h1>
+              <h1>كاميرا ساحل اسرائيل</h1>
               <!-- <p>לפירסום כאן 054-6817830</p> -->
             </a>
           </div>
           <div class="animat-box-in">
-            <h2 dir="rtl">Tel Aviv Hillton Yamit Beach</h2>
+            <h2>جوردون بيتش تل أبيب</h2>
           </div>
-          <a
-            class="home-btn title special"
-            style="color: white"
-            href="./list.html"
-          >
-            <p class="info" dir="rtl"> Israel Live Beach Cam</p>
-            <h1>CAMERAS</h1>
+          <a class="home-btn title special" style="color: white;" href="./list.html">
+            <p class="info">كاميرات الشاطئ الحية</p>
+            <h1>الكاميرات</h1>
           </a>
+          <div class="dropdown">
+            <button onclick="openDropdown()" class="dropbtn"><img class="dropdown-icon" src="../images/white-down-arrow.png" width="16px"/>عربى</button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="../gordon.html">עברית</a>
+              <a href="../en/gordon.html">EN</a>
+              <a href="#">عربى</a>
+            </div>
+        </div>
         </div>
       </div>
     </header>
     <nav>
       <div class="animat-box-in">
         <p>
-          <a style="color: white" href="./dromi2.html">הרצליה דרומי |</a>
-          <a style="color: white" href="./forcast.html">Forcast |</a>
-          <a style="color: white" href="./list.html">cameras</a>
+          <a style="color: white;" href="./hamaaravi.html">جوردون تل أبيب |</a>
+          <a style="color: white;" href="./forcast.html">متنبأ |</a>
+          <a style="color: white;" href="./list.html">الكاميرات</a>
         </p>
       </div>
     </nav>
     <div class="message"></div>
-
-    <div class="main-container cams-container">
+    <div class="main-container">
       <div class="cam-title">BeachCam.co.il</div>
-      <!-- <iframe
-        id="cam1"
-        width="800"
-        height="450"
-        src=" https://rtsp.me/embed/tHdiSen6/"
-        width="800"
-        height="434px"
-        frameborder="0"
-        autoplay
-        allowfullscreen
-      ></iframe> -->
       <iframe
         id="cam1"
-        src="https://g2.ipcamlive.com/player/player.php?alias=5f6226e0414da&autoplay=1&skin=white"
-        width="800px"
-        height="443px"
-        frameborder="0"
-        allowfullscreen
+        width="640"
+        height="360"
+        style="border: 0;"
+        webkitallowfullscreen="true"
+        scrolling="no"
+        mozallowfullscreen="true"
+        allowfullscreen="true"
+        src="https://webcasting.co.il/player/tlv/frishman_mute.html"
       ></iframe>
-      <a
-        class="cam-banner-link"
-        href="https://www.yamitysb.co.il"
-        target="blank"
-      >
-        <div class="cam-banner">
-          <img src="https://www.yamitysb.co.il/pics/logo.png" alt="YAMIT" />
-        </div>
-      </a>
-      <div class="jump-btn" onclick="location.reload()">דלג</div>
+
+      <div class="jump-btn" onclick="location.reload() ">
+        تخطى
+      </div>
+
     </div>
     <div class="loader-container">
       <div class="loader"></div>
     </div>
     <div class="ad">
-      <script
-        async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-      ></script>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
       <!-- adSmall -->
-      <ins
-        class="adsbygoogle"
-        style="display: block"
-        data-ad-client="ca-pub-2190134608327180"
-        data-ad-slot="9146492665"
-        data-ad-format="auto"
-        data-full-width-responsive="true"
-      ></ins>
+      <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-2190134608327180"
+          data-ad-slot="9146492665"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
       <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
+          (adsbygoogle = window.adsbygoogle || []).push({});
       </script>
-    </div>
-    <a class="home-btn mobile-btn" style="color: white" href="./list.html">
-      <h1>CAMERAS</h1>
+  </div>
+    <a class="home-btn mobile-btn" style="color: white;" href="./list.html">
+      <h1>الكاميرات</h1>
     </a>
     <footer>
-      <p style="text-align: center">
-        <a style="color: gold" href="./index.html"> Beach Cam Israel</a>
+      <p style="text-align: center;">
+        <a style="color: gold;" href="./index.html">شاطئ الكام إسرائيل</a>
       </p>
-      <p style="color: gold">contact: gal@beachcam.co.il</p>
+      <p style="color: gold;">اتصل: gal@beachcam.co.il</p>
     </footer>
-    <script>
-      const cam = document.querySelector("#cam1");
-      const camContainer = document.querySelector(".cams-container");
-      const camTitle = document.querySelector("#cam-title");
-      const loader = document.querySelector(".loader-container");
-      const message = document.querySelector(".message");
-      const jumpBtn = document.querySelector(".jump-btn");
-
-      const showJumpBtn = () => {
-        jumpBtn.classList.add("show");
-      };
-
-      const hideJumpBtn = () => {
-        jumpBtn.classList.remove("show");
-      };
-
-      const togglesize = () => {
-        camContainer.classList.toggle("full-size");
-      };
-
-      const closeFullscreen = () => {
-        if (document.exitFullscreen) {
-          document.exitFullscreen();
-        } else if (document.mozCancelFullScreen) {
-          /* Firefox */
-          document.mozCancelFullScreen();
-        } else if (document.webkitExitFullscreen) {
-          /* Chrome, Safari and Opera */
-          document.webkitExitFullscreen();
-        } else if (document.msExitFullscreen) {
-          /* IE/Edge */
-          document.msExitFullscreen();
-        }
-      };
-
-      const reloadCam = () => {
-        // cam.src = "https://g2.ipcamlive.com/player/player.php?alias=galyamsurf&autoplay=1";
-        // cam.style.maxWidth = "800px";
-        // cam.style.position = "relative";
-        // cam.style.height = "450px";
-        // // cam.style.borderRadius = "52%";
-        // cam.style.margin = "unset";
-        // camTitle.style.display = "block";
-        // camContainer.classList.remove("full-size");
-        // timeOut(30000,  changeView)
-        // hideJumpBtn();
-        window.location.reload(true);
-      };
-
-      const changeView = () => {
-        cam.style.maxWidth = "800px";
-        cam.style.position = "static";
-        cam.style.maxHeight = "53vh";
-        cam.style.margin = "30px 15%";
-        // camTitle.style.display = "none";
-        closeFullscreen();
-        cam.src = "../ad.html";
-        showJumpBtn();
-      };
-
-      cam.onload = () => {
-        loader.style.display = "none";
-        camContainer.style.display = "flex";
-      };
-
-      const timeOut = (time, callBack) =>
-        setTimeout(() => {
-          callBack();
-        }, time);
-
-      timeOut(60000, changeView);
-
-      cam.onerror = () => {
-        clearTimeout(timeOut);
-        window.location = "./list.html";
-      };
-    </script>
+    <script src="../js/local.js"></script>
   </body>
 </html>

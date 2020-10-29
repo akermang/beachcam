@@ -32,6 +32,7 @@
       content="Netanya' Poleg, Gal Yam, Surf school,Israel,beach,cam,camera, surfing,live, waves, wave cam,Live beach cam Herzlia,surfing,,sea condition,surf Israel,Live,brodcast,Marina,surf,live,Camera,Live beach surf cam from Israel"
     />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="../css/css1.css">
     <link
       rel="shortcut icon"
       type="image/png"
@@ -239,14 +240,13 @@
       .jump-btn.show {
         font-size: 22px;
         z-index: 10;
-        font-weight: bold;
         display: block;
         width: 60px;
         position: absolute;
         bottom: 0;
         right: 16%;
         height: 60px;
-        background: transparent url("./images/jump.png") no-repeat;
+        background: transparent url("../images/jump.png") no-repeat;
         background-position: center center;
         background-size: contain;
         outline: 0 !important;
@@ -365,7 +365,7 @@
             </a>
           </div>
           <div class="animat-box-in">
-            <h2>גל ים בה"ס לsurfing פולג נתניה</h2>
+            <h2>Poleg Netanya Gal Yam</h2>
           </div>
           <a
             class="home-btn title special"
@@ -375,6 +375,14 @@
             <p class="info"> Israel Live Beach Cam</p>
             <h1>CAMERAS</h1>
           </a>
+          <div class="dropdown">
+            <button onclick="openDropdown()" class="dropbtn"><img class="dropdown-icon" src="../images/white-down-arrow.png" width="16px"/>EN</button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="../poleg.html">עברית</a>
+              <a href="#">EN</a>
+              <a href="../arab/poleg.html">عربى</a>
+            </div>
+        </div>
         </div>
       </div>
     </header>
@@ -399,7 +407,7 @@
         allowfullscreen
       ></iframe>
 
-      <div class="jump-btn" onclick="reloadCam()">דלג</div>
+      <div class="jump-btn" onclick="reloadCam()">skip</div>
     </div>
     <div class="loader-container">
       <div class="loader"></div>
@@ -490,5 +498,6 @@
         window.location = "./list.html";
       };
     </script>
+    <script src="../js/local.js"></script>
   </body>
 </html>

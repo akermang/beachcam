@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="he-IL">
   <head>
     <!-- Google Tag Manager -->
     <script>
@@ -36,6 +36,7 @@
       content="כניסה למרינה,הרצליה,דרומי,מצלמת חוף הילטון ,ישראל,מצלמת גלישה, גלים,מצלמת חוף תל אביב, ים תל אביב,ימית,מצלמת ימית,Hilton beach cam ,גלישה,מצב,גלים,שידור,חי,מרינה,beach cam Israel,surf,live,Camera"
     />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="./css/css1.css">
     <link
       rel="shortcut icon"
       type="image/png"
@@ -436,6 +437,14 @@
             <p class="info">שידור חי - מצלמת חוף</p>
             <h2>מצלמות חוף נוספות</h2>
           </a>
+          <div class="dropdown">
+            <button onclick="openDropdown()" class="dropbtn"><img class="dropdown-icon" src="./images/white-down-arrow.png" width="16px"/>HEB</button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="#">עברית</a>
+              <a href="./en/yamit.html">EN</a>
+              <a href="./arab/yamit.html">عربى</a>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -584,5 +593,6 @@
         window.location = "./list.html";
       };
     </script>
+    <script src="./js/local.js"></script>
   </body>
 </html>

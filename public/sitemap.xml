@@ -7,37 +7,37 @@
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 
-- <url>
+  <url>
   <loc>https://beachcam.co.il/</loc> 
   <lastmod>2019-04-25T21:26:09+00:00</lastmod> 
   <priority>1.00</priority> 
   </url>
-- <url>
+  <url>
   <loc>https://beachcam.co.il/list.html</loc> 
   <lastmod>2020-04-25T19:28:47+00:00</lastmod> 
   <priority>0.80</priority> 
   </url>
-- <url>
+  <url>
   <loc>https://beachcam.co.il/marina.html</loc> 
   <lastmod>2019-04-25T21:26:09+00:00</lastmod> 
   <priority>0.80</priority> 
   </url>
-- <url>
+  <url>
   <loc>https://beachcam.co.il/forcast.html</loc> 
   <lastmod>2019-04-25T19:28:47+00:00</lastmod> 
   <priority>0.80</priority> 
   </url>
-- <url>
+  <url>
   <loc>https://beachcam.co.il/marina.out.html</loc> 
   <lastmod>2019-04-26T08:16:35+00:00</lastmod> 
   <priority>0.80</priority> 
   </url>
-- <url>
+  <url>
   <loc>https://beachcam.co.il/index.html</loc> 
   <lastmod>2019-04-25T21:26:09+00:00</lastmod> 
   <priority>0.64</priority> 
   </url>
-- <url>
+  <url>
   <loc>https://beachcam.co.il/gordon.html</loc> 
   <lastmod>2020-04-25T18:03:37+00:00</lastmod> 
   <priority>0.64</priority> 
@@ -52,12 +52,12 @@
   <lastmod>2020-04-25T18:03:37+00:00</lastmod> 
   <priority>0.64</priority> 
   </url>
-- <url>
+  <url>
   <loc>https://beachcam.co.il/testcam2.html</loc> 
   <lastmod>2019-04-25T20:59:29+00:00</lastmod> 
   <priority>0.64</priority> 
   </url>
-- <url>
+  <url>
   <loc>https://beachcam.co.il/dromi.html</loc> 
   <lastmod>2019-04-25T20:59:29+00:00</lastmod> 
   <priority>0.64</priority> 
@@ -67,7 +67,7 @@
   <lastmod>2020-07-25T20:59:29+00:00</lastmod> 
   <priority>0.64</priority> 
   </url>
-- <url>
+  <url>
   <loc>https://beachcam.co.il/poleg.html</loc> 
   <lastmod>2020-04-25T20:59:28+00:00</lastmod> 
   <priority>0.64</priority> 
@@ -77,17 +77,17 @@
   <lastmod>2020-04-25T20:59:28+00:00</lastmod> 
   <priority>0.64</priority> 
   </url>
-- <url>
+  <url>
   <loc>https://beachcam.co.il/testcam1.html</loc> 
   <lastmod>2020-04-25T20:59:29+00:00</lastmod> 
   <priority>0.64</priority> 
   </url>
-- <url>
+  <url>
   <loc>https://beachcam.co.il/nirvana.html</loc> 
   <lastmod>2019-04-25T20:59:29+00:00</lastmod> 
   <priority>0.64</priority> 
   </url>
-- <url>
+  <url>
   <loc>https://beachcam.co.il/krayot.html</loc> 
   <lastmod>2020-04-25T21:44:55+00:00</lastmod> 
   <priority>0.64</priority> 
@@ -97,14 +97,189 @@
   <lastmod>2020-07-25T21:44:55+00:00</lastmod> 
   <priority>0.64</priority> 
   </url>
-   <url>
+  <url>
   <loc>https://beachcam.co.il/yamit.html</loc> 
   <lastmod>2020-09-16T21:44:55+00:00</lastmod> 
   <priority>0.64</priority> 
   </url>
-   <url>
+  <url>
   <loc>https://beachcam.co.il/scouts.html</loc> 
   <lastmod>2020-09-25T21:44:55+00:00</lastmod> 
+  <priority>0.64</priority> 
+  </url>
+  <url>
+  <loc>https://beachcam.co.il/en/list.html</loc> 
+  <lastmod>2020-10-06T19:28:47+00:00</lastmod> 
+  <priority>0.80</priority> 
+  </url>
+  <url>
+  <loc>https://beachcam.co.il/en/marina.html</loc> 
+  <lastmod>2019-10-06T21:26:09+00:00</lastmod> 
+  <priority>0.80</priority> 
+  </url>
+  <url>
+  <loc>https://beachcam.co.il/en/forcast.html</loc> 
+  <lastmod>2019-10-06T19:28:47+00:00</lastmod> 
+  <priority>0.80</priority> 
+  </url>
+   <url>
+  <loc>https://beachcam.co.il/en/marina.out.html</loc> 
+  <lastmod>2019-10-06T08:16:35+00:00</lastmod> 
+  <priority>0.80</priority> 
+  </url>
+   <url>
+  <loc>https://beachcam.co.il/en/index.html</loc> 
+  <lastmod>2019-10-06T21:26:09+00:00</lastmod> 
+  <priority>0.64</priority> 
+  </url>
+  <url>
+  <loc>https://beachcam.co.il/en/gordon.html</loc> 
+  <lastmod>2020-10-06T18:03:37+00:00</lastmod> 
+  <priority>0.64</priority> 
+  </url>
+  <url>
+  <loc>https://beachcam.co.il/en/yafo.html</loc> 
+  <lastmod>2020-10-06T18:03:37+00:00</lastmod> 
+  <priority>0.64</priority> 
+  </url>
+  <url>
+  <loc>https://beachcam.co.il/en/hamaaravi.html</loc> 
+  <lastmod>2020-10-06T18:03:37+00:00</lastmod> 
+  <priority>0.64</priority> 
+  </url>
+  <url>
+  <loc>https://beachcam.co.il/en/dromi.html</loc> 
+  <lastmod>2019-10-06T20:59:29+00:00</lastmod> 
+  <priority>0.64</priority> 
+  </url>
+  <url>
+  <loc>https://beachcam.co.il/en/dromi2.html</loc> 
+  <lastmod>2020-10-06T20:59:29+00:00</lastmod> 
+  <priority>0.64</priority> 
+  </url>
+  <url>
+  <loc>https://beachcam.co.il/en/poleg.html</loc> 
+  <lastmod>2020-10-06T20:59:28+00:00</lastmod> 
+  <priority>0.64</priority> 
+  </url>
+  <url>
+  <loc>https://beachcam.co.il/en/telavivtayelet.html</loc> 
+  <lastmod>2020-10-06T20:59:28+00:00</lastmod> 
+  <priority>0.64</priority> 
+  </url>
+  <url>
+  <loc>https://beachcam.co.il/en/testcam1.html</loc> 
+  <lastmod>2020-10-06T20:59:29+00:00</lastmod> 
+  <priority>0.64</priority> 
+  </url>
+  <url>
+  <loc>https://beachcam.co.il/en/krayot.html</loc> 
+  <lastmod>2020-10-06T21:44:55+00:00</lastmod> 
+  <priority>0.64</priority> 
+  </url>
+  <url>
+  <loc>https://beachcam.co.il/en/zvulun.html</loc> 
+  <lastmod>2020-10-06T21:44:55+00:00</lastmod> 
+  <priority>0.64</priority> 
+  </url>
+   <url>
+  <loc>https://beachcam.co.il/en/yamit.html</loc> 
+  <lastmod>2020-10-06T21:44:55+00:00</lastmod> 
+  <priority>0.64</priority> 
+  </url>
+   <url>
+  <loc>https://beachcam.co.il/en/scouts.html</loc> 
+  <lastmod>2020-10-06T21:44:55+00:00</lastmod> 
+  <priority>0.64</priority> 
+  </url>
+  <url>
+  <loc>https://beachcam.co.il/arab/list.html</loc> 
+  <lastmod>2020-10-09T19:28:47+00:00</lastmod> 
+  <priority>0.80</priority> 
+  </url>
+  <url>
+  <loc>https://beachcam.co.il/arab/marina.html</loc> 
+  <lastmod>2019-10-09T21:26:09+00:00</lastmod> 
+  <priority>0.80</priority> 
+  </url>
+  <url>
+  <loc>https://beachcam.co.il/arab/forcast.html</loc> 
+  <lastmod>2019-10-09T19:28:47+00:00</lastmod> 
+  <priority>0.80</priority> 
+  </url>
+   <url>
+  <loc>https://beachcam.co.il/arab/marina.out.html</loc> 
+  <lastmod>2019-10-09T08:16:35+00:00</lastmod> 
+  <priority>0.80</priority> 
+  </url>
+   <url>
+  <loc>https://beachcam.co.il/arab/index.html</loc> 
+  <lastmod>2019-10-09T21:26:09+00:00</lastmod> 
+  <priority>0.64</priority> 
+  </url>
+  <url>
+  <loc>https://beachcam.co.il/arab/gordon.html</loc> 
+  <lastmod>2020-10-09T18:03:37+00:00</lastmod> 
+  <priority>0.64</priority> 
+  </url>
+  <url>
+  <loc>https://beachcam.co.il/arab/yafo.html</loc> 
+  <lastmod>2020-10-09T18:03:37+00:00</lastmod> 
+  <priority>0.64</priority> 
+  </url>
+  <url>
+  <loc>https://beachcam.co.il/arab/hamaaravi.html</loc> 
+  <lastmod>2020-10-09T18:03:37+00:00</lastmod> 
+  <priority>0.64</priority> 
+  </url>
+  <url>
+  <loc>https://beachcam.co.il/arab/dromi.html</loc> 
+  <lastmod>2019-10-09T20:59:29+00:00</lastmod> 
+  <priority>0.64</priority> 
+  </url>
+  <url>
+  <loc>https://beachcam.co.il/arab/dromi2.html</loc> 
+  <lastmod>2020-10-09T20:59:29+00:00</lastmod> 
+  <priority>0.64</priority> 
+  </url>
+  <url>
+  <loc>https://beachcam.co.il/arab/poleg.html</loc> 
+  <lastmod>2020-10-09T20:59:28+00:00</lastmod> 
+  <priority>0.64</priority> 
+  </url>
+  <url>
+  <loc>https://beachcam.co.il/arab/telavivtayelet.html</loc> 
+  <lastmod>2020-10-09T20:59:28+00:00</lastmod> 
+  <priority>0.64</priority> 
+  </url>
+  <url>
+  <loc>https://beachcam.co.il/arab/testcam1.html</loc> 
+  <lastmod>2020-10-09T20:59:29+00:00</lastmod> 
+  <priority>0.64</priority> 
+  </url>
+  <url>
+  <loc>https://beachcam.co.il/arab/meridian.html</loc> 
+  <lastmod>2019-10-09T20:59:29+00:00</lastmod> 
+  <priority>0.64</priority> 
+  </url>
+  <url>
+  <loc>https://beachcam.co.il/arab/krayot.html</loc> 
+  <lastmod>2020-10-09T21:44:55+00:00</lastmod> 
+  <priority>0.64</priority> 
+  </url>
+  <url>
+  <loc>https://beachcam.co.il/arab/zvulun.html</loc> 
+  <lastmod>2020-10-09T21:44:55+00:00</lastmod> 
+  <priority>0.64</priority> 
+  </url>
+   <url>
+  <loc>https://beachcam.co.il/arab/yamit.html</loc> 
+  <lastmod>2020-10-09T21:44:55+00:00</lastmod> 
+  <priority>0.64</priority> 
+  </url>
+   <url>
+  <loc>https://beachcam.co.il/arab/scouts.html</loc> 
+  <lastmod>2020-10-09T21:44:55+00:00</lastmod> 
   <priority>0.64</priority> 
   </url>
   </urlset>

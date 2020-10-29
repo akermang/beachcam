@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="he-IL">
   <head>
     <!-- Google Tag Manager -->
     <script>
@@ -33,6 +33,7 @@
       content="הרצליה,דרומי,מרינה דרום,מצלמת גלישה, גלים,מצלמת חוף הרצליה,גלישה,מצב,גלים,שידור,חי,מרינה,surf,live,Camera"
     />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="./css/css1.css" />
     <link
       rel="shortcut icon"
       type="image/png"
@@ -59,6 +60,7 @@
         0% {
           transform: rotate(0deg);
         }
+
         100% {
           transform: rotate(360deg);
         }
@@ -68,6 +70,7 @@
         from {
           transform: scale(0);
         }
+
         to {
           transform: scale(1);
         }
@@ -110,11 +113,16 @@
 
       nav p {
         font-size: 20px;
+        color: white;
       }
 
       h1,
       h2 {
         font-size: 30px;
+      }
+
+      .light-background {
+        background-color: #0c885a;
       }
 
       div.img {
@@ -133,7 +141,7 @@
 
       .message {
         background-color: #9C27B0;
-        display: none;
+        display: block;
         color: wheat;
         text-align: center;
         font-size: medium;
@@ -148,15 +156,17 @@
       }
 
       .cams-container {
-        display: none;
+        display: flex;
         flex-wrap: wrap;
         justify-content: center;
         padding: 6px;
         overflow: auto;
         color: wheat;
+        width: 100%;
         max-width: 800px;
         margin: 0px auto;
         position: relative;
+        margin-bottom: 10px;
         min-height: 33vh;
       }
 
@@ -164,8 +174,9 @@
         position: absolute;
         color: white;
         top: 5%;
-        left: 2%;
+        left: 4%;
         font-size: 22px;
+        z-index: 1;
       }
 
       .cams-container.full-size {
@@ -175,7 +186,6 @@
         left: 0;
         max-width: 100%;
         padding: 0;
-        z-index: 1;
       }
 
       .full-size img {
@@ -189,7 +199,8 @@
       }
 
       iframe {
-        width: 100%;
+        width: 98%;
+        /* min-height: 53vh; */
       }
 
       .loader-container {
@@ -197,10 +208,10 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        height: 50vh;
+        height: 40vh;
         width: 100%;
         position: absolute;
-        top: 33%;
+        top: 200px;
       }
 
       .loader {
@@ -215,14 +226,18 @@
         opacity: 1;
       }
 
+      .main-container {
+        position: relative;
+        z-index: 1;
+        max-width: 800px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+      }
+
       .home-btn {
         padding: 4px;
         border-radius: 7px;
-        margin: 2px;
-      }
-
-      .home-btn.special {
-        background-color: #008000a1;
       }
 
       .home-btn.special {
@@ -263,17 +278,24 @@
         opacity: 1;
       }
 
+      #iframe-1 {
+        position: relative;
+        z-index: 2;
+      }
+
       footer {
+        /* position: fixed; */
+        bottom: 20px;
         width: 100%;
+        color: gold;
+        z-index: 3;
         margin-bottom: 1em;
       }
 
       .ad {
-        width: 100%;
-        text-align: center;
-        margin: 5px auto;
-        overflow: hidden;
         max-width: 800px;
+        margin: 5px auto;
+        min-height: 110px;
       }
 
       @media (max-width: 914px) {
@@ -295,6 +317,17 @@
         }
       }
 
+      @media (max-width: 700px) {
+        .img img {
+          width: 140px;
+        }
+
+        .cam-title {
+          font-size: 19px;
+          left: 5%;
+        }
+      }
+
       @media (max-width: 599px) {
         header img {
           width: 115px;
@@ -313,14 +346,8 @@
           font-size: 22px;
         }
 
-        img {
-          max-height: 53vw;
-          width: 100%;
-        }
-
         .cam-title {
-          left: 4%;
-          font-size: 16px;
+          font-size: 12px;
         }
       }
 
@@ -330,14 +357,14 @@
 
       @media (max-width: 530px) {
         .ad {
-          max-width: 100vw!important;
+          max-width: 100vw !important;
           overflow: hidden;
         }
-        
+
         .adsbygoogle {
-         max-width: 100vw!important;
+          max-width: 100vw !important;
         }
-        
+
         .mobile-btn {
           display: block;
           background-color: #2196f3;
@@ -347,10 +374,13 @@
           margin: auto;
           margin: 15px auto;
         }
-        
-        .cam-title {
-          bottom: 5%;
-          top: initial;
+
+        iframe#cam1 {
+          max-height: 53vw !important;
+        }
+
+        .loader-container {
+          top: 160px;
         }
 
         .row-flex {
@@ -360,9 +390,11 @@
           align-items: center;
           padding: 0;
         }
+
         nav p {
           font-size: 18px;
         }
+
         p.info {
           display: none;
         }
@@ -385,43 +417,58 @@
           </div>
           <a
             class="home-btn title special"
-            style="color: white;"
+            style="color: white"
             href="./list.html"
           >
             <p class="info">שידור חי - גלישת גלים</p>
             <h1>מצלמות חוף נוספות</h1>
           </a>
+          <div class="dropdown">
+            <button onclick="openDropdown()" class="dropbtn">
+              <img
+                class="dropdown-icon"
+                src="./images/white-down-arrow.png"
+                width="16px"
+              />HEB
+            </button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="#">עברית</a>
+              <a href="./en/marina.html">EN</a>
+              <a href="./arab/marina.html">عربى</a>
+            </div>
+          </div>
         </div>
       </div>
     </header>
     <nav>
       <div class="animat-box-in">
         <p>
-          <a style="color: white;" href="./dromi.html">למרינה דרום |</a>
-          <a style="color: white;" href="./forcast.html">תחזית גלים |</a>
-          <a style="color: white;" href="./marina.out.html">מרינה כניסה</a>
+          <a style="color: white" href="./dromi.html">למרינה דרום |</a>
+          <a style="color: white" href="./forcast.html">תחזית גלים |</a>
+          <a style="color: white" href="./marina.out.html">מרינה כניסה</a>
         </p>
       </div>
     </nav>
     <a href="http://62.219.45.26:130//mjpg/video.mjpg ">
       <div class="message">
-        למרינה צפון ניתן לנסות בקישור כאן
+         למרינה צפון ניתן לנסות בקישור כאן
       </div>
     </a>
     <div class="main-container">
       <section class="cams-container">
         <div class="cam-title">BeachCam.co.il</div>
-        <iframe id="adsFrame" frameborder="0" height="0"></iframe>
-        <img
-          id="image"
-          ondblclick="togglesize()"
-          src="http://62.219.45.26:130//mjpg/video.mjpg"
-          alt="מצלמת חוף"
-        />
-        <div class="jump-btn" onclick="location.reload(true)">
-          דלג
-        </div>
+
+        <iframe
+          id="cam1"
+          src="https://g2.ipcamlive.com/player/player.php?alias=5f6364b5551d7&autoplay=1&skin=white"
+          width="800"
+          height="434px"
+          frameborder="0"
+          autoplay
+          allowfullscreen
+        ></iframe>
       </section>
+      <div class="jump-btn" onclick="location.reload(true)">דלג</div>
     </div>
     <div class="ad">
       <script
@@ -431,7 +478,7 @@
       <!-- marinaAds -->
       <ins
         class="adsbygoogle"
-        style="display: block;"
+        style="display: block"
         data-ad-client="ca-pub-2190134608327180"
         data-ad-slot="2338140804"
         data-ad-format="auto"
@@ -441,22 +488,23 @@
         (adsbygoogle = window.adsbygoogle || []).push({});
       </script>
     </div>
-    <a class="home-btn mobile-btn" style="color: white;" href="./list.html">
+    <a class="home-btn mobile-btn" style="color: white" href="./list.html">
       <h1>מצלמות חוף נוספות</h1>
     </a>
     <footer>
-      <p style="text-align: center;">
-        <a style="color: gold;" href="./index.html"> מצלמת חוף Beach Cam Israel</a>
+      <p style="text-align: center">
+        <a style="color: gold" href="./index.html">
+          מצלמת חוף Beach Cam Israel</a
+        >
       </p>
-      <p style="color: gold;">contact: gal@beachcam.co.il</p>
+      <p style="color: gold">contact: gal@beachcam.co.il</p>
     </footer>
 
     <div class="loader-container">
       <div class="loader"></div>
     </div>
     <script>
-      const adsFrame = document.querySelector("#adsFrame");
-      const cam = document.querySelector("#image");
+      const cam = document.querySelector("#cam1");
       const camContainer = document.querySelector(".cams-container");
       const camTitle = document.querySelector(".cam-title");
       const loader = document.querySelector(".loader-container");
@@ -487,19 +535,13 @@
       };
 
       const changeView = () => {
-        adsFrame.style.minHeight = "50vh";
-        adsFrame.src = "./ad1.html";
-        cam.style.display = "none";
-        // closeFullscreen();
-        // cam.style.maxWidth = "300px";
+        cam.style.maxWidth = "800px";
         cam.style.position = "static";
-        // cam.style.height = "70px";
-        // cam.style.borderRadius = "52%";
-        // cam.style.margin = "15%";
-        // cam.onclick = () => location.reload();
+        cam.style.maxHeight = "53vh";
+        cam.style.margin = "30px 15%";
         camTitle.style.display = "none";
-        camContainer.classList.remove("full-size");
-        // cam.src = "./images/tosess.png";
+        closeFullscreen();
+        cam.src = "./ad13a7a2020.html";
         showJumpBtn();
       };
 
@@ -511,15 +553,14 @@
       const timeOut = () =>
         setTimeout(() => {
           changeView();
-        }, 30000);
+        }, 50000);
       timeOut();
 
       cam.onerror = () => {
         clearTimeout(timeOut);
-        cam.style.width = "100%";
-        cam.src = "./images/errorCam1_Moment.jpg";
-        message.style.display = "block";
+        window.location = "./list.html";
       };
     </script>
+    <script src="./js/local.js"></script>
   </body>
 </html>

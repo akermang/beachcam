@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="he-IL">
 
 <head>
     <!-- Google Tag Manager -->
@@ -22,6 +22,7 @@
     <meta name="keywords" content="הרצליה,דרומי,מרינה דרום,מצלמת חוף הילטון,מצלמת חוף גזיבו,מצלמת גלישה,, מצלמת חוף יפו,מצלמת חוף המערבי,מצלמת חוף חיפה,מצלמת חוף נתניה,מצלמת חוף פולג,הרצליה,גלים,מצלמת חוף, הרצליה,גלישה,מצב,גלים,שידור,חי,מרינה,surf,live,Camera"
     />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="./css/css1.css">
     <link rel="shortcut icon" type="image/png" href="https://akermang.github.io/WeatherApp/sun-favicon.png" />
     <title>מצלמות חופים | BeachCam.co.il</title>
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
@@ -256,7 +257,9 @@
             top: 175%;
         }
 
-
+        .cam-link.special {
+            background-color: #008000a1;
+        }
 
         @media(max-width: 914px) {
             .cams-container P {
@@ -310,6 +313,13 @@
         }
 
         @media (max-width: 530px) {
+            .dropdown, 
+            .dropdown-content {
+                position: absolute;
+                left: 0;
+                right: unset;
+            }
+
             .mobile-btn {
                 display: block;
                 background-color: #2196f3;
@@ -344,21 +354,24 @@
             <div class="w3-container w3-blue row-flex">
                 <div class="home-btn">
                     <a href="./index.html" for="home-link">
-                        <h1>BEACH CAM ISRAEL מצלמת חוף</h1>
+                        <h1>BEACH CAM ISRAEL</h1>
+                        <p>מצלמת חוף</p>
                     </a>
                 </div>
                 <div class="animat-box-in text-center">
                     <h2>אינדקס מצלמות</h2>
                 </div>
-
-                <!-- <a id="tosess1" for="tosess-ads-link" style="color: white;" href="https://tosess.co.il/">
-                    <div class="img">
-                        <img id="tosess" src="./images/tosess.png" alt="tosess">
-                    </div>
-                </a> -->
                 <div class="animate-box-in">
                     <p class="info">שידור חי מצלמת חוף - מצלמות גלים</p>
                     <h2 class="info">מצלמות חוף</h2>
+                </div>
+                <div class="dropdown">
+                    <button onclick="openDropdown()" class="dropbtn"><img class="dropdown-icon" src="./images/white-down-arrow.png" width="16px"/>HEB</button>
+                    <div id="myDropdown" class="dropdown-content">
+                      <a href="#">עברית</a>
+                      <a href="./en/list.html">EN</a>
+                      <a href="./arab/list.html">عربى</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -412,12 +425,12 @@
             </li>
               <li>
                 <a style="color: white;" href="./dromi2.html">
-                    <p class="cam-link new">הדרומי הרצליה</p>
+                    <p class="cam-link">הדרומי הרצליה</p>
                 </a>
             </li>
             <li>
                 <a style="color: white;" href="./zvulun.html">
-                    <p class="cam-link new">סאן ביץ'  צופי הים הרצליה </p>
+                    <p class="cam-link new"> זבולון צופי הים הרצליה </p>
                 </a>
             </li>
             <li>
@@ -541,7 +554,7 @@
         })  
     });
     </script>
-
+    <script src="./js/local.js"></script>
 </body>
 
 </html>

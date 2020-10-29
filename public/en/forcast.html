@@ -17,17 +17,17 @@
   <meta
   name="description"
   content="Live beach surf cam from Israel, Beach Surf Cam, surf report Israel updated daily with live HD Beach cam stream. Live Israel - Marina HD surf cam"
-/>
+  />
   <meta
     property="og:description"
     content="Herzlia,South beach,Mrina south,camera, surfing,live, waves, wave cam,Live beach cam Herzlia,surfing,,sea condition,surf Israel,Live,חי,Marina,surf,live,Camera,Live beach surf cam from Israel"
-  />
+    />
   <meta
     name="keywords"
     content="Israel forcast,beach,cam,Tel Aviv,Herzlia,South beach,Mrina south,camera, surfing,live, waves, wave cam,Live beach cam Herzlia,surfing,,sea condition,surf Israel,Live,brodcast,Marina,surf,live,Camera,Live beach surf cam from Israel"
   />
-  />
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="../css/css1.css">
   <link rel="shortcut icon" type="image/png" href="https://akermang.github.io/WeatherApp/sun-favicon.png" />
   <title>BeachCam Israel | BeachCam</title>
 
@@ -150,7 +150,7 @@
     iframe {
       width: 100%;
       min-height: 33vh;
-      z-index: 2;
+      /* z-index: 1; */
     }
 
     .home-btn {
@@ -280,16 +280,14 @@
             <p class="info">Live Beach Cam</p>
             <h1>CAMERAS</h1>
           </a>
-  
-          <!-- <a id="tosess1" for="tosess-ads-link" style="color: white;" href="https://tosess.co.il/">
-            <div class="img">
-                <img id="tosess" src="./images/tosess.png" alt="tosess">
+          <div class="dropdown">
+            <button onclick="openDropdown()" class="dropbtn"><img class="dropdown-icon" src="../images/white-down-arrow.png" width="16px"/>EN</button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="../forcast.html">עברית</a>
+              <a href="#">EN</a>
+              <a href="../arab/forcast.html">عربى</a>
             </div>
-          </a> -->
-          <!-- <div class="animat-box-in">
-            <p class="info">הרצליה Forcast</p>
-            
-          </div> -->
+        </div>
         </div>
       </div>
     </header>
@@ -321,7 +319,7 @@
     const loader = document.querySelector("#loader-container");
     const hideLoader = () => loader.style.display = "none";
   </script>
-
+  <script src="../js/local.js"></script>
 </body>
 
 </html>

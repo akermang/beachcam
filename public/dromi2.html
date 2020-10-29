@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="he-IL">
   <head>
     <!-- Google Tag Manager -->
     <script>
@@ -33,6 +33,7 @@
       content="כניסה למרינה,הרצליה,דרומי,מרינה צפון,מצלמת גלישה, גלים,מצלמת חוף הרצליה,גלישה,מצב,גלים,שידור,חי,מרינה,surf,live,Camera"
     />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="./css/css1.css">
     <link
       rel="shortcut icon"
       type="image/png"
@@ -148,6 +149,8 @@
         color: wheat;
         text-align: center;
         font-size: medium;
+        background-color: #325370;
+        padding: 5px;
       }
 
       .cams-container {
@@ -403,8 +406,8 @@
         <div class="w3-container w3-blue row-flex">
           <div class="home-btn">
             <a href="./index.html">
-              <h1>BEACH CAM ISRAEL מצלמות חוף</h1>
-              <!-- <p>לפירסום כאן 054-6817830</p> -->
+              <h1>BEACH CAM ISRAEL</h1>
+              <p>מצלמות חוף</p>
             </a>
           </div>
           <div class="animat-box-in">
@@ -418,53 +421,36 @@
             <p class="info">שידור חי - מצלמת חוף</p>
             <h2>מצלמות חוף נוספות</h2>
           </a>
+          <div class="dropdown">
+            <button onclick="openDropdown()" class="dropbtn"><img class="dropdown-icon" src="./images/white-down-arrow.png" width="16px"/>HEB</button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="#">עברית</a>
+              <a href="./en/dromi2.html">EN</a>
+              <a href="./arab/dromi2.html">عربى</a>
+            </div>
+          </div>
         </div>
       </div>
     </header>
     <nav>
       <div class="animat-box-in">
         <p>
-          <a href="./marina.html">למרינה צפון |</a>
+          <a href="./dromi.html">למרינה דרום |</a>
           <a href="./forcast.html">תחזית גלים |</a>
           <a class="light-background" href="./zvulun.html">חדש! חוף זבולון</a>
         </p>
       </div>
     </nav>
+    <!-- <div class="message">עקב סיום עונת הרחצה וניתוק תשתיות העיריה, באופן זמני השידור הופסק</div>
+    <div class="message">בקרוב השידור יחזור עם מצלמה משופרת</div>
+    <div class="message">אתכם הסליחה</div>
+    <div class="message"> צוות</div>
+    <div class="message"> BeachCam Israel</div> -->
+    
     <div class="main-container">
       <!-- <div id="cam-title" class="cam-title">BeachCam.co.il</div> -->
 
       <div class="cams-container">
-        <!-- <iframe
-        id="cam1"
-        width="800"
-        height="430"
-        src="https://vxg.io/iframe.html?channel=eyJ0b2tlbiI6InNoYXJlLmV5SnphU0k2SURFMk5EQXlPSDAuNWVmM2M0NjJ0MTJjZmY3ODAuZXg3LXNyODJwRGdsbjJsQnI0b25QTjVDUFZNIiwiY2FtaWQiOjIxNzg2MCwiYWNjZXNzIjoid2F0Y2gifQ%3D%3D&autoplay=on"
-        frameborder="0"
-        scrolling="no"
-        allowfullscreen
-        controls 
-        autoplay
-        utohide= -1  
-        >Your browser are not supported iframe.</iframe
-      > -->
-        <!-- <iframe
-          id="cam1"
-          src="https://g1.ipcamlive.com/player/player.php?alias=5f3ad0fd4e3c3&autoplay=1&skin=white"
-          width="800px"
-          height="450px"
-          frameborder="0"
-          autoplay
-          allowfullscreen
-        ></iframe> -->
-        <!-- <iframe
-          id="cam1"
-          src="https://rtsp.me/embed/iKSibhk6/"
-          width="800"
-          height="434px"
-          frameborder="0"
-          autoplay
-          allowfullscreen
-        ></iframe> -->
         <iframe
           id="cam1"
           src="https://g2.ipcamlive.com/player/player.php?alias=5f632f67dlb6a&autoplay=1&skin=white"
@@ -580,5 +566,6 @@
         window.location = "./list.html";
       };
     </script>
+    <script src="./js/local.js"></script>
   </body>
 </html>
