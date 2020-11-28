@@ -28,25 +28,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
-    name="description"
-    content="Live beach surf cam from Israel, Beach Surf Cam, surf report Israel updated daily with live HD Beach cam stream. Live Israel - Marina HD surf cam"
-  />
-  <meta
-    property="og:description"
-    content="Hilton bay surf cam Tel Aviv Israel,South beach,Mrina south,camera, surfing,live, waves, wave cam,Live beach cam Herzlia,surfing,,sea condition,surf Israel,Live,חי,Marina,surf,live,Camera,Live beach surf cam from Israel"
-  />
-  <meta
-    name="keywords"
-    content="Israel,Tel Aviv, Hilton beach,surfing,Marina,beach,cam,Tel Aviv,Herzlia,South beach,Mrina south,camera, surfing,live, waves, wave cam,Live beach cam Herzlia,surfing,,sea condition,surf Israel,Live,brodcast,Marina,surf,live,Camera,Live beach surf cam from Israel"
-  />
+      name="description"
+      content="Live beach surf cam from Israel, Beach Surf Cam, surf report Israel updated daily with live HD Beach cam stream. Live Israel - Marina HD surf cam"
+    />
+    <meta
+      property="og:description"
+      content="Hilton bay surf cam Tel Aviv Israel,South beach,Mrina south,camera, surfing,live, waves, wave cam,Live beach cam Herzlia,surfing,,sea condition,surf Israel,Live,חי,Marina,surf,live,Camera,Live beach surf cam from Israel"
+    />
+    <meta
+      name="keywords"
+      content="Israel,Tel Aviv, Hilton beach,surfing,Marina,beach,cam,Tel Aviv,Herzlia,South beach,Mrina south,camera, surfing,live, waves, wave cam,Live beach cam Herzlia,surfing,,sea condition,surf Israel,Live,brodcast,Marina,surf,live,Camera,Live beach surf cam from Israel"
+    />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-    <link rel="stylesheet" href="../css/css1.css">
+    <link rel="stylesheet" href="../css/css1.css" />
     <link
       rel="shortcut icon"
       type="image/png"
       href="https://akermang.github.io/WeatherApp/sun-favicon.png"
     />
-    <title> הילטון מרינה תל-אביב | BeachCam Israel | Beach Cam Israel</title>
+    <title>הילטון מרינה תל-אביב | BeachCam Israel | Beach Cam Israel</title>
     <meta
       http-equiv="Cache-Control"
       content="no-cache, no-store, must-revalidate"
@@ -294,6 +294,21 @@
         margin: 5px auto;
       }
 
+      .cam-banner {
+        background: #ffffff;
+        max-width: 800px;
+        margin: 0 auto;
+        /* height: 52px; */
+        width: 100%;
+      }
+
+      a.cam-banner-link {
+        z-index: 3;
+        width: 98%;
+        max-width: 796px;
+        margin-top: 5px;
+      }
+
       @media (max-width: 914px) {
         .cams-container P {
           min-width: 49%;
@@ -399,17 +414,23 @@
             style="color: white"
             href="./list.html"
           >
-            <p class="info"> Israel Live Beach Cam</p>
+            <p class="info">Israel Live Beach Cam</p>
             <h1>CAMERAS</h1>
           </a>
           <div class="dropdown">
-            <button onclick="openDropdown()" class="dropbtn"><img class="dropdown-icon" src="../images/white-down-arrow.png" width="16px"/>EN</button>
+            <button onclick="openDropdown()" class="dropbtn">
+              <img
+                class="dropdown-icon"
+                src="../images/white-down-arrow.png"
+                width="16px"
+              />EN
+            </button>
             <div id="myDropdown" class="dropdown-content">
               <a href="../hiltonmarina.html">עברית</a>
               <a href="#">EN</a>
               <a href="../arab/hiltonmarina.html">عربى</a>
             </div>
-        </div>
+          </div>
         </div>
       </div>
     </header>
@@ -426,13 +447,22 @@
     <div class="main-container">
       <iframe
         id="cam1"
+        src="https://g2.ipcamlive.com/player/player.php?alias=5f6226e0414da&autoplay=1&skin=white"
         width="800"
-        height="434"
-        src="https://rtsp.me/embed/4FEN7bBF/"
+        height="434px"
         frameborder="0"
-        allowfullscreen
         autoplay
+        allowfullscreen
       ></iframe>
+      <a
+        class="cam-banner-link"
+        href="https://www.yamitysb.co.il"
+        target="blank"
+      >
+        <div class="cam-banner">
+          <img src="https://www.yamitysb.co.il/pics/logo.png" alt="YAMIT" />
+        </div>
+      </a>
 
       <div class="jump-btn" onclick="location.reload() ">skip</div>
     </div>
@@ -462,9 +492,7 @@
     </a>
     <footer>
       <p style="text-align: center">
-        <a style="color: gold" href="./index.html">
-        Beach Cam Israel</a
-        >
+        <a style="color: gold" href="./index.html"> Beach Cam Israel</a>
       </p>
       <p style="color: gold">contact: gal@beachcam.co.il</p>
     </footer>

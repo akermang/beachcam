@@ -446,12 +446,12 @@
       </div>
     </nav>
     <div class="main-container">
-      <div id="cam-title" class="cam-title">BeachCam.co.il</div>
+      <!-- <div id="cam-title" class="cam-title">BeachCam.co.il</div> -->
 
       <div class="cams-container">
         <iframe
           id="cam1"
-          src="https://g2.ipcamlive.com/player/player.php?alias=5f790dcadad77&autoplay=1&skin=white"
+          src="https://g2.ipcamlive.com/player/player.php?alias=5f6364b5551d7&autoplay=1&skin=white"
           width="800"
           height="434px"
           frameborder="0"
@@ -489,12 +489,12 @@
       <p style="text-align: center">
         <a style="color: gold" href="./index.html"> شاطئ الكام إسرائيل</a>
       </p>
-      <p style="color: gold">gal@beachcam.co.il</p>
+      <p style="color: gold">contact: gal@beachcam.co.il</p>
     </footer>
     <script>
       const cam = document.querySelector("#cam1");
       const camContainer = document.querySelector(".cams-container");
-      const camTitle = document.querySelector("#cam-title");
+      // const camTitle = document.querySelector("#cam-title");
       const loader = document.querySelector(".loader-container");
       const message = document.querySelector(".message");
       const jumpBtn = document.querySelector(".jump-btn");
@@ -540,7 +540,7 @@
         cam.style.position = "static";
         cam.style.maxHeight = "53vh";
         cam.style.margin = "30px 15%";
-        camTitle.style.display = "none";
+        // camTitle.style.display = "none";
         closeFullscreen();
         cam.src = "../ad13a7a2020.html";
         showJumpBtn();

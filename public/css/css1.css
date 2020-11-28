@@ -42,7 +42,7 @@ display: block;
 }
 .show {display: block;}
 
-@media(max-width: 599px) {
+@media(max-width: 1099px) {
     .dropdown,
     .dropdown-content {
         left: 0;

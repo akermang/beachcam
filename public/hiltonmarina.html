@@ -288,6 +288,21 @@
         margin: 5px auto;
       }
 
+      .cam-banner {
+        background: #ffffff;
+        max-width: 800px;
+        margin: 0 auto;
+        /* height: 52px; */
+        width: 100%;
+      }
+
+      a.cam-banner-link {
+        z-index: 3;
+        width: 98%;
+        max-width: 796px;
+        margin-top: 5px;
+      }
+
       @media (max-width: 914px) {
         .cams-container P {
           min-width: 49%;
@@ -419,14 +434,23 @@
     <div class="message"></div>
     <div class="main-container">
       <iframe
-        id="cam1"
-        width="800"
-        height="434"
-        src="https://rtsp.me/embed/4FEN7bBF/"
-        frameborder="0"
-        allowfullscreen
-        autoplay
-      ></iframe>
+      id="cam1"
+      src="https://g2.ipcamlive.com/player/player.php?alias=5f6226e0414da&autoplay=1&skin=white"
+      width="800"
+      height="434px"
+      frameborder="0"
+      autoplay
+      allowfullscreen
+    ></iframe>
+    <a
+      class="cam-banner-link"
+      href="https://www.yamitysb.co.il"
+      target="blank"
+    >
+      <div class="cam-banner">
+        <img src="https://www.yamitysb.co.il/pics/logo.png" alt="YAMIT" />
+      </div>
+    </a>
 
       <div class="jump-btn" onclick="location.reload() ">דלג</div>
     </div>

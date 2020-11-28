@@ -140,7 +140,7 @@
       }
 
       .message {
-        background-color: #9C27B0;
+        background-color: #9c27b0;
         display: block;
         color: wheat;
         text-align: center;
@@ -298,6 +298,34 @@
         min-height: 110px;
       }
 
+      .cam-banner {
+        background: #ffffff;
+        max-width: 800px;
+        margin: 0 auto;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0 2px;
+      }
+
+      .banner-img {
+        height: 60px;
+      }
+
+      .banner-text {
+        font-size: 22px;
+        font-weight: bold;
+        color: black;
+      }
+
+      div.cam-banner-link {
+        z-index: 3;
+        width: 98%;
+        max-width: 796px;
+        margin-top: 5px;
+      }
+
       @media (max-width: 914px) {
         .cams-container P {
           min-width: 49%;
@@ -329,6 +357,10 @@
       }
 
       @media (max-width: 599px) {
+        .banner-text {
+          font-size: 16px;
+        }
+
         header img {
           width: 115px;
         }
@@ -449,15 +481,37 @@
         </p>
       </div>
     </nav>
-    <a href="http://62.219.45.26:130//mjpg/video.mjpg ">
+    <!-- <a href="http://62.219.45.26:130//mjpg/video.mjpg ">
       <div class="message">
          למרינה צפון ניתן לנסות בקישור כאן
       </div>
-    </a>
+    </a> -->
+    <div class="message">
+      <p>המצלמה הצפונית אינה עובדת</p>
+      <p>בנתיים תהנו משידורי ניסיון בדרומי</p>
+    </div>
     <div class="main-container">
       <section class="cams-container">
-        <div class="cam-title">BeachCam.co.il</div>
-
+        <!-- <div class="cam-title">BeachCam.co.il</div> -->
+        <!-- <div class="cam-banner-link">
+          <a href="https://www.facebook.com/arenamall">
+            <div class="cam-banner">
+              <img
+                class="banner-img"
+                src="https://image.flaticon.com/icons/png/128/2995/2995772.png"
+                alt="Haifa Backdoor"
+              />
+              <span class="banner-text">
+                <p>ארנה פויינט | הרצליה מרינה צפון</p>
+              </span>
+              <img
+                class="banner-img"
+                src="./images/Arena-logo.jpg"
+                alt="danger"
+              />
+            </div>
+          </a>
+        </div> -->
         <iframe
           id="cam1"
           src="https://g2.ipcamlive.com/player/player.php?alias=5f6364b5551d7&autoplay=1&skin=white"
@@ -506,7 +560,7 @@
     <script>
       const cam = document.querySelector("#cam1");
       const camContainer = document.querySelector(".cams-container");
-      const camTitle = document.querySelector(".cam-title");
+      // const camTitle = document.querySelector(".cam-title");
       const loader = document.querySelector(".loader-container");
       const message = document.querySelector(".message");
       const jumpBtn = document.querySelector(".jump-btn");
