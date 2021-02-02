@@ -246,6 +246,7 @@
       }
 
       .jump-btn.show {
+        margin-bottom: 10px;
         font-size: 22px;
         z-index: 10;
         font-weight: bold;
@@ -450,11 +451,7 @@
           </a>
           <div class="dropdown">
             <button onclick="openDropdown()" class="dropbtn">
-              <img
-                class="dropdown-icon"
-                src="../images/white-down-arrow.png"
-                width="16px"
-              />عربى
+             عربى
             </button>
             <div id="myDropdown" class="dropdown-content">
               <a href="../marina.html">עברית</a>
@@ -478,8 +475,8 @@
     </nav>
     <div class="main-container">
       <section class="cams-container">
-        <div class="cam-title">BeachCam.co.il</div>
-        <!-- <div class="cam-banner-link">
+        <!-- <div class="cam-title">BeachCam.co.il</div> -->
+        <div class="cam-banner-link">
           <a href="https://www.facebook.com/arenamall">
             <div class="cam-banner">
               <img
@@ -488,7 +485,7 @@
                 alt="Haifa Backdoor"
               />
               <span class="banner-text">
-                <p>ארנה פויינט | הרצליה מרינה צפון</p>
+                <p> هرتسليا مارينا الشمالية | ارينا سيرف بوينت</p>
               </span>
               <img
                 class="banner-img"
@@ -497,10 +494,10 @@
               />
             </div>
           </a>
-        </div> -->
+        </div>
         <iframe
           id="cam1"
-          src="https://g2.ipcamlive.com/player/player.php?alias=5f6364b5551d7&autoplay=1&skin=white"
+          src="https://g2.ipcamlive.com/player/player.php?alias=5fce1e94e5aba&autoplay=1&skin=white"
           width="800"
           height="434px"
           frameborder="0"
@@ -544,7 +541,7 @@
     <script>
       const cam = document.querySelector("#cam1");
       const camContainer = document.querySelector(".cams-container");
-      const camTitle = document.querySelector(".cam-title");
+      // const camTitle = document.querySelector(".cam-title");
       const loader = document.querySelector(".loader-container");
       const message = document.querySelector(".message");
       const jumpBtn = document.querySelector(".jump-btn");
@@ -577,7 +574,7 @@
         cam.style.position = "static";
         cam.style.maxHeight = "53vh";
         cam.style.margin = "30px 15%";
-        camTitle.style.display = "none";
+        // camTitle.style.display = "none";
         closeFullscreen();
         cam.src = "../ad13a7a2020.html";
         showJumpBtn();

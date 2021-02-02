@@ -39,7 +39,7 @@
       type="image/png"
       href="https://akermang.github.io/WeatherApp/sun-favicon.png"
     />
-    <title>מצלמות חופים | BeachCam | מרינה הרצליה</title>
+    <title>מצלמות חופים | BeachCam | ארנה פוינט מרינה צפון הרצליה </title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
@@ -253,14 +253,13 @@
       }
 
       .jump-btn.show {
+        margin-bottom: 10px;
+        margin-left: 75%;
+        width: 60px;
         font-size: 22px;
         z-index: 10;
         font-weight: bold;
         display: block;
-        width: 60px;
-        position: absolute;
-        bottom: 0;
-        right: 16%;
         height: 60px;
         background: transparent url("./images/jump.png") no-repeat;
         background-position: center center;
@@ -457,11 +456,7 @@
           </a>
           <div class="dropdown">
             <button onclick="openDropdown()" class="dropbtn">
-              <img
-                class="dropdown-icon"
-                src="./images/white-down-arrow.png"
-                width="16px"
-              />HEB
+              HEB
             </button>
             <div id="myDropdown" class="dropdown-content">
               <a href="#">עברית</a>
@@ -486,14 +481,14 @@
          למרינה צפון ניתן לנסות בקישור כאן
       </div>
     </a> -->
-    <div class="message">
+    <!-- <div class="message">
       <p>המצלמה הצפונית אינה עובדת</p>
       <p>בנתיים תהנו משידורי ניסיון בדרומי</p>
-    </div>
+    </div> -->
     <div class="main-container">
       <section class="cams-container">
         <!-- <div class="cam-title">BeachCam.co.il</div> -->
-        <!-- <div class="cam-banner-link">
+        <div class="cam-banner-link">
           <a href="https://www.facebook.com/arenamall">
             <div class="cam-banner">
               <img
@@ -511,10 +506,10 @@
               />
             </div>
           </a>
-        </div> -->
+        </div>
         <iframe
           id="cam1"
-          src="https://g2.ipcamlive.com/player/player.php?alias=5f6364b5551d7&autoplay=1&skin=white"
+          src="https://g2.ipcamlive.com/player/player.php?alias=5fce1e94e5aba&autoplay=1&skin=white"
           width="800"
           height="434px"
           frameborder="0"
@@ -593,7 +588,7 @@
         cam.style.position = "static";
         cam.style.maxHeight = "53vh";
         cam.style.margin = "30px 15%";
-        camTitle.style.display = "none";
+        // camTitle.style.display = "none";
         closeFullscreen();
         cam.src = "./ad13a7a2020.html";
         showJumpBtn();
@@ -607,7 +602,7 @@
       const timeOut = () =>
         setTimeout(() => {
           changeView();
-        }, 50000);
+        }, 80000);
       timeOut();
 
       cam.onerror = () => {

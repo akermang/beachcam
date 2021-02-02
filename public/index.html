@@ -39,7 +39,7 @@
       type="image/png"
       href="https://akermang.github.io/WeatherApp/sun-favicon.png"
     />
-    <title>מצלמות חופים | BeachCam | מצלמות חוף ישראל</title>
+    <title>מצלמות חופים | BeachCam Israel | מצלמות חוף ישראל</title>
     <meta
       http-equiv="Cache-Control"
       content="no-cache, no-store, must-revalidate"
@@ -266,14 +266,13 @@
       }
 
       .jump-btn.show {
+        margin-bottom: 10px;
         font-size: 22px;
+        margin-left: 75%;
+        width: 60px;
         z-index: 10;
         font-weight: bold;
         display: block;
-        width: 60px;
-        position: absolute;
-        bottom: 0;
-        right: 16%;
         height: 60px;
         background: transparent url("./images/jump.png") no-repeat;
         background-position: center center;
@@ -418,7 +417,7 @@
     <header>
       <div class="wrapper">
         <div class="w3-container top-color row-flex">
-          <div class="home-btn">
+          <div class="home-btn home-link-h1">
             <div href="./index.html">
               <h1>BEACH CAM ISRAEL</h1>
             </div>
@@ -436,7 +435,10 @@
             <h2>מצלמות חוף נוספות</h2>
           </a>
           <div class="dropdown">
-            <button onclick="openDropdown()" class="dropbtn"><img class="dropdown-icon" src="./images/white-down-arrow.png" width="16px"/>HEB</button>
+            <button onclick="openDropdown()" class="dropbtn">
+              <!--  -->
+              HEB
+            </button>
             <div id="myDropdown" class="dropdown-content">
               <a href="#">עברית</a>
               <a href="./en/index.html">EN</a>
@@ -453,6 +455,50 @@
           <a href="./dromi.html">למרינה דרום |</a>
           <a href="./forcast.html">תחזית גלים |</a>
           <a href="./list.html">מצלמות</a>
+          <div class="cams-snapshots">
+            <div class="flex-line">
+              <a class="snapshot-link" href="./yamit.html">
+                <div class="snapshot snapshot-1">
+                  <p class="message snapshot-title">הילטון תל אביב</p>
+                  <img
+                    class="cam-img"
+                    src="https://g2.ipcamlive.com/player/snapshot.php?alias=5f6226e0414da"
+                    alt="Marina Darom Hehzelia"
+                  /></div
+              ></a>
+              <a class="snapshot-link" href="./dromi2.html">
+                <div class="snapshot snapshot-2">
+                  <p class="message snapshot-title">הדרומי הרצליה</p>
+                  <img
+                    class="cam-img"
+                    src="https://g2.ipcamlive.com/player/snapshot.php?alias=5f632f67dlb6a"
+                    alt="Dromi Herzelia"
+                  />
+                </div>
+              </a>
+            </div>
+            <div class="flex-line">
+              <a class="snapshot-link" href="./zvulun.html">
+                <div class="snapshot snapshot-3">
+                  <p class="message snapshot-title">זבולון הרצליה</p>
+                  <img
+                    class="cam-img"
+                    src="https://g2.ipcamlive.com/player/snapshot.php?alias=5f6f2b822c9d7"
+                    alt="Zvulun Hehzelia"
+                  /></div
+              ></a>
+              <a class="snapshot-link" href="./marina.html">
+                <div class="snapshot snapshot-4">
+                  <p class="message snapshot-title">  הרצליה מרינה צפון</p>
+                  <img
+                    class="cam-img"
+                    src="https://g2.ipcamlive.com/player/snapshot.php?alias=5fce1e94e5aba"
+                    alt="Herzeliya Marina North"
+                  />
+                </div>
+              </a>
+            </div>
+          </div>
           <div class="message">מצלמת היום: הילטון תל אביב</div>
         </p>
       </div>
@@ -568,7 +614,7 @@
       const timeOut = () =>
         setTimeout(() => {
           changeView();
-        }, 80000);
+        }, 60000);
       timeOut();
 
       cam.onerror = () => {

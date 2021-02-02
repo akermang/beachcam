@@ -267,14 +267,13 @@
       }
 
       .jump-btn.show {
+        margin-bottom: 10px;
+        margin-left: 75%;
+        width: 60px;
         font-size: 22px;
         z-index: 10;
         font-weight: bold;
         display: block;
-        width: 60px;
-        position: absolute;
-        bottom: 0;
-        right: 16%;
         height: 60px;
         background: transparent url("./images/jump.png") no-repeat;
         background-position: center center;
@@ -438,13 +437,7 @@
             <h2>מצלמות חוף נוספות</h2>
           </a>
           <div class="dropdown">
-            <button onclick="openDropdown()" class="dropbtn">
-              <img
-                class="dropdown-icon"
-                src="./images/white-down-arrow.png"
-                width="16px"
-              />HEB
-            </button>
+            <button onclick="openDropdown()" class="dropbtn">HEB</button>
             <div id="myDropdown" class="dropdown-content">
               <a href="#">עברית</a>
               <a href="./en/dromi.html">EN</a>
@@ -457,19 +450,28 @@
     <nav>
       <div class="animat-box-in">
         <p>
-          <a href="./yamit.html">להילטון |</a>
+          <a href="./marina.html">למרינה צפון |</a>
           <a href="./forcast.html">תחזית גלים |</a>
-          <a class="light-background" href="./zvulun.html">חדש! חוף זבולון</a>
+          <a href="./zvulun.html">חוף זבולון</a>
         </p>
       </div>
     </nav>
-    <!-- <a href="http://62.219.45.26:120//mjpg/video.mjpg ">
-      <div class="message">
-        <p>המצלמה הדרומית אינה עובדת</p>
-        <p>בנתיים תהנו משידורי ניסיון בדרומי</p>
-      </div>
-    </a> -->
     <div class="main-container">
+      <div class="cam-banner-link">
+        <a href="http://62.219.45.26:120//mjpg/video.mjpg ">
+          <div class="message">
+            <p> מצלמה נוספת בקישור הזה</p>
+          </div>
+        </a>
+      </div>
+      <!-- <img
+          id="image"
+          ondblclick="togglesize()"
+          src="http://62.219.45.26:120//mjpg/video.mjpg"
+          frameborder="0"
+          alt="מצלמת חוף"
+          width="100%"
+        /> -->
       <!-- <div id="cam-title" class="cam-title">BeachCam.co.il</div> -->
       <div class="cams-container">
         <!-- 5f790dcadad77 -->

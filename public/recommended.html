@@ -29,20 +29,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="  חוף הילטון תל אביב מצלמות חוף שידור ישיר ישראל"
+      content="מצלמות חוף שידור ישיר ישראל, מצלמת חוף גלים surf report Israel updated daily with live HD Beach cam stream. Live Israel - Herzelia Israel HD surf cam"
     />
     <meta
       name="keywords"
-      content="כניסה למרינה,הרצליה,דרומי,מצלמת חוף הילטון ,ישראל,מצלמת גלישה, גלים,מצלמת חוף תל אביב, ים תל אביב,ימית,מצלמת ימית,Hilton beach cam ,גלישה,מצב,גלים,שידור,חי,מרינה,beach cam Israel,surf,live,Camera"
+      content="הרצליה,דרומי,מרינה צפון,מצלמת גלישה, גלים,מצלמת חוף זבולון, הרצליה , דבוש , אכדיה ,גלישה , מצב,גלים ,שידור ,חי,מרינה,surf,live,Camera' Beach Cam Israel, מצלמות חוף, מצלמת חוף, מצלמת גלים"
     />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-    <link rel="stylesheet" href="./css/css1.css">
+    <link rel="stylesheet" href="./css/css1.css" />
     <link
       rel="shortcut icon"
       type="image/png"
       href="https://akermang.github.io/WeatherApp/sun-favicon.png"
     />
-    <title>מצלמות חופים | BeachCam Israel| מצלמת חוף הילטון</title>
+    <title> המומלצות | מצלמות חופים | BeachCam Israel</title>
     <meta
       http-equiv="Cache-Control"
       content="no-cache, no-store, must-revalidate"
@@ -166,14 +166,14 @@
         margin: 0px auto;
         position: relative;
         margin-bottom: 10px;
-        min-height: 33vh;
+        /* min-height: 33vh; */
       }
 
       .cam-title {
         position: absolute;
         color: white;
-        top: 76%;
-        left: 5%;
+        top: 5%;
+        left: 4%;
         font-size: 22px;
         z-index: 1;
       }
@@ -207,7 +207,7 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        height: 40vh;
+        height: 10vh;
         width: 100%;
         position: absolute;
         top: 200px;
@@ -259,9 +259,6 @@
         z-index: 10;
         font-weight: bold;
         display: block;
-        width: 60px;
-        bottom: 64px;
-        right: 16%;
         height: 60px;
         background: transparent url("./images/jump.png") no-repeat;
         background-position: center center;
@@ -327,7 +324,6 @@
         .cam-title {
           font-size: 19px;
         }
-
         h1,
         h2 {
           font-size: 22px;
@@ -346,9 +342,6 @@
       }
 
       @media (max-width: 599px) {
-        .cam-title {
-            top: 61%;
-        }
         header img {
           width: 115px;
         }
@@ -364,6 +357,10 @@
         h1,
         h2 {
           font-size: 22px;
+        }
+
+        .cam-title {
+          display: none;
         }
       }
 
@@ -425,11 +422,17 @@
           <div class="home-btn">
             <a href="./index.html">
               <h1>BEACH CAM ISRAEL</h1>
-              <!-- <p>לפירסום כאן 054-6817830</p> -->
             </a>
           </div>
+          <div>
+            <img
+              class="first-img"
+              src="https://g2.ipcamlive.com/player/snapshot.php?alias=5f6f2b822c9d7"
+              alt="Marina Darom Hehzelia"
+            />
+          </div>
           <div class="animat-box-in">
-            <h2 dir="rtl">חוף הילטון ימית תל אביב</h2>
+            <h2>מצלמות חוף מומלצות</h2>
           </div>
           <a
             class="home-btn title special"
@@ -440,11 +443,13 @@
             <h2>מצלמות חוף נוספות</h2>
           </a>
           <div class="dropdown">
-            <button onclick="openDropdown()" class="dropbtn">HEB</button>
+            <button onclick="openDropdown()" class="dropbtn">
+              HEB
+            </button>
             <div id="myDropdown" class="dropdown-content">
               <a href="#">עברית</a>
-              <a href="./en/yamit.html">EN</a>
-              <a href="./arab/yamit.html">عربى</a>
+              <a href="./en/index.html">EN</a>
+              <a href="./arab/index.html">عربى</a>
             </div>
           </div>
         </div>
@@ -455,45 +460,69 @@
         <p>
           <a style="color: white" href="./dromi2.html">לדרומי |</a>
           <a style="color: white" href="./forcast.html">תחזית גלים |</a>
-          <a style="color: white" href="./marina.html">מרינה צפון הרצליה</a>
+          <a style="color: white" href="./list.html">מצלמות</a>
         </p>
       </div>
     </nav>
     <div class="main-container">
+      <!-- <div id="cam-title" class="cam-title">BeachCam.co.il</div> -->
 
       <div class="cams-container">
-        <a href="./index.html">
-          <div id="cam-title" class="cam-title">BeachCam.co.il</div>
-        </a>
         <!-- <a class="cam-banner-link" href="https://www.facebook.com/yamdakkar1">
           <div class="cam-banner">
             <img src="./images/3.png" alt="Herzelia Sea Scouts" />
           </div>
         </a> -->
-        <iframe
-          id="cam1"
-          src="https://g2.ipcamlive.com/player/player.php?alias=5f6226e0414da&autoplay=1&skin=white"
-          width="800"
-          height="434px"
-          frameborder="0"
-          autoplay
-          allowfullscreen
-        ></iframe>
-        <a
-          class="cam-banner-link"
-          href="https://www.yamitysb.co.il"
-          target="blank"
-        >
-          <div class="cam-banner">
-            <img src="https://www.yamitysb.co.il/pics/logo.png" alt="YAMIT" />
+        <div class="cams-snapshots">
+          <div class="flex-line">
+            <a class="snapshot-link" href="./dromi.html">
+              <div class="snapshot snapshot-1">
+                <p class="message snapshot-title">מרינה דרום הרצליה</p>
+                <img
+                  class="cam-img"
+                  src="https://g2.ipcamlive.com/player/snapshot.php?alias=5f6364b5551d7"
+                  alt="Marina Darom Hehzelia"
+                /></div
+            ></a>
+            <a class="snapshot-link" href="./dromi2.html">
+              <div class="snapshot snapshot-2">
+                <p class="message snapshot-title">הדרומי הרצליה</p>
+                <img
+                  class="cam-img"
+                  src="https://g2.ipcamlive.com/player/snapshot.php?alias=5f632f67dlb6a"
+                  alt="Dromi Herzelia"
+                />
+              </div>
+            </a>
           </div>
-        </a>
+          <div class="flex-line">
+            <a class="snapshot-link" href="./zvulun.html">
+              <div class="snapshot snapshot-3">
+                <p class="message snapshot-title">זבולון הרצליה</p>
+                <img
+                  class="cam-img"
+                  src="https://g2.ipcamlive.com/player/snapshot.php?alias=5f6f2b822c9d7"
+                  alt="Zvulun Hehzelia"
+                /></div
+            ></a>
+            <a class="snapshot-link" href="./yamit.html">
+              <div class="snapshot snapshot-4">
+                <p class="message snapshot-title">הילטון תל אביב</p>
+                <img
+                  class="cam-img"
+                  src="https://g2.ipcamlive.com/player/snapshot.php?alias=5f6226e0414da"
+                  alt="Hilton Beach Tel Aviv"
+                />
+              </div>
+            </a>
+          </div>
+        </div>
       </div>
       <div class="jump-btn" onclick="location.reload()">דלג</div>
     </div>
-    <div id="loader-container" class="loader-container">
+    <!-- <div id="loader-container" class="loader-container">
       <div class="loader"></div>
-    </div>
+    </div> -->
     <div class="ad">
       <script
         async
@@ -523,10 +552,10 @@
       </p>
       <p style="color: gold">contact: gal@beachcam.co.il</p>
     </footer>
-    <script>
+    <!-- <script>
       const cam = document.querySelector("#cam1");
       const camContainer = document.querySelector(".cams-container");
-      const camTitle = document.querySelector("#cam-title");
+      // const camTitle = document.querySelector("#cam-title");
       const loader = document.querySelector(".loader-container");
       const message = document.querySelector(".message");
       const jumpBtn = document.querySelector(".jump-btn");
@@ -572,8 +601,7 @@
         cam.style.position = "static";
         cam.style.maxHeight = "53vh";
         cam.style.margin = "30px 15%";
-        cam.style.marginBottom = "42px";
-        camTitle.style.display = "none";
+        // camTitle.style.display = "none";
         closeFullscreen();
         cam.src = "./ad13a7a2020.html";
         showJumpBtn();
@@ -594,7 +622,7 @@
         clearTimeout(timeOut);
         window.location = "./list.html";
       };
-    </script>
+    </script> -->
     <script src="./js/local.js"></script>
   </body>
 </html>
