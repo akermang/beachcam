@@ -29,26 +29,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Live beach surf cam from Israel,home page, Beach Surf Cam, surf report Israel updated daily with live HD Beach cam stream. Live Israel - Marina HD surf cam"
+      content="Dolfinarium Beach Tel Aviv, gosurf, beach club, Live beach surf cam from Israel, Beach Surf Cam, surf report Israel updated daily with live HD Beach cam stream. Live Israel -Tel Aviv Dolfinarium HD surf cam"
     />
     <meta
       name="keywords"
-      content="Israel,beach,cam,Tel Aviv,Herzlia,South beach,Mrina south,camera, surfing,live, waves, wave cam,Live beach cam Herzlia,surfing,,sea condition,surf Israel,Live,brodcast,Marina,surf,live,Camera,Live beach surf cam from Israel"
+      content="Israel,beach,cam,Tel Aviv, South beach, Dolfinarium,Beach Club, GoSurf, south,camera, surfing,live, waves, wave cam,Live beach cam Tel Aviv,surfing, sea condition,surf Israel,Live,brodcast,surfing Israel,live,Camera,Live beach surf cam from Israel"
     />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-    <link rel="stylesheet" href="../css/css1.css">
+    <link rel="stylesheet" href="../css/css1.css" />
     <link
       rel="shortcut icon"
       type="image/png"
       href="https://akermang.github.io/WeatherApp/sun-favicon.png"
     />
-    <title>BeachCam Israel | BeachCam | Beach Cam Israel</title>
-    <meta
-      http-equiv="Cache-Control"
-      content="no-cache, no-store, must-revalidate"
-    />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
+    <title>Beach Cam Israel | BeachCam | Dolfinarium Tel Aviv   </title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
@@ -130,13 +124,8 @@
         font-size: 30px;
       }
 
-      .top-color {
-        background-color: #9c27b0;
-        color: white;
-      }
-
-      .text-center {
-        text-align: center;
+      .light-background {
+        background-color: #0c885a;
       }
 
       div.img {
@@ -170,6 +159,7 @@
         max-width: 800px;
         margin: 0px auto;
         position: relative;
+        margin-bottom: 10px;
         min-height: 33vh;
       }
 
@@ -180,13 +170,6 @@
         left: 4%;
         font-size: 22px;
         z-index: 1;
-      }
-
-      .cam-title.subTitle {
-        position: static;
-        width: 100%;
-        text-align: center;
-        color: #f5deb3;
       }
 
       .cams-container.full-size {
@@ -209,11 +192,6 @@
       }
 
       iframe {
-        width: 100%;
-        min-height: 23vh;
-      }
-
-      iframe#cam1 {
         width: 98%;
         /* min-height: 53vh; */
       }
@@ -253,7 +231,6 @@
       .home-btn {
         padding: 4px;
         border-radius: 7px;
-        margin: 2px;
       }
 
       .home-btn.special {
@@ -261,7 +238,7 @@
       }
 
       .home-btn:hover {
-        /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
       }
 
       .jump-btn {
@@ -272,6 +249,7 @@
         margin-bottom: 10px;
         font-size: 22px;
         z-index: 10;
+        font-weight: bold;
         display: block;
         width: 60px;
         position: absolute;
@@ -300,6 +278,7 @@
       }
 
       footer {
+        /* position: fixed; */
         bottom: 20px;
         width: 100%;
         color: gold;
@@ -311,6 +290,34 @@
         max-width: 800px;
         margin: 5px auto;
         min-height: 110px;
+      }
+
+      .cam-banner {
+        background: #ffffff;
+        max-width: 800px;
+        margin: 0 auto;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0 2px;
+      }
+
+      .banner-img {
+        height: 60px;
+      }
+
+      .banner-text {
+        font-size: 22px;
+        font-weight: bold;
+        color: black;
+      }
+
+      div.cam-banner-link {
+        z-index: 3;
+        width: 98%;
+        max-width: 796px;
+        margin-top: 5px;
       }
 
       @media (max-width: 914px) {
@@ -344,6 +351,10 @@
       }
 
       @media (max-width: 599px) {
+        .banner-text {
+          font-size: 16px;
+        }
+
         header img {
           width: 115px;
         }
@@ -361,8 +372,8 @@
           font-size: 22px;
         }
 
-        .cam-title.subTitle {
-          top: 15%;
+        .cam-title {
+          font-size: 12px;
         }
       }
 
@@ -420,30 +431,33 @@
   <body>
     <header>
       <div class="wrapper">
-        <div class="w3-container top-color row-flex">
+        <div class="w3-container w3-blue row-flex">
           <div class="home-btn">
-            <div href="./index.html">
+            <a href="./index.html">
               <h1>BEACH CAM ISRAEL</h1>
-            </div>
+              <!-- <p>לפירסום כאן 054-6817830</p> -->
+            </a>
           </div>
-          <div class="animat-box-in text-center">
-            <h2>Beach Cam Israel</h2>
-            <label>The site for surfing and ocean loveres</label>
+          <div class="animat-box-in">
+            <h2>Dolfinarium Tel Aviv</h2>
           </div>
+          
           <a
             class="home-btn title special"
             style="color: white"
             href="./list.html"
           >
-            <p class="info"> Israel Live Beach Cam</p>
-            <h2>CAMERAS</h2>
+            <p class="info">Live Surf cams</p>
+            <h1>CAMERAS</h1>
           </a>
           <div class="dropdown">
-            <button onclick="openDropdown()" class="dropbtn">EN</button>
+            <button onclick="openDropdown()" class="dropbtn">
+              EN
+            </button>
             <div id="myDropdown" class="dropdown-content">
-              <a href="../index.html">עברית</a>
+              <a href="../dolfinarium.html">עברית</a>
               <a href="#">EN</a>
-              <a href="../arab/index.html">عربى</a>
+              <a href="../arab/marina.html">عربى</a>
             </div>
           </div>
         </div>
@@ -452,86 +466,63 @@
     <nav>
       <div class="animat-box-in">
         <p>
-          <a href="./dromi.html">Mrina South |</a>
-          <a href="./forcast.html">Forcast |</a>
-          <a href="./list.html">cameras</a>
+          <a style="color: white" href="./hiltonmarina.html">Hilton Bay |</a>
+          <a style="color: white" href="./forcast.html">Forcast |</a>
+          <a style="color: white" href="./dromi2.html">Herzeliya South</a>
         </p>
       </div>
     </nav>
-    <div class="cams-snapshots animat-box-in">
-      <div class="flex-line">
-        <a class="snapshot-link" href="./hiltonmarina.html">
-          <div class="snapshot snapshot-1">
-            <p class="message snapshot-title">Hilton Tel Aviv</p>
-            <img
-              class="cam-img"
-              src="https://g2.ipcamlive.com/player/snapshot.php?alias=5f6226e0414da"              alt="Hilton Tel Aviv"
-            /></div
-        ></a>
-        <a class="snapshot-link" href="./dromi2.html">
-          <div class="snapshot snapshot-2">
-            <p class="message snapshot-title">Herzeliya South Beach</p>
-            <img
-              class="cam-img"
-              src="https://g2.ipcamlive.com/player/snapshot.php?alias=5f632f67dlb6a"
-              alt="Dromi Herzelia"
-            />
-          </div>
-        </a>
-      </div>
-      <div class="flex-line">
-        <a class="snapshot-link" href="./zvulun.html">
-          <div class="snapshot snapshot-3">
-            <p class="message snapshot-title">Zvulun Herzeliya</p>
-            <img
-              class="cam-img"
-              src="https://g2.ipcamlive.com/player/snapshot.php?alias=5f6f2b822c9d7"
-              alt="Zvulun Hehzelia"
-            /></div
-        ></a>
-        <a class="snapshot-link" href="./marina.html">
-          <div class="snapshot snapshot-4">
-            <p class="message snapshot-title">Herzeliya Marina North</p>
-            <img
-              class="cam-img"
-              src="https://g2.ipcamlive.com/player/snapshot.php?alias=5fce1e94e5aba"
-              alt="Herzelia Marina North"
-            />
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="message">Camera of the day: Hilton Tel Aviv</div>
-    <!-- <div id="cam-title" class="cam-title subTitle"></div> -->
     <div class="main-container">
-      <!-- <div id="cam-title" class="cam-title">BeachCam.co.il</div> -->
-
-      <div class="cams-container">
+      <section class="cams-container">
+        <!-- <div class="cam-title">BeachCam.co.il</div> -->
+        <div class="cam-banner-link">
+          <a href="https://www.facebook.com/arenamall">
+            <div class="cam-banner">
+              <img
+                class="banner-img"
+                src="https://image.flaticon.com/icons/png/128/2995/2995772.png"
+                alt="BeachCam"
+              />
+              <span class="banner-text">
+                <p>BeachCam</p>
+              </span>
+              <img
+                class="banner-img"
+                src="https://beachclub.co.il/wp-content/uploads/2020/10/logo.d110a0.webp"
+                alt="BeachClub"
+              />
+             
+              <img
+                class="banner-img"
+                src="https://static.wixstatic.com/media/cf4d9f_84fb601961084df687a4ab59f3e3647f~mv2.png/v1/fill/w_83,h_55,al_c,q_85,usm_0.66_1.00_0.01/LLogo.webp"
+                alt="danger"
+              />
+            </div>
+          </a>
+        </div>
         <iframe
           id="cam1"
-          src="https://g2.ipcamlive.com/player/player.php?alias=5f6226e0414da&autoplay=1&skin=white"
-          width="800px"
-          height="443px"
+          src="https://g2.ipcamlive.com/player/player.php?alias=5fce1e94e5aba&autoplay=1&skin=white"
+          width="800"
+          height="434px"
           frameborder="0"
+          autoplay
           allowfullscreen
         ></iframe>
-      </div>
-      <div class="jump-btn" onclick="location.reload()">skip</div>
-    </div>
-    <div id="loader-container" class="loader-container">
-      <div class="loader"></div>
+      </section>
+      <div class="jump-btn" onclick="location.reload(true)">דלג</div>
     </div>
     <div class="ad">
       <script
         async
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
       ></script>
-      <!-- adSmall -->
+      <!-- marinaAds -->
       <ins
         class="adsbygoogle"
         style="display: block"
         data-ad-client="ca-pub-2190134608327180"
-        data-ad-slot="9146492665"
+        data-ad-slot="2338140804"
         data-ad-format="auto"
         data-full-width-responsive="true"
       ></ins>
@@ -540,49 +531,25 @@
       </script>
     </div>
     <a class="home-btn mobile-btn" style="color: white" href="./list.html">
-      <h2>CAMERAS</h2>
+      <h1>CAMERAS</h1>
     </a>
     <footer>
       <p style="text-align: center">
-        <a style="color: gold" href="./index.html"> Beach Cam Israel </a>
+        <a style="color: gold" href="./index.html">Beach Cam Israel</a>
       </p>
       <p style="color: gold">contact: gal@beachcam.co.il</p>
     </footer>
+
+    <div class="loader-container">
+      <div class="loader"></div>
+    </div>
     <script>
       const cam = document.querySelector("#cam1");
       const camContainer = document.querySelector(".cams-container");
-      // const camTitle = document.querySelector("#cam-title");
+      // const camTitle = document.querySelector(".cam-title");
       const loader = document.querySelector(".loader-container");
       const message = document.querySelector(".message");
       const jumpBtn = document.querySelector(".jump-btn");
-
-      const elem = document.documentElement;
-      const openFullscreen = () => {
-        if (elem.requestFullscreen) {
-          elem.requestFullscreen();
-        } else if (elem.mozRequestFullScreen) {
-          /* Firefox */
-          elem.mozRequestFullScreen();
-        } else if (elem.webkitRequestFullscreen) {
-          /* Chrome, Safari & Opera */
-          elem.webkitRequestFullscreen();
-        } else if (elem.msRequestFullscreen) {
-          /* IE/Edge */
-          elem.msRequestFullscreen();
-        }
-      };
-
-      const closeFullscreen = () => {
-        if (document.exitFullscreen) {
-          document.exitFullscreen();
-        } else if (document.mozCancelFullScreen) {
-          document.mozCancelFullScreen();
-        } else if (document.webkitExitFullscreen) {
-          document.webkitExitFullscreen();
-        } else if (document.msExitFullscreen) {
-          document.msExitFullscreen();
-        }
-      };
 
       const showJumpBtn = () => {
         jumpBtn.classList.add("show");
@@ -590,6 +557,21 @@
 
       const togglesize = () => {
         camContainer.classList.toggle("full-size");
+      };
+
+      const closeFullscreen = () => {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        } else if (document.mozCancelFullScreen) {
+          /* Firefox */
+          document.mozCancelFullScreen();
+        } else if (document.webkitExitFullscreen) {
+          /* Chrome, Safari and Opera */
+          document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) {
+          /* IE/Edge */
+          document.msExitFullscreen();
+        }
       };
 
       const changeView = () => {
@@ -611,7 +593,7 @@
       const timeOut = () =>
         setTimeout(() => {
           changeView();
-        }, 80000);
+        }, 50000);
       timeOut();
 
       cam.onerror = () => {
