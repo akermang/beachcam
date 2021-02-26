@@ -494,6 +494,26 @@
       </p>
       <p style="color: gold;">contact: gal@beachcam.co.il</p>
     </footer>
+     <!-- The Adblock detected Modal -->
+     <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Adblock detected..</p>
+        <img
+          class="modal-img"
+          src="https://image.flaticon.com/icons/png/128/2995/2995772.png"
+          alt="BeachCam"
+        />
+        <p>שמנו לב כי נעשה שימוש בחוסם פירסומות</p>
+        <p>
+          על מנת שנוכל לספק לך חווית צפיה מושלמת, יש לבטל את פעולת החוסם ולרענן
+          את הדף
+        </p>
+        <p>צוות</p>
+        <p>BeachCam</p>
+      </div>
+    </div>
     <script>
       const cam = document.querySelector("#cam1");
       const camContainer = document.querySelector(".cams-container");
@@ -566,5 +586,34 @@
       };
     </script>
     <script src="./js/local.js"></script>
+     <!-- just-detect-adblock -->
+     <script
+     type="text/javascript"
+     src="./just-detect-adblock/dist/bundle.umd.js"
+   ></script>
+   <script type="text/javascript">
+     const addblockPopup = () => {
+       justDetectAdblock.detectAnyAdblocker().then(function (detected) {
+         if (detected) {
+           console.log("BeachCam say: Adblock detected", detected);
+           // Get the <span> element that closes the modal
+           var modal = document.getElementById("myModal");
+           var span = document.getElementsByClassName("close")[0];
+           modal.style.display = "block";
+           span.onclick = function () {
+             modal.style.display = "none";
+           };
+           // When the user clicks anywhere outside of the modal, close it
+           window.onclick = function (event) {
+             if (event.target == modal) {
+               modal.style.display = "none";
+             }
+           };
+         }
+       });
+     };
+     setTimeout(addblockPopup, 15000);
+   </script>
+   <!-- End just-detect-adblock -->
   </body>
 </html>
