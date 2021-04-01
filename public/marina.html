@@ -639,6 +639,7 @@
         justDetectAdblock.detectAnyAdblocker().then(function (detected) {
           if (detected) {
             console.log("BeachCam say: Adblock detected", detected);
+            closeFullscreen();
             // Get the <span> element that closes the modal
             var modal = document.getElementById("myModal");
             var span = document.getElementsByClassName("close")[0];
@@ -655,7 +656,7 @@
           }
         });
       };
-      setTimeout(addblockPopup, 15000);
+      setInterval(addblockPopup, 15000);
     </script>
     <!-- End just-detect-adblock -->
   </body>

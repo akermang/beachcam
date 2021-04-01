@@ -466,16 +466,16 @@
                     alt="HiltonTel Aviv"
                   /></div
               ></a>
-              <a class="snapshot-link" href="./dromi2.html">
-                <div class="snapshot snapshot-2">
-                  <p class="message snapshot-title">הדרומי הרצליה</p>
+              <a class="snapshot-link last-link" href="./dolfinarium.html">
+                <div class="snapshot snapshot-3">
+                  <p class="message snapshot-title"> דולפינריום תל אביב</p>
                   <img
                     class="cam-img"
-                    src="https://g2.ipcamlive.com/player/snapshot.php?alias=5f632f67dlb6a"
-                    alt="Dromi Herzelia"
-                  />
-                </div>
-              </a>
+                    src="https://g2.ipcamlive.com/player/snapshot.php?alias=5f6364b5551d7"
+                    alt="Zvulun Hehzelia"
+                  /></div
+              ></a>
+              
             </div>
             <div class="flex-line">
               <a class="snapshot-link" href="./zvulun.html">
@@ -498,8 +498,30 @@
                 </div>
               </a>
             </div>
+            <div class="flex-line">
+              <a class="snapshot-link" href="./dromi2.html">
+                <div class="snapshot snapshot-2">
+                  <p class="message snapshot-title">הדרומי הרצליה</p>
+                  <img
+                    class="cam-img"
+                    src="https://g2.ipcamlive.com/player/snapshot.php?alias=5f632f67dlb6a"
+                    alt="Dromi Herzelia"
+                  />
+                </div>
+              </a>
+              <!-- <a class="snapshot-link" href="./marina.html">
+                <div class="snapshot snapshot-4">
+                  <p class="message snapshot-title">  הרצליה מרינה צפון</p>
+                  <img
+                    class="cam-img"
+                    src="https://g2.ipcamlive.com/player/snapshot.php?alias=5fce1e94e5aba"
+                    alt="Herzeliya Marina North"
+                  /> -->
+                </div>
+              </a>
+            </div>
           </div>
-          <div class="message">מצלמת היום: הילטון תל אביב</div>
+          <!-- <div class="message">מצלמת היום: הילטון תל אביב</div> -->
         </p>
       </div>
     </nav>
@@ -507,7 +529,7 @@
     <div class="main-container">
       <!-- <div id="cam-title" class="cam-title">BeachCam.co.il</div> -->
 
-      <div class="cams-container">
+      <!-- <div class="cams-container">
         <iframe
           id="cam1"
           src="https://g2.ipcamlive.com/player/player.php?alias=5f6226e0414da&autoplay=1&skin=white"
@@ -516,7 +538,7 @@
           frameborder="0"
           allowfullscreen
         ></iframe>
-      </div>
+      </div> -->
       <div class="jump-btn" onclick="location.reload()">דלג</div>
     </div>
     <div id="loader-container" class="loader-container">
@@ -552,12 +574,16 @@
       <p style="color: gold">contact: gal@beachcam.co.il</p>
     </footer>
     <script>
-      const cam = document.querySelector("#cam1");
-      const camContainer = document.querySelector(".cams-container");
+      // const cam = document.querySelector("#cam1");
+      // const camContainer = document.querySelector(".cams-container");
       // const camTitle = document.querySelector("#cam-title");
       const loader = document.querySelector(".loader-container");
       const message = document.querySelector(".message");
       const jumpBtn = document.querySelector(".jump-btn");
+
+      setTimeout(() => {
+        loader.style.display = "none";
+      }, 1000);
 
       const elem = document.documentElement;
       const openFullscreen = () => {
@@ -587,40 +613,40 @@
         }
       };
 
-      const showJumpBtn = () => {
-        jumpBtn.classList.add("show");
-      };
+      // const showJumpBtn = () => {
+      //   jumpBtn.classList.add("show");
+      // };
 
-      const togglesize = () => {
-        camContainer.classList.toggle("full-size");
-      };
+      // const togglesize = () => {
+      //   camContainer.classList.toggle("full-size");
+      // };
 
-      const changeView = () => {
-        cam.style.maxWidth = "800px";
-        cam.style.position = "static";
-        cam.style.maxHeight = "53vh";
-        cam.style.margin = "30px 15%";
-        // camTitle.style.display = "none";
-        closeFullscreen();
-        cam.src = "./ad13a7a2020.html";
-        showJumpBtn();
-      };
+      // const changeView = () => {
+      //   cam.style.maxWidth = "800px";
+      //   cam.style.position = "static";
+      //   cam.style.maxHeight = "53vh";
+      //   cam.style.margin = "30px 15%";
+      //   // camTitle.style.display = "none";
+      //   closeFullscreen();
+      //   cam.src = "./ad13a7a2020.html";
+      //   showJumpBtn();
+      // };
 
-      cam.onload = () => {
-        loader.style.display = "none";
-        camContainer.style.display = "flex";
-      };
+      // cam.onload = () => {
+      //   loader.style.display = "none";
+      //   // camContainer.style.display = "flex";
+      // };
 
-      const timeOut = () =>
-        setTimeout(() => {
-          changeView();
-        }, 60000);
-      timeOut();
+      // const timeOut = () =>
+      //   setTimeout(() => {
+      //     changeView();
+      //   }, 60000);
+      // timeOut();
 
-      cam.onerror = () => {
-        clearTimeout(timeOut);
-        window.location = "./list.html";
-      };
+      // cam.onerror = () => {
+      //   clearTimeout(timeOut);
+      //   window.location = "./list.html";
+      // };
     </script>
     <script src="./js/local.js"></script>
   </body>

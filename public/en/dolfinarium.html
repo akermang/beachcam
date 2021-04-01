@@ -42,7 +42,7 @@
       type="image/png"
       href="https://akermang.github.io/WeatherApp/sun-favicon.png"
     />
-    <title>Beach Cam Israel | BeachCam | Dolfinarium Tel Aviv   </title>
+    <title>Beach Cam Israel | BeachCam | Dolfinarium Tel Aviv</title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
@@ -300,7 +300,15 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        padding: 0 2px;
+      }
+
+      .cam-banner .img-responsive {
+        width: 100%;
+      }
+
+      .cam-banner .img-mobile {
+        width: 100%;
+        display: none;
       }
 
       .banner-img {
@@ -351,6 +359,14 @@
       }
 
       @media (max-width: 599px) {
+        .cam-banner .img-responsive {
+          display: none;
+        }
+
+        .cam-banner .img-mobile {
+          display: block;
+        }
+
         .banner-text {
           font-size: 16px;
         }
@@ -441,7 +457,7 @@
           <div class="animat-box-in">
             <h2>Dolfinarium Tel Aviv</h2>
           </div>
-          
+
           <a
             class="home-btn title special"
             style="color: white"
@@ -451,9 +467,7 @@
             <h1>CAMERAS</h1>
           </a>
           <div class="dropdown">
-            <button onclick="openDropdown()" class="dropbtn">
-              EN
-            </button>
+            <button onclick="openDropdown()" class="dropbtn">EN</button>
             <div id="myDropdown" class="dropdown-content">
               <a href="../dolfinarium.html">עברית</a>
               <a href="#">EN</a>
@@ -476,26 +490,17 @@
       <section class="cams-container">
         <!-- <div class="cam-title">BeachCam.co.il</div> -->
         <div class="cam-banner-link">
-          <a href="https://www.facebook.com/arenamall">
+          <a href="https://www.tlvsurf.com/clubs">
             <div class="cam-banner">
               <img
-                class="banner-img"
-                src="https://image.flaticon.com/icons/png/128/2995/2995772.png"
+                class="img-responsive"
+                src="../images/gosurf-banner.jpg"
                 alt="BeachCam"
               />
-              <span class="banner-text">
-                <p>BeachCam</p>
-              </span>
               <img
-                class="banner-img"
-                src="https://beachclub.co.il/wp-content/uploads/2020/10/logo.d110a0.webp"
-                alt="BeachClub"
-              />
-             
-              <img
-                class="banner-img"
-                src="https://static.wixstatic.com/media/cf4d9f_84fb601961084df687a4ab59f3e3647f~mv2.png/v1/fill/w_83,h_55,al_c,q_85,usm_0.66_1.00_0.01/LLogo.webp"
-                alt="danger"
+                class="img-mobile"
+                src="../images/gosurf_small_banner.jpg"
+                alt="BeachCam"
               />
             </div>
           </a>

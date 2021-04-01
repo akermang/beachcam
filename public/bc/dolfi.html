@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=UA-22782431-1"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "UA-22782431-1");
+  </script>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+    }
+    .cam-containe {
+      width: 100%;
+      height: 100vh;
+    }
+  </style>
+  <body>
+    <div class="cam-containe">
+      <iframe
+        id="cam1"
+        src="https://g2.ipcamlive.com/player/player.php?alias=5f6364b5551d7&autoplay=1&skin=white"
+        width="100%"
+        height="100%"
+        frameborder="0"
+        autoplay
+        allowfullscreen
+      ></iframe>
+    </div>
+    <script>
+      // updating src affter 50 minuts for new setion token
+      const timeLengh = 3000000;
+      const camA = document.getElementById("cam1");
+      const update = () => {
+        camA.src =
+          "https://g2.ipcamlive.com/player/player.php?alias=5f6364b5551d7&autoplay=1&skin=white";
+      };
+      setInterval(() => {
+        update();
+      }, timeLengh);
+    </script>
+  </body>
+</html>
