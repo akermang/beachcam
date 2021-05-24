@@ -36,13 +36,15 @@
       content="Hrzlia, Herzelia, Sea Scouts,تل أبيب, Promenade, Israel, surf cam,Israel,شاطئ بحر,cam,camera, surfing,live, waves, wave cam,Live شاطئ بحر cam هرتسليا,surfing,,sea condition,surf Israel,Live,brodcast,Marina,surf,live,Camera,يعيش كاميرا ركوب الأمواج الشاطئ from Israel"
     />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-    <link rel="stylesheet" href="../css/css1.css">
+    <link rel="stylesheet" href="../css/css1.css" />
     <link
       rel="shortcut icon"
       type="image/png"
       href="https://akermang.github.io/WeatherApp/sun-favicon.png"
     />
-    <title>شاطئ زفولون هرتسليا هرتسليا | كاميرات ساحل اسرائيل | كاميرات ساحل اسرائيل</title>
+    <title>
+      شاطئ زفولون هرتسليا هرتسليا | كاميرات ساحل اسرائيل | كاميرات ساحل اسرائيل
+    </title>
     <meta
       http-equiv="Cache-Control"
       content="no-cache, no-store, must-revalidate"
@@ -170,12 +172,25 @@
       }
 
       .cam-title {
+        padding: 0 0.5em 0 1em;
         position: absolute;
-        color: white;
-        top: 5%;
-        left: 4%;
-        font-size: 22px;
-        z-index: 1;
+        color: #ffffff;
+        background-color: #ff0000;
+        background-image: linear-gradient(
+          to right,
+          #c32727,
+          #903e3e,
+          #f44336,
+          #f44336,
+          #5b130d,
+          #82131f,
+          #651711,
+          #da3b2f
+        );
+        top: 78px;
+        right: 3%;
+        font-size: 17px;
+        z-index: 5;
       }
 
       .cams-container.full-size {
@@ -323,7 +338,7 @@
           width: 140px;
         }
         .cam-title {
-          font-size: 19px;
+          font-size: 14px;
         }
         h1,
         h2 {
@@ -337,8 +352,7 @@
         }
 
         .cam-title {
-          font-size: 19px;
-          left: 5%;
+          font-size: 13px;
         }
       }
 
@@ -361,7 +375,7 @@
         }
 
         .cam-title {
-          display: none;
+          /* display: none; */
         }
       }
 
@@ -434,7 +448,7 @@
             style="color: white"
             href="./list.html"
           >
-            <p class="info"> إسرائيل لايف بيتش كام</p>
+            <p class="info">إسرائيل لايف بيتش كام</p>
             <h2>الكاميرات</h2>
           </a>
           <div class="dropdown">
@@ -444,7 +458,7 @@
               <a href="../en/zvulun.html">EN</a>
               <a href="#">عربى</a>
             </div>
-        </div>
+          </div>
         </div>
       </div>
     </header>
@@ -453,14 +467,17 @@
         <p>
           <a style="color: white" href="./dromi2.html">هرتسليا جنوب |</a>
           <a style="color: white" href="./forcast.html">متنبأ |</a>
-          <a style="color: white" href="./marina.html">هرتسليا مارينا الشمالية</a>
+          <a style="color: white" href="./marina.html"
+            >هرتسليا مارينا الشمالية</a
+          >
         </p>
       </div>
     </nav>
     <div class="main-container">
-      <!-- <div id="cam-title" class="cam-title">BeachCam.co.il</div> -->
-
       <div class="cams-container">
+        <!-- <div id="cam-title" class="cam-title">
+          הרצליה SunBeach Live תחרות הגלישה
+        </div> -->
         <a class="cam-banner-link" href="https://www.facebook.com/yamdakkar1">
           <div class="cam-banner">
             <img src="../images/3.png" alt="Herzelia Sea Scouts" />
@@ -571,7 +588,7 @@
       const timeOut = () =>
         setTimeout(() => {
           changeView();
-        }, 70000);
+        }, 170000);
       timeOut();
 
       cam.onerror = () => {

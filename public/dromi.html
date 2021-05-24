@@ -307,7 +307,7 @@
 
       .ad {
         max-width: 800px;
-        margin: 5px auto;
+        margin: 15px auto;
         min-height: 110px;
       }
 
@@ -393,7 +393,7 @@
         }
 
         .loader-container {
-          top: 160px;
+          top: 215px;
         }
 
         .row-flex {
@@ -456,6 +456,11 @@
         </p>
       </div>
     </nav>
+    <a href="http://marina.art-net.co.il:120/mjpg/video.mjpg" target="_blank">
+      <div class="message">
+         למרינה דרום ניתן לנסות בקישור כאן
+      </div>
+    </a>
     <div class="main-container">
       <!-- <div class="cam-banner-link">
         <a href="http://62.219.45.26:120//mjpg/video.mjpg ">
@@ -464,26 +469,26 @@
           </div>
         </a>
       </div> -->
-      <!-- <img
+      <img
           id="image"
           ondblclick="togglesize()"
-          src="http://62.219.45.26:120//mjpg/video.mjpg"
+          src="http://marina.art-net.co.il:120/mjpg/video.mjpg"
           frameborder="0"
           alt="מצלמת חוף"
           width="100%"
-        /> -->
-      <!-- <div id="cam-title" class="cam-title">BeachCam.co.il</div> -->
+        />
+      <div id="cam-title" class="cam-title">BeachCam.co.il</div>
       <div class="cams-container">
         <!-- 5f790dcadad77 -->
-        <image
+        <!-- <image
           id="cam1"
-          src="https://thumbs.dreamstime.com/b/no-service-rubber-stamp-text-inside-illustration-92087428.jpg"
+          src="http://marina.art-net.co.il:120/mjpg/video.mjpg?timestamp=1617615742827"
           width="100%"
           height="434px"
           frameborder="0"
           autoplay
           allowfullscreen
-        ></image>
+        ></image> -->
       </div>
       <div class="jump-btn" onclick="location.reload()">דלג</div>
     </div>
@@ -574,7 +579,7 @@
         showJumpBtn();
       };
 
-      cam.onload = () => {
+      window.onload = () => {
         loader.style.display = "none";
         camContainer.style.display = "flex";
       };
@@ -587,7 +592,8 @@
 
       cam.onerror = () => {
         clearTimeout(timeOut);
-        window.location = "./list.html";
+        cam.style.width = "100%";
+        cam.src = "./images/errorCam1_Moment.jpg";
       };
     </script>
     <script src="./js/local.js"></script>

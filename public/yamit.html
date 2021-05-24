@@ -36,7 +36,7 @@
       content="כניסה למרינה,הרצליה,דרומי,מצלמת חוף הילטון ,ישראל,מצלמת גלישה, גלים,מצלמת חוף תל אביב, ים תל אביב,ימית,מצלמת ימית,Hilton beach cam ,גלישה,מצב,גלים,שידור,חי,מרינה,beach cam Israel,surf,live,Camera"
     />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-    <link rel="stylesheet" href="./css/css1.css">
+    <link rel="stylesheet" href="./css/css1.css" />
     <link
       rel="shortcut icon"
       type="image/png"
@@ -295,7 +295,7 @@
 
       .ad {
         max-width: 800px;
-        margin: 5px auto;
+        margin: 15px auto;
         min-height: 110px;
       }
 
@@ -347,7 +347,7 @@
 
       @media (max-width: 599px) {
         .cam-title {
-            top: 61%;
+          top: 61%;
         }
         header img {
           width: 115px;
@@ -392,7 +392,7 @@
         }
 
         iframe#cam1 {
-          max-height: 53vw !important;
+          max-height: 53vw;
         }
 
         .loader-container {
@@ -460,7 +460,6 @@
       </div>
     </nav>
     <div class="main-container">
-
       <div class="cams-container">
         <a href="./index.html">
           <div id="cam-title" class="cam-title">BeachCam.co.il</div>
@@ -523,8 +522,8 @@
       </p>
       <p style="color: gold">contact: gal@beachcam.co.il</p>
     </footer>
-     <!-- The Adblock detected Modal -->
-     <div id="myModal" class="modal">
+    <!-- The Adblock detected Modal -->
+    <div id="myModal" class="modal">
       <!-- Modal content -->
       <div class="modal-content">
         <span class="close">&times;</span>
@@ -607,7 +606,7 @@
       const timeOut = () =>
         setTimeout(() => {
           changeView();
-        }, 70000);
+        }, 170000);
       timeOut();
 
       cam.onerror = () => {
@@ -616,35 +615,43 @@
       };
     </script>
     <script src="./js/local.js"></script>
-     <!-- just-detect-adblock -->
-     <script
-     type="text/javascript"
-     src="./just-detect-adblock/dist/bundle.umd.js"
-   ></script>
-   <script type="text/javascript">
-     const addblockPopup = () => {
-       justDetectAdblock.detectAnyAdblocker().then(function (detected) {
-         if (detected) {
-           console.log("BeachCam say: Adblock detected", detected);
-           closeFullscreen();
-           // Get the <span> element that closes the modal
-           var modal = document.getElementById("myModal");
-           var span = document.getElementsByClassName("close")[0];
-           modal.style.display = "block";
-           span.onclick = function () {
-             modal.style.display = "none";
-           };
-           // When the user clicks anywhere outside of the modal, close it
-           window.onclick = function (event) {
-             if (event.target == modal) {
-               modal.style.display = "none";
-             }
-           };
-         }
-       });
-     };
-     setInterval(addblockPopup, 15000);
-   </script>
-   <!-- End just-detect-adblock -->
+    <script src="./ad-blocker.js"></script>
+    <!-- just-detect-adblock -->
+    <script
+      type="text/javascript"
+      src="./just-detect-adblock/dist/bundle.umd.js"
+    ></script>
+    <script type="text/javascript">
+      if (document.getElementById("ads")) {
+        console("Blocking Ads: No");
+      } else {
+        console.log("Blocking Ads: Yes");
+        cam.style.maxHeight = "84vh";
+        cam.src = "./adblockalarm.html";
+      }
+      const addblockPopup = () => {
+        justDetectAdblock.detectAnyAdblocker().then(function (detected) {
+          if (detected) {
+            console.log("BeachCam say: Adblock detected", detected);
+            closeFullscreen();
+            // Get the <span> element that closes the modal
+            var modal = document.getElementById("myModal");
+            var span = document.getElementsByClassName("close")[0];
+            modal.style.display = "block";
+            span.onclick = function () {
+              modal.style.display = "none";
+            };
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            };
+          }
+        });
+      };
+      setInterval(addblockPopup, 15000);
+    </script>
+    <!-- End just-detect-adblock -->
   </body>
 </html>

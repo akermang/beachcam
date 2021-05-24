@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="he-IL">
   <head>
     <!-- Google Tag Manager -->
     <script>
@@ -29,20 +29,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="هرتسليا Marina Entrance, يعيش كاميرا ركوب الأمواج الشاطئ from Israel,home page, شاطئ بحر Surf Cam, surf report Israel updated daily with live HD شاطئ بحر cam stream. Live Israel - Marina HD surf cam"
+      content=", בת גלים, בת גלים חיפה, גלישת רות המועדון,מצלמת חוף בת גלים ישראל, חיפה,מצלמות חוף שידור ישיר ישראל, מצלמת חוף גלים surf report Israel updated daily with live HD Beach cam stream. Live Israel - Haifa Bat Galim Israel HD surf cam"
     />
     <meta
       name="keywords"
-      content="Israel,شاطئ بحر,cam,هرتسليا Marina,جنوب شاطئ بحر,Mrina جنوب,camera, surfing,live, waves, wave cam,Live شاطئ بحر cam هرتسليا,surfing,,sea condition,surf Israel,Live,brodcast,Marina,surf,live,Camera,يعيش كاميرا ركوب الأمواج الشاطئ from Israel"
+      content="הרצליה,דרומי,מרינה צפון,מצלמת גלישה, גלים,מצלמת חוף קזינו חיפה, הרצליה , דבוש , אכדיה ,גלישה , מצב,גלים ,שידור ,חי בת גלים, חיפה, מצלמת גלים, חוף בת גלים חיפה ישראל,מרינה,surf,live,Camera' Beach Cam Israel, מצלמות חוף, מצלמת חוף, מצלמת גלים"
     />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-    <link rel="stylesheet" href="../css/css1.css">
+    <link rel="stylesheet" href="../css/css1.css" />
     <link
       rel="shortcut icon"
       type="image/png"
       href="https://akermang.github.io/WeatherApp/sun-favicon.png"
     />
-    <title>كاميرات ساحل اسرائيل كاميرا الشاطئ | כניסה למרינה هرتسليا</title>
+    <title>Hifa Bat Galim | מצלמות חופים | BeachCam Israel</title>
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
@@ -63,6 +69,7 @@
         0% {
           transform: rotate(0deg);
         }
+
         100% {
           transform: rotate(360deg);
         }
@@ -72,6 +79,7 @@
         from {
           transform: scale(0);
         }
+
         to {
           transform: scale(1);
         }
@@ -114,11 +122,16 @@
 
       nav p {
         font-size: 20px;
+        color: white;
       }
 
       h1,
       h2 {
         font-size: 30px;
+      }
+
+      .light-background {
+        background-color: #0c885a;
       }
 
       div.img {
@@ -136,31 +149,23 @@
       }
 
       .message {
-        background-color: #9C27B0;
-        display: none;
         color: wheat;
         text-align: center;
         font-size: medium;
-        font-weight: bold;
-        border: 1px solid;
-        padding: 7px;
-        margin: 5px 16px;
-        border-radius: 3px;
-        width: 97%;
-        max-width: 786px;
-        margin: 10px auto;
       }
 
       .cams-container {
-        display: none;
+        display: flex;
         flex-wrap: wrap;
         justify-content: center;
         padding: 6px;
         overflow: auto;
         color: wheat;
+        width: 100%;
         max-width: 800px;
         margin: 0px auto;
         position: relative;
+        margin-bottom: 10px;
         min-height: 33vh;
       }
 
@@ -168,8 +173,9 @@
         position: absolute;
         color: white;
         top: 5%;
-        left: 2%;
+        left: 4%;
         font-size: 22px;
+        z-index: 1;
       }
 
       .cams-container.full-size {
@@ -179,7 +185,6 @@
         left: 0;
         max-width: 100%;
         padding: 0;
-        z-index: 1;
       }
 
       .full-size img {
@@ -193,8 +198,8 @@
       }
 
       iframe {
-        width: 100%;
-        /* min-height: 33vh; */
+        width: 98%;
+        /* min-height: 53vh; */
       }
 
       .loader-container {
@@ -202,10 +207,10 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        height: 50vh;
+        height: 40vh;
         width: 100%;
         position: absolute;
-        top: 33%;
+        top: 200px;
       }
 
       .loader {
@@ -220,14 +225,18 @@
         opacity: 1;
       }
 
+      .main-container {
+        position: relative;
+        z-index: 1;
+        max-width: 800px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+      }
+
       .home-btn {
         padding: 4px;
         border-radius: 7px;
-        margin: 2px;
-      }
-
-      .home-btn.special {
-        background-color: #008000a1;
       }
 
       .home-btn.special {
@@ -243,14 +252,14 @@
       }
 
       .jump-btn.show {
-        margin-bottom: 10px;
+        
+        margin: 10px;
+        transform: translateX(56vw);
+        width: 60px;
         font-size: 22px;
         z-index: 10;
+        font-weight: bold;
         display: block;
-        width: 60px;
-        position: absolute;
-        bottom: 0;
-        right: 16%;
         height: 60px;
         background: transparent url("../images/jump.png") no-repeat;
         background-position: center center;
@@ -268,22 +277,71 @@
         opacity: 1;
       }
 
+      #iframe-1 {
+        position: relative;
+        z-index: 2;
+      }
+
       footer {
         /* position: fixed; */
+        bottom: 20px;
         width: 100%;
+        color: gold;
+        z-index: 3;
         margin-bottom: 1em;
       }
 
       .ad {
-        width: 100%;
-        text-align: center;
-        margin: 5px auto;
-        overflow: hidden;
         max-width: 800px;
+        margin: 5px auto;
+        min-height: 110px;
       }
 
-      .error-link {
-        margin: 15px auto;
+      .cam-banner {
+        /* background: #6767e8; */
+        max-width: 800px;
+        margin: 0 auto;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0 2px;
+      }
+
+      .cam-banner .img-responsive {
+        width: 100%;
+        height: 67px;
+      }
+
+      .cam-banner .img-mobile {
+        width: 100%;
+        display: none;
+      }
+
+      .banner-img {
+        height: 60px;
+        max-width: 772px;
+        padding: 0;
+      }
+
+      .banner-img.absolute {
+        position: absolute;
+        left: 8%;
+        border-radius: 50%;
+        height: 42px;
+      }
+
+      .banner-text {
+        font-size: 22px;
+        font-weight: bold;
+        color: black;
+      }
+
+      div.cam-banner-link {
+        z-index: 3;
+        width: 98%;
+        max-width: 796px;
+        margin-top: 5px;
       }
 
       @media (max-width: 914px) {
@@ -305,29 +363,30 @@
         }
       }
 
-      @media (max-width: 768px) {
-        .img img {
-          width: 140px;
-        }
-        .cam-title {
-          font-size: 19px;
-        }
-        h1,
-        h2 {
-          font-size: 22px;
-        }
-      }
-
       @media (max-width: 700px) {
         .img img {
           width: 140px;
         }
+
         .cam-title {
           font-size: 19px;
+          left: 5%;
         }
       }
 
       @media (max-width: 599px) {
+        .cam-banner .img-responsive {
+          display: none;
+        }
+
+        .cam-banner .img-mobile {
+          display: block;
+        }
+
+        .banner-text {
+          font-size: 16px;
+        }
+
         header img {
           width: 115px;
         }
@@ -344,14 +403,9 @@
         h2 {
           font-size: 22px;
         }
-        img {
-          max-height: 53vw;
-          width: 100%;
-        }
 
         .cam-title {
-          left: 4%;
-          font-size: 16px;
+          display: none;
         }
       }
 
@@ -361,14 +415,14 @@
 
       @media (max-width: 530px) {
         .ad {
-          max-width: 100vw!important;
+          max-width: 100vw !important;
           overflow: hidden;
         }
 
         .adsbygoogle {
-         max-width: 100vw!important;
+          max-width: 100vw !important;
         }
-        
+
         .mobile-btn {
           display: block;
           background-color: #2196f3;
@@ -378,10 +432,13 @@
           margin: auto;
           margin: 15px auto;
         }
-        
-        .cam-title {
-          bottom: 5%;
-          top: initial;
+
+        iframe#cam1 {
+          max-height: 53vw !important;
+        }
+
+        .loader-container {
+          top: 160px;
         }
 
         .row-flex {
@@ -391,9 +448,11 @@
           align-items: center;
           padding: 0;
         }
+
         nav p {
           font-size: 18px;
         }
+
         p.info {
           display: none;
         }
@@ -407,108 +466,152 @@
         <div class="w3-container w3-blue row-flex">
           <div class="home-btn">
             <a href="./index.html">
-              <h1>كاميرا ساحل اسرائيل</h1>
-              <!-- <p>לפירסום כאן 054-6817830</p> -->
+              <h1>BEACH CAM ISRAEL</h1>
             </a>
           </div>
           <div class="animat-box-in">
-            <h2> هرتسليا مدخل المارينا</h2>
+            <h2>Haifa Bat Galim</h2>
           </div>
           <a
             class="home-btn title special"
-            style="color: white;"
+            style="color: white"
             href="./list.html"
           >
-            <p class="info"> إسرائيل لايف بيتش كام </p>
-            <h1>الكاميرات</h1>
+            <p class="info">Live Beach surf Cam</p>
+            <h2>CAMERAS</h2>
           </a>
           <div class="dropdown">
-            <button onclick="openDropdown()" class="dropbtn">عربى</button>
+            <button onclick="openDropdown()" class="dropbtn">EN</button>
             <div id="myDropdown" class="dropdown-content">
-              <a href="../marina.out.html">עברית</a>
-              <a href="../en/marina.out.html">EN</a>
-              <a href="#">عربى</a>
+              <a href="../batgalim.html">עברית</a>
+              <a href="#">EN</a>
+              <a href="../arab/batgalim.html">عربى</a>
             </div>
-        </div>
+          </div>
         </div>
       </div>
     </header>
     <nav>
       <div class="animat-box-in">
         <p>
-          <a style="color: white;" href="./dromi2.html">هرتسليا جنوب |</a>
-          <a style="color: white;" href="./forcast.html">متنبأ |</a>
-          <a style="color: white;" href="./marina.html">مرينا الشمالية</a>
+          <a style="color: white" href="./dromi2.html"> Herzeliya south |</a>
+          <a style="color: white" href="./forcast.html">forcast |</a>
+          <a style="color: white" href="./yamit.html">Hilton Tel Aviv</a>
         </p>
       </div>
     </nav>
-    <a href="http://marina.art-net.co.il:140/mjpg/video.mjpg">
-      <div class="message">
-        مدخل المارينا جربه هنا
-      </div>
-    </a>
     <div class="main-container">
+      <!-- <div id="cam-title" class="cam-title">BeachCam.co.il</div> -->
 
-      <section class="cams-container">
-        <div class="cam-title">BeachCam.co.il</div>
-        <iframe
-          id="adsFrame"
-          frameborder="0"
-          height="0"
-        ></iframe>
-        <img
-          id="image"
-          ondblclick="togglesize()"
-          src="http://marina.art-net.co.il:140/mjpg/video.mjpg"
-          frameborder="0"
-          alt="إسرائيل لايف بيتش كام"
-        />
-        <!-- src="http://62.219.45.26:140//mjpg/video.mjpg" -->
-
-        <div class="jump-btn" onclick="location.reload()">
-          تخطى
+      <div class="cams-container">
+        <div class="cam-banner-link">
+          <a href="https://shawatina.rest.co.il/" target="_blank">
+            <div class="cam-banner">
+              <img
+                class="banner-img absolute"
+                src="https://cdn4.iconfinder.com/data/icons/summer-v-2/512/sea_sport_waves_wind_windsurf-512.png"
+              />
+              <img
+              class="img-responsive"
+              src="../images/shawatina-big.jpg"
+              alt="BeachCam"
+            />
+            <img
+              class="img-mobile"
+              src="../images/shawatina-mobile.jpg"
+              alt="BeachCam"
+              height="60px"
+            />
+              <!-- <span class="banner-text">
+                <p>בת גלים</p>
+              </span> -->
+              <!-- <img
+                class="banner-img"
+                src="http://www.rest.co.il/_Intros/shawatina/images/shawatina_04.png"
+                alt="danger"
+              /> -->
+            </div>
+          </a>
         </div>
-      </section>
-      <div class="ad">
-        <script
+        <iframe
+          id="cam1"
+          src="https://g2.ipcamlive.com/player/player.php?alias=60997a5d22ca9&autoplay=1&skin=white"
+          width="800"
+          height="434px"
+          frameborder="0"
+          autoplay
+          allowfullscreen
+        ></iframe>
+      </div>
+      <div class="jump-btn" onclick="location.reload()">skip</div>
+    </div>
+    <div id="loader-container" class="loader-container">
+      <div class="loader"></div>
+    </div>
+    <div class="ad">
+      <script
         async
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-        ></script>
-        <!-- marinaAds -->
-        <ins
-          class="adsbygoogle"
-          style="display: block;"
-          data-ad-client="ca-pub-2190134608327180"
-          data-ad-slot="2338140804"
-          data-ad-format="auto"
-          data-full-width-responsive="true"
-        ></ins>
+      ></script>
+      <!-- adSmall -->
+      <ins
+        class="adsbygoogle"
+        style="display: block"
+        data-ad-client="ca-pub-2190134608327180"
+        data-ad-slot="9146492665"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      ></ins>
       <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
       </script>
     </div>
-    </div>
-    <a class="home-btn mobile-btn" style="color: white;" href="./list.html">
-      <h1>الكاميرات</h1>
+    <a class="home-btn mobile-btn" style="color: white" href="./list.html">
+      <h2>מצלמות חוף נוספות</h2>
     </a>
     <footer>
-      <p style="text-align: center;">
-        <a style="color: gold;" href="./index.html">شاطئ الكام إسرائيل</a>
+      <p style="text-align: center">
+        <a style="color: gold" href="./index.html">
+           Beach Cam Israel</a
+        >
       </p>
-      <p style="color: gold;">اتصل: gal@beachcam.co.il</p>
+      <p style="color: gold">contact: gal@beachcam.co.il</p>
     </footer>
-
-    <div class="loader-container">
-      <div class="loader"></div>
-    </div>
     <script>
-      const adsFrame = document.querySelector("#adsFrame");
-      const cam = document.querySelector("#image");
+      const cam = document.querySelector("#cam1");
       const camContainer = document.querySelector(".cams-container");
-      const camTitle = document.querySelector(".cam-title");
+      // const camTitle = document.querySelector("#cam-title");
       const loader = document.querySelector(".loader-container");
       const message = document.querySelector(".message");
       const jumpBtn = document.querySelector(".jump-btn");
+
+      const elem = document.documentElement;
+      const openFullscreen = () => {
+        if (elem.requestFullscreen) {
+          elem.requestFullscreen();
+        } else if (elem.mozRequestFullScreen) {
+          /* Firefox */
+          elem.mozRequestFullScreen();
+        } else if (elem.webkitRequestFullscreen) {
+          /* Chrome, Safari & Opera */
+          elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen) {
+          /* IE/Edge */
+          elem.msRequestFullscreen();
+        }
+      };
+
+      const closeFullscreen = () => {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        } else if (document.mozCancelFullScreen) {
+          document.mozCancelFullScreen();
+        } else if (document.webkitExitFullscreen) {
+          document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) {
+          document.msExitFullscreen();
+        }
+      };
 
       const showJumpBtn = () => {
         jumpBtn.classList.add("show");
@@ -518,32 +621,14 @@
         camContainer.classList.toggle("full-size");
       };
 
-      const closeFullscreen = () => {
-        if (document.exitFullscreen) {
-          document.exitFullscreen();
-        } else if (document.mozCancelFullScreen) { /* Firefox */
-          document.mozCancelFullScreen();
-        } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
-          document.webkitExitFullscreen();
-        } else if (document.msExitFullscreen) { /* IE/Edge */
-          document.msExitFullscreen();
-        }
-      };
-
       const changeView = () => {
-        adsFrame.style.minHeight = "50vh";
-        adsFrame.src = "../ad1.html"
-        cam.style.display = "none";
-        // closeFullscreen();
-        // cam.style.maxWidth = "300px";
+        cam.style.maxWidth = "800px";
         cam.style.position = "static";
-        // cam.style.height = "70px";
-        // cam.style.borderRadius = "52%";
-        // cam.style.margin = "15%";
-        // cam.onclick = () => location.reload();
-        camTitle.style.display = "none";
-        camContainer.classList.remove("full-size");
-        // cam.src = "./images/tosess.png";
+        cam.style.maxHeight = "53vh";
+        cam.style.margin = "30px 15%";
+        // camTitle.style.display = "none";
+        closeFullscreen();
+        cam.src = "../ad13a7a2020.html";
         showJumpBtn();
       };
 
@@ -555,14 +640,12 @@
       const timeOut = () =>
         setTimeout(() => {
           changeView();
-        }, 30000);
+        }, 90000);
       timeOut();
 
       cam.onerror = () => {
         clearTimeout(timeOut);
-        cam.style.width = "100%";
-        cam.src = "../images/errorCam1_Moment.jpg";
-        message.style.display = "block";
+        window.location = "./list.html";
       };
     </script>
     <script src="../js/local.js"></script>

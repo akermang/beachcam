@@ -170,12 +170,26 @@
       }
 
       .cam-title {
+        text-align: right;
+        padding: 0 0.5em 0 1em;
         position: absolute;
-        color: white;
-        top: 5%;
-        left: 4%;
-        font-size: 22px;
-        z-index: 1;
+        color: #ffffff;
+        background-color: #ff0000;
+        background-image: linear-gradient(
+          to right,
+          #c32727,
+          #903e3e,
+          #f44336,
+          #f44336,
+          #5b130d,
+          #82131f,
+          #651711,
+          #da3b2f
+        );
+        top: 78px;
+        right: 3%;
+        font-size: 17px;
+        z-index: 5;
       }
 
       .cams-container.full-size {
@@ -292,7 +306,7 @@
 
       .ad {
         max-width: 800px;
-        margin: 5px auto;
+        margin: 15px auto;
         min-height: 110px;
       }
 
@@ -322,7 +336,7 @@
           width: 140px;
         }
         .cam-title {
-          font-size: 19px;
+          font-size: 15px;
         }
         h1,
         h2 {
@@ -336,8 +350,8 @@
         }
 
         .cam-title {
-          font-size: 19px;
-          left: 5%;
+          font-size: 13px;
+          /* left: 5%; */
         }
       }
 
@@ -360,7 +374,7 @@
         }
 
         .cam-title {
-          display: none;
+          /* display: none; */
         }
       }
 
@@ -465,6 +479,9 @@
             <img src="./images/3.png" alt="Herzelia Sea Scouts" />
           </div>
         </a>
+        <!-- <div id="cam-title" class="cam-title">
+          הרצליה SunBeach Live תחרות הגלישה
+        </div> -->
         <iframe
           id="cam1"
           src="https://g2.ipcamlive.com/player/player.php?alias=5f6f2b822c9d7&autoplay=1&skin=white"
@@ -592,7 +609,7 @@
       const timeOut = () =>
         setTimeout(() => {
           changeView();
-        }, 70000);
+        },170000);
       timeOut();
 
       cam.onerror = () => {

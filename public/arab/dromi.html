@@ -153,9 +153,19 @@
       }
 
       .message {
+        background-color: #9C27B0;
+        display: block;
         color: wheat;
         text-align: center;
         font-size: medium;
+        font-weight: bold;
+        border: 1px solid;
+        padding: 7px;
+        margin: 5px 16px;
+        border-radius: 3px;
+        width: 97%;
+        max-width: 786px;
+        margin: 10px auto;
       }
 
       .cams-container {
@@ -297,7 +307,7 @@
 
       .ad {
         max-width: 800px;
-        margin: 5px auto;
+        margin: 15px auto;
         min-height: 110px;
       }
 
@@ -383,7 +393,7 @@
         }
 
         .loader-container {
-          top: 160px;
+          top: 215px;
         }
 
         .row-flex {
@@ -446,19 +456,23 @@
         </p>
       </div>
     </nav>
+    <a href="http://marina.art-net.co.il:120/mjpg/video.mjpg" target="_blank">
+      <div class="message">
+        هرتسليا مارينا الجنوب على الرابط هنا
+      </div>
+    </a>
     <div class="main-container">
       <!-- <div id="cam-title" class="cam-title">BeachCam.co.il</div> -->
 
       <div class="cams-container">
-        <iframe
-          id="cam1"
-          src="https://g2.ipcamlive.com/player/player.php?alias=5f6364b5551d7&autoplay=1&skin=white"
-          width="800"
-          height="434px"
+        <img
+          id="image"
+          ondblclick="togglesize()"
+          src="http://marina.art-net.co.il:120/mjpg/video.mjpg"
           frameborder="0"
-          autoplay
-          allowfullscreen
-        ></iframe>
+          alt="מצלמת חוף"
+          width="100%"
+        />
       </div>
       <div class="jump-btn" onclick="location.reload()">تخطى</div>
     </div>
@@ -556,7 +570,7 @@
         setTimeout(() => {
           changeView();
         }, 55000);
-      timeOut();
+      // timeOut();
 
       cam.onerror = () => {
         clearTimeout(timeOut);

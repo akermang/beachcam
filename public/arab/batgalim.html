@@ -36,13 +36,13 @@
       content="הרצליה,דרומי,מרינה צפון,מצלמת גלישה, גלים,מצלמת חוף זבולון, הרצליה , דבוש , אכדיה ,גלישה , מצב,גלים ,שידור ,חי בת גלים, חיפה, מצלמת גלים, חוף בת גלים חיפה ישראל,מרינה,surf,live,Camera' Beach Cam Israel, מצלמות חוף, מצלמת חוף, מצלמת גלים"
     />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-    <link rel="stylesheet" href="./css/css1.css">
+    <link rel="stylesheet" href="../css/css1.css" />
     <link
       rel="shortcut icon"
       type="image/png"
       href="https://akermang.github.io/WeatherApp/sun-favicon.png"
     />
-    <title>חוף זבולון הרצליה | מצלמות חופים | BeachCam Israel</title>
+    <title>בת גלים חיפה | מצלמות חופים | BeachCam Israel</title>
     <meta
       http-equiv="Cache-Control"
       content="no-cache, no-store, must-revalidate"
@@ -252,16 +252,15 @@
       }
 
       .jump-btn.show {
-        margin-bottom: 10px;
-        margin-bottom: 10px;
-        transform: translateX(30vw);
+        margin: 10px;
+        transform: translateX(56vw);
         width: 60px;
         font-size: 22px;
         z-index: 10;
         font-weight: bold;
         display: block;
         height: 60px;
-        background: transparent url("./images/jump.png") no-repeat;
+        background: transparent url("../images/jump.png") no-repeat;
         background-position: center center;
         background-size: contain;
         outline: 0 !important;
@@ -293,12 +292,13 @@
 
       .ad {
         max-width: 800px;
-        margin: 5px auto;
+        margin: 15px auto;
         min-height: 110px;
       }
 
       .cam-banner {
-        background: #ffffff;
+        position: relative;
+        /* background: #6767e8; */
         max-width: 800px;
         margin: 0 auto;
         width: 100%;
@@ -308,8 +308,27 @@
         padding: 0 2px;
       }
 
+      .cam-banner .img-responsive {
+        width: 100%;
+        height: 67px;
+      }
+
+      .cam-banner .img-mobile {
+        width: 100%;
+        display: none;
+      }
+
       .banner-img {
         height: 60px;
+        max-width: 772px;
+        padding: 0;
+      }
+      
+      .banner-img.absolute {
+        position: absolute;
+        left: 8%;
+        border-radius: 50%;
+        height: 42px;
       }
 
       .banner-text {
@@ -356,10 +375,18 @@
       }
 
       @media (max-width: 599px) {
+        .cam-banner .img-responsive {
+          display: none;
+        }
+
+        .cam-banner .img-mobile {
+          display: block;
+        }
+
         .banner-text {
           font-size: 16px;
         }
-        
+
         header img {
           width: 115px;
         }
@@ -439,27 +466,27 @@
         <div class="w3-container w3-blue row-flex">
           <div class="home-btn">
             <a href="./index.html">
-              <h1>BEACH CAM ISRAEL</h1>
-              <p>מצלמות חוף</p>
+              <h1>كاميرا ساحل اسرائيل</h1>
             </a>
           </div>
           <div class="animat-box-in">
-            <h2>חיפה בת גלים</h2>
+            <h2>هيفاء بات غاليم</h2>
           </div>
           <a
             class="home-btn title special"
             style="color: white"
             href="./list.html"
           >
-            <p class="info">שידור חי - מצלמת חוף</p>
-            <h2>מצלמות חוף נוספות</h2>
+            <p class="info"> إسرائيل لايف بيتش كام</p>
+            <h2>الكاميرات</h2>
           </a>
           <div class="dropdown">
-            <button onclick="openDropdown()" class="dropbtn">HEB</button>
+            <button onclick="openDropdown()" class="dropbtn">عربى</button>
             <div id="myDropdown" class="dropdown-content">
-              <a href="#">עברית</a>
-              <a href="./en/backdoor.html">EN</a>
-              <a href="./arab/backdoor.html">عربى</a>
+              <a href="../batgalim.html">עברית</a>
+              <a href="../en/batgalim.html">EN</a>
+              <a href="#">عربى</a>
+              
             </div>
           </div>
         </div>
@@ -468,9 +495,9 @@
     <nav>
       <div class="animat-box-in">
         <p>
-          <a style="color: white" href="./dromi2.html"> לדרומי הרצליה |</a>
-          <a style="color: white" href="./forcast.html">תחזית גלים |</a>
-          <a style="color: white" href="./list.html">מצלמות</a>
+          <a style="color: white" href="./dromi2.html">هرتسليا جنوب |</a>
+          <a style="color: white" href="./forcast.html">متنبأ |</a>
+          <a style="color: white" href="./list.html">الكاميرات</a>
         </p>
       </div>
     </nav>
@@ -478,18 +505,38 @@
       <!-- <div id="cam-title" class="cam-title">BeachCam.co.il</div> -->
 
       <div class="cams-container">
-        <div class="cam-banner-link" href="https://www.facebook.com/yamdakkar1">
-          <div class="cam-banner">
-            <img class="banner-img" src="https://images-na.ssl-images-amazon.com/images/I/61TLayiefbL._AC_SX679_.jpg" alt="Haifa Backdoor" />
-            <span class="banner-text">
-                <p> חיפה הבקדור | בת גלים</p>
-            </span>
-            <img class="banner-img" src="https://rlv.zcache.com/locals_only_to_surf_danger_sign_surfing_classic_round_sticker-r3c2c53dfeb7743b39a94b54b8dc0834c_0ugmp_8byvr_492.jpg?rvtype=content" alt="danger" />
-          </div>
+        <div class="cam-banner-link">
+          <a href="https://shawatina.rest.co.il/" target="_blank">
+            <div class="cam-banner">
+              <img
+                class="banner-img absolute"
+                src="https://cdn4.iconfinder.com/data/icons/summer-v-2/512/sea_sport_waves_wind_windsurf-512.png"
+              />
+              <img
+              class="img-responsive"
+              src="../images/shawatina-big.jpg"
+              alt="BeachCam"
+            />
+            <img
+              class="img-mobile"
+              src="../images/shawatina-mobile.jpg"
+              alt="BeachCam"
+              height="60px"
+            />
+              <!-- <span class="banner-text">
+                <p>בת גלים</p>
+              </span> -->
+              <!-- <img
+                class="banner-img"
+                src="http://www.rest.co.il/_Intros/shawatina/images/shawatina_04.png"
+                alt="danger"
+              /> -->
+            </div>
+          </a>
         </div>
         <iframe
           id="cam1"
-          src="https://g2.ipcamlive.com/player/player.php?alias=5f6364b5551d7&autoplay=1&skin=white"
+          src="https://g2.ipcamlive.com/player/player.php?alias=60997a5d22ca9&autoplay=1&skin=white"
           width="800"
           height="434px"
           frameborder="0"
@@ -497,7 +544,7 @@
           allowfullscreen
         ></iframe>
       </div>
-      <div class="jump-btn" onclick="location.reload()">דלג</div>
+      <div class="jump-btn" onclick="location.reload()">يتخطى</div>
     </div>
     <div id="loader-container" class="loader-container">
       <div class="loader"></div>
@@ -526,10 +573,10 @@
     <footer>
       <p style="text-align: center">
         <a style="color: gold" href="./index.html">
-          מצלמת חוף Beach Cam Israel</a
+          شاطئ الكام إسرائيل</a
         >
       </p>
-      <p style="color: gold">contact</p>
+      <p style="color: gold">contact: gal@beachcam.co.il</p>
     </footer>
     <script>
       const cam = document.querySelector("#cam1");
@@ -582,7 +629,7 @@
         cam.style.margin = "30px 15%";
         // camTitle.style.display = "none";
         closeFullscreen();
-        cam.src = "./ad13a7a2020.html";
+        cam.src = "../ad13a7a2020.html";
         showJumpBtn();
       };
 
@@ -594,7 +641,7 @@
       const timeOut = () =>
         setTimeout(() => {
           changeView();
-        }, 70000);
+        }, 90000);
       timeOut();
 
       cam.onerror = () => {
@@ -602,6 +649,6 @@
         window.location = "./list.html";
       };
     </script>
-    <script src="./js/local.js"></script>
+    <script src="../js/local.js"></script>
   </body>
 </html>

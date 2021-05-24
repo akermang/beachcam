@@ -33,7 +33,7 @@
       content="כניסה למרינה,הרצליה,דרומי,מרינה צפון,מצלמת גלישה, גלים,מצלמת חוף הרצליה,גלישה,מצב,גלים,שידור,חי,מרינה,surf,live,Camera"
     />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-    <link rel="stylesheet" href="./css/css1.css">
+    <link rel="stylesheet" href="./css/css1.css" />
     <link
       rel="shortcut icon"
       type="image/png"
@@ -291,7 +291,7 @@
 
       .ad {
         max-width: 800px;
-        margin: 5px auto;
+        margin: 15px auto;
         min-height: 110px;
       }
 
@@ -354,14 +354,14 @@
 
       @media (max-width: 530px) {
         .ad {
-          max-width: 100vw!important;
+          max-width: 100vw !important;
           overflow: hidden;
         }
-        
+
         .adsbygoogle {
-         max-width: 100vw!important;
+          max-width: 100vw !important;
         }
-        
+
         .mobile-btn {
           display: block;
           background-color: #2196f3;
@@ -373,7 +373,7 @@
         }
 
         iframe#cam1 {
-          max-height: 53vw !important;
+          max-height: 53vw;
         }
 
         .loader-container {
@@ -414,7 +414,7 @@
           </div>
           <a
             class="home-btn title special"
-            style="color: white;"
+            style="color: white"
             href="./list.html"
           >
             <p class="info">שידור חי - מצלמת חוף</p>
@@ -445,7 +445,7 @@
       <div class="message"> צוות</div>
       <div class="message"> BeachCam Israel</div> -->
     </nav>
-    
+
     <div class="main-container">
       <!-- <div id="cam-title" class="cam-title">BeachCam.co.il</div> -->
 
@@ -460,9 +460,7 @@
           allowfullscreen
         ></iframe>
       </div>
-      <div class="jump-btn" onclick="location.reload()">
-        דלג
-      </div>
+      <div class="jump-btn" onclick="location.reload()">דלג</div>
     </div>
     <div id="loader-container" class="loader-container">
       <div class="loader"></div>
@@ -475,7 +473,7 @@
       <!-- adSmall -->
       <ins
         class="adsbygoogle"
-        style="display: block;"
+        style="display: block"
         data-ad-client="ca-pub-2190134608327180"
         data-ad-slot="9146492665"
         data-ad-format="auto"
@@ -485,17 +483,19 @@
         (adsbygoogle = window.adsbygoogle || []).push({});
       </script>
     </div>
-    <a class="home-btn mobile-btn" style="color: white;" href="./list.html">
+    <a class="home-btn mobile-btn" style="color: white" href="./list.html">
       <h2>מצלמות חוף נוספות</h2>
     </a>
     <footer>
-      <p style="text-align: center;">
-        <a style="color: gold;" href="./index.html"> מצלמת חוף Beach Cam Israel</a>
+      <p style="text-align: center">
+        <a style="color: gold" href="./index.html">
+          מצלמת חוף Beach Cam Israel</a
+        >
       </p>
-      <p style="color: gold;">contact: gal@beachcam.co.il</p>
+      <p style="color: gold">contact: gal@beachcam.co.il</p>
     </footer>
-     <!-- The Adblock detected Modal -->
-     <div id="myModal" class="modal">
+    <!-- The Adblock detected Modal -->
+    <div id="myModal" class="modal">
       <!-- Modal content -->
       <div class="modal-content">
         <span class="close">&times;</span>
@@ -577,7 +577,7 @@
       const timeOut = () =>
         setTimeout(() => {
           changeView();
-        }, 65000);
+        }, 170000);
       timeOut();
 
       cam.onerror = () => {
@@ -586,35 +586,44 @@
       };
     </script>
     <script src="./js/local.js"></script>
-     <!-- just-detect-adblock -->
-     <script
-     type="text/javascript"
-     src="./just-detect-adblock/dist/bundle.umd.js"
-   ></script>
-   <script type="text/javascript">
-     const addblockPopup = () => {
-       justDetectAdblock.detectAnyAdblocker().then(function (detected) {
-         if (detected) {
-           console.log("BeachCam say: Adblock detected", detected);
-           closeFullscreen();
-           // Get the <span> element that closes the modal
-           var modal = document.getElementById("myModal");
-           var span = document.getElementsByClassName("close")[0];
-           modal.style.display = "block";
-           span.onclick = function () {
-             modal.style.display = "none";
-           };
-           // When the user clicks anywhere outside of the modal, close it
-           window.onclick = function (event) {
-             if (event.target == modal) {
-               modal.style.display = "none";
-             }
-           };
-         }
-       });
-     };
-     setInterval(addblockPopup, 15000);
-   </script>
-   <!-- End just-detect-adblock -->
+    <script src="./ad-blocker.js"></script>
+    <!-- just-detect-adblock -->
+    <script
+      type="text/javascript"
+      src="./just-detect-adblock/dist/bundle.umd.js"
+    ></script>
+    <script type="text/javascript">
+      if (document.getElementById("ads")) {
+        console("Blocking Ads: No");
+      } else {
+        console.log("Blocking Ads: Yes");
+        cam.style.maxHeight = "83vh";
+        cam.src = "./adblockalarm.html";
+      }
+
+      const addblockPopup = () => {
+        justDetectAdblock.detectAnyAdblocker().then(function (detected) {
+          if (detected) {
+            console.log("BeachCam say: Adblock detected", detected);
+            closeFullscreen();
+            // Get the <span> element that closes the modal
+            var modal = document.getElementById("myModal");
+            var span = document.getElementsByClassName("close")[0];
+            modal.style.display = "block";
+            span.onclick = function () {
+              modal.style.display = "none";
+            };
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            };
+          }
+        });
+      };
+      setInterval(addblockPopup, 15000);
+    </script>
+    <!-- End just-detect-adblock -->
   </body>
 </html>
