@@ -21,15 +21,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
-    name="description"
-    content="Haifa surf club Israel surf cam, Live beach surf cam from Israel,home page, Beach Surf Cam, surf report Israel updated daily with live HD Beach cam stream. Live Israel - Marina HD surf cam"
-  />
-  <meta
-    name="keywords"
-    content="Haifa,surf club, Israel, surf cam,Israel,beach,cam,camera, surfing,live, waves, wave cam,Live beach cam Herzlia,surfing,,sea condition,surf Israel,Live,brodcast,Marina,surf,live,Camera,Live beach surf cam from Israel"
-  />
+      name="description"
+      content="Haifa surf club Israel surf cam, Live beach surf cam from Israel,home page, Beach Surf Cam, surf report Israel updated daily with live HD Beach cam stream. Live Israel - Marina HD surf cam"
+    />
+    <meta
+      name="keywords"
+      content="Haifa,surf club, Israel, surf cam,Israel,beach,cam,camera, surfing,live, waves, wave cam,Live beach cam Herzlia,surfing,,sea condition,surf Israel,Live,brodcast,Marina,surf,live,Camera,Live beach surf cam from Israel"
+    />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-    <link rel="stylesheet" href="../css/css1.css">
+    <link rel="stylesheet" href="../css/css1.css" />
     <link
       rel="shortcut icon"
       type="image/png"
@@ -158,8 +158,8 @@
       .cam-title {
         position: absolute;
         color: white;
-        top: 9%;
-        left: 2%;
+        bottom: 5%;
+        left: 3%;
         font-size: 22px;
         z-index: 1;
       }
@@ -276,6 +276,53 @@
         width: 100%;
         z-index: 3;
       }
+      .cam-banner {
+        position: relative;
+        /* background: #6767e8; */
+        max-width: 800px;
+        margin: 0 auto;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0 2px;
+      }
+
+      .cam-banner .img-responsive {
+        width: 100%;
+        height: 67px;
+      }
+
+      .cam-banner .img-mobile {
+        width: 100%;
+        display: none;
+      }
+
+      .banner-img {
+        height: 60px;
+        max-width: 772px;
+        padding: 0;
+      }
+
+      .banner-img.absolute {
+        position: absolute;
+        left: 8%;
+        border-radius: 50%;
+        height: 42px;
+      }
+
+      .banner-text {
+        font-size: 22px;
+        font-weight: bold;
+        color: black;
+      }
+
+      div.cam-banner-link {
+        z-index: 3;
+        width: 98%;
+        max-width: 796px;
+        margin-top: 5px;
+      }
 
       @media (max-width: 914px) {
         .cams-container P {
@@ -289,7 +336,7 @@
         }
         .cam-title {
           font-size: 19px;
-          left: 6%;
+          left: 3%;
         }
         h1,
         h2 {
@@ -382,7 +429,7 @@
             style="color: white"
             href="./list.html"
           >
-            <p class="info"> Israel Live Beach Cam</p>
+            <p class="info">Israel Live Beach Cam</p>
             <h1>CAMERAS</h1>
           </a>
           <div class="dropdown">
@@ -392,14 +439,16 @@
               <a href="#">EN</a>
               <a href="../arab/testcam1.html">عربى</a>
             </div>
-        </div>
+          </div>
         </div>
       </div>
     </header>
     <nav>
       <div class="animat-box-in">
         <p>
-          <a style="color: white" href="./dromi.html">Herzelia Marina South |</a>
+          <a style="color: white" href="./dromi.html"
+            >Herzelia Marina South |</a
+          >
           <a style="color: white" href="./forcast.html">Forcast |</a>
           <a style="color: white" href="./list.html">cameras</a>
         </p>
@@ -408,6 +457,17 @@
     <div class="message"></div>
     <div class="main-container">
       <div class="cam-title">BeachCam.co.il</div>
+      <div class="cam-banner-link">
+        <a href="https://www.surfclub.co.il/" target="_blank">
+          <div class="cam-banner">
+            <img
+              class="img-responsive"
+              src="https://images.leveredgecdn.com/5fbcf3fe9af8790f9530e9a8/wp-content/uploads/2020/10/logo-website.png"
+              alt="BeachCam"
+            />
+          </div>
+        </a>
+      </div>
       <!-- <iframe
         src="https://www.youtube.com/embed/live_stream?channel=UCULiEti0N2Hp074QDes2ADw&amp;autoplay=1"
         width="720"
@@ -417,14 +477,14 @@
         allowfullscreen
       ></iframe> -->
       <iframe
-      id="cam1"
-      src="https://g2.ipcamlive.com/player/player.php?alias=60acaa1aeee83&autoplay=1&skin=white"
-      width="800"
-      height="434px"
-      frameborder="0"
-      autoplay
-      allowfullscreen
-    ></iframe>
+        id="cam1"
+        src="https://g2.ipcamlive.com/player/player.php?alias=60acaa1aeee83&autoplay=1&skin=white"
+        width="800"
+        height="434px"
+        frameborder="0"
+        autoplay
+        allowfullscreen
+      ></iframe>
 
       <div class="jump-btn" onclick="location.reload()">skip</div>
     </div>
@@ -436,9 +496,7 @@
     </a>
     <footer>
       <p style="text-align: center">
-        <a style="color: gold" href="./index.html">
-         Beach Cam Israel</a
-        >
+        <a style="color: gold" href="./index.html"> Beach Cam Israel</a>
       </p>
       <p style="color: gold">contact: gal@beachcam.co.il</p>
     </footer>

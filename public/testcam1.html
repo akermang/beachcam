@@ -26,7 +26,7 @@
       content="כניסה למרינה,הרצליה,דרומי,מרינה צפון,מצלמת גלישה, גלים,מצלמת חוף הרצליה,גלישה,מצב,גלים,שידור,חי,מרינה,surf,live,Camera"
     />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-    <link rel="stylesheet" href="./css/css1.css">
+    <link rel="stylesheet" href="./css/css1.css" />
     <link
       rel="shortcut icon"
       type="image/png"
@@ -155,8 +155,8 @@
       .cam-title {
         position: absolute;
         color: white;
-        top: 9%;
-        left: 2%;
+        bottom: 5%;
+        left: 3%;
         font-size: 22px;
         z-index: 1;
       }
@@ -269,10 +269,57 @@
       }
 
       footer {
-        position: fixed;
-        bottom: 30px;
+        margin-top: 20px;
         width: 100%;
         z-index: 3;
+      }
+
+      .cam-banner {
+        position: relative;
+        /* background: #6767e8; */
+        max-width: 800px;
+        margin: 0 auto;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0 2px;
+      }
+
+      .cam-banner .img-responsive {
+        width: 100%;
+        height: 67px;
+      }
+
+      .cam-banner .img-mobile {
+        width: 100%;
+        display: none;
+      }
+
+      .banner-img {
+        height: 60px;
+        max-width: 772px;
+        padding: 0;
+      }
+
+      .banner-img.absolute {
+        position: absolute;
+        left: 8%;
+        border-radius: 50%;
+        height: 42px;
+      }
+
+      .banner-text {
+        font-size: 22px;
+        font-weight: bold;
+        color: black;
+      }
+
+      div.cam-banner-link {
+        z-index: 3;
+        width: 98%;
+        max-width: 796px;
+        margin-top: 5px;
       }
 
       @media (max-width: 914px) {
@@ -287,7 +334,7 @@
         }
         .cam-title {
           font-size: 19px;
-          left: 6%;
+          left: 3%;
         }
         h1,
         h2 {
@@ -406,6 +453,17 @@
     <div class="message"></div>
     <div class="main-container">
       <div class="cam-title">BeachCam.co.il</div>
+      <div class="cam-banner-link">
+        <a href="https://www.surfclub.co.il/" target="_blank">
+          <div class="cam-banner">
+            <img
+              class="img-responsive"
+              src="https://images.leveredgecdn.com/5fbcf3fe9af8790f9530e9a8/wp-content/uploads/2020/10/logo-website.png"
+              alt="BeachCam"
+            />
+          </div>
+        </a>
+      </div>
       <!-- <iframe
         src="https://www.youtube.com/embed/live_stream?channel=UCULiEti0N2Hp074QDes2ADw&amp;autoplay=1"
         width="720"
@@ -415,14 +473,14 @@
         allowfullscreen
       ></iframe> -->
       <iframe
-      id="cam1"
-      src="https://g2.ipcamlive.com/player/player.php?alias=60acaa1aeee83&autoplay=1&skin=white"
-      width="800"
-      height="434px"
-      frameborder="0"
-      autoplay
-      allowfullscreen
-    ></iframe>
+        id="cam1"
+        src="https://g2.ipcamlive.com/player/player.php?alias=60acaa1aeee83&autoplay=1&skin=white"
+        width="800"
+        height="434px"
+        frameborder="0"
+        autoplay
+        allowfullscreen
+      ></iframe>
 
       <div class="jump-btn" onclick="location.reload()">דלג</div>
     </div>
