@@ -162,6 +162,7 @@ header .home-btn.special.title  {
 
 header .home-btn.home-link-h1 {
   background-color: inherit;
+  border: none;
 }
 
 @media (max-width: 1099px) {
