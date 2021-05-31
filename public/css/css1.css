@@ -152,6 +152,18 @@
   cursor: pointer;
 }
 
+header .home-btn {
+  border: 1px solid white;
+}
+
+header .home-btn.special.title  {
+  border: none;
+}
+
+header .home-btn.home-link-h1 {
+  background-color: inherit;
+}
+
 @media (max-width: 1099px) {
   .dropdown,
   .dropdown-content {
@@ -164,5 +176,9 @@
 @media (max-width: 599px) {
   .snapshot-title {
     position: static;
+  }
+
+  header .home-btn {
+    margin-top: 0.5em;
   }
 }
