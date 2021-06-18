@@ -11,6 +11,9 @@ body {
 .w3-container .home-btn a {
   color: white;
 }
+nav p a {
+  color: white;
+}
 
 .dropbtn {
   background-color: inherit;
