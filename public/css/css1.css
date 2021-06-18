@@ -3,6 +3,10 @@ body {
   font-family: Arial, sans-serif;
 }
 
+.ad {
+  text-align: center;
+}
+
 .w3-container{
   display: flex;
   justify-content: space-evenly!important;
