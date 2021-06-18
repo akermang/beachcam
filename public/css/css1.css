@@ -6,6 +6,7 @@ body {
   display: flex;
   justify-content: space-evenly!important;
   color: white;
+  background-color: rebeccapurple;
 }
 
 .w3-container .home-btn a {
