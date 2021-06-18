@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  font-family: Arial, sans-serif;
 }
 
 .w3-container{
@@ -7,6 +8,10 @@ body {
   justify-content: space-evenly!important;
   color: white;
   background-color: rebeccapurple;
+}
+
+.w3-container.row-flex {
+  padding: 0.35em;
 }
 
 .w3-container .home-btn a {
