@@ -11,7 +11,7 @@ body {
   display: flex;
   justify-content: space-evenly!important;
   color: white;
-  background-color: rebeccapurple;
+  background-color: #363945;
 }
 
 nav p {
@@ -27,7 +27,7 @@ nav p {
 }
 
 .home-btn.mobile-btn {
-  background-color: rebeccapurple ;
+  background-color: #363945 ;
 }
 
 .w3-container.row-flex {
