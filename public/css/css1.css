@@ -10,7 +10,7 @@ body {
 .w3-container{
   display: flex;
   justify-content: space-evenly!important;
-  color: #FDAC53;
+  color: white;
   background-color: #363945;
 }
 
@@ -40,10 +40,10 @@ nav p {
 }
 
 .w3-container .home-btn a {
-  color: #FDAC53;
+  color: white;
 }
 nav p a {
-  color: #FDAC53;
+  color: white;
 }
 
 .dropbtn {
