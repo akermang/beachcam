@@ -219,6 +219,7 @@ header .home-btn.home-link-h1 {
     left: 0;
     right: unset;
     top: 0;
+    z-index: 2;
   }
 }
 
