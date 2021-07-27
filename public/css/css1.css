@@ -155,10 +155,9 @@ nav p a {
   left: 0;
   top: 0;
   width: 100%; /* Full width */
-  height: 71%; /* Full height */
+  height: 100%; /* Full height */
+  max-height: 527px;
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* #2c2e37 w/ opacity */
 }
 
 /* Modal Content */
