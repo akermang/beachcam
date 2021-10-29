@@ -634,7 +634,9 @@
             // Get the <span> element that closes the modal
             var modal = document.getElementById("myModal");
             var span = document.getElementsByClassName("close")[0];
+            var mainContainer = document.getElementsByClassName("main-container")[0];
             modal.style.display = "block";
+            mainContainer.style.opacity = "0.2"
             span.onclick = function () {
               modal.style.display = "none";
             };
