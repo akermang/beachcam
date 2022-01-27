@@ -18,6 +18,20 @@
       })(window, document, "script", "dataLayer", "GTM-WPTQ3HT");
     </script>
     <!-- End Google Tag Manager -->
+    <script>
+      /**
+      * Function that captures a click on an outbound link in Analytics.
+      * This function takes a valid URL string as an argument, and uses that URL string
+      * as the event label. Setting the transport method to 'beacon' lets the hit be sent
+      * using 'navigator.sendBeacon' in browser that support it.
+      */
+      var captureOutboundLink = function(url) {
+         ga('send', 'event', 'outbound', 'click', url, {
+           'transport': 'beacon',
+           'hitCallback': function(){document.location = url;}
+         });
+      }
+    </script>
     <!-- adsense  -->
     <script
       data-ad-client="ca-pub-2190134608327180"
@@ -482,7 +496,7 @@
       <div class="message"> BeachCam Israel</div> -->
     </nav>
     <div class="cam-banner-link">
-      <a id="alfaSurAd" href="https://bebetter.ravpage.co.il/KikFin?BeachCam">
+      <a id="alfaSurAd" href="https://bebetter.ravpage.co.il/KikFin?BeachCam" onclick='captureOutboundLink("Alfa Surf Campain")'>
         <div class="cam-banner">
           <img
             class="img-responsive"
