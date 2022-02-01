@@ -3,6 +3,20 @@
   <head>
     <!-- Google Tag Manager -->
     <script>
+      /**
+      * Function that captures a click on an outbound link in Analytics.
+      * This function takes a valid URL string as an argument, and uses that URL string
+      * as the event label. Setting the transport method to 'beacon' lets the hit be sent
+      * using 'navigator.sendBeacon' in browser that support it.
+      */
+      var captureOutboundLink = function(url) {
+         ga('send', 'event', 'outbound', 'click', url, {
+           'transport': 'beacon',
+           'hitCallback': function(){document.location = url;}
+         });
+      }
+    </script>
+    <script>
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
         w[l].push({
@@ -307,6 +321,13 @@
         width: 100%;
       }
 
+      .cam-banner.alfa {
+        background-color: #2c2e37;
+        text-align: center;
+        width: 98%;
+        margin: 7px auto;
+      }
+
       a.cam-banner-link {
         z-index: 3;
         width: 98%;
@@ -461,9 +482,26 @@
     </nav>
     <div class="main-container">
       <div class="cams-container">
-        <a href="./index.html">
+        <div class="cam-banner-link">
+          <a id="alfaSurAd" href="https://bebetter.ravpage.co.il/KikFin?BeachCam" onclick='captureOutboundLink("Alfa Surf Campain")'>
+            <div class="cam-banner alfa">
+              <img
+                class="img-responsive"
+                src="https://images.ravpages.co.il/xsite_resources/user_content/33/c4/18/49/33c41849eeb21c9f430ae392aa25b1b0/images/f85e02a79f4cadf7cd1e4b898bd041af_864X464.png?cc=8&convert=webp&ver=3.12&rxc=1532355884"
+                alt="BeachCam"
+                width="100%";
+              />
+              <!-- <img
+                class="img-mobile"
+                src="https://images.ravpages.co.il/xsite_resources/user_content/33/c4/18/49/33c41849eeb21c9f430ae392aa25b1b0/images/bb420b7f0c1781fa59d2834eea37298d_184X138.png?cc=8&convert=webp&ver=3.12&rxc=1532355884"
+                alt="BeachCam"
+              /> -->
+            </div>
+          </a>
+        </div>
+        <!-- <a href="./index.html">
           <div id="cam-title" class="cam-title">BeachCam.co.il</div>
-        </a>
+        </a> -->
         <!-- <a class="cam-banner-link" href="https://www.facebook.com/yamdakkar1">
           <div class="cam-banner">
             <img src="./images/3.png" alt="Herzelia Sea Scouts" />
