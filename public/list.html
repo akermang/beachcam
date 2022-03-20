@@ -132,10 +132,11 @@
         .ad {
             width: 100%;
             margin: 0 auto;
-            max-width: 640px;
+            /* max-width: 640px; */
             display: block;
-            margin-bottom: 13px;
-            overflow: auto;
+            margin-bottom: 34px;
+            /* overflow: auto; */
+            display: inline-block;
         }
 
         div.img {
@@ -263,6 +264,12 @@
         @media(max-width: 914px) {
             .cams-container P {
                 min-width: 49%;
+            }
+
+            .ad {
+                max-width: 700px;
+                overflow: auto;
+                margin-bottom: 13px;
             }
         }
 
