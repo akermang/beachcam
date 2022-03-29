@@ -532,7 +532,6 @@
     <div id="myModal" class="modal">
       <!-- Modal content -->
       <div class="modal-content">
-        <span class="close">&times;</span>
         <p>Adblock detected..</p>
         <img
           class="modal-img"
@@ -548,6 +547,13 @@
         <p>BeachCam</p>
       </div>
     </div>
+    <script src="./js/peel.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      if (!document.getElementById("JarTfVIZLvlw")) {
+        document.getElementById("myModal").style.display = "block";
+        document.getElementById("cam1").style.display = "none";
+      }
+    </script>
     <script>
       const cam = document.querySelector("#cam1");
       const camContainer = document.querySelector(".cams-container");
@@ -633,12 +639,9 @@
             closeFullscreen();
             // Get the <span> element that closes the modal
             var modal = document.getElementById("myModal");
-            var span = document.getElementsByClassName("close")[0];
             var mainContainer = document.getElementsByClassName("main-container")[0];
             modal.style.display = "block";
             mainContainer.style.opacity = "0.2"
-            span.onclick = function () {
-              modal.style.display = "none";
             };
             // When the user clicks anywhere outside of the modal, close it
             window.onclick = function (event) {

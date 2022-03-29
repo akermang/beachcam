@@ -4,17 +4,19 @@
     <!-- Google Tag Manager -->
     <script>
       /**
-      * Function that captures a click on an outbound link in Analytics.
-      * This function takes a valid URL string as an argument, and uses that URL string
-      * as the event label. Setting the transport method to 'beacon' lets the hit be sent
-      * using 'navigator.sendBeacon' in browser that support it.
-      */
-      var captureOutboundLink = function(url) {
-         ga('send', 'event', 'outbound', 'click', url, {
-           'transport': 'beacon',
-           'hitCallback': function(){document.location = url;}
-         });
-      }
+       * Function that captures a click on an outbound link in Analytics.
+       * This function takes a valid URL string as an argument, and uses that URL string
+       * as the event label. Setting the transport method to 'beacon' lets the hit be sent
+       * using 'navigator.sendBeacon' in browser that support it.
+       */
+      var captureOutboundLink = function (url) {
+        ga("send", "event", "outbound", "click", url, {
+          transport: "beacon",
+          hitCallback: function () {
+            document.location = url;
+          },
+        });
+      };
     </script>
     <script>
       (function (w, d, s, l, i) {
@@ -492,12 +494,12 @@
                 alt="BeachCam"
                 width="100%";
               /> -->
-              <!-- <img
+        <!-- <img
                 class="img-mobile"
                 src="https://images.ravpages.co.il/xsite_resources/user_content/33/c4/18/49/33c41849eeb21c9f430ae392aa25b1b0/images/bb420b7f0c1781fa59d2834eea37298d_184X138.png?cc=8&convert=webp&ver=3.12&rxc=1532355884"
                 alt="BeachCam"
               /> -->
-            <!-- </div>
+        <!-- </div>
           </a>
         </div> -->
         <!-- <a href="./index.html">
@@ -568,11 +570,7 @@
       <div class="modal-content">
         <span class="close">&times;</span>
         <p>Adblock detected..</p>
-        <img
-          class="modal-img"
-          src="./images/BeachCamIcon.png"
-          alt="BeachCam"
-        />
+        <img class="modal-img" src="./images/BeachCamIcon.png" alt="BeachCam" />
         <p>שמנו לב כי נעשה שימוש בחוסם פירסומות</p>
         <p>
           על מנת שנוכל לספק לך חווית צפייה מושלמת, יש לבטל את פעולת החוסם ולרענן
@@ -582,6 +580,13 @@
         <p>BeachCam</p>
       </div>
     </div>
+    <script src="./js/peel.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      if (!document.getElementById("JarTfVIZLvlw")) {
+        document.getElementById("myModal").style.display = "block";
+        document.getElementById("cam1").style.display = "none";
+      }
+    </script>
     <script>
       const cam = document.querySelector("#cam1");
       const camContainer = document.querySelector(".cams-container");
@@ -674,7 +679,8 @@
             // Get the <span> element that closes the modal
             var modal = document.getElementById("myModal");
             var span = document.getElementsByClassName("close")[0];
-            var mainContainer = document.getElementsByClassName("main-container")[0];
+            var mainContainer =
+              document.getElementsByClassName("main-container")[0];
             modal.style.display = "block";
             mainContainer.style.opacity = "0.2";
             span.onclick = function () {
