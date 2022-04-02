@@ -7,9 +7,9 @@ body {
   text-align: center;
 }
 
-.w3-container{
+.w3-container {
   display: flex;
-  justify-content: space-evenly!important;
+  justify-content: space-evenly !important;
   color: white;
   background-color: #363945;
 }
@@ -32,7 +32,7 @@ nav p {
 }
 
 .home-btn.mobile-btn {
-  background-color: #363945 ;
+  background-color: #363945;
 }
 
 .w3-container.row-flex {
@@ -48,7 +48,7 @@ nav p a {
 
 .dropbtn {
   background-color: inherit;
-  color: #FDAC53;
+  color: #fdac53;
   font-size: 16px;
   border: none;
   cursor: pointer;
@@ -200,10 +200,10 @@ nav p a {
 }
 
 header .home-btn {
-  border: 1px solid #FDAC53;
+  border: 1px solid #fdac53;
 }
 
-header .home-btn.special.title  {
+header .home-btn.special.title {
   border: none;
 }
 
@@ -216,7 +216,7 @@ header .home-btn.home-link-h1 {
   display: none;
   margin-bottom: 30px;
   padding: 20px 10px;
-  background: #D30000;
+  background: #d30000;
   text-align: center;
   font-weight: bold;
   color: #fff;
