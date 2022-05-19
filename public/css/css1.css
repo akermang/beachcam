@@ -223,6 +223,21 @@ header .home-btn.home-link-h1 {
   border-radius: 5px;
 }
 
+.vertion-button {
+  padding: 10px;
+  margin: 10px auto;
+  background: #d30000;
+  border-radius: 8px;
+  color: #aaaaaa;
+  font-size: 18px;
+  border: none;
+}
+
+.vertion-button:hover {
+  cursor: pointer;
+  background: #e73e3e;
+}
+
 @media (max-width: 1099px) {
   .dropdown,
   .dropdown-content {
