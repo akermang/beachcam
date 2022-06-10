@@ -6,7 +6,6 @@ const openDropdown = () => {
 
 // Close the dropdown if the user clicks outside of it
 window.onclick = function (event) {
-  console.log(event.target);
   if (
     !event.target.matches(".dropbtn") &&
     !event.target.matches(".dropdown-icon")

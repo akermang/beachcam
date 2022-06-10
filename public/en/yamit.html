@@ -578,7 +578,7 @@
         cam.style.maxHeight = "53vh";
         cam.style.margin = "30px 15%";
         cam.style.marginBottom = "42px";
-        camTitle.style.display = "none";
+        camTitle? camTitle.style.display = "none": null;
         closeFullscreen();
         cam.src = "../ad13a7a2020.html";
         showJumpBtn();
@@ -592,7 +592,7 @@
       const timeOut = () =>
         setTimeout(() => {
           changeView();
-        }, 170000);
+        }, 1700);
       timeOut();
 
       cam.onerror = () => {
