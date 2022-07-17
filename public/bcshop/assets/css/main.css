@@ -142,6 +142,10 @@ input, select, textarea {
 		text-align: center;
 	}
 
+	.video-container.lowlight {
+		opacity: 0.2;
+	}
+
 	#banner {
 		padding-top: 4em;
 	}
@@ -167,12 +171,16 @@ input, select, textarea {
 	.inner1 h1,
 	.inner1 h2,
 	.inner1 h3{
-		color: #767478;
+		/* color: #767478; */
 	}
 
 	.inner.inner1 {
-		width: 63%;
+		position: absolute;
+		width: 60%;
 		margin: auto;
+		top: 34%;
+		right: 0;
+		left: 0;
 	}
 	.elementor-video { 
 		padding-top: 10px;
@@ -229,7 +237,7 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			.inner.inner1 {
-				width: 80%;
+				width: 70%;
 				margin: auto;
 				padding-top: 0;
 			}
