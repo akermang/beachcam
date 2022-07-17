@@ -238,6 +238,7 @@ input, select, textarea {
 
 			.video-container.lowlight {
 				opacity: 0;
+				z-index: -1;
 			}
 
 			.inner.inner1 {
