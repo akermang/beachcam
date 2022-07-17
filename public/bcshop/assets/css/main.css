@@ -146,6 +146,10 @@ input, select, textarea {
 		opacity: 0.1;
 	}
 
+	.video-container.lowlight video {
+		z-index: 0;
+	}
+
 	#banner {
 		padding-top: 4em;
 	}
@@ -174,6 +178,12 @@ input, select, textarea {
 		/* color: #767478; */
 	}
 
+	
+@keyframes move {
+	from {  transform: scale(0); }
+	to {  transform: scale(1); }
+  }
+
 	.inner.inner1 {
 		position: absolute;
 		width: 60%;
@@ -181,11 +191,18 @@ input, select, textarea {
 		top: 34%;
 		right: 0;
 		left: 0;
+		transition: all 1s;
 	}
+
+	.inner.inner1:hover {
+		z-index: 2;
+	}
+	
 	.elementor-video { 
 		padding-top: 10px;
 		width: 100%;
 		object-fit: cover;
+		z-index: 0;
 	}
 
 	a {
@@ -2288,6 +2305,12 @@ input, select, textarea {
 
 			ul.actions.special li:first-child {
 				padding-left: 0;
+				/* position: absolute; */
+				/* z-index: 1; */
+			}
+
+			ul.actions.special li:first-child:hover {
+				z-index: 1;
 			}
 
 		ul.actions.stacked {
