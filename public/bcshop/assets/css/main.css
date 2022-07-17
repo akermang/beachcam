@@ -171,10 +171,7 @@ input, select, textarea {
 	}
 
 	.inner.inner1 {
-		position: absolute;
 		width: 63%;
-		left: 0;
-		right: 0;
 		margin: auto;
 	}
 	.elementor-video { 
@@ -230,6 +227,12 @@ input, select, textarea {
 	}
 
 		@media screen and (max-width: 736px) {
+
+			.inner.inner1 {
+				width: 80%;
+				margin: auto;
+				padding-top: 0;
+			}
 
 			h2 {
 				font-size: 1.1em;
@@ -3633,7 +3636,7 @@ input, select, textarea {
 			}
 
 /* Banner */
-
+	#banner2,
 	#banner {
 		display: -moz-flex;
 		display: -webkit-flex;
