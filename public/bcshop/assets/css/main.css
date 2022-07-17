@@ -2777,6 +2777,7 @@ input, select, textarea {
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
+		text-align: right;
 	}
 
 		.spotlight .image {
