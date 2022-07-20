@@ -349,27 +349,33 @@
       div.cam-banner-link.keeper {
         max-height: 52vh;
         overflow: hidden;
-        background: linear-gradient(74deg, rgb(33, 42, 43) 0%, rgba(253,187,45,0.29344892026578073) 100%);
-        min-height: 50vh;
+        background: linear-gradient(
+          74deg,
+          rgb(33, 42, 43) 0%,
+          rgba(253, 187, 45, 0.29344892026578073) 100%
+        );
+        min-height: 420px;
+        position: relative;
       }
-      
+
       .keeper-banner-text {
         position: absolute;
-        top: 15%;
+        top: 22%;
         color: white;
+        text-align: center;
       }
 
       .banner-btn {
         font-size: 20px;
         background-color: #ed4933;
-        color:#ffffff;
-        padding:0.5em 1em;
+        color: #ffffff;
+        padding: 0.5em 1em;
         font-weight: bold;
         border-radius: 5px;
       }
 
       .banner-btn:hover {
-        background-color: #ef5e4a ;
+        background-color: #ef5e4a;
       }
 
       @media (max-width: 914px) {
@@ -534,19 +540,24 @@
       <section class="cams-container">
         <!-- <div class="cam-title">BeachCam.co.il</div> -->
         <div class="cam-banner-link keeper">
-          <a id="alfaSurAd" href="https://beachcam.co.il/bcshop/keeper.html" onclick='captureOutboundLink("KEEPER Campain")'>
+          <a
+            id="alfaSurAd"
+            href="https://beachcam.co.il/bcshop/keeper.html"
+            onclick='captureOutboundLink("KEEPER Campain")'
+          >
             <div class="cam-banner alfa">
               <img
                 class="img-responsive"
                 src="https://www.keepersop.com/wp-content/uploads/2022/05/T1-scaled.jpg"
                 alt="BeachCam"
-                width="100%";
+                width="100%"
+                ;
               />
               <div class="keeper-banner-text">
                 <h3>הנחה בלעדית לצופי ביץ' קאם</h3>
                 <h3>חולצה מהפכנית לספורט ימי</h3>
                 <h5>ושלא תשתו לי חשיש...</h5>
-                <h4 class="banner-btn">לפרטים בחנות ביץ' קאם </h4>
+                <h4 class="banner-btn">לפרטים בחנות ביץ' קאם</h4>
               </div>
               <!-- <img
                 class="img-mobile"
