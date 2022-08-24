@@ -54,6 +54,9 @@ table {
 body {
 	-webkit-text-size-adjust: none;
 }
+a.link-img {
+	border-bottom: none;
+}
 
 mark {
 	background-color: transparent;
@@ -109,6 +112,8 @@ input, select, textarea {
 		letter-spacing: 0.075em;
 		line-height: 1.65em;
 	}
+
+
 
 		@media screen and (max-width: 1680px) {
 
