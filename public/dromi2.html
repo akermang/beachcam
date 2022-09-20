@@ -352,14 +352,14 @@
       }
 
       div.cam-banner-link.keeper {
-        max-height: 360px;
+        /* max-height: 360px; */
         overflow: hidden;
-        background: linear-gradient(
+        /* background: linear-gradient(
           74deg,
           rgb(33, 42, 43) 0%,
           rgba(253, 187, 45, 0.29344892026578073) 100%
-        );
-        min-height: 120px;
+        ); */
+        min-height: 100px;
         position: relative;
       }
 
@@ -387,6 +387,14 @@
 
       .banner-btn:hover {
         background-color: #ef5e4a;
+      }
+
+      .tx-320 {
+        display: none;
+      }
+
+      .tx-780 {
+        display: block;
       }
 
       @media (max-width: 914px) {
@@ -420,6 +428,14 @@
       }
 
       @media (max-width: 599px) {
+        .tx-320 {
+          display: block;
+        }
+
+        .tx-780 {
+          display: none;
+        }
+
         header img {
           width: 115px;
         }
@@ -558,26 +574,33 @@
     <div class="main-container" id="main-container">
       <!-- <div id="cam-title" class="cam-title">זמנית - הפסקת חשמל במתקני החוף</div> -->
       <!-- alias=621521fe036e6 -->
-      <!-- <div class="cam-banner-link keeper">
+      <div class="cam-banner-link keeper">
         <a
           id="alfaSurAd"
-          href="https://beachcam.co.il/bcshop/keeper.html"
+          href="https://www.terminalx.com/collections/surf-billihouse?product_list_order=justlanded&utm_source=websurf&utm_medium=referral&utm_campaign=billabong_websurf_60off_2009"
           onclick='captureOutboundLink("KEEPER Campain")'
         >
           <div class="cam-banner alfa">
             <img
-              class="img-responsive"
-              src="https://raw.githubusercontent.com/akermang/beachcam/master/public/images/splasher.jpeg"
+              class="img-responsive tx-780"
+              src="https://raw.githubusercontent.com/akermang/beachcam/master/public/images/780X200.gif"
               alt="BeachCam"
               width="100%"
               ;
             />
-            <div class="keeper-banner-text">
+            <img
+              class="img-responsive tx-320"
+              src="https://raw.githubusercontent.com/akermang/beachcam/master/public/images/780X200.gif"
+              alt="BeachCam"
+              width="100%"
+              ;
+            />
+            <!-- <div class="keeper-banner-text">
               <h3 class="color-h">דגמים חדשים</h3>
-            </div>
+            </div> -->
           </div>
         </a>
-      </div> -->
+      </div>
       <div id="cams_container" class="cams-container">
         <iframe
           id="cam1"

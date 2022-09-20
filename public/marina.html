@@ -349,11 +349,12 @@
       div.cam-banner-link.keeper {
         max-height: 52vh;
         overflow: hidden;
-        background: linear-gradient(
+        /* background: linear-gradient(
           74deg,
           rgb(33, 42, 43) 0%,
-          rgba(253, 187, 45, 0.29344892026578073) 100% );
-        min-height: 195px;
+          rgba(253, 187, 45, 0.29344892026578073) 100%
+        ); */
+        min-height: 100px;
         position: relative;
       }
 
@@ -381,6 +382,14 @@
 
       .banner-btn:hover {
         background-color: #ef5e4a;
+      }
+
+      .tx-320 {
+        display: none;
+      }
+
+      .tx-780 {
+        display: block;
       }
 
       @media (max-width: 914px) {
@@ -414,6 +423,15 @@
       }
 
       @media (max-width: 599px) {
+
+        .tx-320 {
+          display: block;
+        }
+
+        .tx-780 {
+          display: none;
+        }
+        
         .banner-text {
           font-size: 16px;
         }
@@ -547,23 +565,30 @@
         <div class="cam-banner-link keeper">
           <a
             id="alfaSurAd"
-            href="https://beachcam.co.il/bcshop/keeper.html"
+            href="https://www.terminalx.com/collections/surf-billihouse?product_list_order=justlanded&utm_source=websurf&utm_medium=referral&utm_campaign=billabong_websurf_60off_2009"
             onclick='captureOutboundLink("KEEPER Campain")'
           >
             <div class="cam-banner alfa">
               <img
-                class="img-responsive"
-                src="https://raw.githubusercontent.com/akermang/beachcam/master/public/images/splasher.jpeg"
+                class="img-responsive tx-780"
+                src="https://raw.githubusercontent.com/akermang/beachcam/master/public/images/780X200.gif"
                 alt="BeachCam"
                 width="100%"
                 ;
               />
-              <div class="keeper-banner-text">
-                <!-- <h3 class="color-h">הנחה בלעדית לצופי ביץ' קאם</h3> -->
+              <img
+                class="img-responsive tx-320"
+                src="https://raw.githubusercontent.com/akermang/beachcam/master/public/images/780X200.gif"
+                alt="BeachCam"
+                width="100%"
+                ;
+              />
+              <!-- <div class="keeper-banner-text">
+                <h3 class="color-h">הנחה בלעדית לצופי ביץ' קאם</h3>
                 <h3 class="color-h">ארוכה וקצרה דגמים חדשים</h3>
-                <!-- <h5>ושלא תשתו לי חשיש...</h5> -->
-                <!-- <h4 class="banner-btn">לפרטים בחנות ביץ' קאם</h4> -->
-              </div>
+                <h5>ושלא תשתו לי חשיש...</h5>
+                <h4 class="banner-btn">לפרטים בחנות ביץ' קאם</h4>
+              </div> -->
               <!-- <img
                 class="img-mobile"
                 src="https://images.ravpages.co.il/xsite_resources/user_content/33/c4/18/49/33c41849eeb21c9f430ae392aa25b1b0/images/bb420b7f0c1781fa59d2834eea37298d_184X138.png?cc=8&convert=webp&ver=3.12&rxc=1532355884"
