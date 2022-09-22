@@ -325,11 +325,11 @@
         align-items: center;
       }
 
-      .cam-banner.alfa {
+      .cam-banner.terminalx {
         background-color: #2c2e37;
         text-align: center;
         width: 98%;
-        margin: 7px auto;
+        height: max-content;
       }
 
       a.cam-banner-link {
@@ -337,6 +337,22 @@
         width: 98%;
         max-width: 796px;
         margin-top: 5px;
+      }
+
+      div.cam-banner-link.terminalx {
+        min-height: 86px;
+        position: relative;
+        height: max-content;
+        overflow: visible;
+        margin: 4px 0;
+      }
+
+      .tx-320 {
+        display: none;
+      }
+
+      .tx-780 {
+        display: block;
       }
 
       @media (max-width: 914px) {
@@ -371,6 +387,15 @@
       }
 
       @media (max-width: 599px) {
+
+        .tx-320 {
+          display: block;
+        }
+
+        .tx-780 {
+          display: none;
+        }
+
         .cam-title {
           top: 61%;
         }
@@ -486,32 +511,35 @@
       <!-- https://bebetter.ravpage.co.il/KikFin?BeachCam -->
     </nav>
     <div class="main-container">
-      <div class="cams-container">
-        <!-- <div class="cam-banner-link">
-          <a id="alfaSurAd" href="https://kikfin.com/" onclick='captureOutboundLink("Alfa Surf Campain")'>
-            <div class="cam-banner alfa">
-              <img
-                class="img-responsive"
-                src="https://images.ravpages.co.il/xsite_resources/user_content/33/c4/18/49/33c41849eeb21c9f430ae392aa25b1b0/images/f85e02a79f4cadf7cd1e4b898bd041af_864X464.png?cc=8&convert=webp&ver=3.12&rxc=1532355884"
-                alt="BeachCam"
-                width="100%";
-              /> -->
-        <!-- <img
-                class="img-mobile"
-                src="https://images.ravpages.co.il/xsite_resources/user_content/33/c4/18/49/33c41849eeb21c9f430ae392aa25b1b0/images/bb420b7f0c1781fa59d2834eea37298d_184X138.png?cc=8&convert=webp&ver=3.12&rxc=1532355884"
-                alt="BeachCam"
-              /> -->
-        <!-- </div>
-          </a>
-        </div> -->
-        <!-- <a href="./index.html">
-          <div id="cam-title" class="cam-title">צפויים שיבושים בשידור - יום רביעי</div>
-        </a> -->
-        <!-- <a class="cam-banner-link" href="https://www.facebook.com/yamdakkar1">
-          <div class="cam-banner">
-            <img src="./images/3.png" alt="Herzelia Sea Scouts" />
+      <div class="cam-banner-link terminalx">
+        <a
+          id="alfaSurAd"
+          href="https://www.terminalx.com/collections/surf-billihouse?product_list_order=justlanded&utm_source=websurf&utm_medium=referral&utm_campaign=billabong_websurf_60off_2009"
+          onclick='captureOutboundLink("KEEPER Campain")'
+        >
+          <div class="cam-banner terminalx">
+            <img
+              class="img-responsive tx-780"
+              src="https://raw.githubusercontent.com/akermang/beachcam/master/public/images/780X200.gif"
+              alt="BeachCam"
+              width="100%"
+              ;
+            />
+            <img
+              class="img-responsive tx-320"
+              src="https://raw.githubusercontent.com/akermang/beachcam/master/public/images/780X200.gif"
+              alt="BeachCam"
+              width="100%"
+              ;
+            />
+            <!-- <div class="keeper-banner-text">
+              <h3 class="color-h">דגמים חדשים</h3>
+            </div> -->
           </div>
-        </a> -->
+        </a>
+      </div>
+      <div class="cams-container">
+
         <iframe
           id="cam1"
           src="https://ipcamlive.com/player/player.php?alias=628d6359b74c9&autoplay=1&skin=white&hidelink=true&
