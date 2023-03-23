@@ -265,6 +265,28 @@ header .home-btn.home-link-h1 {
   background: #e73e3e;
 }
 
+.ad-side {
+  min-width: 17vw;
+  max-width: 21vw;
+  background-color: wheat;
+  height: 73vh;
+  position: absolute;
+}
+
+.ad-side1-container {
+  left: 0;
+}
+
+.ad-side2-container {
+  right: 0;
+}
+
+@media (max-width: 1200px) {
+  .ad-side {
+    display: none;
+  }
+}
+
 @media (max-width: 1099px) {
   .dropdown,
   .dropdown-content {
