@@ -266,11 +266,11 @@ header .home-btn.home-link-h1 {
 }
 
 .ad-side {
-  min-width: 17vw;
+  min-width: 12vw;
   max-width: 21vw;
-  background-color: wheat;
   height: 73vh;
   position: absolute;
+  margin: 0 3px;
 }
 
 .ad-side1-container {
@@ -281,7 +281,7 @@ header .home-btn.home-link-h1 {
   right: 0;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1170px) {
   .ad-side {
     display: none;
   }
