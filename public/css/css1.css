@@ -281,7 +281,7 @@ header .home-btn.home-link-h1 {
   right: 0;
 }
 
-@media (max-width: 1170px) {
+@media (max-width: 1168px) {
   .ad-side {
     display: none;
   }

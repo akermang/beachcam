@@ -184,11 +184,6 @@
             min-width: 33%;
         }
 
-        iframe {
-            width: 100%;
-            min-height: 33vh;
-        }
-
         .home-btn {
             padding: 4px;
             border-radius: 7px;
@@ -262,6 +257,10 @@
 
         .scroller.up {
             top: 175%;
+        }
+
+        .ad-side {
+            top: 400px;
         }
 
         @media(max-width: 914px) {
@@ -357,7 +356,7 @@
     </style>
 </head>
 
-<body>
+<body class="top-body">
     <header>
         <div class="wrapper">
             <div class="w3-container w3-blue row-flex">
@@ -385,7 +384,14 @@
             </div>
         </div>
     </header>
-   
+    <div id="ad-side1-container" class="ad-side ad-side1-container">
+        <div class="foremediaads-side1"></div>
+      </div>
+      <div id="ad-side2-container" class="ad-side ad-side2-container">
+        <div class="foremediaads-side2"></div>
+      </div>
+    <div id="foremediaads-e1"></div>
+    <script type="text/javascript" async src="https://platform.foremedia.net/code/35177/e1"></script>
     <div class="ad">
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <!-- adSmall -->
@@ -398,6 +404,10 @@
         <script>
             (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
+    </div>
+
+    <div id="ad-container" class="ad-mid-container">
+        <div class="foremediaads-mid foremediaads-mid2"></div>
     </div>
 
     <div id="top" class="main-container">
@@ -550,7 +560,7 @@
         </div>
     </div>
 
-    <footer id="bottom-page">
+    <footer class="beachcam-footer" id="bottom-page">
         <p style="text-align: center;">
             <a style="color: #FDAC53;" href="./index.html">מצלמת חוף Beach Cam Israel</a>
         </p>
