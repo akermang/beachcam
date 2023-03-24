@@ -279,6 +279,7 @@ header .home-btn.home-link-h1 {
 
 .ad-side2-container {
   right: 0;
+  text-align: right;
 }
 
 @media (max-width: 1168px) {
