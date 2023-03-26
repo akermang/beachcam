@@ -284,6 +284,7 @@ header .home-btn.home-link-h1 {
 
 .ad.ad-horizon {
   margin-bottom: 0;
+  margin-top: 6px;
 }
 
 @media (max-width: 1168px) {
