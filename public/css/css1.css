@@ -282,6 +282,10 @@ header .home-btn.home-link-h1 {
   text-align: right;
 }
 
+.ad.ad-horizon {
+  margin-bottom: 0;
+}
+
 @media (max-width: 1168px) {
   .ad-side {
     display: none;
