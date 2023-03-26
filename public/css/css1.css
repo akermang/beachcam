@@ -29,6 +29,7 @@ nav p {
 
 .cam-banner-link {
   overflow: hidden;
+  width: 100%;
 }
 
 div.cam-banner-link.keeper {
