@@ -287,6 +287,10 @@ header .home-btn.home-link-h1 {
   margin-top: 6px;
 }
 
+ins.adsbygoogle[data-ad-status="unfilled"] {
+  display: none!important;
+}
+
 @media (max-width: 1168px) {
   .ad-side {
     display: none;
