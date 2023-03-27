@@ -292,6 +292,10 @@ ins.adsbygoogle[data-ad-status="unfilled"] {
   display: none!important;
 }
 
+.ad-top-container {
+  height: 90px;
+}
+
 @media (max-width: 1168px) {
   .ad-side {
     display: none;
