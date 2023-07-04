@@ -377,6 +377,15 @@
         margin-top: 5px;
       }
 
+      .cam-banner.text-center {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1px auto;
+        padding: 2px;
+      }
+
       div.cam-banner-link.terminalx {
         min-height: 86px;
         position: relative;
@@ -642,7 +651,12 @@
         </a> -->
       </div>
       <div class="cams-container">
-
+        <a class="cam-banner-link" href="https://mybeachcam.app">
+          <div class="cam-banner text-center">
+            <!-- <img src="./images/BeachCamIcon.png" width="50px" alt="My Beach Cam App" /> -->
+            mybeachcam.app לצפייה ללא פרסומות 
+          </div>
+        </a>
         <iframe
           id="cam1"
           src="https://ipcamlive.com/player/player.php?alias=63454584c4c3c&autoplay=1&skin=white&hidelink=true&
@@ -784,7 +798,7 @@
       const timeOut = () =>
         setTimeout(() => {
           changeView();
-        }, 170000);
+        }, 100000);
       timeOut();
 
       cam.onerror = () => {

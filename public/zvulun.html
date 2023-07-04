@@ -353,6 +353,16 @@
         max-width: 796px;
       }
 
+      .cam-banner.text-center {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1px auto;
+        padding: 2px;
+        border-radius: 2px;
+      }
+
       @media (max-width: 914px) {
         .cams-container P {
           min-width: 49%;
@@ -565,11 +575,16 @@
   </div>
     <div class="main-container">
       <!-- <div id="cam-title" class="cam-title">BeachCam.co.il</div> -->
-
       <div class="cams-container">
         <a class="cam-banner-link" href="https://www.facebook.com/yamdakkar1">
           <div class="cam-banner">
             <img src="./images/3.png" alt="Herzelia Sea Scouts" />
+          </div>
+        </a>
+        <a class="cam-banner-link" href="https://mybeachcam.app">
+          <div class="cam-banner text-center">
+            <!-- <img src="./images/BeachCamIcon.png" width="50px" alt="My Beach Cam App" /> -->
+            mybeachcam.app לצפייה ללא פרסומות 
           </div>
         </a>
         <!-- <div id="cam-title" class="cam-title">
@@ -710,7 +725,7 @@
       const timeOut = () =>
         setTimeout(() => {
           changeView();
-        },170000);
+        },100000);
       timeOut();
 
       cam.onerror = () => {
