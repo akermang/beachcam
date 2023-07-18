@@ -708,7 +708,7 @@
       <div id="cams_container" class="cams-container">
         <iframe
           id="cam1"
-          src="https://beachcam.co.il/mybeachcamad.html"
+          src="https://beachcam.co.il/mybeachcamad1.html"
           width="800"
           height="434px"
           frameborder="0"
@@ -829,7 +829,7 @@
 
       setTimeout(()=>{
         cam.src = "https://ipcamlive.com/player/player.php?alias=621521fe036e6&autoplay=1&disablezoombutton=1&skin=white&hidelink=true&          disablereportbutton=true&disableautofullscreen=1&disableframecapture=1&disableuserpause=1"
-      }, 6000)
+      }, 4000)
 
       const changeView = () => {
         cam.style.maxWidth = "800px";
@@ -850,7 +850,7 @@
       const timeOut = () =>
         setTimeout(() => {
           changeView();
-        }, 100000);
+        }, 70000);
       timeOut();
 
       cam.onerror = () => {

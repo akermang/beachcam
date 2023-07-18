@@ -32,7 +32,7 @@
       type="image/png"
       href="https://akermang.github.io/WeatherApp/sun-favicon.png"
     />
-    <title>האפליקצייה | MyBeachCam | מודעה</title>
+    <title>מצלמות חופים | BeachCam | מודעה</title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
@@ -95,7 +95,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        background-color: #fefefec3;
+        background-color: #fefefe00;
         margin: auto;
         padding: 20px;
         border: 1px solid #888;
@@ -131,26 +131,41 @@
 
       a {
         text-decoration: none;
-        color: rgb(27, 101, 112);
+        color: rgb(27, 100, 112);
+      }
+
+      #iukasn {
+        position: absolute;
+        top: 0!important;
+        bottom: 0!important;
+      }
+
+      .Hilltop.vast_2 {
+        width: 800px;
+        height: 100%;
       }
     </style>
   </head>
 
   <body>
-    <a href="https://mybeachcam.app/" target="_blank">
+    <!-- <a href="https://mybeachcam.app/" target="_blank"> -->
         <div id="myModal" class="modal">
             <div class="modal-content">
                 <!-- <span class="close">&times;</span> -->
-                <p>חדש</p>
-                <h3>MyBeachCam.app</h3>
-                <img
-                class="modal-img"
-                src="./images/BeachCamIcon.png"
-                alt="BeachCam"
-                />
-                <h3>לצפייה ללא פירסומות</h3>
-                <p>בכל מכשיר</p>
-                <h3>MyBeachCam.app</h3>
+                           <!-- Hilltop vast_2 start -->
+            <div class="Hilltop vast_2">
+                <script>
+                  (function(__htavim){
+                  var d = document,
+                      s = d.createElement('script'),
+                      l = d.scripts[d.scripts.length - 1];
+                  s.settings = __htavim || {};
+                  s.src = "\/\/crisp-freedom.com\/d.muFDzidCGKlGtoP\/3gp\/v\/bxmoV\/JqZeDm0Y0YN\/zlY\/3\/MNzeI\/5VL\/T\/Qr3CNkj-c\/zPMGzYAy";
+                  l.parentNode.insertBefore(s, l);
+                  })()
+                  </script>
+              </div>
+              <!-- Hilltop vast_2 END -->
                 <script>
                   const host = window.top.location.host;
                   const content = document.getElementById("myModal");
@@ -159,15 +174,19 @@
                  if(host == "beachcam.co.il"){
                   setTimeout(()=>{
                     content.style.display = "block";
-                  }, 4000)
+                  }, 1)
                  }
                  setTimeout(()=>{
                   const modal = document.getElementById("myModal");
                   modal.style.display = "none";
-                 }, 9500)
+                 }, 16000);
+                 setTimeout(()=>{
+                  const modal = document.getElementById("myModal");
+                  modal.style.display = "block";
+                 }, 64500)
                 </script>
             </div>
         </div>
-    </a>
+    <!-- </a> -->
   </body>
 </html>
