@@ -14,6 +14,31 @@
     <script src="https://imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
     <!-- and the vast-ima-player -->
     <script src="https://unpkg.com/@glomex/vast-ima-player@1/dist/vast-ima-player.umd.js"></script>
+    <script src="https://www.ipcamlive.com/player/jquery-3.min.js"></script>
+		<script src="https://www.ipcamlive.com/player/ipcamliveplayer.min.js"></script>        
+		
+		<script>
+            params = {};                
+                params["autoplay"] = false;                
+                params["adsenabled"] = true;                
+                params["adsurl"] = "https://glomex.github.io/vast-ima-player/linear-ad.xml";                                
+			$(window).on("load", function() { 
+				var width = $(window).width();
+				var height = $(window).height(); 
+				$('#mediadiv').width(800).height(400);
+                console.log("params:", params)
+				
+                ipcamliveplayer.embed('mediadiv', '621521fe036e6', params);
+			});
+						
+    		$(window).on("resize", function() {
+    			var width = $(window).width();
+				var height = $(window).height(); 
+				
+				$('#mediadiv').width(width).height(height);
+				ipcamliveplayer.resize();
+    		});
+		</script>
     <title>My VAST-IMA-Player</title>
   </head>
   <body>
@@ -33,6 +58,34 @@
       <div id="adContainer2" style="position:absolute; left:0; top:0;"></div>
     </div>
     <button id="playAd2">Play Ad 2</button>
+    <div>
+      <iframe
+          id="cam1"
+          src="https://ipcamlive.com/player/player.php?alias=634548590c353&autoplay=1&skin=white&hidelink=true&
+          disablereportbutton=true&disableautofullscreen=1&disablezoombutton=1&disableframecapture=1&disableuserpause=1&adsenabled=false"
+          width="780"
+          height="434px"
+          frameborder="0"
+          autoplay
+          allowfullscreen
+          
+        ></iframe>
+    </div>
+    <div>
+      <iframe
+          id="cam1"
+          src="https://ipcamlive.com/player/player.php?alias=647359b22f88d&autoplay=1&skin=white&hidelink=true&
+          disablereportbutton=true&disableautofullscreen=1&disablezoombutton=1&disableframecapture=1&disableuserpause=1&adsenabled=0"
+          width="780"
+          height="434px"
+          frameborder="0"
+          autoplay
+          allowfullscreen
+          
+        ></iframe>
+    </div>
+    <div id="mediadiv" style="background-color: #A0A0A0;"> 
+    </div>    
     <script>
       var adsRenderingSettings = new google.ima.AdsRenderingSettings();
       var imaPlayer = new vastImaPlayer.Player(
@@ -43,7 +96,7 @@
       );
       document.getElementById('playAd').addEventListener('click', function() {
         var playAdsRequest = new google.ima.AdsRequest();
-        playAdsRequest.adTagUrl = "https://crisp-freedom.com/dXmWF_zhd.GANuvYZWGrUy/eeNmO9LuWZlUflCk/PfTqQt3cN/joc/wdMGjvMPtwNeD/cR2JNZzrAhyKN/Ab";
+        playAdsRequest.adTagUrl = "https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/vmap_ad_samples&sz=640x480&cust_params=sample_ar%3Dpreonly&ciu_szs=300x250%2C728x90&gdfp_req=1&ad_rule=1&output=vmap&unviewed_position_start=1&env=vp&impl=s&correlator=";
         // playAdsRequest.adTagUrl = 'https://glomex.github.io/vast-ima-player/linear-ad.xml';
         imaPlayer.playAds(playAdsRequest);
       });

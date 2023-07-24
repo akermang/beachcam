@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="he-IL">
+    <head>
+        
+        <title>Live demo tester3</title>
+        
+		<script src="https://www.ipcamlive.com/player/jquery-3.min.js"></script>
+		<script src="https://www.ipcamlive.com/player/ipcamliveplayer.min.js"></script>        
+		
+		<script>
+            params = {};                
+                params["autoplay"] = false;                
+                params["adsenabled"] = true;                
+                params["adsurl"] = "https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/vmap_ad_samples&sz=640x480&cust_params=sample_ar%3Dpreonly&ciu_szs=300x250%2C728x90&gdfp_req=1&ad_rule=1&output=vmap&unviewed_position_start=1&env=vp&impl=s&correlator=";                                
+			$(window).on("load", function() { 
+				var width = $(window).width();
+				var height = $(window).height(); 
+				$('#mediadiv').width(800).height(400);
+                console.log("params:", params)
+				
+                ipcamliveplayer.embed('mediadiv', '634548590c353', params);
+			});
+						
+    		$(window).on("resize", function() {
+    			var width = $(window).width();
+				var height = $(window).height(); 
+				
+				$('#mediadiv').width(width).height(height);
+				ipcamliveplayer.resize();
+    		});
+		</script>
+		<link
+		rel="shortcut icon"
+		type="image/png"
+		href="https://akermang.github.io/WeatherApp/sun-favicon.png"
+	  />
+    </head>
+    <body style="margin: 0px; border: 0px; padding: 0px; overflow: hidden; background-color: #808080;">				
+    	<div id="mediadiv" style="background-color: #A0A0A0;"> 
+    	</div>    	
+    </body>
+</html>
+	
