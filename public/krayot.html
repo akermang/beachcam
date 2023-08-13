@@ -18,12 +18,39 @@
       })(window, document, "script", "dataLayer", "GTM-WPTQ3HT");
     </script>
     <!-- End Google Tag Manager -->
+    <script src="https://www.ipcamlive.com/player/jquery-3.min.js"></script>
+		<script src="https://www.ipcamlive.com/player/ipcamliveplayer.min.js"></script>        
+		<!-- ipcam start -->
+		<script>
+            params = {}; 
+            params["skin"] = "white";                
+                params["autoplay"] = true;                
+				params["disablenavigation"] = true;  
+				params["adsenabled"] = false;           
+                params["adsurl"] = "https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/vmap_ad_samples&sz=640x480&cust_params=sample_ar%3Dpreonly&ciu_szs=300x250%2C728x90&gdfp_req=1&ad_rule=1&output=vmap&unviewed_position_start=1&env=vp&impl=s&correlator=";                                
+			$(window).on("load", function() { 
+				// var width = $(window).width();
+				// var height = $(window).height(); 
+				// $('#mediadiv').width(800).height(434);
+        //         console.log("params:", params)
+				
+                ipcamliveplayer.embed('mediadiv', '6469b4554f45e', params);
+			});
+						
+    		// $(window).on("resize", function() {
+    		// 	var width = $(window).width();
+				// var height = $(window).height(); 
+				
+				// $('#mediadiv').width(width).height(height);
+				// ipcamliveplayer.resize();
+    		// });
+		</script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="מצלמות חוף שידור ישיר ישראל" />
+    <meta name="description" content="מצלמת חוף הקריות שידור ישיר ישראל" />
     <meta
       name="keywords"
-      content="כניסה למרינה,הרצליה,דרומי,מרינה צפון,מצלמת גלישה, גלים,מצלמת חוף הרצליה,גלישה,מצב,גלים,שידור,חי,מרינה,surf,live,Camera"
+      content=", קריית חיים קריית ים,כניסה למרינה,הרצליה,דרומי,מרינה צפון,מצלמת גלישה, גלים,מצלמת חוף הרצליה,גלישה,מצב,גלים,שידור,חי,מרינה,surf,live,Camera"
     />
     
     <link rel="stylesheet" href="./css/css1.css">
@@ -155,10 +182,22 @@
       .cam-title {
         position: absolute;
         color: white;
-        top: 10%;
+        bottom: 10%;
         left: 7%;
         font-size: 22px;
-        z-index: 1;
+        z-index: 2;
+      }
+
+      .cam-banner {
+        background: #000;
+        max-width: 800px;
+        margin: 0 auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        padding-bottom: 2px;
       }
 
       .cams-container.full-size {
@@ -213,6 +252,8 @@
         z-index: 1;
         max-width: 800px;
         margin: auto;
+        min-height: 200px;
+        background-color: #000;
       }
 
       .home-btn {
@@ -372,7 +413,7 @@
             </a>
           </div>
           <div class="animat-box-in">
-            <h2>חיפה Surf Cycle</h2>
+            <h2>קריות חיפה</h2>
           </div>
           <a class="home-btn title special" style="color: white;" href="./list.html">
             <p class="info">שידור חי - מצלמת חוף</p>
@@ -398,25 +439,87 @@
         </p>
       </div>
     </nav>
+    <div id="ad-side1-container" class="ad-side ad-side1-container">
+      <div class="foremediaads-side1">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2190134608327180"
+            crossorigin="anonymous"></script>
+        <!-- side160/600 -->
+        <ins class="adsbygoogle"
+            style="display:inline-block;width:160px;height:600px"
+            data-ad-client="ca-pub-2190134608327180"
+            data-ad-slot="1532064126"></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+      </div>
+      <div class="foremediaads-side1">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2190134608327180"
+            crossorigin="anonymous"></script>
+        <!-- side160/600 -->
+        <ins class="adsbygoogle"
+            style="display:inline-block;width:160px;height:600px"
+            data-ad-client="ca-pub-2190134608327180"
+            data-ad-slot="1532064126"></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+      </div>
+  </div>
+  <div id="ad-side2-container" class="ad-side ad-side2-container">
+    <div class="foremediaads-side2">
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2190134608327180"
+          crossorigin="anonymous"></script>
+      <!-- side160/600 -->
+      <ins class="adsbygoogle"
+          style="display:inline-block;width:160px;height:600px"
+          data-ad-client="ca-pub-2190134608327180"
+          data-ad-slot="1532064126"></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+    <div class="foremediaads-side2">
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2190134608327180"
+          crossorigin="anonymous"></script>
+      <!-- side160/600 -->
+      <ins class="adsbygoogle"
+          style="display:inline-block;width:160px;height:600px"
+          data-ad-client="ca-pub-2190134608327180"
+          data-ad-slot="1532064126"></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+  </div>
+  <div class="ad ad-horizon">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2190134608327180"
+        crossorigin="anonymous">
+    </script>
+        <!-- horizonSmall -->
+        <ins class="adsbygoogle"
+        style="display:inline-block;width:728px;height:90px"
+        data-ad-client="ca-pub-2190134608327180"
+        data-ad-slot="8607774219"></ins> 
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
     <div class="message"></div>
     <div class="main-container">
       <div class="cam-title">BeachCam.co.il</div>
-      <iframe
-        width="800"
-        height="450"
-        src="https://www.youtube.com/embed/live_stream?channel=UCR8RTG7pqdc7cUxD-Rb-bwA&amp;autoplay=1"
-        frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-        allow="autoplay; encrypted-media"
-      ></iframe>
+      <a href="https://magicboardsco.co.il/" target="_blank">
+        <div class="cam-banner">
+          <img src="https://magicboardsco.co.il/wp-content/uploads/2022/02/MAGICBOARDS-CO-WHITE.png" width="80%">
+        </div>
+      </a>
+      <div id="mediadiv" style="background-color: #000;"></div>
       <div class="jump-btn" onclick="location.reload()">
         דלג
       </div>
     </div>
-    <div class="loader-container">
+    <!-- <div class="loader-container">
       <div class="loader"></div>
-    </div>
+    </div> -->
     <a class="home-btn mobile-btn" style="color: white;" href="./list.html">
       <h1>מצלמות חוף נוספות</h1>
     </a>

@@ -199,8 +199,8 @@
       }
 
       .cam-title {
-        text-align: right;
-        padding: 0 0.5em 0 1em;
+        text-align: center;
+        padding: 1em 0.5em 1em 1em;
         position: absolute;
         color: #ffffff;
         background-color: #ff0000;
@@ -215,8 +215,9 @@
           #651711,
           #da3b2f
         );
-        top: 78px;
+        top: 178px;
         right: 3%;
+        left: 3%;
         font-size: 17px;
         z-index: 5;
       }
@@ -587,9 +588,9 @@
             mybeachcam.app לצפייה ללא פרסומות 
           </div>
         </a>
-        <!-- <div id="cam-title" class="cam-title">
-תקלה - עדיין בטיפול - יום ד
-        </div> -->
+        <div id="cam-title" class="cam-title">
+          לאור שיפוצים בשבט צופי הים - באופן זמני אין שידור
+        </div>
         <iframe
           id="cam1"
           src="https://ipcamlive.com/player/player.php?alias=634548590c353&autoplay=1&skin=white&hidelink=true&
@@ -725,7 +726,7 @@
       const timeOut = () =>
         setTimeout(() => {
           changeView();
-        },60000);
+        },50000);
       timeOut();
 
       cam.onerror = () => {
