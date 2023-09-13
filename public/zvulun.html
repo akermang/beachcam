@@ -577,6 +577,7 @@
     <div class="main-container">
       <!-- <div id="cam-title" class="cam-title">BeachCam.co.il</div> -->
       <div class="cams-container">
+        
         <a class="cam-banner-link" href="https://www.facebook.com/yamdakkar1">
           <div class="cam-banner">
             <img src="./images/3.png" alt="Herzelia Sea Scouts" />
@@ -588,9 +589,9 @@
             mybeachcam.app לצפייה ללא פרסומות 
           </div>
         </a>
-        <div id="cam-title" class="cam-title">
+        <!-- <div id="cam-title" class="cam-title">
           לאור שיפוצים בשבט צופי הים - באופן זמני אין שידור
-        </div>
+        </div> -->
         <iframe
           id="cam1"
           src="https://ipcamlive.com/player/player.php?alias=634548590c353&autoplay=1&skin=white&hidelink=true&
@@ -602,6 +603,12 @@
           allowfullscreen
           
         ></iframe>
+        <a class="cam-banner-link" href="https://www.facebook.com/yamdakkar1">
+          <div class="cam-banner  text-center sun_beach_locals">
+            <img width="45%" src="./images/sun_beach.png" alt="sun beach" />
+            <img width="17%" src="https://images-na.ssl-images-amazon.com/images/I/61TLayiefbL._AC_SX679_.jpg" alt="sun beach" />
+          </div>
+        </a>
       </div>
       <div class="jump-btn" onclick="location.reload()">דלג</div>
     </div>
@@ -726,7 +733,7 @@
       const timeOut = () =>
         setTimeout(() => {
           changeView();
-        },50000);
+        },45000);
       timeOut();
 
       cam.onerror = () => {

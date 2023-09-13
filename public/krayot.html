@@ -22,20 +22,20 @@
 		<script src="https://www.ipcamlive.com/player/ipcamliveplayer.min.js"></script>        
 		<!-- ipcam start -->
 		<script>
-            params = {}; 
-            params["skin"] = "white";                
-                params["autoplay"] = true;                
-				params["disablenavigation"] = true;  
-				params["adsenabled"] = false;           
-                params["adsurl"] = "https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/vmap_ad_samples&sz=640x480&cust_params=sample_ar%3Dpreonly&ciu_szs=300x250%2C728x90&gdfp_req=1&ad_rule=1&output=vmap&unviewed_position_start=1&env=vp&impl=s&correlator=";                                
-			$(window).on("load", function() { 
+        //     params = {}; 
+        //     params["skin"] = "white";                
+        //         params["autoplay"] = true;                
+				// params["disablenavigation"] = true;  
+				// params["adsenabled"] = false;           
+        //         params["adsurl"] = "https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/vmap_ad_samples&sz=640x480&cust_params=sample_ar%3Dpreonly&ciu_szs=300x250%2C728x90&gdfp_req=1&ad_rule=1&output=vmap&unviewed_position_start=1&env=vp&impl=s&correlator=";                                
+			// $(window).on("load", function() { 
 				// var width = $(window).width();
 				// var height = $(window).height(); 
 				// $('#mediadiv').width(800).height(434);
         //         console.log("params:", params)
 				
-                ipcamliveplayer.embed('mediadiv', '6469b4554f45e', params);
-			});
+      //           ipcamliveplayer.embed('mediadiv', '6469b4554f45e', params);
+			// });
 						
     		// $(window).on("resize", function() {
     		// 	var width = $(window).width();
@@ -50,7 +50,7 @@
     <meta name="description" content="מצלמת חוף הקריות שידור ישיר ישראל" />
     <meta
       name="keywords"
-      content=", קריית חיים קריית ים,כניסה למרינה,הרצליה,דרומי,מרינה צפון,מצלמת גלישה, גלים,מצלמת חוף הרצליה,גלישה,מצב,גלים,שידור,חי,מרינה,surf,live,Camera"
+      content=" מצלמת חוף קרית ים,מצלמת חוף קיית חיים,magic boards co, magicboardsco , קריית חיים קריית ים,כניסה למרינה,הרצליה,דרומי,מרינה צפון,מצלמת גלישה, גלים,מצלמת חוף הרצליה,גלישה,מצב,גלים,שידור,חי,מרינה,surf,live,Camera"
     />
     
     <link rel="stylesheet" href="./css/css1.css">
@@ -59,7 +59,7 @@
       type="image/png"
       href="https://akermang.github.io/WeatherApp/sun-favicon.png"
     />
-    <title>מצלמות חופים | BeachCam | קריות חיפה</title>
+    <title>מצלמות חופים | BeachCam | קריות חיפה | magic boards co</title>
     <meta
       http-equiv="Cache-Control"
       content="no-cache, no-store, must-revalidate"
@@ -198,6 +198,7 @@
         align-items: center;
         padding: 0;
         padding-bottom: 2px;
+        max-height: 71px;
       }
 
       .cams-container.full-size {
@@ -254,6 +255,7 @@
         margin: auto;
         min-height: 200px;
         background-color: #000;
+        margin-bottom: 1em;
       }
 
       .home-btn {
@@ -304,11 +306,25 @@
         z-index: 2;
       }
 
+      .ad2,
+      .ad {
+        margin: 1em auto;
+        max-width: 800px;
+        text-align: center;
+      }
+
+      @media (min-width: 720px) {
+        .ad-horizon  {
+          min-height: 185px;
+        }
+      }
+      
       footer {
         /* position: fixed;
         bottom: 30px; */
         width: 100%;
         z-index: 3;
+        margin-top: 1em;
       }
 
       @media (max-width: 914px) {
@@ -368,10 +384,15 @@
       }
 
       @media (max-width: 530px) {
+
+        .adsbygoogle {
+          max-width: 100vw !important;
+        }
+        
         .mobile-btn {
           display: block;
           background-color: #2196f3;
-          margin: 32% 1em 0;
+          margin: 1em 0;
           cursor: pointer;
         }
       
@@ -497,7 +518,7 @@
     </script>
         <!-- horizonSmall -->
         <ins class="adsbygoogle"
-        style="display:inline-block;width:728px;height:90px"
+        style="display:inline-block;width: 720px;height:100px"
         data-ad-client="ca-pub-2190134608327180"
         data-ad-slot="8607774219"></ins> 
     <script>
@@ -509,13 +530,42 @@
       <div class="cam-title">BeachCam.co.il</div>
       <a href="https://magicboardsco.co.il/" target="_blank">
         <div class="cam-banner">
-          <img src="https://magicboardsco.co.il/wp-content/uploads/2022/02/MAGICBOARDS-CO-WHITE.png" width="80%">
+          <img src="https://magicboardsco.co.il/wp-content/uploads/2022/02/MAGICBOARDS-CO-WHITE.png" width="65%">
         </div>
       </a>
-      <div id="mediadiv" style="background-color: #000;"></div>
+      <!-- <div id="mediadiv" style="background-color: #000;"></div> -->
+      <iframe
+      id="cam1"
+      src="https://ipcamlive.com/player/player.php?alias=6469b4554f45e&autoplay=1&skin=white&hidelink=true&
+      disablereportbutton=true&disableautofullscreen=1&disablezoombutton=1&disableframecapture=1&disableuserpause=1"
+      width="800"
+      height="434px"
+      frameborder="0"
+      autoplay
+      allowfullscreen
+      
+    ></iframe>
       <div class="jump-btn" onclick="location.reload()">
         דלג
       </div>
+    </div>
+    <div class="ad2">
+      <script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+      ></script>
+      <!-- adSmall -->
+      <ins
+        class="adsbygoogle"
+        style="display: block"
+        data-ad-client="ca-pub-2190134608327180"
+        data-ad-slot="9146492665"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      ></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
     </div>
     <!-- <div class="loader-container">
       <div class="loader"></div>
