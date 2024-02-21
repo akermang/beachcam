@@ -29,20 +29,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="קונטיקי נתניה  מצלמת חוף קונטיקי נתניה ישראל,  חוף קונטיקי נתניה,מצלמות חוף שידור ישיר ישראל, מצלמת חוף גלים surf report Israel updated daily with live HD Beach cam stream. Live Israel - Maagan Mihael Israel HD surf cam"
+      content=", Kontiki Natanya, Kontiki Natanya חיפה, גלישת רות המועדון,מצלמת חוף Kontiki Natanya ישראל, חיפה,מצלמות חוף שידור ישיר ישראל, מצלמת חוף גלים surf report Israel updated daily with live HD Beach cam stream. Live Israel - Haifa Bat Galim Israel HD surf cam"
     />
     <meta
       name="keywords"
-      content="צפון,מצלמת גלישה, גלים,מצלמת חוף קונטיקי נתניה, גלישה , מצב,גלים ,שידור ,חי חוף קונטיקי נתניה, הרצל, מצלמת גלים, חוף קונטיקי נתניה ישראל,surf,live,Camera' Beach Cam Israel,Natanya, Kontiki, Herzel,Sironit, סירונית, מצלמות חוף, מצלמת חוף, מצלמת גלים"
+      content="הרצליה,דרומי,מרינה צפון,מצלמת גלישה, גלים,מצלמת חוף קזינו חיפה, הרצליה , דבוש , אכדיה ,גלישה , מצב,גלים ,שידור ,חי Kontiki Natanya קונטיקי נתניה סירונית, חיפה, מצלמת גלים, חוף Kontiki Natanya קונטיקי נתניה סירונית חיפה ישראל,מרינה,surf,live,Camera' Beach Cam Israel, מצלמות חוף, מצלמת חוף, מצלמת גלים"
     />
-    <!--  -->
-    <link rel="stylesheet" href="./css/css1.css" />
+    
+    <link rel="stylesheet" href="../css/css1.css" />
     <link
       rel="shortcut icon"
       type="image/png"
       href="https://akermang.github.io/WeatherApp/sun-favicon.png"
     />
-    <title>קונטיקי נתניה | מצלמות חופים | BeachCam Israel</title>
+    <title>Hifa Bat Galim | מצלמות חופים | BeachCam Israel</title>
     <meta
       http-equiv="Cache-Control"
       content="no-cache, no-store, must-revalidate"
@@ -172,7 +172,7 @@
       .cam-title {
         position: absolute;
         color: white;
-        bottom: 7%;
+        top: 5%;
         left: 4%;
         font-size: 22px;
         z-index: 1;
@@ -240,7 +240,7 @@
       }
 
       .home-btn.special {
-        background-color: #9a8b4f;
+        background-color: #9A8B4F;
       }
 
       .home-btn:hover {
@@ -252,6 +252,7 @@
       }
 
       .jump-btn.show {
+        
         margin: 10px;
         transform: translateX(56vw);
         width: 60px;
@@ -260,7 +261,7 @@
         font-weight: bold;
         display: block;
         height: 60px;
-        background: transparent url("./images/jump.png") no-repeat;
+        background: transparent url("../images/jump.png") no-repeat;
         background-position: center center;
         background-size: contain;
         outline: 0 !important;
@@ -285,24 +286,22 @@
         /* position: fixed; */
         bottom: 20px;
         width: 100%;
-        color: #fdac53;
+        color: #FDAC53;
         z-index: 3;
         margin-bottom: 1em;
       }
 
       .ad {
         max-width: 800px;
-        margin: 15px auto;
-        min-height: 110px;
+        margin: 5px auto;
+        min-height: 90px;
       }
 
       .cam-banner {
-        background: rgb(255, 255, 255);
-        color: rgb(0, 0, 0);
-        height: 45px;
+        /* background: #6767e8; */
         max-width: 800px;
         margin: 0 auto;
-        width: 97.5%;
+        width: 100%;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -369,7 +368,7 @@
         }
 
         .cam-title {
-          font-size: 14px;
+          font-size: 19px;
           left: 5%;
         }
       }
@@ -377,10 +376,6 @@
       @media (max-width: 599px) {
         .cam-banner .img-responsive {
           display: none;
-        }
-
-        .cam-title {
-          bottom: 20%;
         }
 
         .cam-banner .img-mobile {
@@ -406,6 +401,10 @@
         h1,
         h2 {
           font-size: 22px;
+        }
+
+        .cam-title {
+          display: none;
         }
       }
 
@@ -467,26 +466,25 @@
           <div class="home-btn">
             <a href="./index.html">
               <h1>BEACH CAM ISRAEL</h1>
-              <p>מצלמות חוף</p>
             </a>
           </div>
           <div class="animat-box-in">
-            <h2>קונטיקי נתניה</h2>
+            <h2>Kontiki Natanya</h2>
           </div>
           <a
             class="home-btn title special"
             style="color: white"
             href="./list.html"
           >
-            <p class="info">שידור חי - מצלמת חוף</p>
-            <h2>מצלמות חוף נוספות</h2>
+            <p class="info">Live Beach surf Cam</p>
+            <h2>CAMERAS</h2>
           </a>
           <div class="dropdown">
-            <button onclick="openDropdown()" class="dropbtn">HEB</button>
+            <button onclick="openDropdown()" class="dropbtn">EN</button>
             <div id="myDropdown" class="dropdown-content">
-              <a href="#">עברית</a>
-              <a href="./en/kontiki.html">EN</a>
-              <a href="./arab/kontiki.html">عربى</a>
+              <a href="../kontiki.html">עברית</a>
+              <a href="#">EN</a>
+              <a href="../arab/kontiki.html">عربى</a>
             </div>
           </div>
         </div>
@@ -495,9 +493,9 @@
     <nav>
       <div class="animat-box-in">
         <p>
-          <a href="./dromi2.html"> לדרומי הרצליה |</a>
-          <a href="./forcast.html">תחזית גלים |</a>
-          <a href="./yamit.html">הילטון תל אביב</a>
+          <a  href="./dromi2.html"> Herzeliya south |</a>
+          <a  href="./forcast.html">forcast |</a>
+          <a  href="./yamit.html">Hilton Tel Aviv</a>
         </p>
       </div>
     </nav>
@@ -528,44 +526,85 @@
       </div>
   </div>
   <div id="ad-side2-container" class="ad-side ad-side2-container">
-      <div class="foremediaads-side2">
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2190134608327180"
-            crossorigin="anonymous"></script>
-        <!-- side160/600 -->
+    <div class="foremediaads-side2">
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2190134608327180"
+          crossorigin="anonymous"></script>
+      <!-- side160/600 -->
+      <ins class="adsbygoogle"
+          style="display:inline-block;width:160px;height:600px"
+          data-ad-client="ca-pub-2190134608327180"
+          data-ad-slot="1532064126"></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+    <div class="foremediaads-side2">
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2190134608327180"
+          crossorigin="anonymous"></script>
+      <!-- side160/600 -->
+      <ins class="adsbygoogle"
+          style="display:inline-block;width:160px;height:600px"
+          data-ad-client="ca-pub-2190134608327180"
+          data-ad-slot="1532064126"></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+  </div>
+  <div class="ad ad-horizon">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2190134608327180"
+        crossorigin="anonymous">
+    </script>
+        <!-- horizonSmall -->
         <ins class="adsbygoogle"
-            style="display:inline-block;width:160px;height:600px"
-            data-ad-client="ca-pub-2190134608327180"
-            data-ad-slot="1532064126"></ins>
-          <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-          </script>
-      </div>
-      <div class="foremediaads-side2">
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2190134608327180"
-            crossorigin="anonymous"></script>
-        <!-- side160/600 -->
-        <ins class="adsbygoogle"
-            style="display:inline-block;width:160px;height:600px"
-            data-ad-client="ca-pub-2190134608327180"
-            data-ad-slot="1532064126"></ins>
-          <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-          </script>
-      </div>
+        style="display:inline-block;width:728px;height:90px"
+        data-ad-client="ca-pub-2190134608327180"
+        data-ad-slot="8607774219"></ins> 
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
   </div>
     <div class="main-container">
-      <div id="cam-title" class="cam-title">BeachCam.co.il</div>
+      <!-- <div id="cam-title" class="cam-title">BeachCam.co.il</div> -->
 
       <div class="cams-container">
         <a class="cam-banner-link"  target="_blank" href="https://www.beachhouse.co.il/">
-            <div class="cam-banner">
+            <div class="cam-banner" style="background-color: black; color: white; width: 97.5%;">
               <h3>BEACH HOUSE since 1991</h3>
             </div>
           </a>
+        <!-- <div class="cam-banner-link">
+          <a href="https://shawatina.co.il/" target="_blank">
+            <div class="cam-banner">
+              <img
+                class="banner-img absolute"
+                src="https://cdn4.iconfinder.com/data/icons/summer-v-2/512/sea_sport_waves_wind_windsurf-512.png"
+              />
+              <img
+              class="img-responsive"
+              src="../images/shawatina-big.jpg"
+              alt="BeachCam"
+            />
+            <img
+              class="img-mobile"
+              src="../images/shawatina-mobile.jpg"
+              alt="BeachCam"
+              height="60px"
+            /> -->
+              <!-- <span class="banner-text">
+                <p>קונטיקי נתניה</p>
+              </span> -->
+              <!-- <img
+                class="banner-img"
+                src="http://www.rest.co.il/_Intros/shawatina/images/shawatina_04.png"
+                alt="danger"
+              /> -->
+            <!-- </div>
+          </a>
+        </div> -->
         <iframe
           id="cam1"
-          src="https://ipcamlive.com/player/player.php?alias=65ccf0508a902&autoplay=1&disablezoombutton=1&skin=white&hidelink=true&
-          disablereportbutton=true&disableautofullscreen=1&disableframecapture=1&disableuserpause=1"
+          src="https://ipcamlive.com/player/player.php?alias=65ccf0508a902&autoplay=1&disablezoombutton=1&skin=white&hidelink=true&disablereportbutton=true&disableautofullscreen=1&disableframecapture=1&disableuserpause=1"
           width="800"
           height="434px"
           frameborder="0"
@@ -573,7 +612,7 @@
           allowfullscreen
         ></iframe>
       </div>
-      <div class="jump-btn" onclick="location.reload()">דלג</div>
+      <div class="jump-btn" onclick="location.reload()">skip</div>
     </div>
     <div id="loader-container" class="loader-container">
       <div class="loader"></div>
@@ -601,11 +640,11 @@
     </a>
     <footer>
       <p style="text-align: center">
-        <a style="color: #fdac53" href="./index.html">
-          מצלמת חוף Beach Cam Israel</a
+        <a style="color: #FDAC53" href="./index.html">
+           Beach Cam Israel</a
         >
       </p>
-      <p style="color: #fdac53">contact: info@beachcam.co.il</p>
+      <p style="color: #FDAC53">contact: info@beachcam.co.il</p>
     </footer>
     <script>
       const cam = document.querySelector("#cam1");
@@ -658,7 +697,7 @@
         cam.style.margin = "30px 15%";
         // camTitle.style.display = "none";
         closeFullscreen();
-        cam.src = "./ad13a7a2020.html";
+        cam.src = "../ad13a7a2020.html";
         showJumpBtn();
       };
 
@@ -670,7 +709,7 @@
       const timeOut = () =>
         setTimeout(() => {
           changeView();
-        }, 100000);
+        }, 90000);
       timeOut();
 
       cam.onerror = () => {
@@ -678,6 +717,6 @@
         window.location = "./list.html";
       };
     </script>
-    <script src="./js/local.js"></script>
+    <script src="../js/local.js"></script>
   </body>
 </html>
