@@ -159,7 +159,7 @@
         flex-wrap: wrap;
         justify-content: center;
         padding: 0px;
-        overflow: auto;
+        overflow: hidden;
         color: wheat;
         width: 100%;
         max-width: 800px;
@@ -297,7 +297,7 @@
       }
 
       .cam-banner {
-        background: rgb(255, 255, 255);
+        /* background: rgb(255, 255, 255); */
         color: rgb(0, 0, 0);
         height: 45px;
         max-width: 800px;
@@ -307,6 +307,31 @@
         justify-content: space-around;
         align-items: center;
         padding: 0 2px;
+      }
+
+      .cam-banner-link.a-sponsorship {
+        max-height: 45px;
+      }
+
+      .cam-banner.sponsorship {
+        background: rgb(255, 255, 255);
+      }
+
+      .cam-img.cam-border {
+        border: 1px solid rgba(224, 216, 201, 0.039);
+        background-color: #02192015;
+      }
+
+      .timer-container {
+        position: absolute;
+        bottom: 1em;
+        right: 2em;
+        background-color: #2c2e37;
+        padding: 0 5px;
+      }
+      
+      .snapshot {
+        overflow: hidden;
       }
 
       .cam-banner .img-responsive {
@@ -561,27 +586,63 @@
       <div id="cam-title" class="cam-title">BeachCam.co.il</div>
 
       <div class="cams-container">
-        <a class="cam-banner-link"  target="_blank" href="https://www.beachhouse.co.il/">
-            <div class="cam-banner">
+          <a class="cam-banner-link a-sponsorship"  target="_blank" href="https://www.beachhouse.co.il/">
+            <div class="cam-banner sponsorship">
               <h3>BEACH HOUSE since 1991</h3>
             </div>
           </a>
-          <!-- <a class="cam-banner-link"  target="_blank" href="https://www.beachhouse.co.il/">
-            <div class="cam-banner">
-              <h3>BEACH HOUSE since 1991</h3>
+          <a class="cam-banner-link" id="cam-banner-link-top"  target="_blank" href="https://www.beachhouse.co.il/">
+            <div class="cam-banner" style="height: 100%; position: absolute; z-index: 3;">
+              <!-- <h3>BEACH HOUSE since 1991</h3> -->
             </div>
-          </a> -->
-          <!-- <a class="snapshot-link" target="_blank" href="https://www.beachhouse.co.il/%D7%9E%D7%A6%D7%9C%D7%9E%D7%AA-%D7%A7%D7%95%D7%A0%D7%98%D7%99%D7%A7%D7%99">
+          </a>
+          <!-- <a class="snapshot-link"  target="_blank" href="https://www.beachhouse.co.il/%D7%A4%D7%A8%D7%A1%D7%95%D7%9E%D7%AA-%D7%9C%D7%91%D7%99%D7%A5-%D7%9B%D7%90%D7%9E"> -->
             <div class="snapshot ">
-              <p class="message snapshot-title">לחצו לצפייה מאתר ביץ האוס</p>
-              <img
+              <!-- <p class="message snapshot-title">לחצו לצפייה מאתר ביץ האוס</p> -->
+              <!-- <img
                 class="cam-img"
-                src="https://ipcamlive.com/player/snapshot.php?alias=65ccf0508a902"
+                src="https://www.beachhouse.co.il/%D7%A4%D7%A8%D7%A1%D7%95%D7%9E%D7%AA-%D7%9C%D7%91%D7%99%D7%A5-%D7%9B%D7%90%D7%9E"
                 alt="Natanya Kontiki"
-              />
+              /> -->
+        <div class="timer-container" id="timer-container">
+                <span class="timer">
+                  <span id="counter"></span>
+                </span>
+              </div>
+              <script>
+                const timerContainer = document.getElementById("timer-container");
+                function countdown() {
+        var seconds = 8;
+        function tick() {
+          var counter = document.getElementById("counter");
+          seconds--;
+          counter.innerHTML =
+            "0:" + (seconds < 10 ? "0" : "") + String(seconds);
+          if (seconds > 0) {
+            setTimeout(tick, 1000);
+          } else {
+            document.getElementById("timer-container").innerHTML = `
+            `;
+          }
+        }
+        tick();
+      }
+      countdown();
+              </script>
+              <iframe
+                title="beachcam"
+                class="cam-img cam-border"
+                id="cam1"
+                width="100%"
+                height="434px"
+                frameborder="0"
+                autoplay
+                allowfullscreen
+              ></iframe>
+        
             </div>
-          </a> -->
-        <iframe
+          <!-- </a> -->
+        <!-- <iframe
           id="cam1"
           src="https://ipcamlive.com/player/player.php?alias=65ccf0508a902&autoplay=1&disablezoombutton=1&skin=white&hidelink=true&
           disablereportbutton=true&disableautofullscreen=1&disableframecapture=1&disableuserpause=1"
@@ -590,8 +651,17 @@
           frameborder="0"
           autoplay
           allowfullscreen
-        ></iframe>
+        ></iframe> -->
       </div>
+      <script>
+        const camera = document.getElementById("cam1");
+        const cameraBannerLinkTop = document.getElementById("cam-banner-link-top");
+        const timeStr = new Date().getTime().toString();
+        camera.src = "https://www.beachhouse.co.il/%D7%A4%D7%A8%D7%A1%D7%95%D7%9E%D7%AA-%D7%9C%D7%91%D7%99%D7%A5-%D7%9B%D7%90%D7%9E" + "?tz=" + timeStr;
+        const changeCamView = () => {camera.src= "https://ipcamlive.com/player/player.php?alias=65ccf0508a902&autoplay=1&disablezoombutton=1&skin=white&hidelink=true&disablereportbutton=true&disableautofullscreen=1&disableframecapture=1&disableuserpause=1",
+        cameraBannerLinkTop.style="display: none;"}
+        setTimeout( changeCamView, 7300)
+      </script>
       <div class="jump-btn" onclick="location.reload()">דלג</div>
     </div>
     <div id="loader-container" class="loader-container">
@@ -674,7 +744,7 @@
         cam.style.maxWidth = "800px";
         cam.style.position = "static";
         cam.style.maxHeight = "53vh";
-        cam.style.margin = "30px 15%";
+        cam.style.margin = "5px 1%";
         // camTitle.style.display = "none";
         closeFullscreen();
         cam.src = "./ad13a7a2020.html";
@@ -689,7 +759,7 @@
       const timeOut = () =>
         setTimeout(() => {
           changeView();
-        }, 100000);
+        }, 45000);
       timeOut();
 
       cam.onerror = () => {
