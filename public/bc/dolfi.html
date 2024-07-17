@@ -25,27 +25,14 @@
   </style>
   <body>
     <div class="cam-containe">
-      <iframe
-        id="cam1"
-        src="https://ipcamlive.com/player/player.php?alias=5f6364b5551d7&autoplay=1&skin=white&hidelink=true&disablereportbutton=true&disableautofullscreen=1&disableframecapture=1&disableuserpause=1"
-        width="100%"
-        height="100%"
-        frameborder="0"
-        autoplay
-        allowfullscreen
-      ></iframe>
-    </div>
-    <script>
-      // updating src affter 50 minuts for new setion token
-      const timeLengh = 3000000;
-      const camA = document.getElementById("cam1");
-      const update = () => {
-        camA.src =
-          "https://ipcamlive.com/player/player.php?alias=5f6364b5551d7&autoplay=1&disablezoombutton=1&disablezoombutton=1&skin=white&hidelink=true&disablereportbutton=true&disableautofullscreen=1&disableframecapture=1&disableuserpause=1";
-      };
-      setInterval(() => {
-        update();
-      }, timeLengh);
-    </script>
+      <a class="snapshot-link last-link" href="https://mybeachcam.app">
+        <div>
+          <img
+            width="100%"
+            class="cam-img"
+            src="https://ipcamlive.com/player/snapshot.php?alias=5f6364b5551d7"
+            alt="חוף אביב תל אביב"
+          /></div
+      ></a>
   </body>
 </html>
