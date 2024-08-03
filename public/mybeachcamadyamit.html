@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          "gtm.start": new Date().getTime(),
+          event: "gtm.js",
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-WPTQ3HT");
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="מצלמות חוף שידור ישיר ישראל" />
+    <meta
+      name="keywords"
+      content="כניסה למרינה,הרצליה,דרומי,מרינה צפון,מצלמת גלישה, גלים,מצלמת חוף הרצליה,גלישה,מצב,גלים,שידור,חי,מרינה,surf,live,Camera"
+    />
+    
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="https://akermang.github.io/WeatherApp/sun-favicon.png"
+    />
+    <title>מודעה ימית | My Beach Cam | ימית</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-22782431-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-22782431-1");
+    </script>
+
+    <style>
+      @keyframes loader-spin {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes createBox {
+        from {
+          transform: scale(0);
+        }
+
+        to {
+          transform: scale(1);
+        }
+      }
+
+      body {
+        background-color: inherit;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+      }
+      .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0); /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4); /* #2c2e37 w/ opacity */
+        background-image: url("https://ipcamlive.com/player/snapshot.php?alias=63454584c4c3c");
+        background-size: cover;
+      }
+
+      /* Modal Content */
+      .modal-content {
+        text-align: center;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* background-color: #fefefe; */
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 99.5%;
+        height: 99.5%;
+        font-weight: bold;
+        border-radius: 8px;
+        padding: 0;
+      }
+
+      .modal-img {
+        height: 40px;
+        width: 40px;
+        align-self: center;
+      }
+
+      /* The Close Button */
+      .close {
+        color: #aaaaaa;
+        position: absolute;
+        left: 5%;
+        top: 5%;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      a {
+        text-decoration: none;
+        color: rgb(250, 250, 250);
+      }
+    </style>
+  </head>
+
+  <body>
+    <a href="https://mybeachcam.app/" target="_blank">
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <!-- <span class="close">&times;</span> -->
+                <h2>לצפייה ממושכת בכתובת</h2>
+                <img
+                class="modal-img"
+                src="./images/BeachCamIcon.png"
+                alt="BeachCam"
+                />
+                <!-- <p>בכתובת</p> -->
+                <h3>MyBeachCam.app</h3>
+                <script>
+                  const host = window.top.location.host;
+                  const content = document.getElementById("myModal");
+                 console.log("host:",host)
+                 console.log("if:",(host == "beachcam.co.il"))
+                 if(host == "beachcam.co.il"){
+                  setTimeout(()=>{
+                    content.style.display = "block";
+                  }, 1)
+                 }
+                 setTimeout(()=>{
+                  const modal = document.getElementById("myModal");
+                  modal.style.display = "none";
+                 }, 9000);
+                 setTimeout(()=>{
+                  const modal = document.getElementById("myModal");
+                  modal.style.display = "block";
+                 }, 64500)
+                </script>
+            </div>
+        </div>
+    </a>
+  </body>
+</html>
