@@ -534,7 +534,7 @@
         </div>
       </a>
       <!-- <div id="mediadiv" style="background-color: #000;"></div> -->
-      <iframe
+      <!-- <iframe
       id="cam1"
       src="https://ipcamlive.com/player/player.php?alias=6469b4554f45e&autoplay=1&skin=white&hidelink=true&
       disablereportbutton=true&disableautofullscreen=1&disablezoombutton=1&disableframecapture=1&disableuserpause=1"
@@ -544,7 +544,30 @@
       autoplay
       allowfullscreen
       
-    ></iframe>
+    ></iframe> -->
+    <div id="mediadiv" style="background-color: #000;"></div>
+     <!-- ipcam start -->
+     <script src="https://www.ipcamlive.com/player/jquery-3.min.js"></script>
+     <script src="https://www.ipcamlive.com/player/ipcamliveplayer.min.js"></script>      
+     <script>
+       params = {};  
+           params["skin"] = "white";          
+           params["autoplay"] = true;                
+   params["disablenavigation"] = true;  
+   params["adsenabled"] = false;           
+           params["adsurl"] = "https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/vmap_ad_samples&sz=640x480&cust_params=sample_ar%3Dpreonly&ciu_szs=300x250%2C728x90&gdfp_req=1&ad_rule=1&output=vmap&unviewed_position_start=1&env=vp&impl=s&correlator=";                                
+   $(window).on("load", function() { 
+             ipcamliveplayer.embed('mediadiv', '6469b4554f45e', params);
+   });
+       
+   // $(window).on("resize", function() {
+   // 	var width = $(window).width();
+   // var height = $(window).height(); 
+   
+   // $('#mediadiv').width(width).height(height);
+   // ipcamliveplayer.resize();
+   // });
+ </script>
       <div class="jump-btn" onclick="location.reload()">
         דלג
       </div>
