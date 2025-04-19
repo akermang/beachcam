@@ -777,7 +777,7 @@
     };
 
     setTimeout(() => {
-      cam.src = "https://ipcamlive.com/player/player.php?alias=63454584c4c3c&autoplay=1&disablezoombutton=1&skin=white&hidelink=true&disablereportbutton=true&disableautofullscreen=1&disableframecapture=1&disableuserpause=1"
+      cam.src = "https://ipcamlive.com/player/player.php?alias=63454584c4c3c&autoplay=1&disablezoombutton=1&skin=white&hidelink=true&disablereportbutton=true&disableautofullscreen=1&disableframecapture=1&disableuserpause=0"
     }, 5000)
 
     const changeView = () => {
@@ -800,7 +800,7 @@
     const timeOut = () =>
       setTimeout(() => {
         changeView();
-      }, 60000);
+      }, 90000);
     timeOut();
 
     cam.onerror = () => {
