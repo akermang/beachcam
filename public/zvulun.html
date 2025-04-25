@@ -606,7 +606,7 @@
           allowfullscreen
           
         ></iframe> -->
-            <iframe id="cam1" src="https://beachcam.co.il/mybeachcamadzvulun.html?t=322" width="800" height="434px"
+            <iframe id="cam1" src="https://ipcamlive.com/player/player.php?alias=634548590c353&websocketenabled=1&autoplay=1&disablezoombutton=1&skin=white&hidelink=true&disablereportbutton=true&disableautofullscreen=1&disableframecapture=1&disableuserpause=0" width="800" height="434px"
               frameborder="0" autoplay allowfullscreen></iframe>
         <!-- <a class="cam-banner-link" href="https://www.facebook.com/yamdakkar1">
           <div class="cam-banner  text-center sun_beach_locals">
@@ -730,9 +730,9 @@
         showJumpBtn();
       };
 
-      setTimeout(() => {
-      cam.src = "https://ipcamlive.com/player/player.php?alias=634548590c353&autoplay=1&disablezoombutton=1&skin=white&hidelink=true&disablereportbutton=true&disableautofullscreen=1&disableframecapture=1&disableuserpause=0"
-    }, 5000)
+    //   setTimeout(() => {
+    //   cam.src = "https://ipcamlive.com/player/player.php?alias=634548590c353&websocketenabled=1&autoplay=1&disablezoombutton=1&skin=white&hidelink=true&disablereportbutton=true&disableautofullscreen=1&disableframecapture=1&disableuserpause=0"
+    // }, 5000)
 
       cam.onload = () => {
         loader.style.display = "none";
@@ -742,7 +742,7 @@
       const timeOut = () =>
         setTimeout(() => {
           changeView();
-        },90000);
+        },120000);
       timeOut();
 
       cam.onerror = () => {
