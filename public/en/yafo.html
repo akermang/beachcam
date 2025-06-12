@@ -392,7 +392,7 @@
     <nav>
       <div class="animat-box-in">
         <p>
-          <a style="color: white;" href="./gordon.html"> Gordon Tel Aviv |</a>
+          <a style="color: white;" href="./hiltonmarina.html"> Hilton Tel Aviv |</a>
           <a style="color: white;" href="./forcast.html">Forcast |</a>
           <a style="color: white;" href="./list.html">cameras</a>
         </p>
@@ -464,8 +464,25 @@
     </script>
   </div>
     <div class="message"></div>
+    <div class="cam-banner-link" style="max-width: 800px; margin: 0 auto;">
+      <a href="https://www.7evenhotels.co.il/" target="_blank"
+        style="display: flex; text-align: center; background:linear-gradient(90deg, rgb(36, 32, 0) 0%, rgb(121, 110, 9) 27%, rgb(164, 173, 150) 100%);;font-size: 1.1em; color: #1b1212;font-weight: bolder; justify-content: center; margin-top: 1em;">
+        <div>
+          <div class="text-center" style="padding-top: 0.25em;">
+            <!-- <img src="./images/BeachCamIcon.png" width="50px" alt="My Beach Cam App" /> -->
+            7 E V E N  -   Hotel
+          </div>
+          <div class="cam-banner text-center"> Tel Aviv</div>
+        </div>
+        <!-- <img width="70px" src="https://media.licdn.com/dms/image/v2/D4D22AQGOXwLDcD64LA/feedshare-shrink_800/feedshare-shrink_800/0/1727873826855?e=1752710400&v=beta&t=BAK1c-BdDGK1ZtZEiJXK9em7X-Nmmy1FLLCMow3wOIc" alt="YAMIT"
+          style="width: 50px;
+        height: 50px;
+        align-self: center;
+        margin: 5px;" /> -->
+      </a>
+    </div>
     <div class="main-container cams-container">
-      <div class="cam-title">BeachCam.co.il</div>
+      <!-- <div class="cam-title">BeachCam.co.il</div> -->
       <iframe
         id="cam"
         width="1000"
@@ -475,7 +492,7 @@
         scrolling="no"
         mozallowfullscreen="true"
         allowfullscreen="true"
-        src="https://gocamstream.com/WebRTCApp/play.html?name=0002"
+        src="https://ipcamlive.com/player/player.php?alias=664cd75b7639c&websocketenabled=1&autoplay=1&disablezoombutton=1&skin=white&hidelink=true&disablereportbutton=true&disableautofullscreen=1&disableframecapture=1&disableuserpause=1"
       ></iframe>
 
       <div class="jump-btn" onclick="location.reload()">
@@ -528,13 +545,13 @@
       }
 
       const reloadCam = () => {
-        cam.src = "https://webcasting.co.il/player/tlv/cam4_mute.html";
+        cam.src = "https://ipcamlive.com/player/player.php?alias=664cd75b7639c&websocketenabled=1&autoplay=1&disablezoombutton=1&skin=white&hidelink=true&disablereportbutton=true&disableautofullscreen=1&disableframecapture=1&disableuserpause=1";
         cam.style.maxWidth = "100%";
         cam.style.position = "relative";
         cam.style.height = "430px";
         // cam.style.borderRadius = "52%";
         cam.style.margin = "unset";
-        camTitle.style.display = "block";
+        // camTitle.style.display = "block";
         camContainer.classList.remove("full-size");
         mobileBtn.style.marginTop = "32%"
         timeOut(30000,  changeView)
@@ -548,10 +565,10 @@
         cam.style.position = "static";
         cam.style.height = "70px";
         // cam.style.borderRadius = "52%";
-        cam.style.margin = "13%";
+        cam.style.margin = "13% auto";
         // cam.onclick = () => location.reload();\
         mobileBtn.style.marginTop = "20%"
-        camTitle.style.display = "none";
+        // camTitle.style.display = "none";
         camContainer.classList.remove("full-size");
         cam.src = "../ad.html";
         showJumpBtn();
