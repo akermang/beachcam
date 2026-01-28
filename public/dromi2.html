@@ -844,7 +844,7 @@
       };
 
       // setTimeout(()=>{
-      //   cam.src = "https://ipcamlive.com/player/player.php?alias=621521fe036e6&websocketenabled=1&autoplay=1&disablezoombutton=1&skin=white&hidelink=true&          disablereportbutton=true&disableautofullscreen=1&disableframecapture=1&disableuserpause=0"
+      //   cam.src = "https://ipcamlive.com/player/player.php?alias=621521fe036e6&websocketenabled=1&autoplay=1&disablezoombutton=1&skin=white&hidelink=true&disablereportbutton=true&disableautofullscreen=1&disableframecapture=1&disableuserpause=0"
       // }, 8000)
 
       const changeView = () => {
@@ -863,11 +863,11 @@
         camContainer.style.display = "flex";
       };
 
-      // const timeOut = () =>
-      //   setTimeout(() => {
-      //     changeView();
-      //   }, 120000);
-      // timeOut();
+      const timeOut = () =>
+        setTimeout(() => {
+          changeView();
+        }, 120000);
+      timeOut();
 
       cam.onerror = () => {
         clearTimeout(timeOut);
