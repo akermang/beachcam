@@ -575,7 +575,7 @@
       <div class="cams-container">
         <iframe
           id="cam1"
-          src="https://beachcam.co.il/mybeachcamad1.html?t=1"
+          src="https://ipcamlive.com/player/player.php?alias=621521fe036e6&autoplay=1&disablezoombutton=1&disablezoombutton=1&skin=white&hidelink=true&disablereportbutton=true&disableautofullscreen=1&disableframecapture=1&disableuserpause=1"
           width="800"
           height="434px"
           frameborder="0"
@@ -693,7 +693,7 @@
       const timeOut = () =>
         setTimeout(() => {
           changeView();
-        }, 30000);
+        }, 60000);
       timeOut();
 
       cam.onerror = () => {
@@ -701,9 +701,9 @@
         window.location = "./list.html";
       };
 
-      setTimeout(()=>{
-        cam.src="https://ipcamlive.com/player/player.php?alias=621521fe036e6&autoplay=1&disablezoombutton=1&disablezoombutton=1&skin=white&hidelink=true&disablereportbutton=true&disableautofullscreen=1&disableframecapture=1&disableuserpause=1"
-      }, 7000);
+      // setTimeout(()=>{
+      //   cam.src="https://ipcamlive.com/player/player.php?alias=621521fe036e6&autoplay=1&disablezoombutton=1&disablezoombutton=1&skin=white&hidelink=true&disablereportbutton=true&disableautofullscreen=1&disableframecapture=1&disableuserpause=1"
+      // }, 7000);
     </script>
     <script src="../js/local.js"></script>
   </body>
