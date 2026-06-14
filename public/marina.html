@@ -1,640 +1,618 @@
 <!DOCTYPE html>
 <html lang="he-IL">
-  <head>
-    <!-- Google Tag Manager -->
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({
-          "gtm.start": new Date().getTime(),
-          event: "gtm.js",
-        });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-WPTQ3HT");
-    </script>
-    <!-- End Google Tag Manager -->
-    <script>
-      /**
-       * Function that captures a click on an outbound link in Analytics.
-       * This function takes a valid URL string as an argument, and uses that URL string
-       * as the event label. Setting the transport method to 'beacon' lets the hit be sent
-       * using 'navigator.sendBeacon' in browser that support it.
-       */
-      var captureOutboundLink = function (url) {
-        ga("send", "event", "outbound", "click", url, {
-          transport: "beacon",
-          hitCallback: function () {
-            document.location = url;
-          },
-        });
-      };
-    </script>
-    <!-- adsense  -->
-    <script
-      data-ad-client="ca-pub-2190134608327180"
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-    ></script>
-    <!-- End adsense  -->
-    <!-- FORMEDIA START -->
-    <!-- <script type="text/javascript" async src="https://platform.foremedia.net/code/35177/analytics"></script> -->
-    <!-- FORMEDIA END -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="מצלמות חוף שידור ישיר ישראל" />
-    <meta
-      name="keywords"
-      content="הרצליה,דרומי,מרינה דרום,מצלמת גלישה, גלים,מצלמת חוף הרצליה,גלישה,מצב,גלים,שידור,חי,מרינה,surf,live,Camera"
-    />
-    <!--  -->
-    <link rel="stylesheet" href="./css/css1.css" />
-    <link
-      rel="shortcut icon"
-      type="image/png"
-      href="https://akermang.github.io/WeatherApp/sun-favicon.png"
-    />
-    <title>מצלמות חופים | BeachCam | ארנה פוינט מרינה צפון הרצליה</title>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-22782431-1"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "UA-22782431-1");
-    </script>
-<!-- active massage for adblock users by AdSense -->
-    <script
-      async
-      src="https://fundingchoicesmessages.google.com/i/pub-2190134608327180?ers=1"
-      nonce="SywlhjIQVCO387QQ92QwHA"
-    ></script>
-    <script nonce="SywlhjIQVCO387QQ92QwHA">
-      (function () {
-        function signalGooglefcPresent() {
-          if (!window.frames["googlefcPresent"]) {
-            if (document.body) {
-              const iframe = document.createElement("iframe");
-              iframe.style =
-                "width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;";
-              iframe.style.display = "none";
-              iframe.name = "googlefcPresent";
-              document.body.appendChild(iframe);
-            } else {
-              setTimeout(signalGooglefcPresent, 0);
-            }
+<head>
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        "gtm.start": new Date().getTime(),
+        event: "gtm.js",
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != "dataLayer" ? "&l=" + l : "";
+      j.async = true;
+      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, "script", "dataLayer", "GTM-WPTQ3HT");
+  </script>
+  <!-- End Google Tag Manager -->
+  <script>
+    /**
+     * Function that captures a click on an outbound link in Analytics.
+     * This function takes a valid URL string as an argument, and uses that URL string
+     * as the event label. Setting the transport method to 'beacon' lets the hit be sent
+     * using 'navigator.sendBeacon' in browser that support it.
+     */
+    var captureOutboundLink = function (url) {
+      ga("send", "event", "outbound", "click", url, {
+        transport: "beacon",
+        hitCallback: function () {
+          document.location = url;
+        },
+      });
+    };
+  </script>
+  <!-- adsense  -->
+  <script data-ad-client="ca-pub-2190134608327180" async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- End adsense  -->
+  <!-- FORMEDIA START -->
+  <!-- <script type="text/javascript" async src="https://platform.foremedia.net/code/35177/analytics"></script> -->
+  <!-- FORMEDIA END -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="מצלמות חוף שידור ישיר ישראל" />
+  <meta name="keywords"
+    content="הרצליה,דרומי,מרינה דרום,מצלמת גלישה, גלים,מצלמת חוף הרצליה,גלישה,מצב,גלים,שידור,חי,מרינה,surf,live,Camera" />
+  <!--  -->
+  <link rel="stylesheet" href="./css/css1.css" />
+  <link rel="shortcut icon" type="image/png" href="https://akermang.github.io/WeatherApp/sun-favicon.png" />
+  <title>מצלמות חופים | BeachCam | ארנה פוינט מרינה צפון הרצליה</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-22782431-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "UA-22782431-1");
+  </script>
+  <!-- active massage for adblock users by AdSense -->
+  <script async src="https://fundingchoicesmessages.google.com/i/pub-2190134608327180?ers=1"
+    nonce="SywlhjIQVCO387QQ92QwHA"></script>
+  <script nonce="SywlhjIQVCO387QQ92QwHA">
+    (function () {
+      function signalGooglefcPresent() {
+        if (!window.frames["googlefcPresent"]) {
+          if (document.body) {
+            const iframe = document.createElement("iframe");
+            iframe.style =
+              "width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;";
+            iframe.style.display = "none";
+            iframe.name = "googlefcPresent";
+            document.body.appendChild(iframe);
+          } else {
+            setTimeout(signalGooglefcPresent, 0);
           }
         }
-        signalGooglefcPresent();
-      })();
-    </script>
-     <!-- END massage for adblock users by AdSense -->
-    <style>
-      @keyframes loader-spin {
-        0% {
-          transform: rotate(0deg);
-        }
-
-        100% {
-          transform: rotate(360deg);
-        }
+      }
+      signalGooglefcPresent();
+    })();
+  </script>
+  <!-- END massage for adblock users by AdSense -->
+  <style>
+    @keyframes loader-spin {
+      0% {
+        transform: rotate(0deg);
       }
 
-      @keyframes createBox {
-        from {
-          transform: scale(0);
-        }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
 
-        to {
-          transform: scale(1);
-        }
+    @keyframes createBox {
+      from {
+        transform: scale(0);
       }
 
-      body {
-        background-color: #2c2e37;
+      to {
+        transform: scale(1);
       }
+    }
 
-      header {
-        width: 100%;
-        display: flex;
-      }
+    body {
+      background-color: #2c2e37;
+    }
 
-      a {
-        text-decoration: none;
-      }
+    header {
+      width: 100%;
+      display: flex;
+    }
 
-      div.animat-box-in {
-        animation: createBox 0.25s;
-      }
+    a {
+      text-decoration: none;
+    }
 
-      .wrapper {
-        width: 100%;
-      }
+    div.animat-box-in {
+      animation: createBox 0.25s;
+    }
 
-      .row-flex {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 5px 0;
-      }
+    .wrapper {
+      width: 100%;
+    }
 
-      p,
-      h1,
-      h2 {
-        text-align: center;
-        margin: 0;
-      }
+    .row-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px 0;
+    }
 
-      nav p {
-        font-size: 20px;
-        color: white;
-      }
+    p,
+    h1,
+    h2 {
+      text-align: center;
+      margin: 0;
+    }
 
-      h1,
-      h2 {
-        font-size: 30px;
-      }
+    nav p {
+      font-size: 20px;
+      color: white;
+    }
 
-      .light-background {
-        background-color: #0c885a;
-      }
+    h1,
+    h2 {
+      font-size: 30px;
+    }
 
-      div.img {
-        text-align: center;
-        border-radius: 2px;
-        background-color: rgb(241, 232, 232);
-      }
+    .light-background {
+      background-color: #0c885a;
+    }
 
-      div.img:hover {
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 1.2);
-      }
+    div.img {
+      text-align: center;
+      border-radius: 2px;
+      background-color: rgb(241, 232, 232);
+    }
 
-      .img img {
-        width: 200px;
-      }
+    div.img:hover {
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 1.2);
+    }
 
-      .message {
-        background-color: #9c27b0;
-        display: block;
-        color: wheat;
-        text-align: center;
-        font-size: medium;
-        font-weight: bold;
-        border: 1px solid;
-        padding: 7px;
-        margin: 5px 16px;
-        border-radius: 3px;
-        width: 97%;
-        max-width: 786px;
-        margin: 10px auto;
-      }
+    .img img {
+      width: 200px;
+    }
 
-      .cams-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 0px;
-        overflow: auto;
-        color: wheat;
-        width: 100%;
-        max-width: 800px;
-        margin: 0px auto;
-        position: relative;
-        margin-bottom: 10px;
-        min-height: 33vh;
-      }
+    .message {
+      background-color: #9c27b0;
+      display: block;
+      color: wheat;
+      text-align: center;
+      font-size: medium;
+      font-weight: bold;
+      border: 1px solid;
+      padding: 7px;
+      margin: 5px 16px;
+      border-radius: 3px;
+      width: 97%;
+      max-width: 786px;
+      margin: 10px auto;
+    }
 
-      .cam-title {
-        position: absolute;
-        color: white;
-        top: 5%;
-        left: 4%;
-        font-size: 22px;
-        z-index: 1;
-      }
+    .cams-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0px;
+      overflow: auto;
+      color: wheat;
+      width: 100%;
+      max-width: 800px;
+      margin: 0px auto;
+      position: relative;
+      margin-bottom: 10px;
+      min-height: 33vh;
+    }
 
-      .cams-container.full-size {
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        max-width: 100%;
-        padding: 0;
-      }
+    .cam-title {
+      position: absolute;
+      color: white;
+      top: 5%;
+      left: 4%;
+      font-size: 22px;
+      z-index: 1;
+    }
 
-      .full-size img {
-        width: 100%;
-        height: 100%;
-      }
+    .cams-container.full-size {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      max-width: 100%;
+      padding: 0;
+    }
 
-      .cams-container P {
-        margin: 0;
-        min-width: 33%;
-      }
+    .full-size img {
+      width: 100%;
+      height: 100%;
+    }
 
-      iframe {
-        width: 98%;
-        /* min-height: 53vh; */
-      }
+    .cams-container P {
+      margin: 0;
+      min-width: 33%;
+    }
 
-      .loader-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        height: 40vh;
-        width: 100%;
-        position: absolute;
-        top: 200px;
-      }
+    iframe {
+      width: 98%;
+      /* min-height: 53vh; */
+    }
 
-      .loader {
-        border: 4px solid #17a2b8;
-        border-left-color: rgba(0, 0, 0, 0.1);
-        border-top-color: #2196f3;
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        animation: loader-spin 0.8s linear infinite;
-        opacity: 1;
-        opacity: 1;
-      }
+    .loader-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 40vh;
+      width: 100%;
+      position: absolute;
+      top: 200px;
+    }
 
-      .main-container {
-        position: relative;
-        z-index: 1;
-        max-width: 800px;
-        margin: auto;
-        display: flex;
-        justify-content: center;
-      }
+    .loader {
+      border: 4px solid #17a2b8;
+      border-left-color: rgba(0, 0, 0, 0.1);
+      border-top-color: #2196f3;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: loader-spin 0.8s linear infinite;
+      opacity: 1;
+      opacity: 1;
+    }
 
-      .home-btn {
-        padding: 4px;
-        border-radius: 7px;
-      }
+    .main-container {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+    }
 
-      .home-btn.special {
-        background-color: #9a8b4f;
-      }
+    .home-btn {
+      padding: 4px;
+      border-radius: 7px;
+    }
 
-      .home-btn:hover {
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-      }
+    .home-btn.special {
+      background-color: #9a8b4f;
+    }
 
-      .jump-btn {
-        display: none;
-      }
+    .home-btn:hover {
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
 
-      .jump-btn.show {
-        margin-bottom: 10px;
-        margin-left: 75%;
-        width: 60px;
-        font-size: 22px;
-        z-index: 10;
-        font-weight: bold;
-        display: block;
-        height: 60px;
-        background: transparent url("./images/jump.png") no-repeat;
-        background-position: center center;
-        background-size: contain;
-        outline: 0 !important;
-        border: 0;
-        color: white;
-        line-height: 2.5;
-        text-align: center;
-        opacity: 0.9;
-        cursor: pointer;
-      }
+    .jump-btn {
+      display: none;
+    }
 
-      .jump-btn.show:hover {
-        opacity: 1;
-      }
+    .jump-btn.show {
+      margin-bottom: 10px;
+      margin-left: 75%;
+      width: 60px;
+      font-size: 22px;
+      z-index: 10;
+      font-weight: bold;
+      display: block;
+      height: 60px;
+      background: transparent url("./images/jump.png") no-repeat;
+      background-position: center center;
+      background-size: contain;
+      outline: 0 !important;
+      border: 0;
+      color: white;
+      line-height: 2.5;
+      text-align: center;
+      opacity: 0.9;
+      cursor: pointer;
+    }
 
-      #iframe-1 {
-        position: relative;
-        z-index: 2;
-      }
+    .jump-btn.show:hover {
+      opacity: 1;
+    }
 
-      footer {
-        /* position: fixed; */
-        bottom: 20px;
-        width: 100%;
-        color: #fdac53;
-        z-index: 3;
-        margin-bottom: 1em;
-      }
+    #iframe-1 {
+      position: relative;
+      z-index: 2;
+    }
 
-      .ad {
-        max-width: 800px;
-        margin: 5px auto;
-        min-height: 20px;
-      }
+    footer {
+      /* position: fixed; */
+      bottom: 20px;
+      width: 100%;
+      color: #fdac53;
+      z-index: 3;
+      margin-bottom: 1em;
+    }
 
-      .cam-banner {
-        background: #ffffff;
-        max-width: 800px;
-        margin: 0 auto;
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        padding: 0 2px;
-      }
+    .ad {
+      max-width: 800px;
+      margin: 5px auto;
+      min-height: 20px;
+    }
 
-      .cam-banner.text-center {
-        margin: 4px auto;
-        background-color: #ff000000;
-        color: #ffffff;
-      }
+    .cam-banner {
+      background: #ffffff;
+      max-width: 800px;
+      margin: 0 auto;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 0 2px;
+    }
 
-      .cam-banner.alfa {
-        background-color: #2c2e37;
-        text-align: center;
-      }
+    .cam-banner.text-center {
+      margin: 4px auto;
+      background-color: #ff000000;
+      color: #ffffff;
+    }
 
-      .banner-img {
-        height: 60px;
-      }
+    .cam-banner.alfa {
+      background-color: #2c2e37;
+      text-align: center;
+    }
 
-      .banner-text {
-        font-size: 22px;
-        font-weight: bold;
-        color: #2c2e37;
-      }
+    .banner-img {
+      height: 60px;
+    }
 
-      div.cam-banner-link {
-        z-index: 3;
-        width: 98%;
-        max-width: 796px;
-      }
+    .banner-text {
+      font-size: 22px;
+      font-weight: bold;
+      color: #2c2e37;
+    }
 
-      div.cam-banner-link.keeper {
-        max-height: 52vh;
-        overflow: hidden;
-        /* background: linear-gradient(
+    div.cam-banner-link {
+      z-index: 3;
+      width: 98%;
+      max-width: 796px;
+    }
+
+    div.cam-banner-link.keeper {
+      max-height: 52vh;
+      overflow: hidden;
+      /* background: linear-gradient(
           74deg,
           rgb(33, 42, 43) 0%,
           rgba(253, 187, 45, 0.29344892026578073) 100%
         ); */
-        min-height: 100px;
-        position: relative;
+      min-height: 100px;
+      position: relative;
+    }
+
+    .keeper-banner-text {
+      position: absolute;
+      top: 24%;
+      color: white;
+      text-align: center;
+    }
+
+    .color-h {
+      color: #1f484e;
+      font-size: 22px;
+      background: #a8e1ff;
+    }
+
+    .banner-btn {
+      font-size: 20px;
+      background-color: #ed4933;
+      color: #ffffff;
+      padding: 0.5em 1em;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+
+    .banner-btn:hover {
+      background-color: #ef5e4a;
+    }
+
+    .tx-320 {
+      display: none;
+    }
+
+    .tx-780 {
+      display: block;
+    }
+
+    @media (max-width: 914px) {
+      .cams-container P {
+        min-width: 49%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .img img {
+        width: 140px;
       }
 
-      .keeper-banner-text {
-        position: absolute;
-        top: 24%;
-        color: white;
-        text-align: center;
+      .cam-title {
+        font-size: 19px;
       }
 
-      .color-h {
-        color: #1f484e;
+      h1,
+      h2 {
         font-size: 22px;
-        background: #a8e1ff;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .img img {
+        width: 140px;
       }
 
-      .banner-btn {
-        font-size: 20px;
-        background-color: #ed4933;
-        color: #ffffff;
-        padding: 0.5em 1em;
-        font-weight: bold;
-        border-radius: 5px;
+      .cam-title {
+        font-size: 19px;
+        left: 5%;
       }
+    }
 
-      .banner-btn:hover {
-        background-color: #ef5e4a;
-      }
+    @media (max-width: 599px) {
 
       .tx-320 {
-        display: none;
-      }
-
-      .tx-780 {
         display: block;
       }
 
-      @media (max-width: 914px) {
-        .cams-container P {
-          min-width: 49%;
-        }
-      }
-
-      @media (max-width: 768px) {
-        .img img {
-          width: 140px;
-        }
-        .cam-title {
-          font-size: 19px;
-        }
-        h1,
-        h2 {
-          font-size: 22px;
-        }
-      }
-
-      @media (max-width: 700px) {
-        .img img {
-          width: 140px;
-        }
-
-        .cam-title {
-          font-size: 19px;
-          left: 5%;
-        }
-      }
-
-      @media (max-width: 599px) {
-
-        .tx-320 {
-          display: block;
-        }
-
-        .tx-780 {
-          display: none;
-        }
-        
-        .banner-text {
-          font-size: 16px;
-        }
-
-        header img {
-          width: 115px;
-        }
-
-        .cams-container P {
-          min-width: 100%;
-        }
-
-        .img img {
-          width: 115px;
-        }
-
-        h1,
-        h2 {
-          font-size: 22px;
-        }
-
-        .cam-title {
-          font-size: 12px;
-        }
-      }
-
-      .mobile-btn {
+      .tx-780 {
         display: none;
       }
 
-      @media (max-width: 530px) {
-        .ad {
-          max-width: 100vw !important;
-          overflow: hidden;
-        }
-
-        .adsbygoogle {
-          max-width: 100vw !important;
-        }
-
-        .mobile-btn {
-          display: block;
-          background-color: #2196f3;
-          margin: 32% 1em 0;
-          cursor: pointer;
-          width: 80vw;
-          margin: auto;
-          margin: 15px auto;
-        }
-
-        iframe#cam1 {
-          max-height: 53vw !important;
-        }
-
-        .loader-container {
-          top: 160px;
-        }
-
-        .row-flex {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-evenly;
-          align-items: center;
-          padding: 0;
-        }
-
-        nav p {
-          font-size: 18px;
-        }
-
-        p.info {
-          display: none;
-        }
+      .banner-text {
+        font-size: 16px;
       }
-    </style>
-  </head>
 
-  <body>
-    <header>
-      <div class="wrapper">
-        <div class="w3-container w3-blue row-flex">
-          <div class="home-btn">
-            <a href="./index.html">
-              <h1>BEACH CAM ISRAEL</h1>
-              <!-- <p>לפירסום כאן 054-6817830</p> -->
-            </a>
-          </div>
-          <div class="animat-box-in">
-            <h2>הרצליה מרינה צפון</h2>
-          </div>
-          <a
-            class="home-btn title special"
-            style="color: white"
-            href="./list.html"
-          >
-            <p class="info">שידור חי - גלישת גלים</p>
-            <h1>מצלמות חוף נוספות</h1>
+      header img {
+        width: 115px;
+      }
+
+      .cams-container P {
+        min-width: 100%;
+      }
+
+      .img img {
+        width: 115px;
+      }
+
+      h1,
+      h2 {
+        font-size: 22px;
+      }
+
+      .cam-title {
+        font-size: 12px;
+      }
+    }
+
+    .mobile-btn {
+      display: none;
+    }
+
+    @media (max-width: 530px) {
+      .ad {
+        max-width: 100vw !important;
+        overflow: hidden;
+      }
+
+      .adsbygoogle {
+        max-width: 100vw !important;
+      }
+
+      .mobile-btn {
+        display: block;
+        background-color: #2196f3;
+        margin: 32% 1em 0;
+        cursor: pointer;
+        width: 80vw;
+        margin: auto;
+        margin: 15px auto;
+      }
+
+      iframe#cam1 {
+        max-height: 53vw !important;
+      }
+
+      .loader-container {
+        top: 160px;
+      }
+
+      .row-flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 0;
+      }
+
+      nav p {
+        font-size: 18px;
+      }
+
+      p.info {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="wrapper">
+      <div class="w3-container w3-blue row-flex">
+        <div class="home-btn">
+          <a href="./index.html">
+            <h1>BEACH CAM ISRAEL</h1>
+            <!-- <p>לפירסום כאן 054-6817830</p> -->
           </a>
-          <div class="dropdown">
-            <button onclick="openDropdown()" class="dropbtn">HEB</button>
-            <div id="myDropdown" class="dropdown-content">
-              <a href="#">עברית</a>
-              <a href="./en/marina.html">EN</a>
-              <a href="./arab/marina.html">عربى</a>
-            </div>
+        </div>
+        <div class="animat-box-in">
+          <h2>הרצליה מרינה צפון</h2>
+        </div>
+        <a class="home-btn title special" style="color: white" href="./list.html">
+          <p class="info">שידור חי - גלישת גלים</p>
+          <h1>מצלמות חוף נוספות</h1>
+        </a>
+        <div class="dropdown">
+          <button onclick="openDropdown()" class="dropbtn">HEB</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="#">עברית</a>
+            <a href="./en/marina.html">EN</a>
+            <a href="./arab/marina.html">عربى</a>
           </div>
         </div>
       </div>
-    </header>
-    <nav>
-      <div class="animat-box-in">
-        <p>
-          <a href="./dromi2.html">לדרומי |</a>
-          <a href="./forcast.html">תחזית גלים |</a>
-          <a href="./zvulun.html"> זבולון</a>
-        </p>
-      </div>
-    </nav>
-    <div id="ad-side1-container" class="ad-side ad-side1-container">
-      <div class="foremediaads-side1">
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2190134608327180"
-            crossorigin="anonymous"></script>
-        <!-- side160/600 -->
-        <ins class="adsbygoogle"
-            style="display:inline-block;width:160px;height:600px"
-            data-ad-client="ca-pub-2190134608327180"
-            data-ad-slot="1532064126"></ins>
-          <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-          </script>
-      </div>
-  </div>
-  <div id="ad-side2-container" class="ad-side ad-side2-container">
-      <div class="foremediaads-side2">
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2190134608327180"
-            crossorigin="anonymous"></script>
-        <!-- side160/600 -->
-        <ins class="adsbygoogle"
-            style="display:inline-block;width:160px;height:400px"
-            data-ad-client="ca-pub-2190134608327180"
-            data-ad-slot="1532064126"></ins>
-          <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-          </script>
-      </div>
-  </div>
-    <div class="ad ad-horizon">
+    </div>
+  </header>
+  <nav>
+    <div class="animat-box-in">
+      <p>
+        <a href="./dromi2.html">לדרומי |</a>
+        <a href="./forcast.html">תחזית גלים |</a>
+        <a href="./zvulun.html"> זבולון</a>
+      </p>
+    </div>
+  </nav>
+  <div id="ad-side1-container" class="ad-side ad-side1-container">
+    <div class="foremediaads-side1">
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2190134608327180"
-          crossorigin="anonymous">
-      </script>
-          <!-- horizonSmall -->
-          <ins class="adsbygoogle"
-          style="display:inline-block;width:728px;height:90px"
-          data-ad-client="ca-pub-2190134608327180"
-          data-ad-slot="8607774219"></ins> 
+        crossorigin="anonymous"></script>
+      <!-- side160/600 -->
+      <ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px"
+        data-ad-client="ca-pub-2190134608327180" data-ad-slot="1532064126"></ins>
       <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
       </script>
     </div>
-    <!-- <a href="http://62.219.45.26:130//mjpg/video.mjpg ">
+  </div>
+  <div id="ad-side2-container" class="ad-side ad-side2-container">
+    <div class="foremediaads-side2">
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2190134608327180"
+        crossorigin="anonymous"></script>
+      <!-- side160/600 -->
+      <ins class="adsbygoogle" style="display:inline-block;width:160px;height:400px"
+        data-ad-client="ca-pub-2190134608327180" data-ad-slot="1532064126"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+  </div>
+  <div class="ad ad-horizon">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2190134608327180"
+      crossorigin="anonymous">
+      </script>
+    <!-- horizonSmall -->
+    <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px"
+      data-ad-client="ca-pub-2190134608327180" data-ad-slot="8607774219"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+  <!-- <a href="http://62.219.45.26:130//mjpg/video.mjpg ">
       <div class="message">
          למרינה צפון ניתן לנסות בקישור כאן
       </div>
     </a> -->
-    <!-- <div class="message">
+  <!-- <div class="message">
       <p>המצלמה הצפונית אינה עובדת</p>
       <p>בנתיים תהנו משידורי ניסיון בדרומי</p>
     </div> -->
-    <div class="main-container">
-      <!-- <div class="cam-banner-link keeper" style="margin-bottom: 5px;">
+  <div class="main-container">
+    <!-- <div class="cam-banner-link keeper" style="margin-bottom: 5px;">
         <a
           target="_blank"
           id="alfaSurAd"
@@ -661,12 +639,12 @@
           </div>
         </a>
       </div> -->
-      <section class="cams-container">
-        <!-- <a class="cam-banner-link" href="./nov24.html">
+    <section class="cams-container">
+      <!-- <a class="cam-banner-link" href="./nov24.html">
           <img width="100%" src="https://akermang.github.io/betknesetlive/780_160_ultrawave%20(20).png" alt="add" id="ultrawave_nov24_arena"/>
         </a>  -->
-        <!-- <div class="cam-title">BeachCam.co.il</div> -->
-        <!-- <div class="cam-banner-link keeper">
+      <!-- <div class="cam-title">BeachCam.co.il</div> -->
+      <!-- <div class="cam-banner-link keeper">
           <a
             id="alfaSurAd"
             href="https://www.terminalx.com/collections/surf-billihouse?product_list_order=justlanded&utm_source=websurf&utm_medium=referral&utm_campaign=billabong_websurf_60off_2009"
@@ -701,199 +679,201 @@
             </div>
           </a>
         </div> -->
-        <div class="cam-banner-link">
-          <a href="https://www.facebook.com/arenamall">
-            <div class="cam-banner">
-              <img
-                class="banner-img"
-                src="./images/BeachCamIcon.png"
-                alt="BeachCam"
-              />
-              <span class="banner-text">
-                <p>ארנה פויינט | הרצליה מרינה צפון</p>
-              </span>
-              <img
-                class="banner-img"
-                src="./images/Arena-logo.jpg"
-                alt="danger"
-              />
-            </div>
-          </a>
-        </div>
-        <div class="cam-banner-link">
-          <a  href="https://mybeachcam.app">
-            <div class="cam-banner text-center">
-              <!-- <img src="./images/BeachCamIcon.png" width="50px" alt="My Beach Cam App" /> -->
-              MyBeachCam.app - לצפייה ארוכה כאן  
-            </div>
-            <div class="cam-banner text-center"> - לחצו כאן -</div>
-          </a>
-        </div>
-        <iframe
-          id="cam1"
-          src="https://ipcamlive.com/player/player.php?alias=63454a0f442fc&websocketenabled=1&autoplay=1&disablezoombutton=1&skin=white&hidelink=true&
-          disablereportbutton=true&disableautofullscreen=1&disableframecapture=1&disableuserpause=1"
-          width="800"
-          height="434px"
-          frameborder="0"
-          autoplay
-          allowfullscreen
-        ></iframe>
-      </section>
-      <div class="jump-btn" onclick="location.reload(true)">דלג</div>
-    </div>
-    <div class="ads-container, psitivemobile" style="max-width: 800px; margin: .2em auto;">
-      <!-- positive mobile outbrain aplvideo ads START -->
-      <div class="aplvideo">
+      <div class="cam-banner-link">
+        <a href="https://www.facebook.com/arenamall">
+          <div class="cam-banner">
+            <img class="banner-img" src="./images/BeachCamIcon.png" alt="BeachCam" />
+            <span class="banner-text">
+              <p>ארנה פויינט | הרצליה מרינה צפון</p>
+            </span>
+            <img class="banner-img" src="./images/Arena-logo.jpg" alt="danger" />
+          </div>
+        </a>
+      </div>
+      <div class="cam-banner-link">
+        <a href="https://mybeachcam.app">
+          <div class="cam-banner text-center">
+            <!-- <img src="./images/BeachCamIcon.png" width="50px" alt="My Beach Cam App" /> -->
+            MyBeachCam.app - לצפייה ארוכה כאן
+          </div>
+          <div class="cam-banner text-center"> - לחצו כאן -</div>
+        </a>
+      </div>
+      <iframe id="cam1" src="https://g1.ipcamlive.com/player/player.php?alias=63454a0f442fc&websocketenabled=1&autoplay=1&disablezoombutton=1&skin=white&hidelink=true&
+          disablereportbutton=true&disableautofullscreen=1&disableframecapture=1&disableuserpause=1" width="800"
+        height="434px" frameborder="0" autoplay allowfullscreen></iframe>
+    </section>
+    <div class="jump-btn" onclick="location.reload(true)">דלג</div>
+  </div>
+  <div class="ads-container, psitivemobile" style="max-width: 800px; margin: .2em auto;">
+    <!-- positive mobile outbrain aplvideo ads START -->
+    <!-- <div class="aplvideo">
         <script async id="AV6a05cf6ce093ce570602b52a" type="text/javascript"
           src="https://tg1.aniview.com/api/adserver/spt?AV_TAGID=6a05cf6ce093ce570602b52a&AV_PUBLISHERID=6a05cd6df7084d6da400c706"></script>
-      </div>
-      <!-- positive mobile outbrain aplvideo ads END -->
-    </div>
-    <div class="ad">
-      <script
-        async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-      ></script>
-      <!-- adSmall -->
-      <ins
-        class="adsbygoogle"
-        style="display: block"
-        data-ad-client="ca-pub-2190134608327180"
-        data-ad-slot="9146492665"
-        data-ad-format="auto"
-        data-full-width-responsive="true"
-      ></ins>
-      <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
+      </div> -->
+    <div class="aplvideo">
+      <script async id="AV6a05cf6ce093ce570602b52a" type="text/javascript"></script>
+      <script type="text/javascript">
+        (function () {
+          // 1. Generate a unique timestamp based on the exact millisecond
+          var timestamp = new Date().getTime();
+
+          // 2. Safely capture and encode the current page URL and Domain
+          var currentUrl = encodeURIComponent(window.location.href);
+          var currentDomain = encodeURIComponent(window.location.hostname);
+
+          // 3. Find your Aniview script element
+          var script = document.getElementById("AV6a05cf6ce093ce570602b52a");
+
+          // 4. Construct the URL passing the dynamic data and the cache-busting timestamp
+          script.src = "https://tg1.aniview.com/api/adserver/spt?AV_TAGID=6a05cf6ce093ce570602b52a&AV_PUBLISHERID=6a05cd6df7084d6da400c706" +
+            "&cb=" + timestamp +
+            "&url=" + currentUrl +
+            "&domain=" + currentDomain;
+        })();
       </script>
     </div>
-    <a class="home-btn mobile-btn" style="color: white" href="./list.html">
-      <h1>מצלמות חוף נוספות</h1>
-    </a>
-    <div class="ads-container, psitivemobile"
-      style="max-width: 800px; margin: 0.2em auto; background-color: aliceblue; padding: 1em;">
-      <!-- outbrain AR_1 PositiveMobile START-->
-      <div class="OUTBRAIN" data-ob-contentUrl="DROP_PERMALINK_HERE" data-widget-id="AR_1"
-        data-ob-installation-key="MEDMO312EFDL2B93C7PB8F4QB"></div>
-      <script type="text/javascript" async="async" src="https://widgets.outbrain.com/outbrain.js"></script>
-      <!-- outbrain AR_1 PositiveMobile END-->
-    </div>
-    <footer>
-      <p style="text-align: center">
-        <a style="color: #fdac53" href="./index.html">
-          מצלמת חוף Beach Cam Israel</a
-        >
-      </p>
-      <p style="color: #fdac53">contact: info@beachcam.co.il</p>
-    </footer>
-    <!-- The Adblock detected Modal -->
-    <div id="myModal" class="modal">
-      <!-- Modal content -->
-      <div class="modal-content">
-        <p>Adblock detected..</p>
-        <img class="modal-img" src="./images/BeachCamIcon.png" alt="BeachCam" />
-        <p>שמנו לב כי נעשה שימוש בחוסם פירסומות</p>
-        <p>
-          על מנת שנוכל לספק לך חווית צפייה מושלמת, יש לבטל את פעולת החוסם ולרענן
-          את הדף
-        </p>
-        <p>צוות</p>
-        <p>BeachCam</p>
-      </div>
-    </div>
-    <script src="./js/peel.js" type="text/javascript"></script>
-    <script type="text/javascript">
-      if (!document.getElementById("JarTfVIZLvlw")) {
-        document.getElementById("myModal").style.display = "block";
-        document.getElementById("cam1").style.display = "none";
-      }
-    </script>
+    <!-- positive mobile outbrain aplvideo ads END -->
+  </div>
 
-    <div class="loader-container">
-      <div class="loader"></div>
-    </div>
+
+
+
+  <div class="ad">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- adSmall -->
+    <ins class="adsbygoogle" style="display: block" data-ad-client="ca-pub-2190134608327180" data-ad-slot="9146492665"
+      data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>
-      const cam = document.querySelector("#cam1");
-      const camContainer = document.querySelector(".cams-container");
-      // const camTitle = document.querySelector(".cam-title");
-      const loader = document.querySelector(".loader-container");
-      const message = document.querySelector(".message");
-      const jumpBtn = document.querySelector(".jump-btn");
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+  <a class="home-btn mobile-btn" style="color: white" href="./list.html">
+    <h1>מצלמות חוף נוספות</h1>
+  </a>
+  <div class="ads-container, psitivemobile"
+    style="max-width: 800px; margin: 0.2em auto; background-color: aliceblue; padding: 1em;">
+    <!-- outbrain AR_1 PositiveMobile START-->
+    <div class="OUTBRAIN" data-ob-contentUrl="DROP_PERMALINK_HERE" data-widget-id="AR_1"
+      data-ob-installation-key="MEDMO312EFDL2B93C7PB8F4QB"></div>
+    <script type="text/javascript" async="async" src="https://widgets.outbrain.com/outbrain.js"></script>
+    <!-- outbrain AR_1 PositiveMobile END-->
+  </div>
+  <footer>
+    <p style="text-align: center">
+      <a style="color: #fdac53" href="./index.html">
+        מצלמת חוף Beach Cam Israel</a>
+    </p>
+    <p style="color: #fdac53">contact: info@beachcam.co.il</p>
+  </footer>
+  <!-- The Adblock detected Modal -->
+  <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <p>Adblock detected..</p>
+      <img class="modal-img" src="./images/BeachCamIcon.png" alt="BeachCam" />
+      <p>שמנו לב כי נעשה שימוש בחוסם פירסומות</p>
+      <p>
+        על מנת שנוכל לספק לך חווית צפייה מושלמת, יש לבטל את פעולת החוסם ולרענן
+        את הדף
+      </p>
+      <p>צוות</p>
+      <p>BeachCam</p>
+    </div>
+  </div>
+  <script src="./js/peel.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    if (!document.getElementById("JarTfVIZLvlw")) {
+      document.getElementById("myModal").style.display = "block";
+      document.getElementById("cam1").style.display = "none";
+    }
+  </script>
 
-      const showJumpBtn = () => {
-        jumpBtn.classList.add("show");
-      };
+  <div class="loader-container">
+    <div class="loader"></div>
+  </div>
+  <script>
+    const cam = document.querySelector("#cam1");
+    const camContainer = document.querySelector(".cams-container");
+    // const camTitle = document.querySelector(".cam-title");
+    const loader = document.querySelector(".loader-container");
+    const message = document.querySelector(".message");
+    const jumpBtn = document.querySelector(".jump-btn");
 
-      const togglesize = () => {
-        camContainer.classList.toggle("full-size");
-      };
+    const showJumpBtn = () => {
+      jumpBtn.classList.add("show");
+    };
 
-      const closeFullscreen = () => {
-        if (document.exitFullscreen) {
-          document.exitFullscreen();
-        } else if (document.mozCancelFullScreen) {
-          /* Firefox */
-          document.mozCancelFullScreen();
-        } else if (document.webkitExitFullscreen) {
-          /* Chrome, Safari and Opera */
-          document.webkitExitFullscreen();
-        } else if (document.msExitFullscreen) {
-          /* IE/Edge */
-          document.msExitFullscreen();
+    const togglesize = () => {
+      camContainer.classList.toggle("full-size");
+    };
+
+    const closeFullscreen = () => {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.mozCancelFullScreen) {
+        /* Firefox */
+        document.mozCancelFullScreen();
+      } else if (document.webkitExitFullscreen) {
+        /* Chrome, Safari and Opera */
+        document.webkitExitFullscreen();
+      } else if (document.msExitFullscreen) {
+        /* IE/Edge */
+        document.msExitFullscreen();
+      }
+    };
+
+    const changeView = () => {
+      cam.style.maxWidth = "800px";
+      cam.style.position = "static";
+      cam.style.maxHeight = "53vh";
+      cam.style.margin = "30px 15%";
+      // camTitle.style.display = "none";
+      closeFullscreen();
+      cam.src = "./ad13a7a2020.html";
+      showJumpBtn();
+    };
+
+    cam.onload = () => {
+      loader.style.display = "none";
+      camContainer.style.display = "flex";
+    };
+
+    const timeOut = () =>
+      setTimeout(() => {
+        changeView();
+      }, 120000);
+    timeOut();
+
+    cam.onerror = () => {
+      clearTimeout(timeOut);
+      window.location = "./list.html";
+    };
+  </script>
+  <script src="./js/local.js"></script>
+  <!-- just-detect-adblock -->
+  <script type="text/javascript" src="./sosason/dist/buundle.umd.js"></script>
+  <script type="text/javascript">
+    const addblockPopup = () => {
+      justDetectAdblock.detectAnyAdblocker().then(function (detected) {
+        if (detected) {
+          console.log("BeachCam say: Adblock detected", detected);
+          closeFullscreen();
+          // Get the <span> element that closes the modal
+          var modal = document.getElementById("myModal");
+          modal.style.display = "block";
+          // When the user clicks anywhere outside of the modal, close it
+          window.onclick = function (event) {
+            if (event.target == modal) {
+              modal.style.display = "none";
+            }
+          };
         }
-      };
+      });
+    };
+    setInterval(addblockPopup, 15000);
+  </script>
+  <!-- End just-detect-adblock -->
+</body>
 
-      const changeView = () => {
-        cam.style.maxWidth = "800px";
-        cam.style.position = "static";
-        cam.style.maxHeight = "53vh";
-        cam.style.margin = "30px 15%";
-        // camTitle.style.display = "none";
-        closeFullscreen();
-        cam.src = "./ad13a7a2020.html";
-        showJumpBtn();
-      };
-
-      cam.onload = () => {
-        loader.style.display = "none";
-        camContainer.style.display = "flex";
-      };
-
-      const timeOut = () =>
-        setTimeout(() => {
-          changeView();
-        }, 120000);
-      timeOut();
-
-      cam.onerror = () => {
-        clearTimeout(timeOut);
-        window.location = "./list.html";
-      };
-    </script>
-    <script src="./js/local.js"></script>
-    <!-- just-detect-adblock -->
-    <script type="text/javascript" src="./sosason/dist/buundle.umd.js"></script>
-    <script type="text/javascript">
-      const addblockPopup = () => {
-        justDetectAdblock.detectAnyAdblocker().then(function (detected) {
-          if (detected) {
-            console.log("BeachCam say: Adblock detected", detected);
-            closeFullscreen();
-            // Get the <span> element that closes the modal
-            var modal = document.getElementById("myModal");
-            modal.style.display = "block";
-            // When the user clicks anywhere outside of the modal, close it
-            window.onclick = function (event) {
-              if (event.target == modal) {
-                modal.style.display = "none";
-              }
-            };
-          }
-        });
-      };
-      setInterval(addblockPopup, 15000);
-    </script>
-    <!-- End just-detect-adblock -->
-  </body>
 </html>
