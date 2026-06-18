@@ -25,6 +25,32 @@
       src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
     ></script>
     <!-- End adsense  -->
+             <!-- active massage for adblock users by AdSense -->
+        <script
+        async
+        src="https://fundingchoicesmessages.google.com/i/pub-2190134608327180?ers=1"
+        nonce="SywlhjIQVCO387QQ92QwHA"
+      ></script>
+      <script nonce="SywlhjIQVCO387QQ92QwHA">
+        (function () {
+          function signalGooglefcPresent() {
+            if (!window.frames["googlefcPresent"]) {
+              if (document.body) {
+                const iframe = document.createElement("iframe");
+                iframe.style =
+                  "width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;";
+                iframe.style.display = "none";
+                iframe.name = "googlefcPresent";
+                document.body.appendChild(iframe);
+              } else {
+                setTimeout(signalGooglefcPresent, 0);
+              }
+            }
+          }
+          signalGooglefcPresent();
+        })();
+      </script>
+       <!-- END massage for adblock users by AdSense -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
@@ -532,16 +558,25 @@
       <!-- <div id="cam-title" class="cam-title">BeachCam.co.il</div> -->
 
       <div class="cams-container">
-        <img
-          id="image"
-          ondblclick="togglesize()"
-          src="http://marina.art-net.co.il:120/mjpg/video.mjpg"
+         <iframe
+          id="cam1"
+          src="https://g1.ipcamlive.com/player/player.php?alias=6994cb060b270&autoplay=1&disablezoombutton=1&disablezoombutton=1&skin=white&hidelink=true&disablereportbutton=true&disableautofullscreen=1&disableframecapture=1&disableuserpause=1"
+          width="800"
+          height="434px"
           frameborder="0"
-          alt="מצלמת חוף"
-          width="100%"
-        />
+          autoplay
+          allowfullscreen
+        ></iframe>
       </div>
       <div class="jump-btn" onclick="location.reload()">skip</div>
+    </div>
+    <div class="ads-container, psitivemobile" style="max-width: 800px; margin: .2em auto;">
+        <!-- positive mobile outbrain aplvideo ads START -->
+        <div class="aplvideo">
+        <script async id="AV6a05cf6ce093ce570602b52a" type="text/javascript"
+            src="https://tg1.aniview.com/api/adserver/spt?AV_TAGID=6a05cf6ce093ce570602b52a&AV_PUBLISHERID=6a05cd6df7084d6da400c706"></script>
+        </div>
+        <!-- positive mobile outbrain aplvideo ads END -->
     </div>
     <div id="loader-container" class="loader-container">
       <div class="loader"></div>
@@ -590,7 +625,7 @@
       <p style="color: #FDAC53">contact: info@beachcam.co.il</p>
     </footer>
     <script>
-      const cam = document.querySelector("#image");
+      const cam = document.querySelector("#cam1");
       const camContainer = document.querySelector(".cams-container");
       // const camTitle = document.querySelector("#cam-title");
       const loader = document.querySelector(".loader-container");
@@ -653,7 +688,7 @@
         setTimeout(() => {
           changeView();
         }, 130000);
-      // timeOut();
+      timeOut();
 
       cam.onerror = () => {
         clearTimeout(timeOut);
