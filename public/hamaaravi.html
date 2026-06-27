@@ -607,7 +607,7 @@
       }
   
       const reloadCam = () => {
-        cam.src = "https://gocamstream.com/WebRTCApp/play.html?name=0002";
+        cam.src = "https://g1.ipcamlive.com/player/player.php?alias=664cd75b7639c&websocketenabled=1&autoplay=1&disablezoombutton=1&skin=white&hidelink=true&disablereportbutton=true&disableautofullscreen=1&disableframecapture=1&disableuserpause=1";
         cam.style.maxWidth = "100%";
         cam.style.position = "relative";
         cam.style.height = "430px";
@@ -646,7 +646,7 @@
           callBack();
         }, time);
   
-      timeOut(90000, changeView);
+      timeOut(120000, changeView);
   
       cam.onerror = () => {
         clearTimeout(timeOut);
