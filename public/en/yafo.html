@@ -519,7 +519,7 @@
         scrolling="no"
         mozallowfullscreen="true"
         allowfullscreen="true"
-        src="https://g1.ipcamlive.com/player/player.php?alias=664cd75b7639c&websocketenabled=1&autoplay=1&disablezoombutton=1&skin=white&hidelink=true&disablereportbutton=true&disableautofullscreen=1&disableframecapture=1&disableuserpause=1"
+        src="https://g1.ipcamlive.com/player/player.php?alias=664cd75b7639c&autoplay=1&disablezoombutton=1&skin=white&hidelink=true&disablereportbutton=true&disableautofullscreen=1&disableframecapture=1&disableuserpause=1"
       ></iframe>
 
       <div class="jump-btn" onclick="location.reload()">
@@ -599,7 +599,7 @@
       }
 
       const reloadCam = () => {
-        cam.src = "https://g1.ipcamlive.com/player/player.php?alias=664cd75b7639c&websocketenabled=1&autoplay=1&disablezoombutton=1&skin=white&hidelink=true&disablereportbutton=true&disableautofullscreen=1&disableframecapture=1&disableuserpause=1";
+        cam.src = "https://g1.ipcamlive.com/player/player.php?alias=664cd75b7639c&autoplay=1&disablezoombutton=1&skin=white&hidelink=true&disablereportbutton=true&disableautofullscreen=1&disableframecapture=1&disableuserpause=1";
         cam.style.maxWidth = "100%";
         cam.style.position = "relative";
         cam.style.height = "430px";
@@ -638,7 +638,7 @@
           callBack();
         }, time);
 
-      timeOut(30000, changeView);
+      timeOut(100000, changeView);
 
       cam.onerror = () => {
         clearTimeout(timeOut);
