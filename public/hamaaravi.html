@@ -616,7 +616,7 @@
         camTitle.style.display = "block";
         camContainer.classList.remove("full-size");
         mobileBtn.style.marginTop = "32%"
-        timeOut(30000, changeView)
+        timeOut(230000, changeView)
         hideJumpBtn();
       }
   
@@ -646,7 +646,7 @@
           callBack();
         }, time);
   
-      timeOut(120000, changeView);
+      timeOut(180000, changeView);
   
       cam.onerror = () => {
         clearTimeout(timeOut);
